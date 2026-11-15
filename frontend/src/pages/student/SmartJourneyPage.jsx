@@ -247,8 +247,8 @@ export default function SmartJourneyPage() {
   return (
     <div className={`w-full mx-auto transition-all ${
       activeTab === 'interview'
-        ? 'w-full flex-1 flex flex-col min-h-0 px-2 sm:px-4 py-2 space-y-2 sm:space-y-3'
-        : 'max-w-[1600px] px-4 sm:px-6 lg:px-8 py-6 space-y-6'
+        ? 'w-full h-full flex-1 flex flex-col min-h-0 overflow-hidden space-y-2'
+        : 'max-w-[1600px] px-4 sm:px-6 lg:px-8 py-6 space-y-6 overflow-y-auto'
     }`}>
       
       {/* BARRE D'ONGLETS / ÉTAPES DU PARCOURS */}
@@ -263,7 +263,7 @@ export default function SmartJourneyPage() {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer shrink-0 ${
+                className={`flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer shrink-0 ${
                   isActive
                     ? 'bg-[#153B2B] text-white shadow-xs'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
@@ -290,12 +290,12 @@ export default function SmartJourneyPage() {
 
       {/* CONTENU ACTIF SELON L'ONGLET SÉLECTIONNÉ */}
       <div className={`transition-opacity duration-300 ${
-        activeTab === 'interview' ? 'flex-1 min-h-0 flex flex-col w-full' : ''
+        activeTab === 'interview' ? 'flex-1 min-h-0 flex flex-col w-full overflow-hidden' : ''
       }`}>
         
         {/* ONGLET 1 : ENTRETIEN CONVERSATIONNEL AVEC L'IA */}
         {activeTab === 'interview' && (
-          <div className="w-full flex-1 min-h-[580px] h-[calc(100vh-215px)] flex flex-col">
+          <div className="w-full h-full flex-1 min-h-0 flex flex-col overflow-hidden">
             <AiInterviewChat
               conversation={journey.conversation || []}
               onSendMessage={handleSendMessage}

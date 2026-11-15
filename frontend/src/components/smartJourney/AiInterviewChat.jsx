@@ -7,6 +7,7 @@ import {
   Sparkles,
   RefreshCw,
   ArrowRight,
+  ArrowDown,
   Shield,
   HelpCircle,
   Clock,
@@ -61,7 +62,8 @@ export default function AiInterviewChat({
   });
   const [serverErrorBanner, setServerErrorBanner] = useState(null);
 
-  // Références d'exécution et de flux audio
+  // Références d'exécution, de défilement et de flux audio
+  const messagesContainerRef = useRef(null);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
   const mediaStreamRef = useRef(null);
@@ -72,14 +74,69 @@ export default function AiInterviewChat({
   const accumulatedTranscriptRef = useRef('');
   const isRecordingRef = useRef(false);
 
-  // Défilement automatique vers le dernier message
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  // Détection du scroll et indicateur de nouveau message
+  const [isAtBottom, setIsAtBottom] = useState(true);
+  const [hasNewUnread, setHasNewUnread] = useState(false);
+  const prevConversationLengthRef = useRef(conversation?.length || 0);
+  const isInitialMountRef = useRef(true);
+
+  // Défilement automatique ou manuel vers le dernier message
+  const scrollToBottom = (behavior = 'smooth') => {
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTo({
+        top: messagesContainerRef.current.scrollHeight,
+        behavior
+      });
+    } else if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior });
+    }
+    setHasNewUnread(false);
+    setIsAtBottom(true);
   };
 
+  // Suivi de la position de scroll de l'utilisateur
+  const handleScroll = () => {
+    const el = messagesContainerRef.current;
+    if (!el) return;
+    const distanceToBottom = el.scrollHeight - el.scrollTop - el.clientHeight;
+    const atBottom = distanceToBottom <= 70;
+    setIsAtBottom(atBottom);
+    if (atBottom) {
+      setHasNewUnread(false);
+    }
+  };
+
+  // Gestion du défilement lors de l'arrivée de nouveaux messages
   useEffect(() => {
-    scrollToBottom();
-  }, [conversation, loading, voiceState]);
+    const currentLength = conversation?.length || 0;
+    const prevLength = prevConversationLengthRef.current;
+
+    if (isInitialMountRef.current) {
+      // Défilement direct au premier affichage
+      scrollToBottom('auto');
+      isInitialMountRef.current = false;
+    } else if (currentLength > prevLength) {
+      const lastMsg = conversation[currentLength - 1];
+      const isUserMsg = lastMsg?.role === 'user';
+
+      if (isUserMsg || isAtBottom) {
+        // Envoi par l'élève ou utilisateur déjà en bas : défilement automatique
+        scrollToBottom('smooth');
+      } else {
+        // L'utilisateur lit volontairement des messages plus anciens : ne pas couper sa lecture
+        setHasNewUnread(true);
+      }
+    }
+
+    prevConversationLengthRef.current = currentLength;
+  }, [conversation]);
+
+  // Maintenir le défilement si l'IA génère et qu'on est déjà en bas
+  useEffect(() => {
+    if (loading && isAtBottom) {
+      scrollToBottom('smooth');
+    }
+  }, [loading]);
 
   // Vérification de la santé des serveurs IA au montage
   useEffect(() => {
@@ -880,9 +937,9 @@ export default function AiInterviewChat({
   };
 
   return (
-    <div className="chat-card-3d w-full h-full flex-1 flex flex-col min-h-[600px]">
+    <div className="chat-card-3d w-full h-full flex-1 flex flex-col min-h-0 overflow-hidden">
       {/* Conteneur intérieur du Chat */}
-      <div className="chat-card-3d-inner">
+      <div className="chat-card-3d-inner w-full h-full flex-1 flex flex-col min-h-0 overflow-hidden">
         {/* HEADER MILITAIRE PROFESSIONNEL & STATUT DU CONSEILLER */}
         <div className="bg-gradient-to-r from-[#102C20] via-[#153B2B] to-[#1C4E39] text-white px-4 sm:px-6 py-3.5 border-b border-[#1C4E39] shrink-0 shadow-xs">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -1026,9 +1083,14 @@ export default function AiInterviewChat({
         </div>
       )}
 
-      {/* ZONE DE MESSAGES PARTAGÉE (COMMUNE AUX MODES TEXTE ET VOCAL) */}
-      <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 bg-radial from-slate-50/50 to-white">
-        {conversation.map((msg, index) => {
+      {/* ZONE DE MESSAGES AVEC DÉFILEMENT INDÉPENDANT */}
+      <div className="relative flex-1 min-h-0 flex flex-col overflow-hidden">
+        <div
+          ref={messagesContainerRef}
+          onScroll={handleScroll}
+          className="flex-1 min-h-0 overflow-y-auto p-4 sm:p-6 space-y-4 bg-radial from-slate-50/50 to-white"
+        >
+          {conversation.map((msg, index) => {
           const isAi = msg.role === 'assistant';
           const isAr = isArabicText(msg.text || msg.transcription);
           const isVoice = msg.mode === 'voice';
@@ -1227,6 +1289,25 @@ export default function AiInterviewChat({
         )}
 
         <div ref={messagesEndRef} />
+      </div>
+
+      {/* BOUTON DISCRET « NOUVEAU MESSAGE ↓ » LORSQUE DE NOUVEAUX MESSAGES ARRIVENT HORS DE LA ZONE VISIBLE */}
+      {(!isAtBottom || hasNewUnread) && (
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-30 pointer-events-auto">
+          <button
+            type="button"
+            onClick={() => scrollToBottom('smooth')}
+            className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold shadow-xl transition-all duration-200 cursor-pointer border ${
+              hasNewUnread
+                ? 'bg-[#153B2B] text-white border-gold hover:bg-[#1C4E39] ring-2 ring-gold/40 animate-bounce'
+                : 'bg-white/95 text-[#153B2B] border-slate-300 hover:bg-slate-100 shadow-md backdrop-blur-xs'
+            }`}
+          >
+            <span>{hasNewUnread ? 'Nouveau message' : 'Dernier message'}</span>
+            <ArrowDown className={`w-3.5 h-3.5 ${hasNewUnread ? 'text-gold' : 'text-[#153B2B]'}`} />
+          </button>
+        </div>
+      )}
       </div>
 
       {/* SUGGESTIONS DE RÉPONSES RAPIDES */}

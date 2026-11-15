@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Outlet, NavLink, useNavigate } from 'react-router-dom';
+import { Outlet, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
 import {
   Shield,
@@ -18,6 +18,8 @@ export default function StudentLayout() {
   const { user, logout, quickLogin } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const isParcoursPage = location.pathname.includes('/eleve/parcours-intelligent');
 
   const navLinks = [
     { to: '/eleve/dashboard', label: 'Tableau de bord', icon: LayoutDashboard },
@@ -39,9 +41,11 @@ export default function StudentLayout() {
   }, [mobileMenuOpen]);
 
   return (
-    <div className="min-h-[100dvh] bg-[#F7F8F5] flex flex-col font-sans relative overflow-x-hidden w-full">
+    <div className={`bg-[#F7F8F5] flex flex-col font-sans relative overflow-x-hidden w-full ${
+      isParcoursPage ? 'h-[100dvh] max-h-[100dvh] overflow-hidden' : 'min-h-[100dvh]'
+    }`}>
       {/* Barre de navigation unique & épurée */}
-      <header className="sticky top-0 z-40 bg-[#153B2B] text-white border-b border-[#1C4E39] shadow-sm w-full">
+      <header className="sticky top-0 z-40 bg-[#153B2B] text-white border-b border-[#1C4E39] shadow-sm w-full h-16 shrink-0">
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 h-16 flex items-center justify-between">
           {/* Logo & Identité */}
           <div className="flex items-center gap-3 sm:gap-6 min-w-0">
@@ -225,14 +229,20 @@ export default function StudentLayout() {
       </header>
 
       {/* Contenu principal en plein écran responsive */}
-      <main className="flex-1 w-full px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-3 min-w-0 flex flex-col">
+      <main className={`flex-1 w-full min-w-0 flex flex-col ${
+        isParcoursPage 
+          ? 'h-[calc(100dvh-64px)] overflow-hidden p-2 sm:p-3' 
+          : 'px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-3'
+      }`}>
         <Outlet />
       </main>
 
-      {/* Pied de page sobre en pleine largeur */}
-      <footer className="border-t border-slateSubtle-200 bg-white py-3.5 px-4 sm:px-6 lg:px-8 text-center text-xs text-slateSubtle-600 w-full">
-        <p>ORIENT-GR • Gendarmerie Royale — Plateforme d'Orientation Professionnelle</p>
-      </footer>
+      {/* Pied de page sobre en pleine largeur (masqué en mode plein écran entretien pour éviter tout défilement global) */}
+      {!isParcoursPage && (
+        <footer className="border-t border-slateSubtle-200 bg-white py-3.5 px-4 sm:px-6 lg:px-8 text-center text-xs text-slateSubtle-600 w-full shrink-0">
+          <p>ORIENT-GR • Gendarmerie Royale — Plateforme d'Orientation Professionnelle</p>
+        </footer>
+      )}
     </div>
   );
 }
