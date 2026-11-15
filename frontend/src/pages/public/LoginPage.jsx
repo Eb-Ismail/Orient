@@ -164,7 +164,7 @@ export default function LoginPage() {
     <div 
       className="min-h-screen w-full bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center py-6 sm:py-8 px-4 sm:px-6 relative overflow-x-hidden selection:bg-gold/30"
       style={{
-        backgroundImage: `url('/images/login-bg.webp?v=20261115_pure')`,
+        backgroundImage: `url('/images/login-bg.webp?v=20261115_final_single')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
