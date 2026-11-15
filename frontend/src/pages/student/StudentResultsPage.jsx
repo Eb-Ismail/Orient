@@ -137,15 +137,15 @@ export default function StudentResultsPage() {
               <Award className="w-4 h-4 text-gold" />
               <span>المملكة المغربية • الدرك الملكي • القيادة العليا</span>
             </div>
-            <h1 className="text-xl sm:text-2xl font-black text-gendarmerie font-serif">
+            <h1 className="text-2xl sm:text-3xl font-bold text-gendarmerie font-serif">
               تقرير التوجيه المهني والتقييم الميداني المركب
             </h1>
-            <p className="text-xs text-slateSubtle-600">
+            <p className="text-sm text-slate-600 leading-relaxed">
               تحليل المهارات العملية والكفاءات الميدانية استناداً إلى الاختبارات المهنية الثلاثة ونتائج الورشات التطبيقية
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto print:hidden">
+          <div className="flex flex-wrap items-center gap-2.5 self-start sm:self-auto print:hidden">
             <Button
               variant="outline"
               size="sm"
@@ -166,73 +166,73 @@ export default function StudentResultsPage() {
         </div>
 
         {/* Fiche d'identification militaire de l'élève */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 bg-cream-50/80 rounded-2xl border border-slateSubtle-200/80 text-xs">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 bg-slate-50/90 rounded-2xl border border-slate-200 text-xs sm:text-sm">
           <div>
-            <span className="text-[11px] text-slateSubtle-500 block">الاسم والنسب:</span>
+            <span className="text-xs text-slate-500 block mb-0.5">الاسم والنسب:</span>
             <strong className="text-gendarmerie font-bold">{studentInfo.prenom} {studentInfo.nom}</strong>
           </div>
           <div>
-            <span className="text-[11px] text-slateSubtle-500 block">الرقم العسكري:</span>
+            <span className="text-xs text-slate-500 block mb-0.5">الرقم العسكري:</span>
             <strong className="font-mono text-gendarmerie font-bold">{studentInfo.matricule}</strong>
           </div>
           <div>
-            <span className="text-[11px] text-slateSubtle-500 block">فوج التكوين:</span>
-            <span className="text-slateSubtle-700">{studentInfo.promotionNom || studentInfo.promotion || 'الفوج 54'}</span>
+            <span className="text-xs text-slate-500 block mb-0.5">فوج التكوين:</span>
+            <span className="text-slate-700 font-medium">{studentInfo.promotionNom || studentInfo.promotion || 'الفوج 54'}</span>
           </div>
           <div>
-            <span className="text-[11px] text-slateSubtle-500 block">تاريخ إصدار التقرير:</span>
-            <span className="text-slateSubtle-700 font-medium">{formatDate(dateBilan)}</span>
+            <span className="text-xs text-slate-500 block mb-0.5">تاريخ إصدار التقرير:</span>
+            <span className="text-slate-700 font-medium">{formatDate(dateBilan)}</span>
           </div>
         </div>
       </div>
 
       {/* 2. Résumé de la performance globale combinée */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <div className="bg-[#153B2B] text-white rounded-3xl p-6 shadow-card space-y-3 relative overflow-hidden print:p-4">
+        <div className="bg-[#153B2B] text-white rounded-3xl p-6 shadow-sm space-y-3 relative overflow-hidden print:p-4">
           <div className="flex items-center justify-between">
             <span className="text-xs text-gold font-bold uppercase tracking-wider">معدل الأداء الميداني المركب</span>
             <Sparkles className="w-5 h-5 text-gold" />
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="text-4xl font-black font-serif text-white">{statistiquesGlobales.scoreMoyenGlobal}%</span>
+            <span className="text-4xl font-extrabold font-serif text-white">{statistiquesGlobales.scoreMoyenGlobal}%</span>
             <span className="text-xs text-gold-light font-bold">تقدير: {statistiquesGlobales.mentionGlobale}</span>
           </div>
-          <p className="text-[11px] text-slate-300 leading-relaxed">
+          <p className="text-xs text-slate-200 leading-relaxed">
             مؤشر كفاءة هجين يجمع بين الدقة الإجرائية للاختبارات المهنية والمهارات اليدوية بالورشات التطبيقية.
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl border border-slateSubtle-200 p-6 shadow-sm space-y-2 print:p-4">
-          <span className="text-xs text-slateSubtle-500 font-bold uppercase tracking-wider block">الورشات التطبيقية المنجزة</span>
+        <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-xs space-y-2 print:p-4">
+          <span className="text-xs text-slate-500 font-bold uppercase tracking-wider block">الورشات التطبيقية المنجزة</span>
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-black text-gendarmerie font-mono">
+            <span className="text-3xl font-extrabold text-gendarmerie font-mono">
               {traineePracticalProfile?.overallPerformance?.completedCount || 0}
-              <span className="text-sm font-normal text-slateSubtle-500 mr-1.5">
+              <span className="text-sm font-normal text-slate-500 mr-1.5">
                 / {traineePracticalProfile?.overallPerformance?.totalAssigned || 0}
               </span>
             </span>
-            <span className="text-xs text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+            <span className="text-xs text-emerald-800 font-bold bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
               {traineePracticalProfile?.overallPerformance?.averageScore20 !== null
                 ? `معدل ${traineePracticalProfile?.overallPerformance?.averageScore20}/20`
                 : 'في الانتظار'}
             </span>
           </div>
-          <p className="text-[11px] text-slateSubtle-600">
+          <p className="text-xs text-slate-600 leading-relaxed">
             مواقف تقنية واقعية مؤطرة (معلوميات، ميكانيك، إلكترونيات، لوجستيك).
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl border border-slateSubtle-200 p-6 shadow-sm space-y-2 print:p-4">
-          <span className="text-xs text-slateSubtle-500 font-bold uppercase tracking-wider block">قرار لجنة التوجيه والتعيين</span>
+        <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-xs space-y-2 print:p-4">
+          <span className="text-xs text-slate-500 font-bold uppercase tracking-wider block">قرار لجنة التوجيه والتعيين</span>
           <div className="flex items-center gap-2 pt-1">
-            <span className="w-2.5 h-2.5 rounded-full bg-gold animate-pulse" />
-            <span className="text-sm font-extrabold text-gendarmerie">
+            <span className="w-2.5 h-2.5 rounded-full bg-gold" />
+            <span className="text-base font-bold text-gendarmerie">
               {administrativeDecision.statut === 'VALIDEE_ADMIN'
                 ? 'توجيه مصادق عليه رسمياً'
                 : 'مقترح استشاري مبني على الكفاءات'}
             </span>
           </div>
-          <p className="text-[11px] text-slateSubtle-600 leading-relaxed">
+          <p className="text-xs text-slate-600 leading-relaxed">
             {administrativeDecision.observationsAr || 'المقترح استشاري وتتخذ القيادة الإدارية القرار النهائي وفق مصلحة الخدمة.'}
           </p>
         </div>

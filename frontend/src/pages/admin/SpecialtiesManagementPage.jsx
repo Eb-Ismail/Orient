@@ -196,16 +196,16 @@ export default function SpecialtiesManagementPage() {
   return (
     <div className="space-y-6 animate-fade-slide">
       {/* En-tête */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slateSubtle-200">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
-          <div className="flex items-center gap-2 text-xs font-semibold text-gendarmerie uppercase tracking-wider mb-1">
+          <div className="flex items-center gap-2 text-xs font-bold text-gendarmerie uppercase tracking-wider mb-1">
             <Shield className="w-4 h-4 text-gold" />
             Référentiel des Métiers & Algorithme d'Orientation
           </div>
-          <h1 className="text-2xl font-extrabold text-gendarmerie font-serif">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gendarmerie font-serif">
             Gestion Dynamique des Spécialités
           </h1>
-          <p className="text-xs text-slateSubtle-700">
+          <p className="text-sm text-slate-600 mt-1">
             Filières opérationnelles, critères de notation multicritères et conditions d'accès réglementaires.
           </p>
         </div>
@@ -220,22 +220,22 @@ export default function SpecialtiesManagementPage() {
       </div>
 
       {/* Barre de recherche et filtres */}
-      <div className="flex flex-wrap items-center gap-3 p-4 bg-white rounded-xl border border-slateSubtle-200 shadow-2xs">
+      <div className="flex flex-wrap items-center gap-3 p-4 bg-white rounded-2xl border border-slate-200/90 shadow-2xs">
         <div className="relative flex-1 min-w-[240px]">
-          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slateSubtle-500" />
+          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
           <input
             type="text"
             placeholder="Rechercher une spécialité, code ou mission..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full text-xs pl-9 pr-3 py-2 border border-slateSubtle-200 rounded-xl focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie text-slateSubtle-800 transition-all"
+            className="w-full text-sm pl-10 pr-3.5 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie text-slate-800 bg-white transition-colors"
           />
         </div>
 
         <select
           value={selectedSubdivision}
           onChange={(e) => setSelectedSubdivision(e.target.value)}
-          className="text-xs py-2 px-3 border border-slateSubtle-200 rounded-xl bg-white text-slateSubtle-800 focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie transition-all"
+          className="text-sm py-2.5 px-3.5 border border-slate-200 rounded-xl bg-white text-slate-800 focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie transition-colors"
         >
           <option value="">Toutes les subdivisions ({specialties.length})</option>
           {subdivisions.map(sub => (
@@ -249,21 +249,21 @@ export default function SpecialtiesManagementPage() {
         {filteredSpecialties.map((spec) => {
           const IconComponent = iconMap[spec.Icone] || Shield;
           return (
-            <Card key={spec.SpecialiteId} className="p-6 space-y-4 rounded-xl border border-slateSubtle-200 hover:border-gold/50 hover:shadow-card transition-all duration-200">
+            <Card key={spec.SpecialiteId} className="p-6 space-y-4 rounded-2xl border border-slate-200/90 hover:border-gold/50 shadow-xs transition-all duration-200">
               <div className="flex items-start justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-xl bg-cream-100 border border-slateSubtle-200 flex items-center justify-center text-gold flex-shrink-0 shadow-2xs">
+                  <div className="w-11 h-11 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-gold flex-shrink-0 shadow-2xs">
                     <IconComponent className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-gendarmerie leading-snug">
+                    <h3 className="text-base sm:text-lg font-bold text-gendarmerie leading-snug">
                       {spec.Intitule}
                     </h3>
                     <div className="flex items-center gap-2 mt-0.5">
-                      <span className="text-[11px] font-mono font-bold bg-cream-100 text-gendarmerie px-2 py-0.5 rounded border border-slateSubtle-200">
+                      <span className="text-xs font-mono font-bold bg-slate-100 text-gendarmerie px-2.5 py-0.5 rounded border border-slate-200">
                         {spec.Code}
                       </span>
-                      <span className="text-xs text-slateSubtle-700">
+                      <span className="text-xs text-slate-600 font-medium">
                         {spec.Subdivision}
                       </span>
                     </div>
@@ -280,7 +280,7 @@ export default function SpecialtiesManagementPage() {
                 </Button>
               </div>
 
-              <p className="text-xs text-slateSubtle-700 leading-relaxed">
+              <p className="text-sm text-slate-600 leading-relaxed">
                 {spec.Description}
               </p>
 

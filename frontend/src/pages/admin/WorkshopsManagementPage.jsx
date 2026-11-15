@@ -371,73 +371,73 @@ export default function WorkshopsManagementPage() {
 
       {/* 2. Top KPIs */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white rounded-xl p-4 border border-slateSubtle-200 shadow-xs flex items-center justify-between">
+        <div className="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-xs flex items-center justify-between">
           <div>
-            <div className="text-[11px] font-semibold uppercase text-slateSubtle-600 tracking-wider">
+            <div className="text-xs font-semibold uppercase text-slate-500 tracking-wider">
               Ateliers Actifs
             </div>
-            <div className="text-2xl font-bold text-gendarmerie font-serif mt-0.5">
+            <div className="text-2xl sm:text-3xl font-bold text-gendarmerie font-serif mt-1">
               {stats?.activeWorkshops || 0}
-              <span className="text-xs font-normal text-slateSubtle-600 ml-1.5">
+              <span className="text-xs font-normal text-slate-500 ml-1.5">
                 sur {stats?.totalWorkshops || 0}
               </span>
             </div>
-            <div className="text-[11px] text-emerald-700 font-medium mt-1">
+            <div className="text-xs text-emerald-700 font-medium mt-1">
               4 catégories techniques
             </div>
           </div>
-          <div className="w-11 h-11 rounded-xl bg-gendarmerie/10 text-gendarmerie flex items-center justify-center">
+          <div className="w-11 h-11 rounded-xl bg-gendarmerie/10 text-gendarmerie flex items-center justify-center shrink-0">
             <ClipboardList className="w-5 h-5 text-gendarmerie" />
           </div>
         </div>
 
-        <div className="bg-white rounded-xl p-4 border border-slateSubtle-200 shadow-xs flex items-center justify-between">
+        <div className="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-xs flex items-center justify-between">
           <div>
-            <div className="text-[11px] font-semibold uppercase text-slateSubtle-600 tracking-wider">
+            <div className="text-xs font-semibold uppercase text-slate-500 tracking-wider">
               Élèves Assignés
             </div>
-            <div className="text-2xl font-bold text-gendarmerie font-serif mt-0.5">
+            <div className="text-2xl sm:text-3xl font-bold text-gendarmerie font-serif mt-1">
               {stats?.totalAssignments || 0}
             </div>
-            <div className="text-[11px] text-slateSubtle-600 font-medium mt-1">
+            <div className="text-xs text-slate-500 font-medium mt-1">
               {stats?.evaluatedAssignments || 0} évalués ({stats?.completionRate || 0}%)
             </div>
           </div>
-          <div className="w-11 h-11 rounded-xl bg-gold/15 text-gold-dark flex items-center justify-center">
+          <div className="w-11 h-11 rounded-xl bg-gold/15 text-gold-dark flex items-center justify-center shrink-0">
             <UserCheck className="w-5 h-5 text-gold-dark" />
           </div>
         </div>
 
-        <div className="bg-white rounded-xl p-4 border border-slateSubtle-200 shadow-xs flex items-center justify-between">
+        <div className="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-xs flex items-center justify-between">
           <div>
-            <div className="text-[11px] font-semibold uppercase text-slateSubtle-600 tracking-wider">
+            <div className="text-xs font-semibold uppercase text-slate-500 tracking-wider">
               Score Moyen Pratique
             </div>
-            <div className="text-2xl font-bold text-gendarmerie font-serif mt-0.5">
+            <div className="text-2xl sm:text-3xl font-bold text-gendarmerie font-serif mt-1">
               {stats?.averageScore || 0}%
             </div>
-            <div className="text-[11px] text-emerald-700 font-medium mt-1">
+            <div className="text-xs text-emerald-700 font-medium mt-1">
               Mention dominante : Très Bien
             </div>
           </div>
-          <div className="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
+          <div className="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
             <Award className="w-5 h-5 text-emerald-700" />
           </div>
         </div>
 
-        <div className="bg-white rounded-xl p-4 border border-slateSubtle-200 shadow-xs flex items-center justify-between">
+        <div className="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-xs flex items-center justify-between">
           <div>
-            <div className="text-[11px] font-semibold uppercase text-slateSubtle-600 tracking-wider">
+            <div className="text-xs font-semibold uppercase text-slate-500 tracking-wider">
               Compétences Révélées
             </div>
-            <div className="text-2xl font-bold text-gendarmerie font-serif mt-0.5">
+            <div className="text-2xl sm:text-3xl font-bold text-gendarmerie font-serif mt-1">
               {stats?.topDetectedSkills?.length || 0}
             </div>
-            <div className="text-[11px] text-gold-dark font-medium mt-1">
+            <div className="text-xs text-gold-dark font-medium mt-1">
               Aptitudes techniques qualifiées
             </div>
           </div>
-          <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center">
+          <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center shrink-0">
             <Sparkles className="w-5 h-5 text-amber-600" />
           </div>
         </div>
@@ -521,15 +521,15 @@ export default function WorkshopsManagementPage() {
       </div>
 
       {/* 4. Barre de Filtres & Recherche */}
-      <div className="bg-white rounded-xl p-3.5 border border-slateSubtle-200 shadow-2xs flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
+      <div className="bg-white rounded-2xl p-4 border border-slate-200/90 shadow-xs flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
         <div className="flex-1 relative">
-          <Search className="w-4 h-4 text-slateSubtle-500 absolute left-3 top-1/2 -translate-y-1/2" />
+          <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             placeholder="Rechercher par titre, code, sous-domaine..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-1.5 text-xs rounded-lg border border-slateSubtle-200 focus:outline-none focus:ring-1 focus:ring-gendarmerie"
+            className="w-full pl-10 pr-3.5 py-2 text-sm rounded-xl border border-slate-200 bg-white text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-gendarmerie/20 focus:border-gendarmerie transition-all"
           />
         </div>
 
@@ -538,7 +538,7 @@ export default function WorkshopsManagementPage() {
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-2.5 py-1.5 text-xs rounded-lg border border-slateSubtle-200 bg-white font-medium text-gendarmerie focus:outline-none"
+            className="px-3 py-2 text-sm rounded-xl border border-slate-200 bg-white font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-gendarmerie/20 focus:border-gendarmerie transition-all cursor-pointer"
           >
             <option value="ALL">Tous les domaines</option>
             {categories.map((c) => (
@@ -552,7 +552,7 @@ export default function WorkshopsManagementPage() {
           <select
             value={selectedDifficulty}
             onChange={(e) => setSelectedDifficulty(e.target.value)}
-            className="px-2.5 py-1.5 text-xs rounded-lg border border-slateSubtle-200 bg-white font-medium text-gendarmerie focus:outline-none"
+            className="px-3 py-2 text-sm rounded-xl border border-slate-200 bg-white font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-gendarmerie/20 focus:border-gendarmerie transition-all cursor-pointer"
           >
             <option value="ALL">Toutes difficultés</option>
             <option value="DEBUTANT">Débutant</option>
@@ -564,7 +564,7 @@ export default function WorkshopsManagementPage() {
           <select
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
-            className="px-2.5 py-1.5 text-xs rounded-lg border border-slateSubtle-200 bg-white font-medium text-gendarmerie focus:outline-none"
+            className="px-3 py-2 text-sm rounded-xl border border-slate-200 bg-white font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-gendarmerie/20 focus:border-gendarmerie transition-all cursor-pointer"
           >
             <option value="ACTIF">Actifs seulement</option>
             <option value="ARCHIVE">Archivés</option>

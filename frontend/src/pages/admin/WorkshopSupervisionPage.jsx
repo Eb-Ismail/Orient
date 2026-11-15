@@ -305,9 +305,9 @@ export default function WorkshopSupervisionPage() {
       <div className="flex items-center gap-2 border-b border-slate-200 pb-2">
         <button
           onClick={() => setActiveTab('EVAL_GRID')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition-all ${
+          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
             activeTab === 'EVAL_GRID'
-              ? 'bg-[#1B4332] text-white shadow-xs'
+              ? 'bg-gendarmerie text-white shadow-xs'
               : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
           }`}
         >
@@ -316,9 +316,9 @@ export default function WorkshopSupervisionPage() {
         </button>
         <button
           onClick={() => setActiveTab('ASSIGNMENTS_LIST')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition-all ${
+          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
             activeTab === 'ASSIGNMENTS_LIST'
-              ? 'bg-[#1B4332] text-white shadow-xs'
+              ? 'bg-gendarmerie text-white shadow-xs'
               : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
           }`}
         >
@@ -333,7 +333,7 @@ export default function WorkshopSupervisionPage() {
       ) : (
         <>
       {/* 2. Filtres & Recherche */}
-      <div className="bg-white p-4 rounded-xl border border-slateSubtle-200 shadow-2xs space-y-3">
+      <div className="bg-white p-4 rounded-2xl border border-slate-200/90 shadow-xs space-y-3">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
           {/* Onglets de Statut */}
           <div className="flex items-center gap-1.5 flex-wrap">
@@ -347,10 +347,10 @@ export default function WorkshopSupervisionPage() {
               <button
                 key={st.id}
                 onClick={() => setFilterStatus(st.id)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
                   filterStatus === st.id
-                    ? 'bg-gendarmerie text-white shadow-2xs'
-                    : 'bg-cream-100 text-slateSubtle-700 hover:bg-cream-200'
+                    ? 'bg-gendarmerie text-white shadow-xs'
+                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200/80 border border-transparent'
                 }`}
               >
                 {st.label}
@@ -359,14 +359,14 @@ export default function WorkshopSupervisionPage() {
           </div>
 
           {/* Recherche */}
-          <div className="relative w-full md:w-64">
-            <Search className="w-4 h-4 text-slateSubtle-400 absolute left-3 top-1/2 -translate-y-1/2" />
+          <div className="relative w-full md:w-72">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Rechercher élève, matricule, atelier..."
-              className="w-full pl-9 pr-3 py-1.5 text-xs rounded-xl border border-slateSubtle-200 bg-white focus:outline-none focus:ring-1 focus:ring-gendarmerie shadow-2xs"
+              className="w-full pl-9 pr-3.5 py-2 text-sm rounded-xl border border-slate-200 bg-white text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-gendarmerie/20 focus:border-gendarmerie transition-all"
             />
           </div>
         </div>
@@ -379,20 +379,20 @@ export default function WorkshopSupervisionPage() {
           description="Vous n'avez aucun stagiaire correspondant aux filtres actifs."
         />
       ) : (
-        <div className="bg-white rounded-xl border border-slateSubtle-200 shadow-2xs overflow-hidden">
+        <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden">
           <div className="overflow-x-auto table-responsive-container">
-            <table className="w-full text-left text-xs text-slate-800 min-w-[640px]">
-              <thead className="bg-cream-100/80 text-[11px] uppercase tracking-wider text-slateSubtle-600 font-bold border-b border-slateSubtle-200">
+            <table className="w-full text-left text-sm text-slate-800 min-w-[640px]">
+              <thead className="bg-slate-50 text-slate-700 text-xs font-bold uppercase tracking-wider border-b border-slate-200">
                 <tr>
-                  <th className="p-3.5">Élève Gendarme</th>
-                  <th className="p-3.5">Atelier Pratique</th>
-                  <th className="p-3.5">Progression</th>
-                  <th className="p-3.5">Statut</th>
-                  <th className="p-3.5">Résultat</th>
-                  <th className="p-3.5 text-right">Actions</th>
+                  <th className="py-3.5 px-4">Élève Gendarme</th>
+                  <th className="py-3.5 px-4">Atelier Pratique</th>
+                  <th className="py-3.5 px-4">Progression</th>
+                  <th className="py-3.5 px-4">Statut</th>
+                  <th className="py-3.5 px-4">Résultat</th>
+                  <th className="py-3.5 px-4 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slateSubtle-100">
+              <tbody className="divide-y divide-slate-100">
                 {filteredAssignments.map((assign) => {
                   const w = assign.Atelier || {};
                   const eleve = assign.Eleve || {};
@@ -401,42 +401,42 @@ export default function WorkshopSupervisionPage() {
                   const isReadyToEvaluate = statut === 'EN_ATTENTE_VALIDATION';
 
                   return (
-                    <tr key={assign.AssignationId} className="hover:bg-cream-50/60 transition-colors">
-                      <td className="p-3.5">
+                    <tr key={assign.AssignationId} className="hover:bg-slate-50/80 transition-colors border-b border-slate-100">
+                      <td className="py-3.5 px-4">
                         <div className="flex items-center gap-2.5">
                           <div className="w-8 h-8 rounded-full bg-gendarmerie/10 text-gendarmerie flex items-center justify-center font-bold font-serif shrink-0">
                             {eleve.nom ? eleve.nom[0] : 'E'}
                           </div>
                           <div>
-                            <span className="font-bold text-gendarmerie block">
+                            <span className="font-bold text-gendarmerie block text-sm">
                               {eleve.nom} {eleve.prenom}
                             </span>
-                            <span className="font-mono text-[10px] text-slateSubtle-500">
+                            <span className="font-mono text-xs text-slate-500">
                               {eleve.matricule || 'EG-2025-014'} • {eleve.promotion || 'Promo 54'}
                             </span>
                           </div>
                         </div>
                       </td>
 
-                      <td className="p-3.5">
+                      <td className="py-3.5 px-4">
                         <div className="max-w-[240px]">
                           <div className="flex items-center gap-1.5">
-                            <span className="font-mono text-[10px] font-bold text-gendarmerie bg-cream-200 px-1.5 py-0.2 rounded">
+                            <span className="font-mono text-xs font-bold text-gendarmerie bg-slate-100 px-2 py-0.5 rounded-md">
                               {w.Code}
                             </span>
-                            <span className="text-xs font-semibold truncate" title={w.Titre}>
+                            <span className="text-xs sm:text-sm font-semibold truncate text-slate-900" title={w.Titre}>
                               {w.Titre}
                             </span>
                           </div>
-                          <span className="text-[10px] text-slateSubtle-500 block truncate mt-0.5">
+                          <span className="text-xs text-slate-500 block truncate mt-0.5">
                             {w.Categorie?.intituleFr || w.SousDomaine}
                           </span>
                         </div>
                       </td>
 
-                      <td className="p-3.5">
+                      <td className="py-3.5 px-4">
                         <div className="w-32 space-y-1">
-                          <div className="flex items-center justify-between text-[10px] font-bold text-slateSubtle-600">
+                          <div className="flex items-center justify-between text-xs font-bold text-slate-600">
                             <span>Avancement</span>
                             <span>{pct}%</span>
                           </div>
@@ -451,47 +451,47 @@ export default function WorkshopSupervisionPage() {
                         </div>
                       </td>
 
-                      <td className="p-3.5">
+                      <td className="py-3.5 px-4">
                         {statut === 'VALIDE' ? (
-                          <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
-                            <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                          <span className="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
                             <span>Validé</span>
                           </span>
                         ) : statut === 'EN_ATTENTE_VALIDATION' ? (
-                          <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200 animate-pulse">
-                            <Clock className="w-3 h-3 text-indigo-600" />
+                          <span className="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200 animate-pulse">
+                            <Clock className="w-3.5 h-3.5 text-indigo-600" />
                             <span>À Évaluer</span>
                           </span>
                         ) : statut === 'A_REEVALUER' ? (
-                          <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200">
-                            <RotateCcw className="w-3 h-3 text-rose-600" />
+                          <span className="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 border border-rose-200">
+                            <RotateCcw className="w-3.5 h-3.5 text-rose-600" />
                             <span>À Réévaluer</span>
                           </span>
                         ) : (
-                          <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
-                            <TrendingUp className="w-3 h-3 text-amber-600" />
+                          <span className="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
+                            <TrendingUp className="w-3.5 h-3.5 text-amber-600" />
                             <span>En cours</span>
                           </span>
                         )}
                       </td>
 
-                      <td className="p-3.5">
+                      <td className="py-3.5 px-4">
                         {assign.ScoreObtenu !== null && assign.ScoreObtenu !== undefined ? (
-                          <span className="font-extrabold text-sm text-gendarmerie font-serif">
+                          <span className="font-extrabold text-sm sm:text-base text-gendarmerie font-serif">
                             {assign.ScoreObtenu}/20
                           </span>
                         ) : (
-                          <span className="text-slateSubtle-400 font-semibold">—</span>
+                          <span className="text-slate-400 font-semibold">—</span>
                         )}
                       </td>
 
-                      <td className="p-3.5 text-right">
+                      <td className="py-3.5 px-4 text-right">
                         <button
                           onClick={() => handleOpenEvaluate(assign)}
-                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
                             isReadyToEvaluate
-                              ? 'bg-gendarmerie text-white hover:bg-[#1C4E39] shadow-xs'
-                              : 'bg-cream-200 text-gendarmerie hover:bg-cream-300'
+                              ? 'bg-gendarmerie text-white hover:bg-gendarmerie-light shadow-xs'
+                              : 'bg-slate-100 text-gendarmerie hover:bg-slate-200'
                           }`}
                         >
                           <UserCheck className="w-3.5 h-3.5" />

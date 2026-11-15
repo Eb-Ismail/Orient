@@ -208,7 +208,7 @@ export default function StudentDashboard() {
         {/* Informations essentielles : Matricule, Promotion, Statut */}
         <div className="flex flex-wrap items-center gap-3">
           {/* Matricule */}
-          <div className="px-3.5 py-2 rounded-xl bg-cream-100 border border-slate-200 text-xs">
+          <div className="px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs">
             <span className="text-slate-500 text-xs uppercase font-bold tracking-wider block">Matricule</span>
             <span className="font-mono font-bold text-sm text-gendarmerie mt-0.5 block">
               {user?.matricule || 'N/A'}
@@ -216,7 +216,7 @@ export default function StudentDashboard() {
           </div>
 
           {/* Promotion */}
-          <div className="px-3.5 py-2 rounded-xl bg-cream-100 border border-slate-200 text-xs">
+          <div className="px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs">
             <span className="text-slate-500 text-xs uppercase font-bold tracking-wider block">Promotion</span>
             <span className="font-bold text-slate-800 text-sm mt-0.5 block">
               {user?.promotionNom || user?.promotion || 'Promotion 54'}
@@ -224,7 +224,7 @@ export default function StudentDashboard() {
           </div>
 
           {/* Statut de formation */}
-          <div className="px-3.5 py-2 rounded-xl bg-emerald-50 border border-emerald-200 text-xs">
+          <div className="px-4 py-2 rounded-xl bg-emerald-50 border border-emerald-200 text-xs">
             <span className="text-emerald-800 text-xs uppercase font-bold tracking-wider block">Statut</span>
             <span className="font-bold text-sm text-emerald-900 flex items-center gap-1.5 mt-0.5">
               <span className="w-2 h-2 rounded-full bg-emerald-600" />

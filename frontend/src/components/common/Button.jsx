@@ -13,22 +13,22 @@ export default function Button({
   className = '',
   ...props
 }) {
-  const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-200 ease-out rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100 disabled:hover:shadow-none select-none active:scale-[0.98]';
+  const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-150 ease-out rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100 disabled:hover:shadow-none select-none active:scale-[0.98] cursor-pointer';
 
   const sizeStyles = {
-    xs: 'text-[11px] px-2.5 py-1 gap-1.5 font-medium',
-    sm: 'text-xs px-3.5 py-1.5 gap-1.5 font-medium',
-    md: 'text-xs md:text-sm px-4 py-2.5 gap-2 font-medium',
-    lg: 'text-sm md:text-base px-6 py-3 gap-2.5 font-semibold',
+    xs: 'text-xs px-2.5 py-1 gap-1.5 font-semibold',
+    sm: 'text-xs px-3.5 py-2 gap-1.5 font-bold',
+    md: 'text-sm px-4 py-2.5 gap-2 font-bold',
+    lg: 'text-base px-6 py-3 gap-2.5 font-bold',
   };
 
   const variantStyles = {
-    primary: 'bg-gendarmerie hover:bg-gendarmerie-dark text-white shadow-sm hover:shadow focus:ring-gold/50',
-    secondary: 'bg-gendarmerie-light hover:bg-gendarmerie text-white shadow-sm hover:shadow focus:ring-gold/50',
-    gold: 'bg-gold hover:bg-gold-dark text-white font-semibold shadow-sm hover:shadow-gold-glow focus:ring-gold/50',
-    outline: 'border border-slateSubtle-200 bg-white hover:bg-cream-100 hover:border-slateSubtle-300 text-slateSubtle-800 focus:ring-gold/40',
-    danger: 'bg-rose-700 hover:bg-rose-800 text-white shadow-sm focus:ring-rose-600',
-    ghost: 'text-slateSubtle-700 hover:bg-cream-100 hover:text-gendarmerie focus:ring-gold/40',
+    primary: 'bg-[#153B2B] hover:bg-[#1A4533] text-white shadow-xs focus:ring-[#153B2B]/40',
+    secondary: 'bg-[#1C4E39] hover:bg-[#153B2B] text-white shadow-xs focus:ring-[#153B2B]/40',
+    gold: 'bg-[#C9A052] hover:bg-[#B38C42] text-white font-bold shadow-xs focus:ring-gold/50',
+    outline: 'border border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300 text-slate-700 focus:ring-gold/40',
+    danger: 'bg-rose-700 hover:bg-rose-800 text-white shadow-xs focus:ring-rose-600',
+    ghost: 'text-slate-700 hover:bg-slate-100 hover:text-[#153B2B] focus:ring-gold/40',
   };
 
   return (

@@ -206,12 +206,12 @@ export default function AdminSettingsPage() {
       </div>
 
       {/* Barre d'onglets de configuration */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-slateSubtle-200">
+      <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-slate-200">
         <button
           type="button"
           onClick={() => setActiveTab('general')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap cursor-pointer ${
-            activeTab === 'general' ? 'bg-[#153B2B] text-white shadow-card' : 'bg-white text-slateSubtle-700 hover:bg-cream-100 border border-slateSubtle-200'
+          className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition whitespace-nowrap cursor-pointer ${
+            activeTab === 'general' ? 'bg-gendarmerie text-white shadow-xs' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
           }`}
         >
           1. Paramètres Généraux
@@ -220,8 +220,8 @@ export default function AdminSettingsPage() {
         <button
           type="button"
           onClick={() => setActiveTab('competencies')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap cursor-pointer ${
-            activeTab === 'competencies' ? 'bg-[#153B2B] text-white shadow-card' : 'bg-white text-slateSubtle-700 hover:bg-cream-100 border border-slateSubtle-200'
+          className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition whitespace-nowrap cursor-pointer ${
+            activeTab === 'competencies' ? 'bg-gendarmerie text-white shadow-xs' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
           }`}
         >
           2. Référentiel des Compétences ({competencies.length})
@@ -230,8 +230,8 @@ export default function AdminSettingsPage() {
         <button
           type="button"
           onClick={() => setActiveTab('matrix')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap cursor-pointer ${
-            activeTab === 'matrix' ? 'bg-[#153B2B] text-white shadow-card' : 'bg-white text-slateSubtle-700 hover:bg-cream-100 border border-slateSubtle-200'
+          className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition whitespace-nowrap cursor-pointer ${
+            activeTab === 'matrix' ? 'bg-gendarmerie text-white shadow-xs' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
           }`}
         >
           3. Matrice Spécialités & Poids
@@ -240,8 +240,8 @@ export default function AdminSettingsPage() {
         <button
           type="button"
           onClick={() => setActiveTab('scoring')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap cursor-pointer ${
-            activeTab === 'scoring' ? 'bg-[#153B2B] text-white shadow-card' : 'bg-white text-slateSubtle-700 hover:bg-cream-100 border border-slateSubtle-200'
+          className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition whitespace-nowrap cursor-pointer ${
+            activeTab === 'scoring' ? 'bg-gendarmerie text-white shadow-xs' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
           }`}
         >
           4. Barème & Critères de Scoring
@@ -250,8 +250,8 @@ export default function AdminSettingsPage() {
         <button
           type="button"
           onClick={() => setActiveTab('tasks')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap cursor-pointer ${
-            activeTab === 'tasks' ? 'bg-[#153B2B] text-white shadow-card' : 'bg-white text-slateSubtle-700 hover:bg-cream-100 border border-slateSubtle-200'
+          className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition whitespace-nowrap cursor-pointer ${
+            activeTab === 'tasks' ? 'bg-gendarmerie text-white shadow-xs' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
           }`}
         >
           5. Banque des 60 Tâches ({simulationTasks.length})

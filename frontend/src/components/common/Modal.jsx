@@ -93,16 +93,16 @@ export default function Modal({
         onClick={(e) => e.stopPropagation()}
       >
         {/* En-tête fixe avec bouton de fermeture toujours visible et accessible */}
-        <div className="shrink-0 flex items-center justify-between px-3.5 sm:px-6 py-3 sm:py-4 border-b border-slateSubtle-200 bg-cream-100/95 backdrop-blur-xs">
+        <div className="shrink-0 flex items-center justify-between px-4 sm:px-6 py-3.5 sm:py-4 border-b border-slate-200/90 bg-white">
           <div className="min-w-0 pr-3">
             {title && (
-              <h3 className="text-sm sm:text-base md:text-lg font-bold text-gendarmerie flex items-center gap-2 truncate">
+              <h3 className="text-base sm:text-lg font-bold text-gendarmerie flex items-center gap-2 truncate">
                 <span className="w-1.5 h-4 rounded-full bg-gold inline-block shrink-0" />
                 <span className="truncate">{title}</span>
               </h3>
             )}
             {subtitle && (
-              <p className="text-[11px] sm:text-xs text-slateSubtle-700 mt-0.5 ml-3.5 truncate">
+              <p className="text-xs text-slate-500 mt-0.5 ml-3.5 truncate">
                 {subtitle}
               </p>
             )}
@@ -110,7 +110,7 @@ export default function Modal({
           <button
             type="button"
             onClick={onClose}
-            className="shrink-0 rounded-xl p-2 text-slateSubtle-600 hover:bg-cream-200 hover:text-gendarmerie transition-colors duration-150 min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer"
+            className="shrink-0 rounded-xl p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors duration-150 min-h-[40px] min-w-[40px] flex items-center justify-center cursor-pointer"
             aria-label="Fermer la fenêtre modale"
           >
             <X className="w-5 h-5" />
@@ -119,7 +119,7 @@ export default function Modal({
 
         {/* Corps de la modale avec défilement vertical interne indépendant */}
         <div
-          className={`flex-1 min-h-0 overflow-y-auto overflow-x-hidden overscroll-contain px-3.5 sm:px-6 py-3.5 sm:py-5 ${bodyClassName}`}
+          className={`flex-1 min-h-0 overflow-y-auto overflow-x-hidden overscroll-contain px-4 sm:px-6 py-4 sm:py-5 text-sm leading-relaxed text-slate-800 ${bodyClassName}`}
           style={{ overflowY: 'auto' }}
         >
           {children}
@@ -127,7 +127,7 @@ export default function Modal({
 
         {/* Pied de page fixe si spécifié */}
         {footer && (
-          <div className="shrink-0 flex flex-wrap items-center justify-end gap-2 sm:gap-3 px-3.5 sm:px-6 py-2.5 sm:py-3.5 border-t border-slateSubtle-200 bg-cream-100/80 rounded-b-2xl">
+          <div className="shrink-0 flex flex-wrap items-center justify-end gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 border-t border-slate-200/90 bg-slate-50 rounded-b-2xl">
             {footer}
           </div>
         )}

@@ -115,7 +115,7 @@ export default function AdminLayout() {
               <div className="font-extrabold text-sm tracking-wider text-white">
                 ORIENT<span className="text-gold">-GR</span>
               </div>
-              <div className="text-[9px] text-slate-300 uppercase tracking-widest font-medium">
+              <div className="text-xs text-slate-300 uppercase tracking-wider font-semibold">
                 Administration
               </div>
             </div>

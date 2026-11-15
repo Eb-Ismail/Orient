@@ -91,7 +91,7 @@ export default function StudentLayout() {
               </div>
               <div className="text-left leading-tight">
                 <p className="font-semibold text-white text-xs truncate max-w-[130px]">{user?.prenom} {user?.nom}</p>
-                <p className="text-[11px] text-slate-300 font-mono">{user?.matricule}</p>
+                <p className="text-xs text-slate-300 font-mono">{user?.matricule}</p>
               </div>
             </div>
 
@@ -157,7 +157,7 @@ export default function StudentLayout() {
                   </div>
                   <div>
                     <span className="font-bold text-white block">{user?.prenom} {user?.nom}</span>
-                    <span className="text-[10px] text-slate-300 font-mono">{user?.matricule} • Élève</span>
+                    <span className="text-xs text-slate-300 font-mono">{user?.matricule} • Élève</span>
                   </div>
                 </div>
                 <button
@@ -191,7 +191,7 @@ export default function StudentLayout() {
               })}
 
               <div className="pt-3 mt-2 border-t border-white/10 space-y-2">
-                <span className="text-[10px] uppercase font-bold text-gold/80 block px-2">
+                <span className="text-xs uppercase font-bold text-gold/90 block px-2">
                   Accès rapides aux espaces :
                 </span>
                 <div className="grid grid-cols-2 gap-2">

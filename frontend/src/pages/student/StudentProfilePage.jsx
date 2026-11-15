@@ -177,7 +177,7 @@ export default function StudentProfilePage() {
         </div>
 
         {/* Navigation interne des 3 sous-espaces de Mon Profil */}
-        <div className="bg-white p-1.5 rounded-2xl border border-slateSubtle-200 shadow-2xs flex items-center gap-1 overflow-x-auto shrink-0">
+        <div className="bg-white p-1.5 rounded-2xl border border-slate-200/90 shadow-xs flex items-center gap-1.5 overflow-x-auto shrink-0">
           {[
             { id: 'infos', label: 'Infos & Vœux', icon: User },
             { id: 'competences', label: 'Dossier Compétences', icon: Award },
@@ -190,11 +190,11 @@ export default function StudentProfilePage() {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap ${
-                  isActive ? 'bg-gendarmerie text-white shadow-xs' : 'text-slateSubtle-700 hover:bg-cream-100'
+                className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap ${
+                  isActive ? 'bg-gendarmerie text-white shadow-xs' : 'text-slate-700 hover:bg-slate-100'
                 }`}
               >
-                <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-gold' : 'text-slateSubtle-500'}`} />
+                <Icon className={`w-4 h-4 ${isActive ? 'text-gold' : 'text-slate-400'}`} />
                 <span>{tab.label}</span>
               </button>
             );
@@ -203,17 +203,17 @@ export default function StudentProfilePage() {
       </div>
 
       {/* Identité militaire */}
-      <div className="p-5 bg-white rounded-2xl border border-slateSubtle-200 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="p-5 bg-white rounded-2xl border border-slate-200/90 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-gendarmerie text-white flex items-center justify-center font-bold text-lg font-serif">
+          <div className="w-12 h-12 rounded-xl bg-gendarmerie text-white flex items-center justify-center font-bold text-lg font-serif shrink-0">
             {user?.nom?.charAt(0) || 'E'}
           </div>
           <div>
             <h2 className="text-lg font-bold text-gendarmerie">
               {user?.prenom} {user?.nom}
             </h2>
-            <div className="flex flex-wrap items-center gap-3 text-xs text-slateSubtle-600 mt-0.5">
-              <span className="font-mono">Matricule : <strong>{user?.matricule}</strong></span>
+            <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-slate-500 mt-0.5">
+              <span className="font-mono">Matricule : <strong className="text-slate-800">{user?.matricule}</strong></span>
               <span>•</span>
               <span>{user?.email}</span>
               <span>•</span>
@@ -524,15 +524,15 @@ export default function StudentProfilePage() {
           {preferences.map((pref, idx) => {
             const isLegacyCode = pref.code && !officialCodesSet.has(pref.code);
             return (
-              <div key={pref.rang} className="p-3.5 rounded-xl bg-cream-50/50 border border-slateSubtle-200 space-y-2">
-                <span className="text-xs font-bold text-gendarmerie block">
+              <div key={pref.rang} className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                <span className="text-xs sm:text-sm font-bold text-gendarmerie block">
                   Choix #{pref.rang} :
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                   <select
                     value={pref.code}
                     onChange={(e) => handlePreferenceChange(idx, 'code', e.target.value)}
-                    className="text-xs p-2.5 border border-slateSubtle-200 rounded-xl bg-white text-slateSubtle-800 focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie"
+                    className="text-sm py-2 px-3 border border-slate-200 rounded-xl bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-gendarmerie/20 focus:border-gendarmerie transition-all cursor-pointer"
                   >
                     <option value="">-- Choisir une spécialité --</option>
                     {officialSpecialties.map(spec => (
@@ -551,7 +551,7 @@ export default function StudentProfilePage() {
                     value={pref.motivation}
                     onChange={(e) => handlePreferenceChange(idx, 'motivation', e.target.value)}
                     placeholder="Motivation ou projet professionnel..."
-                    className="sm:col-span-2 text-xs p-2.5 border border-slateSubtle-200 rounded-xl bg-white text-slateSubtle-800 focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie"
+                    className="sm:col-span-2 text-sm py-2 px-3.5 border border-slate-200 rounded-xl bg-white text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-gendarmerie/20 focus:border-gendarmerie transition-all"
                   />
                 </div>
               </div>

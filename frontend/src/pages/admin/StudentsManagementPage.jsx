@@ -117,16 +117,16 @@ export default function StudentsManagementPage() {
   return (
     <div className="space-y-6 animate-fade-slide">
       {/* Entête */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slateSubtle-200">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
-          <div className="flex items-center gap-2 text-xs font-semibold text-gendarmerie uppercase tracking-wider mb-1">
+          <div className="flex items-center gap-2 text-xs font-bold text-gendarmerie uppercase tracking-wider mb-1">
             <Users className="w-4 h-4 text-gold" />
             Gestion des Effectifs & Promotions
           </div>
-          <h1 className="text-2xl font-extrabold text-gendarmerie font-serif">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gendarmerie font-serif">
             Registre des Élèves Gendarmes
           </h1>
-          <p className="text-xs text-slateSubtle-700">
+          <p className="text-sm text-slate-600 mt-1">
             Consultation, notation et suivi des épreuves d'orientation par promotion.
           </p>
         </div>
@@ -144,20 +144,20 @@ export default function StudentsManagementPage() {
       <Card className="p-4 bg-white">
         <form onSubmit={handleSearchSubmit} className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           <div className="relative sm:col-span-2">
-            <Search className="w-4 h-4 text-slateSubtle-400 absolute left-3.5 top-3" />
+            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
             <input
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Rechercher par nom, prénom, matricule ou e-mail..."
-              className="w-full pl-10 pr-3.5 py-2 text-xs border border-slateSubtle-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie text-slateSubtle-800 transition-all hover:border-slateSubtle-300"
+              className="w-full pl-10 pr-3.5 py-2.5 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie text-slate-800 transition-colors bg-white hover:border-slate-300"
             />
           </div>
 
           <select
             value={selectedPromotion}
             onChange={(e) => setSelectedPromotion(e.target.value)}
-            className="text-xs py-2 px-3.5 border border-slateSubtle-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie text-slateSubtle-800 transition-all hover:border-slateSubtle-300"
+            className="text-sm py-2.5 px-3.5 border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie text-slate-800 transition-colors hover:border-slate-300"
           >
             <option value="">Toutes les promotions</option>
             {promotions.map((p) => (
@@ -170,7 +170,7 @@ export default function StudentsManagementPage() {
           <select
             value={selectedMedical}
             onChange={(e) => setSelectedMedical(e.target.value)}
-            className="text-xs py-2 px-3.5 border border-slateSubtle-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie text-slateSubtle-800 transition-all hover:border-slateSubtle-300"
+            className="text-sm py-2.5 px-3.5 border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie text-slate-800 transition-colors hover:border-slate-300"
           >
             <option value="">Tous statuts SIGYCOP</option>
             <option value="SIGYCOP_VALIDE">SIGYCOP Apte</option>
@@ -196,27 +196,27 @@ export default function StudentsManagementPage() {
           />
         ) : (
           <div className="overflow-x-auto table-responsive-container">
-            <table className="w-full text-left text-xs min-w-[750px]">
+            <table className="w-full text-left text-sm min-w-[750px]">
               <thead>
-                <tr className="border-b border-slateSubtle-200 bg-cream-100/90 text-slateSubtle-700 font-semibold uppercase tracking-wider text-[11px]">
-                  <th className="py-3 px-4">Élève Gendarme</th>
-                  <th className="py-3 px-4">Promotion</th>
-                  <th className="py-3 px-4 text-center">Rang</th>
-                  <th className="py-3 px-4 text-center">Note Formation</th>
-                  <th className="py-3 px-4 text-center">Sport /20</th>
-                  <th className="py-3 px-4">SIGYCOP</th>
-                  <th className="py-3 px-4 text-center">Statut Test</th>
-                  <th className="py-3 px-4 text-right">Actions</th>
+                <tr className="border-b border-slate-200 bg-slate-50 text-slate-700 font-bold uppercase tracking-wider text-xs">
+                  <th className="py-3.5 px-4">Élève Gendarme</th>
+                  <th className="py-3.5 px-4">Promotion</th>
+                  <th className="py-3.5 px-4 text-center">Rang</th>
+                  <th className="py-3.5 px-4 text-center">Note Formation</th>
+                  <th className="py-3.5 px-4 text-center">Sport /20</th>
+                  <th className="py-3.5 px-4">SIGYCOP</th>
+                  <th className="py-3.5 px-4 text-center">Statut Test</th>
+                  <th className="py-3.5 px-4 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slateSubtle-100">
+              <tbody className="divide-y divide-slate-100">
                 {students.map((student) => (
-                  <tr key={student.UtilisateurId} className="hover:bg-cream-50/70 transition-colors">
-                    <td className="py-3 px-4">
-                      <div className="font-bold text-gendarmerie">
+                  <tr key={student.UtilisateurId} className="hover:bg-slate-50/70 transition-colors">
+                    <td className="py-3.5 px-4">
+                      <div className="font-bold text-gendarmerie text-sm">
                         {student.nom} {student.prenom}
                       </div>
-                      <div className="text-[10px] font-mono text-slateSubtle-700">
+                      <div className="text-xs font-mono text-slate-500 mt-0.5">
                         {student.matricule} • {student.TailleCm ? `${student.TailleCm} cm` : 'Taille n.r.'} • Y={student.VisionSIGYCOP_Y || 1}
                       </div>
                     </td>

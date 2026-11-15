@@ -339,12 +339,12 @@ export default function QuestionBankPage() {
   const getDifficultyBadge = (q) => {
     const diff = q.DifficulteLabel || q.DifficulteArabe || (q.Difficulte === 'FACILE' ? 'سهل' : q.Difficulte === 'MOYEN' ? 'متوسط' : 'صعب');
     if (diff === 'سهل' || q.Difficulte === 'FACILE') {
-      return <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">سهل</span>;
+      return <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">سهل</span>;
     }
     if (diff === 'صعب' || q.Difficulte === 'DIFFICILE' || q.Difficulte === 'AVANCE' || q.Difficulte === 'EXPERT') {
-      return <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-rose-50 text-rose-800 border border-rose-200">صعب</span>;
+      return <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-800 border border-rose-200">صعب</span>;
     }
-    return <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">متوسط</span>;
+    return <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">متوسط</span>;
   };
 
   if (loading) {
@@ -354,19 +354,19 @@ export default function QuestionBankPage() {
   return (
     <div className="space-y-6 animate-fade-slide">
       {/* En-tête */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slateSubtle-200">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
-          <div className="flex items-center gap-2 text-xs font-semibold text-gendarmerie uppercase tracking-wider mb-1">
+          <div className="flex items-center gap-2 text-xs font-bold text-gendarmerie uppercase tracking-wider mb-1">
             <Compass className="w-4 h-4 text-gold" />
             بنك الأسئلة والتوجيه المهني للدرك الملكي
           </div>
-          <h1 className="text-2xl font-extrabold text-gendarmerie font-serif flex items-center gap-3">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gendarmerie font-serif flex items-center gap-3">
             <span>Banque des 140 Questions QCM</span>
             <span className="text-sm font-sans font-bold bg-gold/15 text-gendarmerie px-3 py-0.5 rounded-full border border-gold/40">
               140 سؤال باللغة العربية
             </span>
           </h1>
-          <p className="text-xs text-slateSubtle-700 mt-1">
+          <p className="text-sm text-slate-600 mt-1">
             إدارة بنك أسئلة روائز التوجيه المهني، استعراض الخيارات الأربعة، ضبط المعاملات، وتفعيل أو تعطيل الأسئلة مع الحفاظ على الأمان المطلق للإجابات الصحيحة.
           </p>
         </div>
@@ -393,50 +393,50 @@ export default function QuestionBankPage() {
 
       {/* Barre de KPI et Statuts */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <div className="p-3 bg-white rounded-xl border border-slateSubtle-200 shadow-2xs">
-          <span className="text-slateSubtle-500 text-xs block mb-1">إجمالي الأسئلة (Total)</span>
+        <div className="p-4 bg-white rounded-2xl border border-slate-200/90 shadow-2xs">
+          <span className="text-slate-500 text-xs font-bold block mb-1">إجمالي الأسئلة (Total)</span>
           <div className="flex items-baseline gap-2">
-            <strong className="text-xl font-black text-gendarmerie">{stats.total}</strong>
-            <span className="text-[11px] font-bold text-slateSubtle-600">/ 140 متوقعة</span>
+            <strong className="text-2xl font-bold font-mono text-gendarmerie">{stats.total}</strong>
+            <span className="text-xs font-bold text-slate-500">/ 140 متوقعة</span>
           </div>
         </div>
 
-        <div className="p-3 bg-emerald-50/50 rounded-xl border border-emerald-200 shadow-2xs">
-          <span className="text-emerald-700 text-xs block mb-1">الأسئلة النشطة (Actives)</span>
+        <div className="p-4 bg-emerald-50/50 rounded-2xl border border-emerald-200 shadow-2xs">
+          <span className="text-emerald-800 text-xs font-bold block mb-1">الأسئلة النشطة (Actives)</span>
           <div className="flex items-baseline gap-2">
-            <strong className="text-xl font-black text-emerald-800">{stats.actives}</strong>
-            <span className="text-[11px] font-semibold text-emerald-700">متاحة في الروائز</span>
+            <strong className="text-2xl font-bold font-mono text-emerald-800">{stats.actives}</strong>
+            <span className="text-xs font-semibold text-emerald-700">متاحة في الروائز</span>
           </div>
         </div>
 
-        <div className="p-3 bg-amber-50/50 rounded-xl border border-amber-200 shadow-2xs">
-          <span className="text-amber-700 text-xs block mb-1">الأسئلة المعطلة (Inactives)</span>
+        <div className="p-4 bg-amber-50/50 rounded-2xl border border-amber-200 shadow-2xs">
+          <span className="text-amber-800 text-xs font-bold block mb-1">الأسئلة المعطلة (Inactives)</span>
           <div className="flex items-baseline gap-2">
-            <strong className="text-xl font-black text-amber-800">{stats.inactives}</strong>
-            <span className="text-[11px] font-semibold text-amber-700">موقوفة مؤقتاً</span>
+            <strong className="text-2xl font-bold font-mono text-amber-800">{stats.inactives}</strong>
+            <span className="text-xs font-semibold text-amber-700">موقوفة مؤقتاً</span>
           </div>
         </div>
 
-        <div className="p-3 bg-slateSubtle-50 rounded-xl border border-slateSubtle-200 shadow-2xs">
-          <span className="text-slateSubtle-500 text-xs block mb-1">الأرشيف (Archivées)</span>
+        <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 shadow-2xs">
+          <span className="text-slate-500 text-xs font-bold block mb-1">الأرشيف (Archivées)</span>
           <div className="flex items-baseline gap-2">
-            <strong className="text-xl font-black text-slateSubtle-700">{stats.archivees}</strong>
-            <span className="text-[11px] font-semibold text-slateSubtle-600">محفوظة</span>
+            <strong className="text-2xl font-bold font-mono text-slate-700">{stats.archivees}</strong>
+            <span className="text-xs font-semibold text-slate-500">محفوظة</span>
           </div>
         </div>
       </div>
 
       {/* Barre de recherche et filtres multicritères */}
-      <div className="p-4 bg-white rounded-xl border border-slateSubtle-200 shadow-2xs space-y-3">
+      <div className="p-4 bg-white rounded-2xl border border-slate-200/90 shadow-2xs space-y-3">
         <div className="flex flex-wrap items-center gap-3">
           <div className="relative flex-1 min-w-[240px]">
-            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slateSubtle-500" />
+            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
             <input
               type="text"
               placeholder="ابحث بالنص العربي، الرمز، أو الكفاءة (ex: Q-LOG-001, فرملة, دورية)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full text-xs pl-9 pr-3 py-2.5 border border-slateSubtle-200 rounded-xl focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie text-slateSubtle-800 transition-all"
+              className="w-full text-sm pl-9 pr-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie text-slate-800 bg-white transition-colors"
             />
           </div>
 
@@ -444,7 +444,7 @@ export default function QuestionBankPage() {
           <select
             value={selectedDomaine}
             onChange={(e) => setSelectedDomaine(e.target.value)}
-            className="text-xs py-2.5 px-3 border border-slateSubtle-200 rounded-xl bg-white text-slateSubtle-800 focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie transition-all max-w-[260px]"
+            className="text-sm py-2.5 px-3 border border-slate-200 rounded-xl bg-white text-slate-800 focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie transition-colors max-w-[260px]"
           >
             <option value="">جميع الفئات العشر ({ARABIC_CATEGORIES.length})</option>
             {ARABIC_CATEGORIES.map(cat => (
@@ -458,7 +458,7 @@ export default function QuestionBankPage() {
           <select
             value={selectedDifficulte}
             onChange={(e) => setSelectedDifficulte(e.target.value)}
-            className="text-xs py-2.5 px-3 border border-slateSubtle-200 rounded-xl bg-white text-slateSubtle-800 focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie transition-all"
+            className="text-sm py-2.5 px-3 border border-slate-200 rounded-xl bg-white text-slate-800 focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie transition-colors"
           >
             <option value="">كافة المستويات (Toutes difficultés)</option>
             <option value="FACILE">سهل (Facile)</option>
@@ -470,7 +470,7 @@ export default function QuestionBankPage() {
           <select
             value={selectedSpecialite}
             onChange={(e) => setSelectedSpecialite(e.target.value)}
-            className="text-xs py-2.5 px-3 border border-slateSubtle-200 rounded-xl bg-white text-slateSubtle-800 focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie transition-all w-full sm:max-w-[220px]"
+            className="text-sm py-2.5 px-3 border border-slate-200 rounded-xl bg-white text-slate-800 focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie transition-colors w-full sm:max-w-[220px]"
           >
             <option value="">كافة التخصصات (Spécialités)</option>
             {SPECIALITES_REFERENTIEL.map(s => (
@@ -482,7 +482,7 @@ export default function QuestionBankPage() {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="text-xs py-2.5 px-3 border border-slateSubtle-200 rounded-xl bg-white text-slateSubtle-800 focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie transition-all"
+            className="text-sm py-2.5 px-3 border border-slate-200 rounded-xl bg-white text-slate-800 focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie transition-colors"
           >
             <option value="ALL">جميع الحالات (Tous les états)</option>
             <option value="ACTIVE">النشطة فقط (Actives)</option>
@@ -492,14 +492,14 @@ export default function QuestionBankPage() {
         </div>
 
         {/* Chips rapides de catégories */}
-        <div className="flex flex-wrap items-center gap-1.5 pt-2 border-t border-slateSubtle-100">
-          <span className="text-[11px] font-bold text-slateSubtle-500 mr-1">الفئات :</span>
+        <div className="flex flex-wrap items-center gap-1.5 pt-2 border-t border-slate-100">
+          <span className="text-xs font-bold text-slate-500 mr-1">الفئات :</span>
           <button
             onClick={() => setSelectedDomaine('')}
-            className={`text-[11px] px-2.5 py-1 rounded-lg border transition-all ${
+            className={`text-xs px-3 py-1 rounded-xl border transition-all cursor-pointer ${
               selectedDomaine === ''
                 ? 'bg-gendarmerie text-white border-gendarmerie font-bold'
-                : 'bg-cream-50 text-slateSubtle-700 border-slateSubtle-200 hover:bg-cream-100'
+                : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
             }`}
           >
             الكل ({questions.length})
@@ -508,10 +508,10 @@ export default function QuestionBankPage() {
             <button
               key={cat.code}
               onClick={() => setSelectedDomaine(cat.code === selectedDomaine ? '' : cat.code)}
-              className={`text-[11px] px-2.5 py-1 rounded-lg border transition-all ${
+              className={`text-xs px-3 py-1 rounded-xl border transition-all cursor-pointer ${
                 selectedDomaine === cat.code
                   ? 'bg-gendarmerie text-white border-gendarmerie font-bold'
-                  : 'bg-cream-50 text-slateSubtle-700 border-slateSubtle-200 hover:bg-cream-100'
+                  : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
               }`}
             >
               {cat.nom} ({cat.count})
@@ -614,20 +614,20 @@ export default function QuestionBankPage() {
 
             {/* Options de réponse affichées */}
             {q.Options && q.Options.length > 0 && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-3">
                 {q.Options.map((opt, oIdx) => (
                   <div
                     key={oIdx}
                     dir="rtl"
-                    className={`p-2.5 rounded-lg border text-xs flex items-center justify-between text-right ${
+                    className={`p-3 rounded-xl border text-sm flex items-center justify-between text-right ${
                       opt.EstCorrecte
-                        ? 'bg-emerald-50/70 border-emerald-300 text-emerald-950 font-semibold'
-                        : 'bg-cream-50/50 border-slateSubtle-200 text-slateSubtle-800'
+                        ? 'bg-emerald-50/70 border-emerald-300 text-emerald-950 font-bold'
+                        : 'bg-slate-50/50 border-slate-200 text-slate-800'
                     }`}
                   >
                     <div className="flex items-center gap-2.5">
-                      <span className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-[11px] flex-shrink-0 ${
-                        opt.EstCorrecte ? 'bg-emerald-600 text-white' : 'bg-cream-200 text-gendarmerie'
+                      <span className={`w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 ${
+                        opt.EstCorrecte ? 'bg-emerald-600 text-white' : 'bg-slate-200 text-gendarmerie'
                       }`}>
                         {opt.LettreOptionArabe || opt.LettreArabe || ['أ', 'ب', 'ج', 'د'][oIdx]}
                       </span>
@@ -635,8 +635,8 @@ export default function QuestionBankPage() {
                     </div>
 
                     {opt.EstCorrecte && (
-                      <span className="text-[10px] font-bold text-emerald-700 flex items-center gap-1 flex-shrink-0 mr-2 bg-emerald-100/80 px-1.5 py-0.5 rounded">
-                        <Check className="w-3 h-3" /> الجواب الصحيح
+                      <span className="text-xs font-bold text-emerald-800 flex items-center gap-1 flex-shrink-0 mr-2 bg-emerald-100 px-2 py-0.5 rounded-full border border-emerald-200">
+                        <Check className="w-3.5 h-3.5" /> الجواب الصحيح
                       </span>
                     )}
                   </div>
@@ -645,14 +645,14 @@ export default function QuestionBankPage() {
             )}
 
             {/* Spécialités concernées et compétences */}
-            <div className="pt-3 flex flex-wrap items-center justify-between gap-3 text-xs border-t border-slateSubtle-100 mt-3">
+            <div className="pt-3 flex flex-wrap items-center justify-between gap-3 text-xs border-t border-slate-100 mt-3">
               <div className="flex flex-wrap items-center gap-1.5">
-                <Award className="w-3.5 h-3.5 text-gold mr-1" />
-                <span className="text-[11px] font-bold text-slateSubtle-600">التخصصات المستهدفة :</span>
+                <Award className="w-4 h-4 text-gold mr-1" />
+                <span className="text-xs font-bold text-slate-600">التخصصات المستهدفة :</span>
                 {Array.isArray(q.SpecialitesPonderation) && q.SpecialitesPonderation.map((sp, idx) => (
                   <span
                     key={idx}
-                    className="text-[10px] font-bold bg-cream-100 text-gendarmerie px-2 py-0.5 rounded border border-slateSubtle-200"
+                    className="text-xs font-bold bg-slate-100 text-gendarmerie px-2.5 py-0.5 rounded-full border border-slate-200"
                   >
                     {sp.specialite} ({sp.poids})
                   </span>
@@ -660,11 +660,11 @@ export default function QuestionBankPage() {
               </div>
 
               <div className="flex items-center gap-3">
-                <span className="text-[11px] text-slateSubtle-600 font-medium">
-                  المعامل (Coef) : <strong className="text-gendarmerie">{q.Coefficient || 1.0}</strong>
+                <span className="text-xs text-slate-600 font-medium">
+                  المعامل (Coef) : <strong className="text-gendarmerie font-bold">{q.Coefficient || 1.0}</strong>
                 </span>
-                <span className="text-[11px] text-slateSubtle-600 font-medium">
-                  النقاط : <strong className="text-gendarmerie">{q.Points || 1} نقطة</strong>
+                <span className="text-xs text-slate-600 font-medium">
+                  النقاط : <strong className="text-gendarmerie font-bold">{q.Points || 1} نقطة</strong>
                 </span>
               </div>
             </div>

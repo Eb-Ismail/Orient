@@ -304,7 +304,7 @@ export default function CommissionsRecruitmentPage() {
             className={`flex items-center gap-2.5 px-4 sm:px-5 py-3 rounded-xl text-xs sm:text-sm font-bold transition cursor-pointer ${
               activeTab === 'dossiers_positifs'
                 ? 'bg-[#153B2B] text-white shadow-xs'
-                : 'text-slate-600 hover:bg-cream-100 hover:text-slate-900'
+                : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
             }`}
           >
             <CheckCircle2 className="w-4 h-4 text-emerald-400" />
@@ -322,7 +322,7 @@ export default function CommissionsRecruitmentPage() {
             className={`flex items-center gap-2.5 px-4 sm:px-5 py-3 rounded-xl text-xs sm:text-sm font-bold transition cursor-pointer ${
               activeTab === 'candidats'
                 ? 'bg-[#153B2B] text-white shadow-xs'
-                : 'text-slate-600 hover:bg-cream-100 hover:text-slate-900'
+                : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
             }`}
           >
             <Users className="w-4 h-4 text-gold" />
@@ -338,7 +338,7 @@ export default function CommissionsRecruitmentPage() {
             className={`flex items-center gap-2.5 px-4 sm:px-5 py-3 rounded-xl text-xs sm:text-sm font-bold transition cursor-pointer ${
               activeTab === 'commissions'
                 ? 'bg-[#153B2B] text-white shadow-xs'
-                : 'text-slate-600 hover:bg-cream-100 hover:text-slate-900'
+                : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
             }`}
           >
             <Shield className="w-4 h-4 text-gold" />

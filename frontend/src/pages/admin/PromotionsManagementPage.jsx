@@ -83,7 +83,7 @@ export default function PromotionsManagementPage() {
 
   return (
     <div className="space-y-6 animate-fade-slide">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slateSubtle-200">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold text-gendarmerie uppercase tracking-wider mb-1">
             <GraduationCap className="w-4 h-4 text-gold" />
@@ -92,7 +92,7 @@ export default function PromotionsManagementPage() {
           <h1 className="text-2xl font-extrabold text-gendarmerie font-serif">
             Gestion des Promotions d'Élèves Gendarmes
           </h1>
-          <p className="text-xs text-slateSubtle-700">
+          <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
             Suivi des cohortes de Rochefort, Chaumont, Montluçon, Châteaulin et Tulle.
           </p>
         </div>
@@ -106,19 +106,19 @@ export default function PromotionsManagementPage() {
         </Button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {promotions.map((promo) => (
-          <Card key={promo.PromotionId} className="p-6 space-y-4 rounded-xl border border-slateSubtle-200 hover:border-gold/50 hover:shadow-card transition-all duration-200">
+          <Card key={promo.PromotionId} className="p-5 sm:p-6 space-y-4 rounded-2xl border border-slate-200/90 hover:border-gold/50 shadow-xs transition-all duration-200">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-mono font-bold text-slateSubtle-700">
+              <span className="text-xs font-mono font-bold text-slate-600">
                 {promo.Code}
               </span>
-              <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold border shadow-2xs ${
+              <span className={`px-2.5 py-1 rounded-full text-xs font-bold border ${
                 promo.Statut === 'ACTIVE'
                   ? 'bg-emerald-50 text-emerald-800 border-emerald-200'
                   : promo.Statut === 'PREPARATION'
                   ? 'bg-amber-50 text-amber-800 border-amber-200'
-                  : 'bg-cream-100 text-slateSubtle-700 border-slateSubtle-200'
+                  : 'bg-slate-100 text-slate-700 border-slate-200'
               }`}>
                 {promo.Statut}
               </span>
@@ -128,23 +128,23 @@ export default function PromotionsManagementPage() {
               <h3 className="text-base font-bold text-gendarmerie">
                 {promo.Nom}
               </h3>
-              <p className="text-xs text-gendarmerie font-medium flex items-center gap-1.5 mt-1">
+              <p className="text-xs text-slate-600 font-medium flex items-center gap-1.5 mt-1">
                 <School className="w-3.5 h-3.5 text-gold" />
                 {promo.Ecole}
               </p>
             </div>
 
-            <p className="text-xs text-slateSubtle-700 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               {promo.Description || "Promotion d'élèves gendarmes sous contrat en formation initiale."}
             </p>
 
-            <div className="pt-3 border-t border-slateSubtle-100 flex items-center justify-between text-xs text-slateSubtle-700">
+            <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
               <span className="flex items-center gap-1">
                 <Users className="w-3.5 h-3.5 text-gold" />
-                Effectif : <strong>{promo.EffectifTotal} élèves</strong>
+                Effectif : <strong className="text-slate-800">{promo.EffectifTotal} élèves</strong>
               </span>
               <span className="flex items-center gap-1">
-                <Calendar className="w-3.5 h-3.5 text-slateSubtle-700" />
+                <Calendar className="w-3.5 h-3.5 text-slate-400" />
                 {new Date(promo.DateFin).getFullYear()}
               </span>
             </div>
@@ -167,33 +167,33 @@ export default function PromotionsManagementPage() {
       >
         <form className="space-y-4">
           <div>
-            <label className="block text-xs font-semibold text-slateSubtle-800 mb-1">Code Promotion</label>
+            <label className="block text-xs font-semibold text-slate-700 mb-1.5">Code Promotion</label>
             <input
               type="text"
               required
               value={newPromo.code}
               onChange={(e) => setNewPromo({ ...newPromo, code: e.target.value })}
               placeholder="ex: PROM-2026-56"
-              className="w-full text-xs p-2.5 border border-slateSubtle-200 rounded-xl focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie transition-all"
+              className="w-full text-sm py-2 px-3.5 border border-slate-200 rounded-xl bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-gendarmerie/20 focus:border-gendarmerie transition-all"
             />
           </div>
           <div>
-            <label className="block text-xs font-semibold text-slateSubtle-800 mb-1">Nom / Parrain de Promotion</label>
+            <label className="block text-xs font-semibold text-slate-700 mb-1.5">Nom / Parrain de Promotion</label>
             <input
               type="text"
               required
               value={newPromo.nom}
               onChange={(e) => setNewPromo({ ...newPromo, nom: e.target.value })}
               placeholder="ex: 56ème Promotion - Gendarme..."
-              className="w-full text-xs p-2.5 border border-slateSubtle-200 rounded-xl focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie transition-all"
+              className="w-full text-sm py-2 px-3.5 border border-slate-200 rounded-xl bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-gendarmerie/20 focus:border-gendarmerie transition-all"
             />
           </div>
           <div>
-            <label className="block text-xs font-semibold text-slateSubtle-800 mb-1">École de Rattachement</label>
+            <label className="block text-xs font-semibold text-slate-700 mb-1.5">École de Rattachement</label>
             <select
               value={newPromo.ecole}
               onChange={(e) => setNewPromo({ ...newPromo, ecole: e.target.value })}
-              className="w-full text-xs p-2.5 border border-slateSubtle-200 rounded-xl bg-white text-slateSubtle-800 focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie transition-all"
+              className="w-full text-sm py-2 px-3.5 border border-slate-200 rounded-xl bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-gendarmerie/20 focus:border-gendarmerie transition-all cursor-pointer"
             >
               <option value="École de Gendarmerie de Rochefort">École de Gendarmerie de Rochefort</option>
               <option value="École de Gendarmerie de Chaumont">École de Gendarmerie de Chaumont</option>

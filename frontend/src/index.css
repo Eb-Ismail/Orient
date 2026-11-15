@@ -119,29 +119,29 @@
 
 /* Cartes de réponse du test QCM - Design Épuré et Militaire */
 .test-option-card {
-  @apply relative flex items-center p-4 md:p-5 rounded-xl border border-slateSubtle-200 bg-white transition-all duration-200 ease-out cursor-pointer hover:border-gold hover:shadow-card hover:-translate-y-0.5 select-none;
+  @apply relative flex items-center p-4 md:p-5 rounded-2xl border border-slate-200 bg-white transition-all duration-200 ease-out cursor-pointer hover:border-gold/60 hover:shadow-sm select-none;
 }
 
 .test-option-card.selected {
-  @apply border-gendarmerie bg-[#F7F8F5] shadow-card ring-2 ring-gold/40 text-[#344256] -translate-y-0.5;
+  @apply border-gendarmerie bg-[#F7F8F5] shadow-sm ring-2 ring-gold/40 text-gendarmerie;
 }
 
 /* Utilitaires Formulaires Modernes */
 .input-military {
-  @apply w-full text-xs px-3.5 py-2.5 rounded-xl border border-slateSubtle-200 bg-white text-slateSubtle-800 placeholder:text-slate-400 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie hover:border-slateSubtle-300;
+  @apply w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder:text-slate-400 transition-colors duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie hover:border-slate-300;
 }
 
 .select-military {
-  @apply w-full text-xs px-3.5 py-2.5 rounded-xl border border-slateSubtle-200 bg-white text-slateSubtle-800 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie hover:border-slateSubtle-300;
+  @apply w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-800 transition-colors duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gendarmerie hover:border-slate-300;
 }
 
 /* Tables Minimalistes & Modernes */
 .table-header-military {
-  @apply bg-cream-100/90 text-slateSubtle-700 text-[11px] font-semibold uppercase tracking-wider border-b border-slateSubtle-200;
+  @apply bg-slate-50 text-slate-700 text-xs font-bold uppercase tracking-wider border-b border-slate-200 py-3.5 px-4;
 }
 
 .table-row-military {
-  @apply hover:bg-cream-50/70 transition-colors duration-150 border-b border-slateSubtle-100;
+  @apply hover:bg-slate-50/80 transition-colors duration-150 border-b border-slate-100 text-sm;
 }
 
 /* Badge Institutionnel */
