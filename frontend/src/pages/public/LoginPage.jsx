@@ -161,17 +161,16 @@ export default function LoginPage() {
   };
 
   return (
-    <div 
-      className="min-h-screen w-full bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center py-6 sm:py-8 px-4 sm:px-6 relative overflow-x-hidden selection:bg-gold/30"
-      style={{
-        backgroundImage: `url('/images/login-bg.webp?v=20261115_final_single')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
+    <div className="min-h-screen w-full relative flex flex-col justify-center items-center py-6 sm:py-8 px-4 sm:px-6 overflow-x-hidden selection:bg-gold/30">
+      {/* Image originale affichée en arrière-plan sans étirement, sans filtres et sans bandes */}
+      <img 
+        src="/images/login-bg.webp?v=original_clean" 
+        alt="Arrière-plan Gendarmerie Royale" 
+        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none -z-10 select-none"
+      />
+
       {/* En-tête officiel centré au-dessus de la carte */}
-      <div className="w-full max-w-md sm:max-w-lg mx-auto text-center mb-2.5 sm:mb-3">
+      <div className="w-full max-w-md sm:max-w-lg mx-auto text-center mb-2.5 sm:mb-3 relative z-10">
         {/* Blason / Écusson Vert Gendarmerie avec bordure or */}
         <div className="mx-auto w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#153B2B] flex items-center justify-center border-2 border-gold/70 shadow-md mb-2">
           <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
@@ -194,7 +193,7 @@ export default function LoginPage() {
       </div>
 
       {/* Carte centrale d'authentification à fond blanc opaque */}
-      <div className="w-full max-w-[480px] sm:max-w-[500px] md:max-w-[520px] mx-auto bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-slate-200/90 p-5 sm:p-7">
+      <div className="w-full max-w-[480px] sm:max-w-[500px] md:max-w-[520px] mx-auto bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-slate-200/90 p-5 sm:p-7 relative z-10">
         
         {/* Sélecteur d'espace sous forme d'onglets (Espace Élève / Encadrement) */}
         <div className="bg-slate-100 p-1 rounded-xl flex items-center gap-1 mb-4">
@@ -515,7 +514,7 @@ export default function LoginPage() {
       </div>
 
       {/* Mention de bas de page */}
-      <div className="mt-4 text-center">
+      <div className="mt-4 text-center relative z-10">
         <p className="text-xs font-semibold text-slate-700">
           Système fiable au service de la Gendarmerie Royale
         </p>
