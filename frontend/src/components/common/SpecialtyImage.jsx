@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Shield } from 'lucide-react';
 
 export default function SpecialtyImage({
@@ -16,6 +16,12 @@ export default function SpecialtyImage({
   const [imgSrc, setImgSrc] = useState(src);
   const [hasError, setHasError] = useState(false);
   const [triedFallback, setTriedFallback] = useState(false);
+
+  useEffect(() => {
+    setImgSrc(src);
+    setHasError(false);
+    setTriedFallback(false);
+  }, [src, fallbackSrc]);
 
   const handleError = () => {
     if (!triedFallback && fallbackSrc && fallbackSrc !== imgSrc) {

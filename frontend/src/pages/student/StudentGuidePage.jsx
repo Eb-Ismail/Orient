@@ -496,8 +496,8 @@ export default function StudentGuidePage() {
             <section className="space-y-4">
               <div className="flex items-center justify-between pb-2 border-b border-slateSubtle-200">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-xl bg-indigo-100 text-indigo-800 flex items-center justify-center font-bold">
-                    <Cpu className="w-4 h-4 text-indigo-700" />
+                  <div className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">
+                    <Cpu className="w-4 h-4 text-emerald-700" />
                   </div>
                   <div>
                     <h2 className="text-lg sm:text-xl font-bold font-serif text-gendarmerie">
@@ -508,24 +508,27 @@ export default function StudentGuidePage() {
                     </p>
                   </div>
                 </div>
-                <span className="px-3 py-1 rounded-full bg-indigo-50 text-indigo-800 text-xs font-mono font-bold border border-indigo-200">
+                <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-mono font-bold border border-emerald-200">
                   {filteredTechnologiques.length} domaines
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                 {filteredTechnologiques.map((dom) => {
                   const Icon = ICON_MAP[dom.Icone || dom.icone] || Cpu;
+                  const domCode = dom.Code || dom.code || '';
+                  const imageFileName = domCode.toLowerCase();
 
                   return (
                     <div
                       key={dom.Code || dom.code}
-                      className="bg-white rounded-2xl border border-slateSubtle-200 shadow-2xs hover:shadow-card hover:border-indigo-400 transition-all duration-200 flex flex-col justify-between overflow-hidden group"
+                      className="bg-white rounded-2xl border border-slateSubtle-200 shadow-2xs hover:shadow-card hover:border-gold/50 transition-all duration-200 flex flex-col justify-between overflow-hidden group"
                     >
                       {/* Image / Visuel Vectoriel */}
-                      <div className="relative w-full aspect-video sm:h-[175px] overflow-hidden bg-slate-900 rounded-t-2xl">
+                      <div className="relative w-full aspect-video sm:h-[180px] overflow-hidden bg-slate-900 rounded-t-2xl">
                         <SpecialtyImage
-                          src={dom.ImageUrl || dom.imageUrl}
+                          src={dom.ImageUrl || dom.imageUrl || `/images/ateliers/${imageFileName}.webp`}
+                          fallbackSrc={`/images/ateliers/${imageFileName}.jpg`}
                           alt={dom.Titre || dom.titre}
                           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 brightness-95"
                           aspectRatio="aspect-video"
@@ -537,9 +540,9 @@ export default function StudentGuidePage() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none" />
 
-                        {/* Badge de code */}
+                        {/* Badge de code officiel */}
                         <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10">
-                          <span className={`px-2.5 py-1 rounded-full text-xs font-extrabold border shadow-xs ${dom.BadgeClass || dom.badgeClass}`}>
+                          <span className={`px-2.5 py-1 rounded-full text-xs font-extrabold border shadow-xs ${dom.BadgeClass || dom.badgeClass || 'bg-emerald-100 text-emerald-800 border-emerald-300'}`}>
                             {dom.Code || dom.code}
                           </span>
                         </div>
@@ -565,40 +568,36 @@ export default function StudentGuidePage() {
                         </div>
                       </div>
 
-                      {/* Contenu textuel */}
+                      {/* Corps de la carte */}
                       <div className="p-4 space-y-3 flex-1 flex flex-col justify-between">
-                        <p className="text-xs sm:text-sm text-slate-600 line-clamp-3 leading-relaxed">
-                          {dom.DescriptionCourte || dom.descriptionCourte}
-                        </p>
+                        <div className="space-y-2">
+                          <p className="text-xs sm:text-sm text-slate-600 line-clamp-2 leading-relaxed">
+                            {dom.DescriptionCourte || dom.descriptionCourte}
+                          </p>
+                        </div>
 
-                        {/* Compétences clés aperçu */}
-                        <div className="pt-2 border-t border-slateSubtle-100 space-y-1.5">
-                          <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block">
-                            Compétences cibles :
-                          </span>
-                          <div className="flex flex-wrap gap-1.5">
-                            {(dom.CompetencesTechniques || dom.competencesTechniques || []).slice(0, 2).map((comp, idx) => (
-                              <span
-                                key={idx}
-                                className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium truncate max-w-full"
-                              >
-                                {comp.split('(')[0]}
-                              </span>
-                            ))}
+                        {/* Métadonnées & cursus (même design que les spécialités) */}
+                        <div className="pt-2 border-t border-slateSubtle-100 flex items-center justify-between text-xs text-slate-600">
+                          <div className="flex items-center gap-1.5 font-medium">
+                            <BookOpen className="w-3.5 h-3.5 text-gold-dark" />
+                            <span>Filière d'appui</span>
+                          </div>
+                          <div className="flex items-center gap-1.5 font-semibold text-emerald-800">
+                            <Award className="w-3.5 h-3.5 text-emerald-700" />
+                            <span>Support spécialisé</span>
                           </div>
                         </div>
                       </div>
 
-                      {/* Bouton Fiche détaillée */}
+                      {/* Bouton d'accès */}
                       <div className="p-4 pt-0">
                         <button
                           type="button"
                           onClick={() => setActiveDomainDetail(dom)}
-                          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-900 hover:bg-indigo-800 text-white font-bold text-xs sm:text-sm shadow-xs transition cursor-pointer"
+                          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gendarmerie hover:bg-[#1A4533] text-white font-bold text-xs sm:text-sm shadow-xs transition group-hover:bg-[#1A4533] cursor-pointer"
                         >
-                          <FileText className="w-4 h-4 text-gold" />
                           <span>Fiche détaillée du domaine</span>
-                          <ChevronRight className="w-4 h-4 text-white/70" />
+                          <ChevronRight className="w-4 h-4 text-gold-light group-hover:translate-x-0.5 transition-transform" />
                         </button>
                       </div>
                     </div>
@@ -615,8 +614,8 @@ export default function StudentGuidePage() {
             <section className="space-y-4">
               <div className="flex items-center justify-between pb-2 border-b border-slateSubtle-200">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold">
-                    <Wrench className="w-4 h-4 text-amber-700" />
+                  <div className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">
+                    <Wrench className="w-4 h-4 text-emerald-700" />
                   </div>
                   <div>
                     <h2 className="text-lg sm:text-xl font-bold font-serif text-gendarmerie">
@@ -627,7 +626,7 @@ export default function StudentGuidePage() {
                     </p>
                   </div>
                 </div>
-                <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-mono font-bold border border-amber-200">
+                <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-mono font-bold border border-emerald-200">
                   {filteredTechniquesLogistiques.length} domaines
                 </span>
               </div>
@@ -635,16 +634,19 @@ export default function StudentGuidePage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                 {filteredTechniquesLogistiques.map((dom) => {
                   const Icon = ICON_MAP[dom.Icone || dom.icone] || Wrench;
+                  const domCode = dom.Code || dom.code || '';
+                  const imageFileName = domCode.toLowerCase();
 
                   return (
                     <div
                       key={dom.Code || dom.code}
-                      className="bg-white rounded-2xl border border-slateSubtle-200 shadow-2xs hover:shadow-card hover:border-amber-400 transition-all duration-200 flex flex-col justify-between overflow-hidden group"
+                      className="bg-white rounded-2xl border border-slateSubtle-200 shadow-2xs hover:shadow-card hover:border-gold/50 transition-all duration-200 flex flex-col justify-between overflow-hidden group"
                     >
                       {/* Image / Visuel Vectoriel */}
-                      <div className="relative w-full aspect-video sm:h-[175px] overflow-hidden bg-slate-900 rounded-t-2xl">
+                      <div className="relative w-full aspect-video sm:h-[180px] overflow-hidden bg-slate-900 rounded-t-2xl">
                         <SpecialtyImage
-                          src={dom.ImageUrl || dom.imageUrl}
+                          src={dom.ImageUrl || dom.imageUrl || `/images/ateliers/${imageFileName}.webp`}
+                          fallbackSrc={`/images/ateliers/${imageFileName}.jpg`}
                           alt={dom.Titre || dom.titre}
                           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 brightness-95"
                           aspectRatio="aspect-video"
@@ -656,9 +658,9 @@ export default function StudentGuidePage() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none" />
 
-                        {/* Badge de code */}
+                        {/* Badge de code officiel */}
                         <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10">
-                          <span className={`px-2.5 py-1 rounded-full text-xs font-extrabold border shadow-xs ${dom.BadgeClass || dom.badgeClass}`}>
+                          <span className={`px-2.5 py-1 rounded-full text-xs font-extrabold border shadow-xs ${dom.BadgeClass || dom.badgeClass || 'bg-emerald-100 text-emerald-800 border-emerald-300'}`}>
                             {dom.Code || dom.code}
                           </span>
                         </div>
@@ -684,40 +686,36 @@ export default function StudentGuidePage() {
                         </div>
                       </div>
 
-                      {/* Contenu textuel */}
+                      {/* Corps de la carte */}
                       <div className="p-4 space-y-3 flex-1 flex flex-col justify-between">
-                        <p className="text-xs sm:text-sm text-slate-600 line-clamp-3 leading-relaxed">
-                          {dom.DescriptionCourte || dom.descriptionCourte}
-                        </p>
+                        <div className="space-y-2">
+                          <p className="text-xs sm:text-sm text-slate-600 line-clamp-2 leading-relaxed">
+                            {dom.DescriptionCourte || dom.descriptionCourte}
+                          </p>
+                        </div>
 
-                        {/* Compétences clés aperçu */}
-                        <div className="pt-2 border-t border-slateSubtle-100 space-y-1.5">
-                          <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block">
-                            Compétences cibles :
-                          </span>
-                          <div className="flex flex-wrap gap-1.5">
-                            {(dom.CompetencesTechniques || dom.competencesTechniques || []).slice(0, 2).map((comp, idx) => (
-                              <span
-                                key={idx}
-                                className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium truncate max-w-full"
-                              >
-                                {comp.split('(')[0]}
-                              </span>
-                            ))}
+                        {/* Métadonnées & cursus (même design que les spécialités) */}
+                        <div className="pt-2 border-t border-slateSubtle-100 flex items-center justify-between text-xs text-slate-600">
+                          <div className="flex items-center gap-1.5 font-medium">
+                            <BookOpen className="w-3.5 h-3.5 text-gold-dark" />
+                            <span>Maintien en condition</span>
+                          </div>
+                          <div className="flex items-center gap-1.5 font-semibold text-emerald-800">
+                            <Award className="w-3.5 h-3.5 text-emerald-700" />
+                            <span>Soutien logistique</span>
                           </div>
                         </div>
                       </div>
 
-                      {/* Bouton Fiche détaillée */}
+                      {/* Bouton d'accès */}
                       <div className="p-4 pt-0">
                         <button
                           type="button"
                           onClick={() => setActiveDomainDetail(dom)}
-                          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#78350F] hover:bg-[#632C0D] text-white font-bold text-xs sm:text-sm shadow-xs transition cursor-pointer"
+                          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gendarmerie hover:bg-[#1A4533] text-white font-bold text-xs sm:text-sm shadow-xs transition group-hover:bg-[#1A4533] cursor-pointer"
                         >
-                          <FileText className="w-4 h-4 text-gold" />
                           <span>Fiche détaillée du domaine</span>
-                          <ChevronRight className="w-4 h-4 text-white/70" />
+                          <ChevronRight className="w-4 h-4 text-gold-light group-hover:translate-x-0.5 transition-transform" />
                         </button>
                       </div>
                     </div>
