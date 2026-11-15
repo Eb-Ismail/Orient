@@ -1,0 +1,75 @@
+# ==============================================================================
+# ORIENT-GR — Configuration d'exclusion Git (.gitignore)
+# ==============================================================================
+
+# Dépendances (Node.js)
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# Builds et artefacts compilés
+.next/
+**/.next/
+dist/
+**/dist/
+build/
+**/build/
+out/
+**/out/
+*.tsbuildinfo
+
+# Fichiers d'environnement et secrets (CRITIQUE : Ne jamais publier)
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+**/.env
+**/.env.local
+**/.env.*.local
+!**/.env.example
+
+# Sauvegardes de bases de données et fichiers de données lourds / sensibles
+*.bak
+*.mdf
+*.ldf
+*.dump
+*.dmp
+*.sql.bak
+*_backup*
+**/backups/
+
+# Logs et répertoires temporaires
+logs/
+*.log
+**/*.log
+scratch/
+**/scratch/
+tmp/
+temp/
+.temp/
+
+# Fichiers système et éditeurs
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.swp
+*.swo
+
+# Tests & Couverture
+coverage/
+.nyc_output/
+.playwright/
+test-results/

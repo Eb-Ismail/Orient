@@ -1,0 +1,13503 @@
+// Banque de 140 questions adaptées pour le service testService
+export const arabicQuestionBank140 = [
+  {
+    "QuestionId": 1,
+    "TestId": 1,
+    "Code": "Q-LOG-001",
+    "Enonce": "إذا كانت جميع دوريات التدخل السريع مجهزة بنظام الاتصال المشفر، وبعض سيارات الدرك الملكي تابعة لفرق التدخل السريع، فما هو الاستنتاج المنطقي الحتمي الصائب؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "بما أن كل دوريات التدخل مجهزة بنظام مشفر، والبعض من سيارات الدرك ينتمي لهذا الصنف، فإن بعض سيارات الدرك على الأقل مجهزة بنظام الاتصال المشفر بالضرورة المنطقية.",
+    "Competences": [
+      "الاستدلال الاستنباطي",
+      "التحليل المنطقي الصارم"
+    ],
+    "CompetencesAssociees": [
+      "الاستدلال الاستنباطي",
+      "التحليل المنطقي الصارم"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-INFO",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 101,
+        "QuestionId": 1,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "جميع سيارات الدرك الملكي بدون استثناء مجهزة بالنظام المشفر",
+        "EnonceOption": "جميع سيارات الدرك الملكي بدون استثناء مجهزة بالنظام المشفر",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 102,
+        "QuestionId": 1,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "بعض سيارات الدرك الملكي على الأقل مجهزة بنظام الاتصال المشفر",
+        "EnonceOption": "بعض سيارات الدرك الملكي على الأقل مجهزة بنظام الاتصال المشفر",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 103,
+        "QuestionId": 1,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "لا توجد أي سيارة تابعة للدرك الملكي تستخدم الاتصال المشفر",
+        "EnonceOption": "لا توجد أي سيارة تابعة للدرك الملكي تستخدم الاتصال المشفر",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 104,
+        "QuestionId": 1,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الاتصال المشفر مخصص فقط للشاحنات اللوجستية الثقيلة",
+        "EnonceOption": "الاتصال المشفر مخصص فقط للشاحنات اللوجستية الثقيلة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 2,
+    "TestId": 1,
+    "Code": "Q-LOG-002",
+    "Enonce": "في سلسلة التوقيت العملياتي التالية للدوريات: (06:00 ، 06:45 ، 07:45 ، 09:00 ، ...)، ما هو توقيت انطلاق الدورية الموالية وفق النمط الزمني المضطرد؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الفوارق الزمنية تتصاعد بمقدار 15 دقيقة في كل خطوة: (+45 دقيقة، ثم +60 دقيقة، ثم +75 دقيقة). الفارق التالي هو +90 دقيقة (ساعة ونصف)، و09:00 + 1h30 = 10:30.",
+    "Competences": [
+      "الاستدلال التتابعي",
+      "الحساب الذهني العملياتي"
+    ],
+    "CompetencesAssociees": [
+      "الاستدلال التتابعي",
+      "الحساب الذهني العملياتي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 201,
+        "QuestionId": 2,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "10:00",
+        "EnonceOption": "10:00",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 202,
+        "QuestionId": 2,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "10:15",
+        "EnonceOption": "10:15",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 203,
+        "QuestionId": 2,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "10:30",
+        "EnonceOption": "10:30",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 204,
+        "QuestionId": 2,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "10:45",
+        "EnonceOption": "10:45",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 3,
+    "TestId": 1,
+    "Code": "Q-LOG-003",
+    "Enonce": "إذا كان الضابط (أ) أقدم رتبة من الرقيب (ب)، والرقيب (ج) أحدث رتبة من الرقيب (ب)، والمساعد (د) أقدم رتبة من الضابط (أ)، فمن هو صاحب الرتبة الأدنى بين الأربعة؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الترتيب التنازلي للأقدمية: المساعد (د) > الضابط (أ) > الرقيب (ب) > الرقيب (ج). إذن الرقيب (ج) هو الأحدث رتبة أي صاحب الرتبة الأدنى في المجموعة.",
+    "Competences": [
+      "الترتيب الهرمي",
+      "الاستنتاج المباشر"
+    ],
+    "CompetencesAssociees": [
+      "الترتيب الهرمي",
+      "الاستنتاج المباشر"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-SEC-ADMIN",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 301,
+        "QuestionId": 3,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "الضابط (أ)",
+        "EnonceOption": "الضابط (أ)",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 302,
+        "QuestionId": 3,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الرقيب (ب)",
+        "EnonceOption": "الرقيب (ب)",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 303,
+        "QuestionId": 3,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الرقيب (ج)",
+        "EnonceOption": "الرقيب (ج)",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 304,
+        "QuestionId": 3,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "المساعد (د)",
+        "EnonceOption": "المساعد (د)",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 4,
+    "TestId": 1,
+    "Code": "Q-LOG-004",
+    "Enonce": "خمسة عناصر درك (س، ع، ص، ق، ر) في طابور تفتيش. العنصر (ص) ليس الأول ولا الأخير. العنصر (س) يسبق (ع) مباشرة. العنصر (ر) في المركز الأخير. إذا كان (ص) يسبق (س)، فمن يقف أولاً؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "AVANCE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "AVANCE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "العنصر (ر) في المركز الخامس والأخير. ترتيب (ص يسبق س يسبق ع) يأخذ 3 مراكز متتالية. بما أن (ص) ليس الأول ولا الأخير، فمكانه هو الثاني، يليه (س) ثالثاً، ثم (ع) رابعاً، و(ر) خامساً. إذن المركز الأول حتماً هو للعنصر (ق).",
+    "Competences": [
+      "حل المشكلات المنطقية المركبة",
+      "الترتيب المكاني"
+    ],
+    "CompetencesAssociees": [
+      "حل المشكلات المنطقية المركبة",
+      "الترتيب المكاني"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-GSI"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 401,
+        "QuestionId": 4,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "العنصر (س)",
+        "EnonceOption": "العنصر (س)",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 402,
+        "QuestionId": 4,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "العنصر (ق)",
+        "EnonceOption": "العنصر (ق)",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 403,
+        "QuestionId": 4,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "العنصر (ص)",
+        "EnonceOption": "العنصر (ص)",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 404,
+        "QuestionId": 4,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "العنصر (ع)",
+        "EnonceOption": "العنصر (ع)",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 5,
+    "TestId": 1,
+    "Code": "Q-LOG-005",
+    "Enonce": "إذا كانت العبارة الشرطية التالية صحيحة: \"إذا تم تفعيل خطة الطوارئ (أ)، يتم وجوباً إغلاق المعبر الحدودي (ب)\". فما هي العبارة المعاكسة إيجابياً (Contraposée) التي تعتبر صحيحة حتماً؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "قاعدة المنطق الصوري: العبارة (إذا تحقق أ فإن ب يتحقق) تكافئ منطقياً (إذا لم يتحقق ب، فإنه حتماً لم يتم تفعيل أ).",
+    "Competences": [
+      "المنطق الرياضي والرمزي",
+      "التحليل الاستدلالي"
+    ],
+    "CompetencesAssociees": [
+      "المنطق الرياضي والرمزي",
+      "التحليل الاستدلالي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-INFO"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 501,
+        "QuestionId": 5,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "إذا تم إغلاق المعبر (ب)، فإن الخطة (أ) قد تم تفعيلها بالضرورة",
+        "EnonceOption": "إذا تم إغلاق المعبر (ب)، فإن الخطة (أ) قد تم تفعيلها بالضرورة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 502,
+        "QuestionId": 5,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "إذا لم يتم إغلاق المعبر الحدودي (ب)، فإن خطة الطوارئ (أ) لم تفعل حتماً",
+        "EnonceOption": "إذا لم يتم إغلاق المعبر الحدودي (ب)، فإن خطة الطوارئ (أ) لم تفعل حتماً",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 503,
+        "QuestionId": 5,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إذا لم تفعل الخطة (أ)، فلن يغلق المعبر (ب) أبداً",
+        "EnonceOption": "إذا لم تفعل الخطة (أ)، فلن يغلق المعبر (ب) أبداً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 504,
+        "QuestionId": 5,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إغلاق المعبر لا يرتبط بأي خطة أمنية مسبقة",
+        "EnonceOption": "إغلاق المعبر لا يرتبط بأي خطة أمنية مسبقة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 6,
+    "TestId": 1,
+    "Code": "Q-LOG-006",
+    "Enonce": "سلسلة أعداد تمثل تشفير الاتصالات التكتيكية: (2 ، 6 ، 18 ، 54 ، ...). ما هو العدد التالي في السلسلة؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "المتتالية تضاعفية بضرب كل حد في العدد 3 (2×3=6 ، 6×3=18 ، 18×3=54). الحد التالي هو 54 × 3 = 162.",
+    "Competences": [
+      "المتتاليات الحسابية",
+      "الاستدلال العددي السريع"
+    ],
+    "CompetencesAssociees": [
+      "المتتاليات الحسابية",
+      "الاستدلال العددي السريع"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 601,
+        "QuestionId": 6,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "108",
+        "EnonceOption": "108",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 602,
+        "QuestionId": 6,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "144",
+        "EnonceOption": "144",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 603,
+        "QuestionId": 6,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "162",
+        "EnonceOption": "162",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 604,
+        "QuestionId": 6,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "180",
+        "EnonceOption": "180",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 7,
+    "TestId": 1,
+    "Code": "Q-LOG-007",
+    "Enonce": "في مستودع للأسلحة، كل البنادق الآلية مرقمة، وبعض الأسلحة المرقمة مصنوعة من سبائك التيتانيوم. ما النتيجة المنطقية التي لا يمكن دحضها؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "لا يمكن الجزم بأن كل البنادق من التيتانيوم ولا بأن التيتانيوم للبنادق فقط، لكن الثابت يقيناً هو أن بعض الأسلحة في المستودع مرقمة.",
+    "Competences": [
+      "الاستقراء المنطقي",
+      "نفي المغالطات الصورية"
+    ],
+    "CompetencesAssociees": [
+      "الاستقراء المنطقي",
+      "نفي المغالطات الصورية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 701,
+        "QuestionId": 7,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "كل بنادق المستودع مصنوعة حتماً من التيتانيوم",
+        "EnonceOption": "كل بنادق المستودع مصنوعة حتماً من التيتانيوم",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 702,
+        "QuestionId": 7,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "يوجد أسلحة مرقمة داخل المستودع",
+        "EnonceOption": "يوجد أسلحة مرقمة داخل المستودع",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 703,
+        "QuestionId": 7,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "لا توجد بنادق مصنوعة من التيتانيوم إطلاقاً",
+        "EnonceOption": "لا توجد بنادق مصنوعة من التيتانيوم إطلاقاً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 704,
+        "QuestionId": 7,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "جميع المسدسات الفردية غير مرقمة",
+        "EnonceOption": "جميع المسدسات الفردية غير مرقمة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 8,
+    "TestId": 1,
+    "Code": "Q-LOG-008",
+    "Enonce": "تستغرق سيارة الدرك ساعة و20 دقيقة لقطع مسافة بسرعة 90 كم/س. كم ستستغرق نفس السيارة لقطع ذات المسافة إذا رفعت سرعتها إلى 120 كم/س؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "ساعة و20 دقيقة = 4/3 ساعة. المسافة = 90 × (4/3) = 120 كم. بالسرعة الجديدة 120 كم/س: الزمن = المسافة / السرعة = 120 / 120 = ساعة واحدة تماماً (60 دقيقة).",
+    "Competences": [
+      "التناسب العكسي",
+      "الحساب التقديري العملياتي"
+    ],
+    "CompetencesAssociees": [
+      "التناسب العكسي",
+      "الحساب التقديري العملياتي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 801,
+        "QuestionId": 8,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "45 دقيقة",
+        "EnonceOption": "45 دقيقة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 802,
+        "QuestionId": 8,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "50 دقيقة",
+        "EnonceOption": "50 دقيقة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 803,
+        "QuestionId": 8,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "60 دقيقة (ساعة واحدة)",
+        "EnonceOption": "60 دقيقة (ساعة واحدة)",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 804,
+        "QuestionId": 8,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "70 دقيقة",
+        "EnonceOption": "70 دقيقة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 9,
+    "TestId": 1,
+    "Code": "Q-LOG-009",
+    "Enonce": "إذا كانت الإشارة اللاسلكية الخضراء تعني \"تقدم\"، والصفراء تعني \"استعد\"، والحمراء تعني \"توقف\". إذا ألغي اللون الأصفر واستعيض عنه بوميض أخضر متقطع، فما هو التفسير المنطقي لوميض أخضر متقطع؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الاستبدال المنطقي المباشر: الوميض الأخضر أخذ دلالة اللون الأصفر الملغى، وبالتالي فدلالته الحتمية هي \"استعد\".",
+    "Competences": [
+      "تأويل الإشارات الميدانية",
+      "الترميز العملياتي"
+    ],
+    "CompetencesAssociees": [
+      "تأويل الإشارات الميدانية",
+      "الترميز العملياتي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GEH",
+      "SPEC-MOTARD"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 901,
+        "QuestionId": 9,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "توقف فوري وشامل",
+        "EnonceOption": "توقف فوري وشامل",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 902,
+        "QuestionId": 9,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "استعد للتحرك أو اتخاذ الموقع",
+        "EnonceOption": "استعد للتحرك أو اتخاذ الموقع",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 903,
+        "QuestionId": 9,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "انسحاب تكتيكي للخلف",
+        "EnonceOption": "انسحاب تكتيكي للخلف",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 904,
+        "QuestionId": 9,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "طلب إمداد بالوقود",
+        "EnonceOption": "طلب إمداد بالوقود",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 10,
+    "TestId": 1,
+    "Code": "Q-LOG-010",
+    "Enonce": "متتالية أشكال هندسية في شاشات الرادار: (مثلث: 3 زوايا ، مربع: 4 زوايا ، مخمس: 5 زوايا ، مسدس: 6 زوايا). إذا كان الشكل التالي يزيد في عدد الأقطار وليس الزوايا فقط، فما هو عدد أضلاع الشكل التالي؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "النمط يتبع بانتظام تسلسل المضلعات المنتظمة بإضافة ضلع واحد في كل خطوة (3، 4، 5، 6)، فالشكل الموالي هو المسبع ذو 7 أضلاع.",
+    "Competences": [
+      "الاستدلال الهندسي",
+      "التعرف على الأنماط"
+    ],
+    "CompetencesAssociees": [
+      "الاستدلال الهندسي",
+      "التعرف على الأنماط"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 1
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 1001,
+        "QuestionId": 10,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "6 أضلاع",
+        "EnonceOption": "6 أضلاع",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1002,
+        "QuestionId": 10,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "7 أضلاع (مسبع)",
+        "EnonceOption": "7 أضلاع (مسبع)",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 1003,
+        "QuestionId": 10,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "8 أضلاع",
+        "EnonceOption": "8 أضلاع",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1004,
+        "QuestionId": 10,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "9 أضلاع",
+        "EnonceOption": "9 أضلاع",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 11,
+    "TestId": 1,
+    "Code": "Q-LOG-011",
+    "Enonce": "ثلاثة حراس (علي، حسن، عمر). أحدهم صادق دائماً، والآخر كاذب دائماً، والثالث يصدق أحياناً. قال علي: \"حسن كاذب\". وقال حسن: \"عمر كاذب\". وقال عمر: \"علي وحسن كاذبان معاً\". من هو الصادق دائماً من بينهم؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "AVANCE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "AVANCE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "لو كان عمر صادقاً لكان علي وحسن كاذبين، لكن قول حسن \"عمر كاذب\" سيكون صادقاً وهذا تناقض. إذن عمر كاذب. بالتالي قول حسن \"عمر كاذب\" صحيح، فحسن هو الصادق وعلي هو المتذبذب.",
+    "Competences": [
+      "مفارقات الصدق والكذب",
+      "التحليل الاستدلالي المتقدم"
+    ],
+    "CompetencesAssociees": [
+      "مفارقات الصدق والكذب",
+      "التحليل الاستدلالي المتقدم"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 1101,
+        "QuestionId": 11,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "علي",
+        "EnonceOption": "علي",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1102,
+        "QuestionId": 11,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "حسن",
+        "EnonceOption": "حسن",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 1103,
+        "QuestionId": 11,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "عمر",
+        "EnonceOption": "عمر",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1104,
+        "QuestionId": 11,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "لا يمكن تحديده رياضياً",
+        "EnonceOption": "لا يمكن تحديده رياضياً",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 12,
+    "TestId": 1,
+    "Code": "Q-LOG-012",
+    "Enonce": "متتالية أرقام مشفرة لمجموعات الدوريات: (100 ، 95 ، 85 ، 70 ، 50 ، ...). ما هو الرقم الآتي في المتتالية؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الفروق تتناقص بتصاعد: (-5 ، -10 ، -15 ، -20). الفارق التالي هو -25. إذن: 50 - 25 = 25.",
+    "Competences": [
+      "الاستنتاج الرياضي",
+      "التحليل المتسلسل"
+    ],
+    "CompetencesAssociees": [
+      "الاستنتاج الرياضي",
+      "التحليل المتسلسل"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 1201,
+        "QuestionId": 12,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "30",
+        "EnonceOption": "30",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1202,
+        "QuestionId": 12,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "25",
+        "EnonceOption": "25",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 1203,
+        "QuestionId": 12,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "20",
+        "EnonceOption": "20",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1204,
+        "QuestionId": 12,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "15",
+        "EnonceOption": "15",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 13,
+    "TestId": 1,
+    "Code": "Q-LOG-013",
+    "Enonce": "إذا كانت جميع المعدات العسكرية الثقيلة تخضع للصيانة الشهرية، وجميع الآليات الخاضعة للصيانة الشهرية تسجل في الدفتر الرسمي، فما هي النتيجة المنطقية المؤكدة؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "قياس منطقي قاطع من الدرجة الأولى (معدات ثقيلة -> صيانة شهرية -> تسجيل بالدفتر). النتيجة: جميع المعدات الثقيلة تسجل في الدفتر الرسمي حتماً.",
+    "Competences": [
+      "القياس المنطقي التام",
+      "قواعد الاستنتاج"
+    ],
+    "CompetencesAssociees": [
+      "القياس المنطقي التام",
+      "قواعد الاستنتاج"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-SEC-ADMIN",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 1301,
+        "QuestionId": 13,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "جميع المعدات العسكرية الثقيلة تسجل في الدفتر الرسمي بالضرورة",
+        "EnonceOption": "جميع المعدات العسكرية الثقيلة تسجل في الدفتر الرسمي بالضرورة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 1302,
+        "QuestionId": 13,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "المعدات الخفيفة فقط هي التي تسجل في الدفتر",
+        "EnonceOption": "المعدات الخفيفة فقط هي التي تسجل في الدفتر",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1303,
+        "QuestionId": 13,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الدفتر الرسمي لا يحتوي على أي معدات ثقيلة",
+        "EnonceOption": "الدفتر الرسمي لا يحتوي على أي معدات ثقيلة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1304,
+        "QuestionId": 13,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الصيانة الشهرية اختيارية وليست إلزامية",
+        "EnonceOption": "الصيانة الشهرية اختيارية وليست إلزامية",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 14,
+    "TestId": 1,
+    "Code": "Q-LOG-014",
+    "Enonce": "خزان وقود بقاعدة عسكرية يفرغ بمعدل ثابت كل 4 ساعات بمقدار الثلث. إذا كان ممتلئاً بالكامل الساعة 08:00 صباحاً، فكم سيتبقى منه في الساعة 16:00 من نفس اليوم؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "AVANCE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "AVANCE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "بين 08:00 و16:00 تمر 8 ساعات (فترتان من 4 ساعات). في الفترة الأولى ينقص الثلث ويتبقى 2/3. في الفترة الثانية ينقص ثلث المتبقي: (2/3) - (1/3 × 2/3) = (2/3) × (2/3) = 4/9.",
+    "Competences": [
+      "الحساب التراكمي النسبي",
+      "التفكير الاستراتيجي في الإمداد"
+    ],
+    "CompetencesAssociees": [
+      "الحساب التراكمي النسبي",
+      "التفكير الاستراتيجي في الإمداد"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PSIG",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 1401,
+        "QuestionId": 14,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "1/3 من الخزان",
+        "EnonceOption": "1/3 من الخزان",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1402,
+        "QuestionId": 14,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "4/9 من الخزان",
+        "EnonceOption": "4/9 من الخزان",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 1403,
+        "QuestionId": 14,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "1/2 من الخزان",
+        "EnonceOption": "1/2 من الخزان",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1404,
+        "QuestionId": 14,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "يفرغ تماماً ويصل للصفر",
+        "EnonceOption": "يفرغ تماماً ويصل للصفر",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 15,
+    "TestId": 1,
+    "Code": "Q-LOG-015",
+    "Enonce": "إذا كانت كلمة \"درك\" تشفر رقمياً بالرمز (4-10-20)، وكلمة \"أمن\" تشفر بالرمز (1-24-25)، فما المبدأ الرياضي المعتمد في توليد هذا التشفير التكتيكي البسيط؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "استبدال كل حرف أبجدي برقمه التسلسلي المباشر في جدول الأبجدية المتفق عليه كنظام مصفوفة إبدال ثابتة.",
+    "Competences": [
+      "التشفير التناظري",
+      "الاستدلال الاستدلالي الرمزي"
+    ],
+    "CompetencesAssociees": [
+      "التشفير التناظري",
+      "الاستدلال الاستدلالي الرمزي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 1501,
+        "QuestionId": 15,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "ضرب عدد حروف الكلمة في تاريخ اليوم",
+        "EnonceOption": "ضرب عدد حروف الكلمة في تاريخ اليوم",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1502,
+        "QuestionId": 15,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "إبدال كل حرف بالرتبة الأبجدية المحددة في مصفوفة التشفير",
+        "EnonceOption": "إبدال كل حرف بالرتبة الأبجدية المحددة في مصفوفة التشفير",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 1503,
+        "QuestionId": 15,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "اختيار الأرقام عشوائياً دون أي قاعدة",
+        "EnonceOption": "اختيار الأرقام عشوائياً دون أي قاعدة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1504,
+        "QuestionId": 15,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "حساب عدد النقاط في كل حرف فقط",
+        "EnonceOption": "حساب عدد النقاط في كل حرف فقط",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 16,
+    "TestId": 1,
+    "Code": "Q-LOG-016",
+    "Enonce": "أربعة صناديق ذخيرة مغلقة تحمل ملصقات خاطئة جميعها: [رصاص 9 مم]، [رصاص 7.62 مم]، [مختلط]. إذا سمح لك بفتح صندوق واحد فقط وأخذ طلقة واحدة منه لمعرفة محتويات جميع الصناديق، فأي صندوق تختار فتحه؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "AVANCE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "AVANCE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "تختار الصندوق الموسوم بـ [مختلط]. بما أن ملصقه خاطئ حتماً، فالطلقة التي تسحبها تحدد نوعه بيقين (إما 9 مم فقط أو 7.62 مم فقط)، وبالتالي ينكشف محتوى الصندوقين الآخرين بالإقصاء المباشر.",
+    "Competences": [
+      "الاستدلال الاستنباطي الإقصائي",
+      "المنطق الرياضي للمعلومة الناقصة"
+    ],
+    "CompetencesAssociees": [
+      "الاستدلال الاستنباطي الإقصائي",
+      "المنطق الرياضي للمعلومة الناقصة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-GSI"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 1601,
+        "QuestionId": 16,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "الصندوق الذي يحمل ملصق [رصاص 9 مم]",
+        "EnonceOption": "الصندوق الذي يحمل ملصق [رصاص 9 مم]",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1602,
+        "QuestionId": 16,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الصندوق الذي يحمل ملصق [مختلط]",
+        "EnonceOption": "الصندوق الذي يحمل ملصق [مختلط]",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 1603,
+        "QuestionId": 16,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الصندوق الذي يحمل ملصق [رصاص 7.62 مم]",
+        "EnonceOption": "الصندوق الذي يحمل ملصق [رصاص 7.62 مم]",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1604,
+        "QuestionId": 16,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "لا يمكن معرفتها دون فتح جميع الصناديق",
+        "EnonceOption": "لا يمكن معرفتها دون فتح جميع الصناديق",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 17,
+    "TestId": 1,
+    "Code": "Q-LOG-017",
+    "Enonce": "إذا علمت أن \"كل حراس الشخصيات يتقنون الرماية الدقيقة\"، و\"بعض المظليين هم حراس شخصيات\"، فما هي النتيجة الحتمية؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "تقاطع مجموعة المظليين مع مجموعة حراس الشخصيات يعني حتماً أن العناصر المشتركة تتقن الرماية الدقيقة، إذن: بعض المظليين يتقنون الرماية الدقيقة.",
+    "Competences": [
+      "المنطق الأرسطي",
+      "العلاقات بين المجموعات"
+    ],
+    "CompetencesAssociees": [
+      "المنطق الأرسطي",
+      "العلاقات بين المجموعات"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GEH",
+      "SPEC-GSI"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 1701,
+        "QuestionId": 17,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "جميع المظليين بدون استثناء يتقنون الرماية الدقيقة",
+        "EnonceOption": "جميع المظليين بدون استثناء يتقنون الرماية الدقيقة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1702,
+        "QuestionId": 17,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "بعض المظليين يتقنون الرماية الدقيقة بالضرورة",
+        "EnonceOption": "بعض المظليين يتقنون الرماية الدقيقة بالضرورة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 1703,
+        "QuestionId": 17,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "لا يوجد أي مظلي يتقن الرماية",
+        "EnonceOption": "لا يوجد أي مظلي يتقن الرماية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1704,
+        "QuestionId": 17,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "حراس الشخصيات لا ينفذون قفزاً مظلياً أبداً",
+        "EnonceOption": "حراس الشخصيات لا ينفذون قفزاً مظلياً أبداً",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 18,
+    "TestId": 1,
+    "Code": "Q-LOG-018",
+    "Enonce": "متتالية أحرف تكتيكية: (أ ، ج ، هـ ، ز ، ...). ما هو الحرف العربي الآتي في النمط؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "النمط يتجاوز حرفاً واحداً في كل خطوة في الترتيب الأبجدي الهجائي: (أ [ب] ج [د] هـ [و] ز [ح] ط). إذن الحرف التالي هو \"ط\".",
+    "Competences": [
+      "المتتاليات الحرفية",
+      "التركيز على التسلسل الأبجدي"
+    ],
+    "CompetencesAssociees": [
+      "المتتاليات الحرفية",
+      "التركيز على التسلسل الأبجدي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 1
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-SEC-ADMIN",
+      "SPEC-INFO"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 1801,
+        "QuestionId": 18,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "ح",
+        "EnonceOption": "ح",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1802,
+        "QuestionId": 18,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "ط",
+        "EnonceOption": "ط",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 1803,
+        "QuestionId": 18,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "ي",
+        "EnonceOption": "ي",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1804,
+        "QuestionId": 18,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "ك",
+        "EnonceOption": "ك",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 19,
+    "TestId": 1,
+    "Code": "Q-LOG-019",
+    "Enonce": "إذا كانت بطارية جهاز الإرسال اللاسلكي تنفد بنسبة 15% كل ساعتين في وضع الاستعداد، وبنسبة 40% كل ساعتين في وضع البث المستمر. إذا بقي الجهاز 4 ساعات في الاستعداد ثم ساعتين في البث، فما النسبة المتبقية من الشحن؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "AVANCE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "AVANCE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الاستعداد: 4 ساعات = فترتان من ساعتين = 2 × 15% = 30%. البث: ساعتان = 40%. إجمالي الاستهلاك = 30% + 40% = 70%. النسبة المتبقية من 100% = 30%.",
+    "Competences": [
+      "الحساب العملياتي للطاقة",
+      "التخطيط اللوجستي"
+    ],
+    "CompetencesAssociees": [
+      "الحساب العملياتي للطاقة",
+      "التخطيط اللوجستي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 1901,
+        "QuestionId": 19,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "20%",
+        "EnonceOption": "20%",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1902,
+        "QuestionId": 19,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "25%",
+        "EnonceOption": "25%",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1903,
+        "QuestionId": 19,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "30%",
+        "EnonceOption": "30%",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 1904,
+        "QuestionId": 19,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "35%",
+        "EnonceOption": "35%",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 20,
+    "TestId": 1,
+    "Code": "Q-LOG-020",
+    "Enonce": "في قضية سرقة، ثبت أن: \"السارق لا يمكن أن يدخل إلا إذا كان يحمل المفتاح الرئيسي أو كسر النافذة\". وتبين بالمعاينة أن النافذة سليمة تماماً ولم تكسر. ما الاستنتاج القضائي المنطقي القطعي؟",
+    "ContexteSituationnel": "الاستدلال المنطقي",
+    "DomaineId": 1,
+    "DomaineCode": "LOGIQUE",
+    "DomaineNom": "الاستدلال المنطقي",
+    "DomaineIntitule": "الاستدلال المنطقي",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "قاعدة الفصل المنطقي (Modus Tollendo Ponens): إما أ أو ب. بما أن ب غير محقق يقيناً (النافذة لم تكسر)، فإن أ محقق حتماً، أي أن السارق كان يحوز المفتاح الرئيسي.",
+    "Competences": [
+      "الاستدلال القضائي المباشر",
+      "إقصاء الفرضيات"
+    ],
+    "CompetencesAssociees": [
+      "الاستدلال القضائي المباشر",
+      "إقصاء الفرضيات"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 2001,
+        "QuestionId": 20,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "السارق قفز من المدخنة العلوية",
+        "EnonceOption": "السارق قفز من المدخنة العلوية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2002,
+        "QuestionId": 20,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "السارق كان يحوز المفتاح الرئيسي بالضرورة",
+        "EnonceOption": "السارق كان يحوز المفتاح الرئيسي بالضرورة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 2003,
+        "QuestionId": 20,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "السرقة لم تقع أصلاً والادعاء كاذب",
+        "EnonceOption": "السرقة لم تقع أصلاً والادعاء كاذب",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2004,
+        "QuestionId": 20,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "النافذة ستكسر في المستقبل",
+        "EnonceOption": "النافذة ستكسر في المستقبل",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 21,
+    "TestId": 1,
+    "Code": "Q-OBS-021",
+    "Enonce": "أثناء معاينة مسرح حادث سير، لاحظ المحقق آثار فرملة متقطعة ومنتظمة على الإسفلت قبل نقطة الاصطدام بـ 15 متراً. إلى ماذا يشير هذا النمط المحدد من الآثار؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الآثار المتقطعة والمنتظمة لفرامل المركبة تعكس عمل نظام منع انغلاق المكابح (ABS) الذي يضغط ويحرر المكابح آلياً بسرعة عالية لتفادي انزلاق العجلات.",
+    "Competences": [
+      "الملاحظة الدقيقة للأدلة الميدانية",
+      "التحليل السببي لحوادث السير"
+    ],
+    "CompetencesAssociees": [
+      "الملاحظة الدقيقة للأدلة الميدانية",
+      "التحليل السببي لحوادث السير"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 2101,
+        "QuestionId": 21,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "السائق كان يضغط على دواسة الفرامل باليد بدل القدم",
+        "EnonceOption": "السائق كان يضغط على دواسة الفرامل باليد بدل القدم",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2102,
+        "QuestionId": 21,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تدخل نظام منع انغلاق المكابح (ABS) في السيارة لتفادي الانزلاق",
+        "EnonceOption": "تدخل نظام منع انغلاق المكابح (ABS) في السيارة لتفادي الانزلاق",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 2103,
+        "QuestionId": 21,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "انفجار الإطار الأمامي الأيمن قبل الاصطدام",
+        "EnonceOption": "انفجار الإطار الأمامي الأيمن قبل الاصطدام",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2104,
+        "QuestionId": 21,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "تعطل نظام توجيه المقود بشكل كلي ومفاجئ",
+        "EnonceOption": "تعطل نظام توجيه المقود بشكل كلي ومفاجئ",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 22,
+    "TestId": 1,
+    "Code": "Q-OBS-022",
+    "Enonce": "عند تفحص رخصة سياقة إلكترونية أثناء مراقبة ليلية بواسطة مصباح الأشعة فوق البنفسجية (UV)، ما هي العلامة الدالة الفورية على أن الوثيقة مشبوهة أو مقلدة؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الوثائق الرسمية تحتوي على أحبار أمنية تتوهج تحت الأشعة فوق البنفسجية وتصميم ميكروغرافي دقيق؛ غياب التوهج الفوسفوري المميز يدل على التزوير المادي.",
+    "Competences": [
+      "كشف التزييف",
+      "التدقيق الوثائقي"
+    ],
+    "CompetencesAssociees": [
+      "كشف التزييف",
+      "التدقيق الوثائقي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 1
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-MOTARD",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 2201,
+        "QuestionId": 22,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "وضوح صورة صاحب الرخصة بلون أسود داكن",
+        "EnonceOption": "وضوح صورة صاحب الرخصة بلون أسود داكن",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2202,
+        "QuestionId": 22,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "غياب الشعارات المتوهجة فوسفورياً تحت الأشعة فوق البنفسجية",
+        "EnonceOption": "غياب الشعارات المتوهجة فوسفورياً تحت الأشعة فوق البنفسجية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 2203,
+        "QuestionId": 22,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "وجود شريحة إلكترونية بارزة على ظهر البطاقة",
+        "EnonceOption": "وجود شريحة إلكترونية بارزة على ظهر البطاقة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2204,
+        "QuestionId": 22,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "كتابة الاسم العائلي بالحروف اللاتينية والعربية معاً",
+        "EnonceOption": "كتابة الاسم العائلي بالحروف اللاتينية والعربية معاً",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 23,
+    "TestId": 1,
+    "Code": "Q-OBS-023",
+    "Enonce": "في رسم بياني تصادمي، انحرفت السيارة (أ) بزاوية 45 درجة نحو اليمين بعد اصطدام جانبي مع شاحنة (ب) التي أكملت مسارها المستقيم دون أي انحراف. ما الاستنتاج الفيزيائي والملاحظاتي المباشر؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "وفق قوانين الديناميكا وكمية الحركة، الكتلة الأكبر للشاحنة وعزم اندفاعها المستمر جعلا طاقتها الحركية تمتص الاصطدام بينما فرضت انحرافاً كبيراً على السيارة الأخف وزناً.",
+    "Competences": [
+      "قراءة المخططات الميدانية",
+      "التحليل الميكانيكي للحوادث"
+    ],
+    "CompetencesAssociees": [
+      "قراءة المخططات الميدانية",
+      "التحليل الميكانيكي للحوادث"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 2301,
+        "QuestionId": 23,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "كتلة وعزم اندفاع الشاحنة كانا أكبر بكثير ففرضا مسار الاصطدام على المركبة الخفيفة",
+        "EnonceOption": "كتلة وعزم اندفاع الشاحنة كانا أكبر بكثير ففرضا مسار الاصطدام على المركبة الخفيفة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 2302,
+        "QuestionId": 23,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "السيارة كانت متوقفة تماماً والشاحنة كانت تسير إلى الخلف",
+        "EnonceOption": "السيارة كانت متوقفة تماماً والشاحنة كانت تسير إلى الخلف",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2303,
+        "QuestionId": 23,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "السائقان فقدا الوعي معاً قبل نقطة التقاطع بـ 500 متر",
+        "EnonceOption": "السائقان فقدا الوعي معاً قبل نقطة التقاطع بـ 500 متر",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2304,
+        "QuestionId": 23,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الاصطدام وقع من الجهة الخلفية للشاحنة وليس الجانبية",
+        "EnonceOption": "الاصطدام وقع من الجهة الخلفية للشاحنة وليس الجانبية",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 24,
+    "TestId": 1,
+    "Code": "Q-OBS-024",
+    "Enonce": "خلال مراقبة محيط منشأة حيوية، أي من السلوكيات التالية يعتبر مؤشراً يقظاً يستدعي الاشتباه والتدقيق الأمني المباشر؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "التوقف المتكرر في زوايا الرؤية الميتة وتدوين مواقع الكاميرات هو نمط استطلاع ورصد تحضيري للأعمال العدائية، وهو مؤشر تهديد يستوجب الفحص الفوري.",
+    "Competences": [
+      "اليقظة الميدانية",
+      "الملاحظة الاستباقية"
+    ],
+    "CompetencesAssociees": [
+      "اليقظة الميدانية",
+      "الملاحظة الاستباقية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GEH",
+      "SPEC-GSI",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 2401,
+        "QuestionId": 24,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "شخص يسأل الحارس عن توقيت فتح مكتب استقبال المرتفقين",
+        "EnonceOption": "شخص يسأل الحارس عن توقيت فتح مكتب استقبال المرتفقين",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2402,
+        "QuestionId": 24,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "مركبة تدور عدة مرات ببطء وتلتقط صوراً لكاميرات المراقبة ونقاط الحراسة",
+        "EnonceOption": "مركبة تدور عدة مرات ببطء وتلتقط صوراً لكاميرات المراقبة ونقاط الحراسة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 2403,
+        "QuestionId": 24,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "موظف يرتدي بذلة العمل ويحمل شارة مهنية واضحة متجهاً للمدخل الرئيسي",
+        "EnonceOption": "موظف يرتدي بذلة العمل ويحمل شارة مهنية واضحة متجهاً للمدخل الرئيسي",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2404,
+        "QuestionId": 24,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "عامل توصيل بضائع يتصل بالزبون لاستلام الطرد",
+        "EnonceOption": "عامل توصيل بضائع يتصل بالزبون لاستلام الطرد",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 25,
+    "TestId": 1,
+    "Code": "Q-OBS-025",
+    "Enonce": "عند فحص صفيحة ترقيم شاحنة نقل دولي، لاحظ الدركي وجود مسامير تثبيت (Rivets) حديثة جداً تختلف عن بقية أجزاء الصفيحة المتقادمة مع أثر طلاء حديث حول الحواف. ما التفسير الأمني الأقرب؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "استبدال مسامير التثبيت الحديثة على صفيحة متآكلة مع وجود طلاء حديث يدل على احتمال قوي لاستبدال الصفيحة مؤخراً لتضليل أجهزة التتبع أو إخفاء هوية المركبة (مركبة مجهولة/مزورة).",
+    "Competences": [
+      "ملاحظة التفاصيل الدقيقة",
+      "مكافحة تهريب وتزوير المركبات"
+    ],
+    "CompetencesAssociees": [
+      "ملاحظة التفاصيل الدقيقة",
+      "مكافحة تهريب وتزوير المركبات"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-MOTARD"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 2501,
+        "QuestionId": 25,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "المركبة خضعت لغسيل روتيني بالبخار في محطة الخدمة",
+        "EnonceOption": "المركبة خضعت لغسيل روتيني بالبخار في محطة الخدمة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2502,
+        "QuestionId": 25,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "احتمال تزوير أو استبدال صفيحة الترقيم لإخفاء الهوية الحقيقية للشاحنة",
+        "EnonceOption": "احتمال تزوير أو استبدال صفيحة الترقيم لإخفاء الهوية الحقيقية للشاحنة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 2503,
+        "QuestionId": 25,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الإطارات الاحتياطية للشاحنة جديدة ولم تستعمل من قبل",
+        "EnonceOption": "الإطارات الاحتياطية للشاحنة جديدة ولم تستعمل من قبل",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2504,
+        "QuestionId": 25,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "السائق يحمل رخصة سياقة من صنف الدرك الملكي حصرياً",
+        "EnonceOption": "السائق يحمل رخصة سياقة من صنف الدرك الملكي حصرياً",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 26,
+    "TestId": 1,
+    "Code": "Q-OBS-026",
+    "Enonce": "في شريط فيديو لكاميرا مراقبة يوثق عملية سطو، أظهرت الساعة الرقمية المسجلة بالفيديو التوقيت 23:45:10، بينما ساعة الحائط المعلقة في الغرفة كانت تشير إلى 23:30:00 ومؤشر الثواني يتحرك بانتظام. ما الذي يجب على المحقق ملاحظته وتدوينه فوراً؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "يجب رصد وتوثيق فارق التوقيت (Offset) بين جهاز التسجيل الرقمي (DVR) والتوقيت الحقيقي المعياري لتصحيح التسلسل الزمني للأحداث وضمان صحة الحجية القضائية.",
+    "Competences": [
+      "التحليل الزمني الجنائي",
+      "توثيق الأدلة الرقمية"
+    ],
+    "CompetencesAssociees": [
+      "التحليل الزمني الجنائي",
+      "توثيق الأدلة الرقمية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-INFO",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 2601,
+        "QuestionId": 26,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "إلغاء الفيديو واعتباره دليلاً باطلاً دون أي إجراءات إضافية",
+        "EnonceOption": "إلغاء الفيديو واعتباره دليلاً باطلاً دون أي إجراءات إضافية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2602,
+        "QuestionId": 26,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "قياس وتوثيق فارق التوقيت بين خادم الكاميرا والتوقيت الواقعي لإعادة ضبط التسلسل الزمني بدقة",
+        "EnonceOption": "قياس وتوثيق فارق التوقيت بين خادم الكاميرا والتوقيت الواقعي لإعادة ضبط التسلسل الزمني بدقة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 2603,
+        "QuestionId": 26,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "افتراض أن الجريمة ارتكبت في اليوم الموالي بالضرورة",
+        "EnonceOption": "افتراض أن الجريمة ارتكبت في اليوم الموالي بالضرورة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2604,
+        "QuestionId": 26,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "اتهام صانع ساعة الحائط بالتواطؤ مع المشتبه بهم",
+        "EnonceOption": "اتهام صانع ساعة الحائط بالتواطؤ مع المشتبه بهم",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 27,
+    "TestId": 1,
+    "Code": "Q-OBS-027",
+    "Enonce": "أثناء تفتيش نظامي لمركبة مشبوهة، لاحظ الدركي أن الصوت الصادر عن النقر الخفيف على الباب الأيمن مكتوم وثقيل جداً مقارنة بالرنين المجوف الطبيعي للباب الأيسر. ما الاستنتاج العملياتي الأبرز؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الصوت المكتوم يدل على وجود مادة أو تجويف محشو داخل هيكل الباب (مثل مخبأ مهيأ للممنوعات أو الأسلحة)، مما يفرض فحصاً دقيقاً ومباشراً للبطانة الداخلية.",
+    "Competences": [
+      "التفتيش الوقائي الفطن",
+      "التمييز الحسي السمعي"
+    ],
+    "CompetencesAssociees": [
+      "التفتيش الوقائي الفطن",
+      "التمييز الحسي السمعي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-GSI",
+      "SPEC-MOTARD"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 2701,
+        "QuestionId": 27,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "احتمال وجود تجويف سري أو حشو بمواد ممنوعة داخل هيكل الباب الأيمن",
+        "EnonceOption": "احتمال وجود تجويف سري أو حشو بمواد ممنوعة داخل هيكل الباب الأيمن",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 2702,
+        "QuestionId": 27,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "أن الباب الأيمن مصنوع من الألومنيوم الخفيف جداً",
+        "EnonceOption": "أن الباب الأيمن مصنوع من الألومنيوم الخفيف جداً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2703,
+        "QuestionId": 27,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "أن زجاج الباب الأيسر مفتوح جزئياً فقط",
+        "EnonceOption": "أن زجاج الباب الأيسر مفتوح جزئياً فقط",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2704,
+        "QuestionId": 27,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "أن مكبر الصوت الداخلي للسيارة يعمل بكفاءة عالية",
+        "EnonceOption": "أن مكبر الصوت الداخلي للسيارة يعمل بكفاءة عالية",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 28,
+    "TestId": 1,
+    "Code": "Q-OBS-028",
+    "Enonce": "صرح الشاهد الأول: \"رأيت شاحنة حمراء مسرعة تجاوزت الإشارة الحمراء عند الساعة 14:00\". بينما صرح الشاهد الثاني في نفس المكان: \"سمعت صوت فرملة حادة في حدود الثانية بعد الزوال ونظرت فرأيت شاحنة زرقاء تصطدم بسيارة\". ما العنصر المشترك المؤكد بين الشهادتين قبل إجراء التحريات المعمقة؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "العنصر المتطابق يقيناً بين الشاهدين هو التوقيت (حوالي الساعة 14:00) ونوع المركبة الكبيرة (شاحنة)، بينما لون الشاحنة وتفاصيل الفعل تباينت وتتطلب دليلاً مادياً فاصلاً.",
+    "Competences": [
+      "مقارنة الشهادات",
+      "استخلاص الحقائق المشتركة"
+    ],
+    "CompetencesAssociees": [
+      "مقارنة الشهادات",
+      "استخلاص الحقائق المشتركة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 2801,
+        "QuestionId": 28,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "لون الشاحنة هو البنفسجي المزدوج",
+        "EnonceOption": "لون الشاحنة هو البنفسجي المزدوج",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2802,
+        "QuestionId": 28,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "وجود شاحنة في مسرح الحدث في حدود الساعة 14:00",
+        "EnonceOption": "وجود شاحنة في مسرح الحدث في حدود الساعة 14:00",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 2803,
+        "QuestionId": 28,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "كلا الشاهدين يقودان نفس نوع السيارة",
+        "EnonceOption": "كلا الشاهدين يقودان نفس نوع السيارة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2804,
+        "QuestionId": 28,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الإشارة الضوئية كانت مطفأة تماماً طوال اليوم",
+        "EnonceOption": "الإشارة الضوئية كانت مطفأة تماماً طوال اليوم",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 29,
+    "TestId": 1,
+    "Code": "Q-OBS-029",
+    "Enonce": "عند معاينة نافذة زجاجية مكسورة بمقذوف في مسرح جريمة، لوحظ أن الفوهة المخروطية المتسعة (Cratère) لثقب الزجاج تقع في الواجهة الداخلية للغرفة والفتحة الضيقة في الواجهة الخارجية. من أي اتجاه تم إطلاق المقذوف؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "في الفيزياء الجنائية لكسور الزجاج، الفوهة المخروطية تتسع دائماً في اتجاه خروج المقذوف (جهة الاندفاع)، مما يعني أن المقذوف اخترق الزجاج من الخارج نحو الداخل.",
+    "Competences": [
+      "البالستيك والمقذوفات الجنائية",
+      "التحليل المادي لكسور الزجاج"
+    ],
+    "CompetencesAssociees": [
+      "البالستيك والمقذوفات الجنائية",
+      "التحليل المادي لكسور الزجاج"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-GSI"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 2901,
+        "QuestionId": 29,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "من داخل الغرفة نحو الخارج",
+        "EnonceOption": "من داخل الغرفة نحو الخارج",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2902,
+        "QuestionId": 29,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "من خارج الغرفة باتجاه الداخل",
+        "EnonceOption": "من خارج الغرفة باتجاه الداخل",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 2903,
+        "QuestionId": 29,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "من السقف عمودياً بزاوية 90 درجة",
+        "EnonceOption": "من السقف عمودياً بزاوية 90 درجة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 2904,
+        "QuestionId": 29,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الكسر ناتج عن تغير درجة الحرارة دون أي مقذوف",
+        "EnonceOption": "الكسر ناتج عن تغير درجة الحرارة دون أي مقذوف",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 30,
+    "TestId": 1,
+    "Code": "Q-OBS-030",
+    "Enonce": "أثناء توقيف سائق في نقطة مراقبة ليلية، لاحظ الدركي ارتعاشاً لا إرادياً في اليدين، وتجنباً مستمراً للتواصل البصري، وصعوبة في ابتلاع الريق، رغم برودة الطقس وسلامة وثائق السيارة الظاهرة. ما هو التصرف الاحترافي المبني على هذه الملاحظة السلوكية؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "هذه العلامات تشير إلى توتر نفسي حاد وخوف شديد غير متناسب مع تفتيش روتيني، مما يوجب رفع مستوى الحذر الأمني وإجراء فحص وتفتيش معمق للسائق والمركبة.",
+    "Competences": [
+      "ملاحظة لغة الجسد",
+      "إدارة المخاطر في التوقيف"
+    ],
+    "CompetencesAssociees": [
+      "ملاحظة لغة الجسد",
+      "إدارة المخاطر في التوقيف"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-GSI",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 3001,
+        "QuestionId": 30,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "السماح له بالمرور فوراً لتفادي تضييع وقته",
+        "EnonceOption": "السماح له بالمرور فوراً لتفادي تضييع وقته",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3002,
+        "QuestionId": 30,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "رفع درجة اليقظة الأمنية وتعميق المراقبة والتفتيش وفق الضوابط القانونية",
+        "EnonceOption": "رفع درجة اليقظة الأمنية وتعميق المراقبة والتفتيش وفق الضوابط القانونية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 3003,
+        "QuestionId": 30,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "مطالبته بتقديم اعتراف فوري بارتكاب جناية قتل",
+        "EnonceOption": "مطالبته بتقديم اعتراف فوري بارتكاب جناية قتل",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3004,
+        "QuestionId": 30,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "تجاهل السلوك ومصادرة رخصة السياقة بصفة نهائية دون سند قانوني",
+        "EnonceOption": "تجاهل السلوك ومصادرة رخصة السياقة بصفة نهائية دون سند قانوني",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 31,
+    "TestId": 1,
+    "Code": "Q-OBS-031",
+    "Enonce": "في مدار طرقي رئيسي يشهد اختناقاً مرورياً حاداً، لاحظ رئيس دورية الدراجين أن السيارات متوقفة داخل الحلقة الدائرية بينما المنافذ المؤدية للمدار خالية من أي حادث. ما السبب الهيكلي المشاهد للاختناق؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "السبب الميداني هو عدم احترام أسبقية المرور لليسار ودخول مركبات إضافية عندما يكون المدار ممتلئاً بالفعل، مما يسبب ما يعرف بـ \"القفل الذاتي للمدار\" (Deadlock).",
+    "Competences": [
+      "تحليل حركة السير والجولان",
+      "التدبير الميداني للازدحام"
+    ],
+    "CompetencesAssociees": [
+      "تحليل حركة السير والجولان",
+      "التدبير الميداني للازدحام"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 3101,
+        "QuestionId": 31,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "دخول مركبات إلى المدار دون وجود منفذ خروج متاح مما أدى لانسداد حلقة التدفق",
+        "EnonceOption": "دخول مركبات إلى المدار دون وجود منفذ خروج متاح مما أدى لانسداد حلقة التدفق",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 3102,
+        "QuestionId": 31,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "أن جميع السيارات نفد منها الوقود في نفس اللحظة",
+        "EnonceOption": "أن جميع السيارات نفد منها الوقود في نفس اللحظة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3103,
+        "QuestionId": 31,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "ارتفاع ضغط الهواء في العجلات لجميع المركبات",
+        "EnonceOption": "ارتفاع ضغط الهواء في العجلات لجميع المركبات",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3104,
+        "QuestionId": 31,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "أن إشارات المرور الخضراء كانت مضاءة في جميع الاتجاهات",
+        "EnonceOption": "أن إشارات المرور الخضراء كانت مضاءة في جميع الاتجاهات",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 32,
+    "TestId": 1,
+    "Code": "Q-OBS-032",
+    "Enonce": "عند استلام كيس أحراز قضائية مغلق بالشمع الأحمر، لاحظ كاتب الضبط أن خيط الربط مقطوع تحت الختم وتم لصقه بالغراء الشفاف بدقة متناهية. ما الإجراء الفوري الواجب اتخاذه وفق قواعد التحري والضبط؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "أي مساس بسلامة الحرز يقطع سلسلة الحيازة القانونية (Chain of Custody). يجب رفض الاستلام الشكلي الفوري، وإنجاز محضر معاينة بالخلل، وإشعار النيابة العامة والقائد التسلسلي فوراً.",
+    "Competences": [
+      "سلسلة حفظ الأدلة الجنائية",
+      "حماية الحجية القانونية للأحراز"
+    ],
+    "CompetencesAssociees": [
+      "سلسلة حفظ الأدلة الجنائية",
+      "حماية الحجية القانونية للأحراز"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 3201,
+        "QuestionId": 32,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "إعادة إغلاق الكيس بختم جديد وتجاهل الملاحظة لتسريع الإجراءات",
+        "EnonceOption": "إعادة إغلاق الكيس بختم جديد وتجاهل الملاحظة لتسريع الإجراءات",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3202,
+        "QuestionId": 32,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "إثبات الواقعة فوراً في محضر رسمي وإشعار النيابة العامة بكسر سلامة الحرز",
+        "EnonceOption": "إثبات الواقعة فوراً في محضر رسمي وإشعار النيابة العامة بكسر سلامة الحرز",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 3203,
+        "QuestionId": 32,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "رمي الحرز في سلة المهملات لعدم صلاحيته",
+        "EnonceOption": "رمي الحرز في سلة المهملات لعدم صلاحيته",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3204,
+        "QuestionId": 32,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "فتح الكيس وتوزيع محتوياته على باقي الزملاء",
+        "EnonceOption": "فتح الكيس وتوزيع محتوياته على باقي الزملاء",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 33,
+    "TestId": 1,
+    "Code": "Q-OBS-033",
+    "Enonce": "أثناء دراسة خريطة طبوغرافية لتطويق فارين في منطقة جبلية وعرة، لاحظ الضابط وادياً جافاً شديد الانحدار يتصل بنقطة عبور معبدة واحدة تفصل بين قريتين. ما الميزة التكتيكية لهذه الملاحظة؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "تحديد نقطة الاختناق الإجبارية (Choke Point) في التضاريس يتيح وضع نقطة مراقبة وكمين حاكم بأقل عدد ممكن من القوات وتأمين قطع خط انسحاب الفارين بفعالية.",
+    "Competences": [
+      "التحليل الطبوغرافي التكتيكي",
+      "التخطيط لعمليات الحصار والتطويق"
+    ],
+    "CompetencesAssociees": [
+      "التحليل الطبوغرافي التكتيكي",
+      "التخطيط لعمليات الحصار والتطويق"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PSIG",
+      "SPEC-GSI"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 3301,
+        "QuestionId": 33,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تحديد \"نقطة اختناق إجبارية\" تتيح إحكام السيطرة والكمين بأقل مجهود عملياتي",
+        "EnonceOption": "تحديد \"نقطة اختناق إجبارية\" تتيح إحكام السيطرة والكمين بأقل مجهود عملياتي",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 3302,
+        "QuestionId": 33,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "ضرورة استخدام طائرات الهليكوبتر فقط لنقل المياه المعدنية",
+        "EnonceOption": "ضرورة استخدام طائرات الهليكوبتر فقط لنقل المياه المعدنية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3303,
+        "QuestionId": 33,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "أن المنطقة صالحة لسباق الدراجات الهوائية السريعة",
+        "EnonceOption": "أن المنطقة صالحة لسباق الدراجات الهوائية السريعة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3304,
+        "QuestionId": 33,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "أن الوادي لا يمكن دخوله إلا في فصل الصيف",
+        "EnonceOption": "أن الوادي لا يمكن دخوله إلا في فصل الصيف",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 34,
+    "TestId": 1,
+    "Code": "Q-OBS-034",
+    "Enonce": "في تتبع آثار أقدام مشتبه به على رمال رطبة، كانت طبعة مقدمة القدم (الأصابع) عميقة جداً وواضحة بينما طبعة الكعب تكاد تكون غير مرئية مع مسافات متباعدة تزيد عن متر بين الخطوات. إلى ماذا تشير هذه الملاحظة الفنية؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "عند الجري السريع (العدو)، يرتكز وزن الجسم بالكامل على مقدمة القدم وتتباعد خطوات الساقين، بخلاف المشي الهادئ الذي يترك أثراً متوازناً وعميقاً في الكعب.",
+    "Competences": [
+      "قص الأثر والتحري الميداني",
+      "تحليل الآثار البيولوجية والحركية"
+    ],
+    "CompetencesAssociees": [
+      "قص الأثر والتحري الميداني",
+      "تحليل الآثار البيولوجية والحركية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 3401,
+        "QuestionId": 34,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "الشخص كان يمشي إلى الخلف ببطء وتأنٍّ",
+        "EnonceOption": "الشخص كان يمشي إلى الخلف ببطء وتأنٍّ",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3402,
+        "QuestionId": 34,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الشخص كان يعدو (يجري) بسرعة عالية أثناء مروره",
+        "EnonceOption": "الشخص كان يعدو (يجري) بسرعة عالية أثناء مروره",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 3403,
+        "QuestionId": 34,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الشخص كان يحمل حمولة ثقيلة جداً على ظهره وهو جالس",
+        "EnonceOption": "الشخص كان يحمل حمولة ثقيلة جداً على ظهره وهو جالس",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3404,
+        "QuestionId": 34,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الأثر يعود لدراجة نارية صغيرة بعجلتين",
+        "EnonceOption": "الأثر يعود لدراجة نارية صغيرة بعجلتين",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 35,
+    "TestId": 1,
+    "Code": "Q-OBS-035",
+    "Enonce": "خلال البحث عن سيارة متورطة في جنحة فرار، عممت غرفة القيادة مواصفات: \"سيارة رمادية رباعية الدفع\". أي من التفاصيل المرصودة التالية يقدم أعلى قيمة تمييزية لتأكيد تحديد المركبة المشبوهة وسط عشرات السيارات الرمادية؟",
+    "ContexteSituationnel": "التحليل والملاحظة",
+    "DomaineId": 2,
+    "DomaineCode": "OBSERVATION",
+    "DomaineNom": "التحليل والملاحظة",
+    "DomaineIntitule": "التحليل والملاحظة",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "العلامات الفريدة التالفة أو المعدلة (مثل كسر محدد بالمرآة الجانبية أو ملصق نادر أو صدمة مميزة) تشكل عناصر تمييز قاطعة لا تتكرر في باقي المركبات من نفس الموديل واللون.",
+    "Competences": [
+      "الملاحظة التمييزية",
+      "التعرف السريع على الأهداف"
+    ],
+    "CompetencesAssociees": [
+      "الملاحظة التمييزية",
+      "التعرف السريع على الأهداف"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PJ",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 3501,
+        "QuestionId": 35,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "أن السيارة تسير على أربع عجلات مطاطية",
+        "EnonceOption": "أن السيارة تسير على أربع عجلات مطاطية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3502,
+        "QuestionId": 35,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "وجود كسر مميز في المرآة الجانبية اليسرى مع ملصق فريد على الزجاج الخلفي",
+        "EnonceOption": "وجود كسر مميز في المرآة الجانبية اليسرى مع ملصق فريد على الزجاج الخلفي",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 3503,
+        "QuestionId": 35,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "وجود مقود دائري داخل مقصورة القيادة",
+        "EnonceOption": "وجود مقود دائري داخل مقصورة القيادة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3504,
+        "QuestionId": 35,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "أن الزجاج الأمامي شفاف ونظيف تماماً",
+        "EnonceOption": "أن الزجاج الأمامي شفاف ونظيف تماماً",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 36,
+    "TestId": 1,
+    "Code": "Q-ATT-036",
+    "Enonce": "أثناء تلقي نداء لاسلكي سريع ومتقطع وسط ضوضاء محرك الدورية: \"الدورية 4... تحرك فوراً إلى النقطة كليو 47... كرر 47 وليس 74... الدعم مطلوب\". ما هي النقطة المحددة بدقة لتوجيه التدخل؟",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الرسالة شددت بوضوح على تصحيح التردد وتفادي الخلط البصري/السمعي المألوف: النقطة المقصودة هي الكيلومتر 47 وليس 74.",
+    "Competences": [
+      "التركيز السمعي الانتقائي",
+      "اليقظة اللاسلكية في الطوارئ"
+    ],
+    "CompetencesAssociees": [
+      "التركيز السمعي الانتقائي",
+      "اليقظة اللاسلكية في الطوارئ"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PSIG",
+      "SPEC-GSI"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 3601,
+        "QuestionId": 36,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "النقطة الكيلومترية 74",
+        "EnonceOption": "النقطة الكيلومترية 74",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3602,
+        "QuestionId": 36,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "النقطة الكيلومترية 47",
+        "EnonceOption": "النقطة الكيلومترية 47",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 3603,
+        "QuestionId": 36,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "النقطة الكيلومترية 147",
+        "EnonceOption": "النقطة الكيلومترية 147",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3604,
+        "QuestionId": 36,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الرجوع إلى مقر القيادة الإقليمية",
+        "EnonceOption": "الرجوع إلى مقر القيادة الإقليمية",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 37,
+    "TestId": 1,
+    "Code": "Q-ATT-037",
+    "Enonce": "خلال نوبة حراسة ليلية ثابتة تمتد لأربع ساعات في موقع معزول، ما هو الإجراء الأنجع للحفاظ على أقصى درجات التركيز الذهني ومقاومة النعاس والشرود؟",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "المسح البصري الدوري لقطاعات الرصد وتغيير وضعية الوقوف مع التنفس العميق ينشط الدورة الدموية ويبقي الحواس في حالة استنفار دائم دون إخلال بالواجب.",
+    "Competences": [
+      "الانتباه المستمر والمقاوم للرتابة",
+      "الانضباط في الحراسة الثابتة"
+    ],
+    "CompetencesAssociees": [
+      "الانتباه المستمر والمقاوم للرتابة",
+      "الانضباط في الحراسة الثابتة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GEH",
+      "SPEC-GSI",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 3701,
+        "QuestionId": 37,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "الجلوس والاسترخاء وإغلاق العينين لبضع دقائق فقط",
+        "EnonceOption": "الجلوس والاسترخاء وإغلاق العينين لبضع دقائق فقط",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3702,
+        "QuestionId": 37,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "المسح البصري النشط للقطاعات وتغيير زوايا المراقبة والتحرك الموضعي المنتظم",
+        "EnonceOption": "المسح البصري النشط للقطاعات وتغيير زوايا المراقبة والتحرك الموضعي المنتظم",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 3703,
+        "QuestionId": 37,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "تصفح مواقع التواصل الاجتماعي على الهاتف الشخصي لطرد الملل",
+        "EnonceOption": "تصفح مواقع التواصل الاجتماعي على الهاتف الشخصي لطرد الملل",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3704,
+        "QuestionId": 37,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "وضع سماعات الأذن لسماع الموسيقى بصوت مرتفع",
+        "EnonceOption": "وضع سماعات الأذن لسماع الموسيقى بصوت مرتفع",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 38,
+    "TestId": 1,
+    "Code": "Q-ATT-038",
+    "Enonce": "أمامك قائمة تتضمن أرقام بطاقات التعريف الوطنية التالية: [AB123456, AB123465, AB123546, AB123456]. كم مرة تكرر الرقم المحدد [AB123456] بالضبط وبشكل متطابق في القائمة؟",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الرقم AB123456 ورد في المركز الأول ثم تكرر بنفس الترتيب في المركز الرابع فقط، أي مرتين بالضبط (العنصر الثاني والثالث فيهما قلب للأرقام 65 و 546).",
+    "Competences": [
+      "التدقيق البصري السريع",
+      "مقارنة المتطابقات الرقمية"
+    ],
+    "CompetencesAssociees": [
+      "التدقيق البصري السريع",
+      "مقارنة المتطابقات الرقمية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-SEC-ADMIN",
+      "SPEC-INFO",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 3801,
+        "QuestionId": 38,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "مرة واحدة فقط",
+        "EnonceOption": "مرة واحدة فقط",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3802,
+        "QuestionId": 38,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "مرتان بالضبط",
+        "EnonceOption": "مرتان بالضبط",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 3803,
+        "QuestionId": 38,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "ثلاث مرات",
+        "EnonceOption": "ثلاث مرات",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3804,
+        "QuestionId": 38,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "أربع مرات متتالية",
+        "EnonceOption": "أربع مرات متتالية",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 39,
+    "TestId": 1,
+    "Code": "Q-ATT-039",
+    "Enonce": "أثناء مراجعة سجل الموقوفين رهن الحراسة النظرية، أي زوج من البيانات التالية يحتوي على خطأ إملائي أو رقمي دقيق يجب تصحيحه فوراً؟",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "في الزوج (ج)، تاريخ نهاية الأجل (14/05) يسبق تاريخ التوقيف (15/05)، وهو خطأ تاريخي منطقي فادح يمس مشروعية التوقيف الإجرائي.",
+    "Competences": [
+      "الانتباه للتفاصيل الدقيقة",
+      "التوثيق الإداري السليم"
+    ],
+    "CompetencesAssociees": [
+      "الانتباه للتفاصيل الدقيقة",
+      "التوثيق الإداري السليم"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-SEC-ADMIN",
+      "SPEC-PJ",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 3901,
+        "QuestionId": 39,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تاريخ الدخول: 10/05/2024 الساعة 10:00 — تاريخ الانتهاء: 12/05/2024 الساعة 10:00",
+        "EnonceOption": "تاريخ الدخول: 10/05/2024 الساعة 10:00 — تاريخ الانتهاء: 12/05/2024 الساعة 10:00",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3902,
+        "QuestionId": 39,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "رقم المحضر: 1420/ج.ج — تاريخ المحضر: 12/05/2024",
+        "EnonceOption": "رقم المحضر: 1420/ج.ج — تاريخ المحضر: 12/05/2024",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 3903,
+        "QuestionId": 39,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "تاريخ التوقيف: 15/05/2024 — تاريخ نهاية الحراسة: 14/05/2024",
+        "EnonceOption": "تاريخ التوقيف: 15/05/2024 — تاريخ نهاية الحراسة: 14/05/2024",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 3904,
+        "QuestionId": 39,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الضابط المشرف: ملازم أول س.م — الوحدة: المركز الترابي",
+        "EnonceOption": "الضابط المشرف: ملازم أول س.م — الوحدة: المركز الترابي",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 40,
+    "TestId": 1,
+    "Code": "Q-ATT-040",
+    "Enonce": "يقود دركي دراجة نارية في موكب رسمي بسرعة 80 كم/س. تتطلب القيادة تقسيم الانتباه (Attention partagée) بين مسار الطريق وحركة كبار الشخصيات. ما هو السلوك الصحيح لتفادي تشتت الانتباه؟",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الانتباه المقسم يعتمد على المسح البصري الديناميكي السريع (الطريق، المرايا، الموكب) مع المحافظة على مسافة أمان ثابتة والتركيز على مسار التوجيه الأساسي لمنع حوادث الاصطدام.",
+    "Competences": [
+      "تقسيم الانتباه الحركي",
+      "التركيز أثناء القيادة التكتيكية"
+    ],
+    "CompetencesAssociees": [
+      "تقسيم الانتباه الحركي",
+      "التركيز أثناء القيادة التكتيكية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-GEH"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 4001,
+        "QuestionId": 40,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "التركيز التام على شاشة الهاتف دون النظر إلى الطريق أمام الدراجة",
+        "EnonceOption": "التركيز التام على شاشة الهاتف دون النظر إلى الطريق أمام الدراجة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4002,
+        "QuestionId": 40,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "المسح البصري التناوبي السريع مع تثبيت مسافة الأمان وتركيز الرؤية المحورية على مسار السير",
+        "EnonceOption": "المسح البصري التناوبي السريع مع تثبيت مسافة الأمان وتركيز الرؤية المحورية على مسار السير",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 4003,
+        "QuestionId": 40,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الالتفات المستمر للخلف طوال فترة السير لمحادثة مرافق الموكب",
+        "EnonceOption": "الالتفات المستمر للخلف طوال فترة السير لمحادثة مرافق الموكب",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4004,
+        "QuestionId": 40,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إغلاق عيني السائق كل 10 ثوانٍ لتفادي جفاف العين",
+        "EnonceOption": "إغلاق عيني السائق كل 10 ثوانٍ لتفادي جفاف العين",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 41,
+    "TestId": 1,
+    "Code": "Q-ATT-041",
+    "Enonce": "أثناء مراقبة أوراق سيارة في نقطة تفتيش، لمح الدركي عبر الرؤية المحيطية (Peripheral vision) حركة سريعة ليد الراكب الخلفي تمتد نحو أسفل المقعد. ما هو رد الفعل الانتباهي والأمني السليم؟",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "حركة اليد المفاجئة لأسفل مقعد مشبوه قد تكون محاولة لسحب سلاح ناري أو إخفاء حرز؛ يجب فوراً إيقاف فحص الأوراق، وأخذ وضعية حماية، وإصدار أمر حازم بإظهار اليدين والتنسيق مع الزميل.",
+    "Competences": [
+      "الرؤية المحيطية واليقظة السريعة",
+      "حماية الذات في التدخلات المباشرة"
+    ],
+    "CompetencesAssociees": [
+      "الرؤية المحيطية واليقظة السريعة",
+      "حماية الذات في التدخلات المباشرة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GSI",
+      "SPEC-PSIG",
+      "SPEC-MOTARD"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 4101,
+        "QuestionId": 41,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "متابعة قراءة أوراق السيارة بهدوء دون أي اكتراث",
+        "EnonceOption": "متابعة قراءة أوراق السيارة بهدوء دون أي اكتراث",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4102,
+        "QuestionId": 41,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الانتقال فوراً لوضع التأهب الأمني، وأمر الراكب بإظهار يديه فوراً، وتنبيه الزميل المرافق",
+        "EnonceOption": "الانتقال فوراً لوضع التأهب الأمني، وأمر الراكب بإظهار يديه فوراً، وتنبيه الزميل المرافق",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 4103,
+        "QuestionId": 41,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الابتسام للراكب والطلب منه مساعدته في البحث تحت الكرسي",
+        "EnonceOption": "الابتسام للراكب والطلب منه مساعدته في البحث تحت الكرسي",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4104,
+        "QuestionId": 41,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الانسحاب التام والفرار من نقطة المراقبة سيراً على الأقدام",
+        "EnonceOption": "الانسحاب التام والفرار من نقطة المراقبة سيراً على الأقدام",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 42,
+    "TestId": 1,
+    "Code": "Q-ATT-042",
+    "Enonce": "في اختبار فحص التركيز الإداري، أي من المتتاليات الآتية تحتوي على عنصر دخيل لا ينتمي لباقي العناصر؟ المتتالية: [محضر معاينة، استدعاء رسمي، بطاقة زيارة، برقية عملياتية، قذيفة هاون]",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "جميع العناصر الأولى هي وثائق ومحررات إدارية وقضائية رسمية، بينما \"قذيفة هاون\" هي ذخيرة حربية مادية وسلاح، وبالتالي هي العنصر الدخيل منطقياً وتصنيفياً.",
+    "Competences": [
+      "الانتباه التصنيفي",
+      "الفصل بين السياقات الإدارية والميدانية"
+    ],
+    "CompetencesAssociees": [
+      "الانتباه التصنيفي",
+      "الفصل بين السياقات الإدارية والميدانية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-SEC-ADMIN",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 4201,
+        "QuestionId": 42,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "محضر معاينة",
+        "EnonceOption": "محضر معاينة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4202,
+        "QuestionId": 42,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "استدعاء رسمي",
+        "EnonceOption": "استدعاء رسمي",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4203,
+        "QuestionId": 42,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "قذيفة هاون",
+        "EnonceOption": "قذيفة هاون",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 4204,
+        "QuestionId": 42,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "برقية عملياتية",
+        "EnonceOption": "برقية عملياتية",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 43,
+    "TestId": 1,
+    "Code": "Q-ATT-043",
+    "Enonce": "أثناء التعامل مع السلاح الفردي، ما هي القاعدة الذهبية الأولى التي تعبر عن الانتباه الأمني الصارم وتمنع إطلاق النار العرضي غير المقصود؟",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "القاعدة الأولى للأمان في الأسلحة: اعتبار السلاح دائماً ملقماً وجاهزاً للإطلاق، وإبقاء الإصبع ممدداً خارج واقي الزناد (Pontet) حتى اتخاذ قرار الرماية الواعي.",
+    "Competences": [
+      "قواعد الأمان والانتباه الصارم للأسلحة",
+      "الانضباط التكتيكي"
+    ],
+    "CompetencesAssociees": [
+      "قواعد الأمان والانتباه الصارم للأسلحة",
+      "الانضباط التكتيكي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GSI",
+      "SPEC-PSIG",
+      "SPEC-GEH",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 4301,
+        "QuestionId": 43,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "إبقاء الإصبع دائماً ممتداً بمحاذاة الهيكل خارج واقي الزناد حتى تحديد الهدف وعزم الإطلاق",
+        "EnonceOption": "إبقاء الإصبع دائماً ممتداً بمحاذاة الهيكل خارج واقي الزناد حتى تحديد الهدف وعزم الإطلاق",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 4302,
+        "QuestionId": 43,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "وضع الإصبع بإحكام على الزناد طوال فترة حمل السلاح والتجول به",
+        "EnonceOption": "وضع الإصبع بإحكام على الزناد طوال فترة حمل السلاح والتجول به",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4303,
+        "QuestionId": 43,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "توجيه فوهة السلاح نحو الزملاء عند التحدث معهم للتأكد من انتباههم",
+        "EnonceOption": "توجيه فوهة السلاح نحو الزملاء عند التحدث معهم للتأكد من انتباههم",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4304,
+        "QuestionId": 43,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "افتراض أن السلاح فارغ دائماً دون الحاجة للتأكد من مخزن الذخيرة",
+        "EnonceOption": "افتراض أن السلاح فارغ دائماً دون الحاجة للتأكد من مخزن الذخيرة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 44,
+    "TestId": 1,
+    "Code": "Q-ATT-044",
+    "Enonce": "استقبل مأمور قاعة المواصلات اتصال استغاثة من مواطنة تصرخ بهستيريا قائلة: \"أنقذوني... بيت عمي قرب وادي إيسيل... سيارة كحلة دهست الدري الصغير ومشت بسرعة... الشارع 14 درب النخلة زنقة 3!\". ما العنوان الدقيق الذي يجب إرسال الدورية إليه فوراً؟",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "التركيز الانتقائي يقتضي فصل الصراخ والمشاعر الجانبية واستخلاص العنوان المحدد جغرافياً: درب النخلة، الشارع 14، زنقة 3، قرب وادي إيسيل.",
+    "Competences": [
+      "الاستماع الفعال واستخلاص البيانات الحرجة",
+      "التركيز في بيئة الضغط النفسي"
+    ],
+    "CompetencesAssociees": [
+      "الاستماع الفعال واستخلاص البيانات الحرجة",
+      "التركيز في بيئة الضغط النفسي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-SEC-ADMIN",
+      "SPEC-PSIG",
+      "SPEC-INFO"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 4401,
+        "QuestionId": 44,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "منزل عمها في أي مدينة مجاورة",
+        "EnonceOption": "منزل عمها في أي مدينة مجاورة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4402,
+        "QuestionId": 44,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "شارع 14، درب النخلة، زنقة 3، قرب وادي إيسيل",
+        "EnonceOption": "شارع 14، درب النخلة، زنقة 3، قرب وادي إيسيل",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 4403,
+        "QuestionId": 44,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "محطة القطار الرئيسية في مركز المدينة",
+        "EnonceOption": "محطة القطار الرئيسية في مركز المدينة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4404,
+        "QuestionId": 44,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "أي دكان تجاري يبيع السيارات الكحلة",
+        "EnonceOption": "أي دكان تجاري يبيع السيارات الكحلة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 45,
+    "TestId": 1,
+    "Code": "Q-ATT-045",
+    "Enonce": "على شاشة رادار قياس السرعة، ظهرت في جزء من الثانية أربع مركبات في نفس المقطع: (السيارة أ: 98 كم/س)، (السيارة ب: 138 كم/س في طريق سرعتها القصوى 100 كم/س)، (الشاحنة ج: 75 كم/س)، (الحافلة د: 85 كم/س). أي مركبة تشكل الهدف الميداني الفوري لدركي الرادار؟",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "المركبة (ب) تسير بسرعة 138 كم/س متجاوزة السرعة القانونية بـ 38 كم/س، وهي المخالفة الجسيمة الفورية التي تستوجب إشعار نقطة التوقيف المتقدمة لاعتراضها.",
+    "Competences": [
+      "سرعة التمييز الإدراكي",
+      "الضبط الراداري لمخالفات السرعة"
+    ],
+    "CompetencesAssociees": [
+      "سرعة التمييز الإدراكي",
+      "الضبط الراداري لمخالفات السرعة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 4501,
+        "QuestionId": 45,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "السيارة (أ)",
+        "EnonceOption": "السيارة (أ)",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4502,
+        "QuestionId": 45,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "السيارة (ب)",
+        "EnonceOption": "السيارة (ب)",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 4503,
+        "QuestionId": 45,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الشاحنة (ج)",
+        "EnonceOption": "الشاحنة (ج)",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4504,
+        "QuestionId": 45,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الحافلة (د)",
+        "EnonceOption": "الحافلة (د)",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 46,
+    "TestId": 1,
+    "Code": "Q-ATT-046",
+    "Enonce": "يقف دركي في صفوف تشكيل حفظ النظام العام أمام حشد غاضب يطلق هتافات واستفزازات لفظية. ما هو السلوك الذي يعكس أعلى درجات التركيز والانضباط العسكري؟",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "في مهام حفظ النظام، يجب الحفاظ على برودة الأعصاب، وتجاهل الاستفزازات اللفظية، والتركيز على تعليمات القائد وحماية التشكيل دون أي ردود أفعال انفعالية فردية.",
+    "Competences": [
+      "ضبط النفس ومقاومة التشتت الاستفزازي",
+      "الانضباط في حفظ النظام"
+    ],
+    "CompetencesAssociees": [
+      "ضبط النفس ومقاومة التشتت الاستفزازي",
+      "الانضباط في حفظ النظام"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PSIG",
+      "SPEC-GEH",
+      "SPEC-GSI"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 4601,
+        "QuestionId": 46,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "الرد على المتظاهرين بنفس الألفاظ الاستفزازية لإثبات القوة الشخصية",
+        "EnonceOption": "الرد على المتظاهرين بنفس الألفاظ الاستفزازية لإثبات القوة الشخصية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4602,
+        "QuestionId": 46,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الحفاظ على الثبات والهدوء التام والتركيز الصارم على حماية الموقع وأوامر قائد التشكيل",
+        "EnonceOption": "الحفاظ على الثبات والهدوء التام والتركيز الصارم على حماية الموقع وأوامر قائد التشكيل",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 4603,
+        "QuestionId": 46,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الاندفاع الفردي نحو الحشد لضرب أول شخص يصرخ",
+        "EnonceOption": "الاندفاع الفردي نحو الحشد لضرب أول شخص يصرخ",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4604,
+        "QuestionId": 46,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "مغادرة الصف والعودة إلى الشاحنة لشرب الشاي",
+        "EnonceOption": "مغادرة الصف والعودة إلى الشاحنة لشرب الشاي",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 47,
+    "TestId": 1,
+    "Code": "Q-ATT-047",
+    "Enonce": "خلال الجرد اليومي لذخيرة مستودع الأسلحة (Armurerie)، يحتوي كل صندوق ذخيرة على 50 طلقة. إذا كان السجل يسجل استلام 10 صناديق كاملة وخرجت 3 دوريات كل دورية استلمت مخزنين بكل مخزن 15 طلقة، فكم طلقة يجب أن توجد بالتمام والكمال في المستودع بعد الجرد؟",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "إجمالي الرصيد المستلم: 10 صناديق × 50 طلقة = 500 طلقة. الذخيرة المصروفة: 3 دوريات × (2 مخزن × 15) = 3 × 30 = 90 طلقة. الرصيد المتبقي بدقة: 500 - 90 = 410 طلقات.",
+    "Competences": [
+      "الحساب العملياتي الدقيق",
+      "اليقظة في تدبير الذخيرة الحية"
+    ],
+    "CompetencesAssociees": [
+      "الحساب العملياتي الدقيق",
+      "اليقظة في تدبير الذخيرة الحية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-SEC-ADMIN",
+      "SPEC-PSIG",
+      "SPEC-GSI"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 4701,
+        "QuestionId": 47,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "400 طلقة",
+        "EnonceOption": "400 طلقة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4702,
+        "QuestionId": 47,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "410 طلقات بالضبط",
+        "EnonceOption": "410 طلقات بالضبط",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 4703,
+        "QuestionId": 47,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "420 طلقة",
+        "EnonceOption": "420 طلقة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4704,
+        "QuestionId": 47,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "380 طلقة",
+        "EnonceOption": "380 طلقة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 48,
+    "TestId": 1,
+    "Code": "Q-ATT-048",
+    "Enonce": "أثناء تأمين تجمع جماهيري حاشد، أي من العلامات الجسدية التالية يمثل خطراً مستتراً يجب أن يلفت انتباه المراقب الأمني فوراً؟",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "ارتداء معطف شتوي ثقيل جداً في يوم صيفي حار مع تثبيت اليد تحت الإبط يشكل شذوذاً بيئياً وسلوكياً صريحاً (Anomalie comportementale) يشير لاحتمال حمل سلاح أو جسم محظور.",
+    "Competences": [
+      "الانتباه للمخاطر الخفية في التجمعات",
+      "الملاحظة الأمنية الوقائية"
+    ],
+    "CompetencesAssociees": [
+      "الانتباه للمخاطر الخفية في التجمعات",
+      "الملاحظة الأمنية الوقائية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GSI",
+      "SPEC-GEH",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 4801,
+        "QuestionId": 48,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "شخص يلوح بعلم وطني ويهتف بحماس",
+        "EnonceOption": "شخص يلوح بعلم وطني ويهتف بحماس",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4802,
+        "QuestionId": 48,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "شخص يرتدي معطفاً سميكاً ومغلقاً في يوم صيفي شديد الحرارة ويده اليمنى ثابتة تحت المعطف",
+        "EnonceOption": "شخص يرتدي معطفاً سميكاً ومغلقاً في يوم صيفي شديد الحرارة ويده اليمنى ثابتة تحت المعطف",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 4803,
+        "QuestionId": 48,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "عائلة تتناول المثلجات بجانب الرصيف",
+        "EnonceOption": "عائلة تتناول المثلجات بجانب الرصيف",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4804,
+        "QuestionId": 48,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "مصور صحفي يحمل كاميرا معتمدة ببطاقة رسمية واضحة",
+        "EnonceOption": "مصور صحفي يحمل كاميرا معتمدة ببطاقة رسمية واضحة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 49,
+    "TestId": 1,
+    "Code": "Q-ATT-049",
+    "Enonce": "في مهمة خفر ونقل معتقلين خطيرين لمسافة طويلة تزيد عن 6 ساعات بالسيارة، متى تبدأ مؤشرات هبوط التركيز الذهني الخطيرة بالظهور وكيف تتم معالجتها ميدانياً؟",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الدراسات تثبت انخفاض التركيز بعد ساعتين من القيادة المتواصلة؛ الإجراء المهني هو التناوب بين عناصر الدورية والتوقف الأمني المخطط له في نقط دركية مؤمنة.",
+    "Competences": [
+      "تدبير الإجهاد في المهام الحساسة",
+      "الحفاظ على اليقظة العملياتية"
+    ],
+    "CompetencesAssociees": [
+      "تدبير الإجهاد في المهام الحساسة",
+      "الحفاظ على اليقظة العملياتية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PSIG",
+      "SPEC-MOTARD",
+      "SPEC-GSI"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 4901,
+        "QuestionId": 49,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "التركيز لا ينخفض أبداً مهما طالت المدة إذا كان الدركي شجاعاً",
+        "EnonceOption": "التركيز لا ينخفض أبداً مهما طالت المدة إذا كان الدركي شجاعاً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4902,
+        "QuestionId": 49,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "يبدأ الانخفاض بعد ساعتين من السياقة المتواصلة، ويجب التناوب على القيادة والتوقف في نقطة دركية مؤمنة",
+        "EnonceOption": "يبدأ الانخفاض بعد ساعتين من السياقة المتواصلة، ويجب التناوب على القيادة والتوقف في نقطة دركية مؤمنة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 4903,
+        "QuestionId": 49,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "فتح النوافذ وقيادة السيارة بأقصى سرعة ممكنة لإنهاء المهمة في ساعة واحدة",
+        "EnonceOption": "فتح النوافذ وقيادة السيارة بأقصى سرعة ممكنة لإنهاء المهمة في ساعة واحدة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 4904,
+        "QuestionId": 49,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إعطاء مقود السيارة للموقوف ليقود السيارة تحت مراقبة الدورية",
+        "EnonceOption": "إعطاء مقود السيارة للموقوف ليقود السيارة تحت مراقبة الدورية",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 50,
+    "TestId": 1,
+    "Code": "Q-ATT-050",
+    "Enonce": "خلال تمشيط ليلي لغابة مشبوهة بواسطة مصابيح كاشفة، أي حركة بصرية يجب أن تكون أولوية الانتباه لدى الرامي الأمامي في فريق التدخل؟",
+    "ContexteSituationnel": "التركيز والانتباه",
+    "DomaineId": 3,
+    "DomaineCode": "ATTENTION",
+    "DomaineNom": "التركيز والانتباه",
+    "DomaineIntitule": "التركيز والانتباه",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "في بيئة منخفضة الإضاءة، حركة الأغصان أو الوميض الفجائي على مستوى ارتفاع الإنسان أو حركة الظلال المتعارضة مع الريح هي مؤشر التهديد الفوري الذي يحدد تموضع الخصم.",
+    "Competences": [
+      "الانتباه الراداري التكتيكي",
+      "الرماية والتمييز في الظلام"
+    ],
+    "CompetencesAssociees": [
+      "الانتباه الراداري التكتيكي",
+      "الرماية والتمييز في الظلام"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 1
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GSI",
+      "SPEC-PSIG",
+      "SPEC-GEH"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 5001,
+        "QuestionId": 50,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "متابعة حركة النجوم في السماء للتأكد من حالة الطقس",
+        "EnonceOption": "متابعة حركة النجوم في السماء للتأكد من حالة الطقس",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5002,
+        "QuestionId": 50,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "رصد أي انكسار مفاجئ للأغصان أو انعكاس ضوئي شاذ أو حركة ظل تتعارض مع اتجاه الرياح الطبيعية",
+        "EnonceOption": "رصد أي انكسار مفاجئ للأغصان أو انعكاس ضوئي شاذ أو حركة ظل تتعارض مع اتجاه الرياح الطبيعية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 5003,
+        "QuestionId": 50,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "التركيز التام على حذاء الدركي للتأكد من عدم اتساخه بالطين",
+        "EnonceOption": "التركيز التام على حذاء الدركي للتأكد من عدم اتساخه بالطين",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5004,
+        "QuestionId": 50,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إطفاء جميع الكشافات والجلوس للنوم حتى بزوغ شمس الصباح",
+        "EnonceOption": "إطفاء جميع الكشافات والجلوس للنوم حتى بزوغ شمس الصباح",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 51,
+    "TestId": 1,
+    "Code": "Q-DEC-051",
+    "Enonce": "وصلت دورية درك ملكي أولاً إلى مسرح حادث سير خطير على طريق سيار مظلم، حيث توجد سيارة محطمة بوسط الطريق مع مصاب بداخلها وشاحنات مسرعة قادمة. ما هو القرار القيادي والعملياتي الأول الذي يجب تنفيذه فوراً؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "القاعدة الذهبية الميدانية (حماية - إشعار - إنقاذ PAS): تأمين المسرح بوضع إشارات التحذير الضوئية والمثلثة لمسافة كافية لمنع حادث تصادمي متسلسل، ثم طلب الإسعاف وتقديم الإسعافات.",
+    "Competences": [
+      "ترتيب الأولويات في الطوارئ",
+      "اتخاذ القرار تحت الضغط الشديد"
+    ],
+    "CompetencesAssociees": [
+      "ترتيب الأولويات في الطوارئ",
+      "اتخاذ القرار تحت الضغط الشديد"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PSIG",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 5101,
+        "QuestionId": 51,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "البدء الفوري في استجواب المصاب داخل السيارة وتحرير محضر المخالفة",
+        "EnonceOption": "البدء الفوري في استجواب المصاب داخل السيارة وتحرير محضر المخالفة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5102,
+        "QuestionId": 51,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تأمين وحماية مكان الحادث بتشوير تحذيري عاجل ومسافة أمان لمنع وقوع حوادث دهس متسلسلة",
+        "EnonceOption": "تأمين وحماية مكان الحادث بتشوير تحذيري عاجل ومسافة أمان لمنع وقوع حوادث دهس متسلسلة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 5103,
+        "QuestionId": 51,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "سحب السيارة المحطمة فوراً بواسطة حبل يدوي دون تشوير ضوئي",
+        "EnonceOption": "سحب السيارة المحطمة فوراً بواسطة حبل يدوي دون تشوير ضوئي",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5104,
+        "QuestionId": 51,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "مغادرة المكان والذهاب للبحث عن رافعة خاصة",
+        "EnonceOption": "مغادرة المكان والذهاب للبحث عن رافعة خاصة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 52,
+    "TestId": 1,
+    "Code": "Q-DEC-052",
+    "Enonce": "أثناء توقيف مخالف، بدأ السائق بالصراخ وإثارة الفوضى واستفزاز المارة للتجمهر حول الدورية، مدعياً تعرضه للظلم بهدف إرباك رجال الدرك. ما القرار الحكيم والاحترافي لحل هذه الأزمة؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "التصرف المهني يعتمد على امتصاص الغضب، وتهدئة النبرة، وعزل الشخص عن الفضوليين، وطلب تعزيز إذا لزم، وتطبيق القانون بصرامة وهدوء دون الانجرار للاستفزاز.",
+    "Competences": [
+      "إدارة النزاعات والمواقف المتوترة",
+      "الهدوء والسيطرة الميدانية"
+    ],
+    "CompetencesAssociees": [
+      "إدارة النزاعات والمواقف المتوترة",
+      "الهدوء والسيطرة الميدانية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PSIG",
+      "SPEC-MOTARD",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 5201,
+        "QuestionId": 52,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "مبادلته الصراخ واستعمال العنف الجسدي الفوري أمام الجمهور",
+        "EnonceOption": "مبادلته الصراخ واستعمال العنف الجسدي الفوري أمام الجمهور",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5202,
+        "QuestionId": 52,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الحفاظ على الهدوء والصرامة، وإبعاد الفضوليين، وتطبيق المساطر القانونية بثبات ودون انفعال",
+        "EnonceOption": "الحفاظ على الهدوء والصرامة، وإبعاد الفضوليين، وتطبيق المساطر القانونية بثبات ودون انفعال",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 5203,
+        "QuestionId": 52,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "تمزيق وثائق السائق وتركه يغادر دون تحرير أي مخالفة",
+        "EnonceOption": "تمزيق وثائق السائق وتركه يغادر دون تحرير أي مخالفة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5204,
+        "QuestionId": 52,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الاستسلام لمطالبه والاعتذار له أمام المارة تفادياً للإحراج",
+        "EnonceOption": "الاستسلام لمطالبه والاعتذار له أمام المارة تفادياً للإحراج",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 53,
+    "TestId": 1,
+    "Code": "Q-DEC-053",
+    "Enonce": "اخترقت سيارة مشبوهة تسير بسرعة جنونية حاجزاً دركياً متسببة في تحطيم السلاسل المسمارية دون إصابة العناصر، وفرت هاربة في اتجاه طريق سريع. ما القرار القيادي المتوافق مع قواعد استخدام السلاح والتدرج الأمني؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "لا يجوز إطلاق النار على سيارة تبتعد لمجرد الفرار إذا لم يعد هناك خطر حال ومباشر على الحياة؛ القرار الصائب هو التعميم اللاسلكي الفوري، ونشر خطة تطويق عبر النقط الموالية.",
+    "Competences": [
+      "اتخاذ القرار التكتيكي الحاسم",
+      "قواعد استخدام السلاح الوظيفي"
+    ],
+    "CompetencesAssociees": [
+      "اتخاذ القرار التكتيكي الحاسم",
+      "قواعد استخدام السلاح الوظيفي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GSI",
+      "SPEC-PJ",
+      "SPEC-MOTARD",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 5301,
+        "QuestionId": 53,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "إطلاق وابل عشوائي من الرصاص على زجاج السيارة الخلفي أثناء ابتعادها في الظلام",
+        "EnonceOption": "إطلاق وابل عشوائي من الرصاص على زجاج السيارة الخلفي أثناء ابتعادها في الظلام",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5302,
+        "QuestionId": 53,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "التعميم اللاسلكي الفوري لمواصفات المركبة وتنسيق خطة محاصرة وتطويق مع المراكز المجاورة",
+        "EnonceOption": "التعميم اللاسلكي الفوري لمواصفات المركبة وتنسيق خطة محاصرة وتطويق مع المراكز المجاورة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 5303,
+        "QuestionId": 53,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "تجاهل الحادث تماماً واعتباره أمراً اعتيادياً لا يستدعي المتابعة",
+        "EnonceOption": "تجاهل الحادث تماماً واعتباره أمراً اعتيادياً لا يستدعي المتابعة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5304,
+        "QuestionId": 53,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "مغادرة الحاجز دون إشعار القيادة للبحث العشوائي في الشوارع الفرعية",
+        "EnonceOption": "مغادرة الحاجز دون إشعار القيادة للبحث العشوائي في الشوارع الفرعية",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 54,
+    "TestId": 1,
+    "Code": "Q-DEC-054",
+    "Enonce": "كانت دورية متجهة لتوقيف مشتبه به في سرقة متجر، وأثناء سيرها عاينت طفلاً صغيراً صدمته دراجة نارية وهو ملقى على حافة الطريق ينزف في غياب أي مسعف. كيف يتم البت في هذا التعارض العملياتي؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "في فلسفة العمل الأمني والقانوني، الحفاظ على الحياة البشرية وإنقاذ الأرواح المعرضة للهلاك له الأولوية المطلقة على أي مهمة مادية؛ مع إشعار القاعة لتوجيه دورية أخرى للسرقة.",
+    "Competences": [
+      "الموازنة الإنسانية والعملياتية",
+      "الأولوية لإنقاذ الأرواح"
+    ],
+    "CompetencesAssociees": [
+      "الموازنة الإنسانية والعملياتية",
+      "الأولوية لإنقاذ الأرواح"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PSIG",
+      "SPEC-PJ",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 5401,
+        "QuestionId": 54,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تجاهل الطفل ومتابعة الطريق لتوقيف سارق المتجر مهما كلف الأمر",
+        "EnonceOption": "تجاهل الطفل ومتابعة الطريق لتوقيف سارق المتجر مهما كلف الأمر",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5402,
+        "QuestionId": 54,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "التوقف الفوري لإسعاف الطفل وإنقاذ حياته وإشعار القاعة لتحويل مهمة السرقة لدورية أخرى",
+        "EnonceOption": "التوقف الفوري لإسعاف الطفل وإنقاذ حياته وإشعار القاعة لتحويل مهمة السرقة لدورية أخرى",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 5403,
+        "QuestionId": 54,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "معاتبة الطفل على خروجه من المنزل ثم استكمال المسار",
+        "EnonceOption": "معاتبة الطفل على خروجه من المنزل ثم استكمال المسار",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5404,
+        "QuestionId": 54,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الانتظار في مكان الحادث دون تقديم أي مساعدة حتى قدوم والدي الطفل",
+        "EnonceOption": "الانتظار في مكان الحادث دون تقديم أي مساعدة حتى قدوم والدي الطفل",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 55,
+    "TestId": 1,
+    "Code": "Q-DEC-055",
+    "Enonce": "تدخلت دورية لفض شجار دامٍ بين جيران، حيث يحمل أحد الأطراف سكيناً مهدداً بالطعن والطرف الآخر ممسك بعصا خشبية غليظة وسط صراخ عائلاتهم. ما هو التسلسل التكتيكي الحاسم لحل النزاع؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "التسلسل: 1- فرض مسافة أمان وتوجيه إنذار صارم بإلقاء الأسلحة، 2- الفصل الجسدي بين الخصمين، 3- شل حركة المعتدي ونزع السلاح، 4- حجز الأسلحة وفتح تحقيق قضائي.",
+    "Competences": [
+      "إدارة المواجهات المسلحة الخفيفة",
+      "السيطرة الميدانية الفورية"
+    ],
+    "CompetencesAssociees": [
+      "إدارة المواجهات المسلحة الخفيفة",
+      "السيطرة الميدانية الفورية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GSI",
+      "SPEC-PSIG",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 5501,
+        "QuestionId": 55,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "الدخول وسط الشجار بالأيدي العارية دون تقييم المخاطر أو إنذار",
+        "EnonceOption": "الدخول وسط الشجار بالأيدي العارية دون تقييم المخاطر أو إنذار",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5502,
+        "QuestionId": 55,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "فرض مسافة أمان، الإنذار الحازم بإلقاء الأسلحة، شل حركة حامل السلاح، وفصل الأطراف",
+        "EnonceOption": "فرض مسافة أمان، الإنذار الحازم بإلقاء الأسلحة، شل حركة حامل السلاح، وفصل الأطراف",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 5503,
+        "QuestionId": 55,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "تشجيع أحد الأطراف على ضرب الآخر لإنهاء الخلاف بسرعة",
+        "EnonceOption": "تشجيع أحد الأطراف على ضرب الآخر لإنهاء الخلاف بسرعة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5504,
+        "QuestionId": 55,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "تصوير الشجار بالهاتف ونشره على الإنترنت لطلب آراء الجمهور",
+        "EnonceOption": "تصوير الشجار بالهاتف ونشره على الإنترنت لطلب آراء الجمهور",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 56,
+    "TestId": 1,
+    "Code": "Q-DEC-056",
+    "Enonce": "أثناء دورية استطلاعية في منطقة قروية نائية ليلاً، تعطل محرك سيارة الدورية تماماً مع انقطاع تغطية أجهزة الاتصال اللاسلكي وشبكة الهاتف في المنخفض الجغرافي. ما هو القرار الأنسب لمعالجة الموقف؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "تأمين المركبة والسلاح أولاً، وتفادي تفرق العناصر، ثم الصعود التكتيكي المنظم لمرتفع جغرافي قريب لاستعادة التغطية اللاسلكية وإبلاغ القيادة ببيانات الموقع والعطل بدقة.",
+    "Competences": [
+      "التصرف في حالات الانعزال والخلل الفني",
+      "التدبير الأمني للمخاطر"
+    ],
+    "CompetencesAssociees": [
+      "التصرف في حالات الانعزال والخلل الفني",
+      "التدبير الأمني للمخاطر"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PSIG",
+      "SPEC-INFO",
+      "SPEC-MOTARD"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 5601,
+        "QuestionId": 56,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "ترك السيارة والسلاح في الخلاء والمشي الفردي العشوائي نحو وجهات مجهولة",
+        "EnonceOption": "ترك السيارة والسلاح في الخلاء والمشي الفردي العشوائي نحو وجهات مجهولة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5602,
+        "QuestionId": 56,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تأمين السيارة، بقاء عنصرين معاً، والصعود التكتيكي لمرتفع قريب لاستعادة الاتصال بالقيادة",
+        "EnonceOption": "تأمين السيارة، بقاء عنصرين معاً، والصعود التكتيكي لمرتفع قريب لاستعادة الاتصال بالقيادة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 5603,
+        "QuestionId": 56,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إشعال النار في إطارات السيارة للتدفئة بانتظار الصباح",
+        "EnonceOption": "إشعال النار في إطارات السيارة للتدفئة بانتظار الصباح",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5604,
+        "QuestionId": 56,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إطلاق جميع الرصاصات الحية في الهواء كإشارة استغاثة احتفالية",
+        "EnonceOption": "إطلاق جميع الرصاصات الحية في الهواء كإشارة استغاثة احتفالية",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 57,
+    "TestId": 1,
+    "Code": "Q-DEC-057",
+    "Enonce": "تحصن شخص مصاب باضطراب نفسي داخل منزله شاهراً بندقية صيد مهدداً بإطلاق النار على كل من يقترب من الباب. ما هو القرار القيادي الأكثر مطابقة للإجراءات العملياتية الحديثة؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "قاعدة تجميد الموقف (Gel de la situation): ضرب طوق أمني وإخلاء المحيط المباشر لمنع أي إصابات للمدنيين، وإطلاق مسار التفاوض، واستدعاء الفرق المتخصصة بالاقتحام (GSI).",
+    "Competences": [
+      "تدبير الأزمات ذات التهديد المسلح",
+      "تجميد الموقف والتدخل المتخصص"
+    ],
+    "CompetencesAssociees": [
+      "تدبير الأزمات ذات التهديد المسلح",
+      "تجميد الموقف والتدخل المتخصص"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GSI",
+      "SPEC-PSIG",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 5701,
+        "QuestionId": 57,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "اقتحام المنزل فوراً وبشكل منفرد عبر كسر الباب الرئيسي بالقدم",
+        "EnonceOption": "اقتحام المنزل فوراً وبشكل منفرد عبر كسر الباب الرئيسي بالقدم",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5702,
+        "QuestionId": 57,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تجميد الوضع، إقامة طوق أمني محكم، إخلاء الجوار، وتفعيل مسار التفاوض واستدعاء القوات الخاصة",
+        "EnonceOption": "تجميد الوضع، إقامة طوق أمني محكم، إخلاء الجوار، وتفعيل مسار التفاوض واستدعاء القوات الخاصة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 5703,
+        "QuestionId": 57,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "مغادرة الموقع وتركه لحين نفاد ذخيرته تلقائياً دون أي مراقبة",
+        "EnonceOption": "مغادرة الموقع وتركه لحين نفاد ذخيرته تلقائياً دون أي مراقبة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5704,
+        "QuestionId": 57,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "السماح للفضوليين والجيران بالدخول لإقناعه بالعدول عن موقفه",
+        "EnonceOption": "السماح للفضوليين والجيران بالدخول لإقناعه بالعدول عن موقفه",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 58,
+    "TestId": 1,
+    "Code": "Q-DEC-058",
+    "Enonce": "خلال تفتيش قانوني لمنزل مشتبه به في قضية سرقة مواشٍ بإذن قضائي، عثرت عناصر الدرك على كيس كبير يحتوي على مادة مخدرة بيضاء مهيأة للتوزيع لم تكن ضمن موضوع الإذن الأصلي. كيف يتم اتخاذ القرار الإجرائي السليم؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "العثور على جريمة مخدرات يشكل حالة تلبس عارضة (Flagrance)؛ يجب حجز المادة فوراً، وتحرير محضر بالواقعة العارضة، وإشعار النيابة العامة فوراً لتوسيع نطاق البحث.",
+    "Competences": [
+      "الشرعية الإجرائية في التفتيش",
+      "التعامل مع الجرائم المتلبس بها العارضة"
+    ],
+    "CompetencesAssociees": [
+      "الشرعية الإجرائية في التفتيش",
+      "التعامل مع الجرائم المتلبس بها العارضة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 5801,
+        "QuestionId": 58,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "إتلاف الكيس في المرحاض فوراً لأن الإذن لم ينص عليه",
+        "EnonceOption": "إتلاف الكيس في المرحاض فوراً لأن الإذن لم ينص عليه",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5802,
+        "QuestionId": 58,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "حجز المخدرات، تحرير محضر بالتلبس، وإشعار وكيل الملك فوراً لتلقي التعليمات الإجرائية",
+        "EnonceOption": "حجز المخدرات، تحرير محضر بالتلبس، وإشعار وكيل الملك فوراً لتلقي التعليمات الإجرائية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 5803,
+        "QuestionId": 58,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "أخذ المخدرات وإخفاؤها في المنزل دون تدوينها بالمحضر",
+        "EnonceOption": "أخذ المخدرات وإخفاؤها في المنزل دون تدوينها بالمحضر",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5804,
+        "QuestionId": 58,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "ترك المخدرات مكانها واستكمال البحث عن المواشي فقط دون أي ذكر للواقعة",
+        "EnonceOption": "ترك المخدرات مكانها واستكمال البحث عن المواشي فقط دون أي ذكر للواقعة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 59,
+    "TestId": 1,
+    "Code": "Q-DEC-059",
+    "Enonce": "تسببت أمطار طوفانية مفاجئة في محاصرة مدرسة ابتدائية قروية بمياه الفيضانات المتصاعدة بسرعة، وبنفس الوقت أبلغ فلاح عن غرق قطيعه في مزرعة مجاورة. أين يتم توجيه جهد الإنقاذ الفوري؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "إنقاذ حياة الأطفال والتلاميذ في المدرسة له الأولوية القصوى والمطلقة وغير القابلة للنقاش قبل أي ممتلكات أو حيوانات أو خسائر مادية في حالات الكوارث.",
+    "Competences": [
+      "الأولويات في الكوارث الطبيعية",
+      "حماية الفئات الهشة والمستضعفة"
+    ],
+    "CompetencesAssociees": [
+      "الأولويات في الكوارث الطبيعية",
+      "حماية الفئات الهشة والمستضعفة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PSIG",
+      "SPEC-MOTARD",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 5901,
+        "QuestionId": 59,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "توجيه كل القوات لإنقاذ رؤوس الأغنام لتقليل الخسائر المالية",
+        "EnonceOption": "توجيه كل القوات لإنقاذ رؤوس الأغنام لتقليل الخسائر المالية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5902,
+        "QuestionId": 59,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "التوجه الفوري لتأمين وإخلاء تلاميذ المدرسة والأطر التربوية إلى منطقة آمنة ومرتفعة",
+        "EnonceOption": "التوجه الفوري لتأمين وإخلاء تلاميذ المدرسة والأطر التربوية إلى منطقة آمنة ومرتفعة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 5903,
+        "QuestionId": 59,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الانتظار حتى انتهاء الأمطار لتفقد المدرسة والمزرعة معاً",
+        "EnonceOption": "الانتظار حتى انتهاء الأمطار لتفقد المدرسة والمزرعة معاً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 5904,
+        "QuestionId": 59,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إغلاق أبواب المدرسة بالمفاتيح لمنع خروج التلاميذ للسباحة",
+        "EnonceOption": "إغلاق أبواب المدرسة بالمفاتيح لمنع خروج التلاميذ للسباحة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 60,
+    "TestId": 1,
+    "Code": "Q-DEC-060",
+    "Enonce": "أثناء مهمة ميدانية مشتركة، نشب خلاف حاد وتبادل كلامي غير لائق بين دركيين من نفس الرتبة بسبب توزيع المهام أمام مرأى المواطنين. كيف يتدخل رئيس الدورية لحل المشكلة فوراً؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "إيقاف الجدال فوراً وبصرامة قيادية، والفصل بينهما لتأمين إنجاز المهمة، وتأجيل المعالجة التأديبية والنفسية لجلسة مغلقة داخل الوحدة بعيداً عن أعين الجمهور.",
+    "Competences": [
+      "القيادة العسكرية وإدارة الخلافات",
+      "هيبة السلك والحفاظ على المظهر العام"
+    ],
+    "CompetencesAssociees": [
+      "القيادة العسكرية وإدارة الخلافات",
+      "هيبة السلك والحفاظ على المظهر العام"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PSIG",
+      "SPEC-GEH"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 6001,
+        "QuestionId": 60,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "السماح لهما بالتشابك بالأيدي لمعرفة من الأقوى والأحق بالرأي",
+        "EnonceOption": "السماح لهما بالتشابك بالأيدي لمعرفة من الأقوى والأحق بالرأي",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6002,
+        "QuestionId": 60,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "إيقاف الخلاف بحزم فوري، فصلهما ميدانياً لإنجاز الواجب، وتأجيل المساءلة التأديبية للمقر",
+        "EnonceOption": "إيقاف الخلاف بحزم فوري، فصلهما ميدانياً لإنجاز الواجب، وتأجيل المساءلة التأديبية للمقر",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 6003,
+        "QuestionId": 60,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "أخذ جانب أحدهما ضد الآخر بناء على الصداقة الشخصية",
+        "EnonceOption": "أخذ جانب أحدهما ضد الآخر بناء على الصداقة الشخصية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6004,
+        "QuestionId": 60,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "مغادرة المهمة وترك الدركيين يتشاجران بمفردهما في الشارع",
+        "EnonceOption": "مغادرة المهمة وترك الدركيين يتشاجران بمفردهما في الشارع",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 61,
+    "TestId": 1,
+    "Code": "Q-DEC-061",
+    "Enonce": "تلقى مركز دركي إشعاراً باقتراب حافلة تنقل مشجعين متعصبين يثيرون الفوضى على الطريق، بينما القوة المتوفرة بالمركز في تلك اللحظة لا تتعدى دركيين اثنين. ما هو القرار الأمني الحكيم؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "اعتراض حافلة حاشدة بعنصرين فقط يعرض سلامة الأفراد للخطر المحقق؛ القرار هو طلب الدعم من القيادة وتنسيق نقطة اعتراض مشتركة بأعداد كافية وموقع استراتيجي آمن.",
+    "Competences": [
+      "تقدير ميزان القوى العملياتي",
+      "تجنب الوقوع في كمائن التفوق العددي"
+    ],
+    "CompetencesAssociees": [
+      "تقدير ميزان القوى العملياتي",
+      "تجنب الوقوع في كمائن التفوق العددي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PSIG",
+      "SPEC-MOTARD",
+      "SPEC-GSI"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 6101,
+        "QuestionId": 61,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "اعتراض الحافلة بمفردهما والدخول في مواجهة جسدية مباشرة مع 50 مشجعاً",
+        "EnonceOption": "اعتراض الحافلة بمفردهما والدخول في مواجهة جسدية مباشرة مع 50 مشجعاً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6102,
+        "QuestionId": 61,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "طلب التعزيز الفوري والتنسيق لتوقيف الحافلة في نقطة مراقبة مجهزة وبقوة عددية كافية",
+        "EnonceOption": "طلب التعزيز الفوري والتنسيق لتوقيف الحافلة في نقطة مراقبة مجهزة وبقوة عددية كافية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 6103,
+        "QuestionId": 61,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إغلاق المركز الدركي والهروب من المنطقة بأكملها",
+        "EnonceOption": "إغلاق المركز الدركي والهروب من المنطقة بأكملها",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6104,
+        "QuestionId": 61,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "رمي الحجارة على نوافذ الحافلة لإجبارها على التوقف",
+        "EnonceOption": "رمي الحجارة على نوافذ الحافلة لإجبارها على التوقف",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 62,
+    "TestId": 1,
+    "Code": "Q-DEC-062",
+    "Enonce": "أثناء استراحة غداء بمطعم على الطريق، لاحظ دركي أن صاحب المطعم يرفض تسلم ثمن الوجبة ويصر قائلاً: \"أنتم رجال درك ونحن في خدمتكم دائماً بلا مقابل\". ما هو القرار المهني والأخلاقي الصارم الواجب اتخاذه؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الامتناع التام عن قبول أي هدايا أو خدمات مجانية مهما كانت بسيطة لأنها تمس بمبدأ الحياد والتجرد، والإصرار المؤدب والحاسم على دفع الفاتورة كاملة مع الحصول على وصل.",
+    "Competences": [
+      "النزاهة والاستقامة الأخلاقية",
+      "احترام مدونة السلوك الوظيفي"
+    ],
+    "CompetencesAssociees": [
+      "النزاهة والاستقامة الأخلاقية",
+      "احترام مدونة السلوك الوظيفي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PJ",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 6201,
+        "QuestionId": 62,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "قبول الوجبة مجاناً ودعوة جميع المعارف لتناول وجبات مجانية يومياً",
+        "EnonceOption": "قبول الوجبة مجاناً ودعوة جميع المعارف لتناول وجبات مجانية يومياً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6202,
+        "QuestionId": 62,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "رفض المجانية بأدب وحزم والإصرار التام على دفع الثمن المستحق صيانة للكرامة والحياد المؤسساتي",
+        "EnonceOption": "رفض المجانية بأدب وحزم والإصرار التام على دفع الثمن المستحق صيانة للكرامة والحياد المؤسساتي",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 6203,
+        "QuestionId": 62,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "طلب وجبات إضافية لأخذها إلى المنزل بالمجان أيضاً",
+        "EnonceOption": "طلب وجبات إضافية لأخذها إلى المنزل بالمجان أيضاً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6204,
+        "QuestionId": 62,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "اعتقال صاحب المطعم فوراً بتهمة الخيانة العظمى",
+        "EnonceOption": "اعتقال صاحب المطعم فوراً بتهمة الخيانة العظمى",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 63,
+    "TestId": 1,
+    "Code": "Q-DEC-063",
+    "Enonce": "عرض سائق شاحنة مخالف مبلغاً مالياً كبيراً مدسوساً داخل وثائق الشاحنة لتفادي حجز حمولته الزائدة. ما هو الإجراء الإداري والقضائي الحاسم الفوري؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "محاولة إرشاء موظف عمومي هي جناية/جنحة متلبس بها؛ يجب رفض الرشوة، وتوثيق الأوراق النقدية بحضور الزميل كحرز، وحجز السائق والمركبة وإشعار النيابة العامة فوراً.",
+    "Competences": [
+      "مكافحة الرشوة والفساد",
+      "الشرعية في التثبيت الجنائي للرشوة"
+    ],
+    "CompetencesAssociees": [
+      "مكافحة الرشوة والفساد",
+      "الشرعية في التثبيت الجنائي للرشوة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ",
+      "SPEC-MOTARD"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 6301,
+        "QuestionId": 63,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "أخذ نصف المبلغ المالي وتسهيل مرور الشاحنة",
+        "EnonceOption": "أخذ نصف المبلغ المالي وتسهيل مرور الشاحنة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6302,
+        "QuestionId": 63,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "رفض المبلغ، حجز الأوراق المالية كحرز تلبس بجريمة الرشوة، توقيف السائق، وإشعار النيابة العامة",
+        "EnonceOption": "رفض المبلغ، حجز الأوراق المالية كحرز تلبس بجريمة الرشوة، توقيف السائق، وإشعار النيابة العامة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 6303,
+        "QuestionId": 63,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إعادة النقود للسائق مع تحذيره شفوياً فقط ومطالبته بالمغادرة السريعة",
+        "EnonceOption": "إعادة النقود للسائق مع تحذيره شفوياً فقط ومطالبته بالمغادرة السريعة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6304,
+        "QuestionId": 63,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "مفاوضته لزيادة المبلغ إلى الضعف قبل اتخاذ القرار",
+        "EnonceOption": "مفاوضته لزيادة المبلغ إلى الضعف قبل اتخاذ القرار",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 64,
+    "TestId": 1,
+    "Code": "Q-DEC-064",
+    "Enonce": "اندلع حريق مهول في مستودع للأسمدة الكيماوية بمحاذاة طريق جهوي رئيسي مع انبعاث غازات صفراء كثيفة خانقة. ما هو القرار التكتيكي الأسرع لحماية حركة المرور والساكنة؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الغازات الناتجة عن الكيماويات سامة وخانقة؛ يجب قطع الطريق فوراً من الاتجاهين على مسافة أمان، وتوجيه حركة المرور لمحاور بديلة، والتنسيق العاجل مع الوقاية المدنية.",
+    "Competences": [
+      "إدارة مخاطر المواد الخطرة",
+      "التدابير الوقائية للسلامة العامة"
+    ],
+    "CompetencesAssociees": [
+      "إدارة مخاطر المواد الخطرة",
+      "التدابير الوقائية للسلامة العامة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 1
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PSIG",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 6401,
+        "QuestionId": 64,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "السماح للسيارات بالمرور مسرعة وسط الدخان لاختبار قوة تحمل الركاب",
+        "EnonceOption": "السماح للسيارات بالمرور مسرعة وسط الدخان لاختبار قوة تحمل الركاب",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6402,
+        "QuestionId": 64,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "قطع حركة السير من الجانبين، إقامة محاور تحويل آمنة، والتنسيق العاجل مع مصالح الإطفاء والوقاية",
+        "EnonceOption": "قطع حركة السير من الجانبين، إقامة محاور تحويل آمنة، والتنسيق العاجل مع مصالح الإطفاء والوقاية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 6403,
+        "QuestionId": 64,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الدخول إلى المستودع المشتعل لاستنشاق الغازات والتأكد من نوعيتها دون قناع واقٍ",
+        "EnonceOption": "الدخول إلى المستودع المشتعل لاستنشاق الغازات والتأكد من نوعيتها دون قناع واقٍ",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6404,
+        "QuestionId": 64,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الانتظار حتى تحترق جميع الأسمدة بمفردها لفتح الطريق",
+        "EnonceOption": "الانتظار حتى تحترق جميع الأسمدة بمفردها لفتح الطريق",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 65,
+    "TestId": 1,
+    "Code": "Q-DEC-065",
+    "Enonce": "رصدت دورية مبحوثاً عنه خطيراً في قضية اتجار دولي في المخدرات داخل سوق أسبوعي مكتظ بآلاف المتسوقين والأطفال. كيف يتم التخطيط لعملية التوقيف بنجاح؟",
+    "ContexteSituationnel": "حل المشكلات واتخاذ القرار",
+    "DomaineId": 4,
+    "DomaineCode": "DECISION",
+    "DomaineNom": "حل المشكلات واتخاذ القرار",
+    "DomaineIntitule": "حل المشكلات واتخاذ القرار",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "التدخل المسلح وسط حشد كثيف قد يسبب تدافعاً مميتاً أو احتجاز رهائن؛ الصواب هو المراقبة السرية والتعقب حتى خروجه لمنطقة مكشوفة ومعزولة وتوقيفه بمباغتة تامة.",
+    "Competences": [
+      "التخطيط لعمليات التوقيف في الأماكن الحساسة",
+      "حماية المدنيين من التدافع وردود الفعل العنيفة"
+    ],
+    "CompetencesAssociees": [
+      "التخطيط لعمليات التوقيف في الأماكن الحساسة",
+      "حماية المدنيين من التدافع وردود الفعل العنيفة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-GSI",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 6501,
+        "QuestionId": 65,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "إطلاق النار في الهواء والصراخ باسم المشتبه به وسط حشود السوق لإخافته",
+        "EnonceOption": "إطلاق النار في الهواء والصراخ باسم المشتبه به وسط حشود السوق لإخافته",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6502,
+        "QuestionId": 65,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "فرض مراقبة سرية لصيقة، وتتبع تحركاته بهدوء حتى خروجه لمكان معزول لتوقيفه بمباغتة ودون تعريض المدنيين للخطر",
+        "EnonceOption": "فرض مراقبة سرية لصيقة، وتتبع تحركاته بهدوء حتى خروجه لمكان معزول لتوقيفه بمباغتة ودون تعريض المدنيين للخطر",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 6503,
+        "QuestionId": 65,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "استخدام القنابل المسيلة للدموع وسط خيام الخضار لتفريق السوق بأكمله",
+        "EnonceOption": "استخدام القنابل المسيلة للدموع وسط خيام الخضار لتفريق السوق بأكمله",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6504,
+        "QuestionId": 65,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إلغاء التوقيف نهائياً ومسح اسم المبحوث عنه من قاعدة البيانات",
+        "EnonceOption": "إلغاء التوقيف نهائياً ومسح اسم المبحوث عنه من قاعدة البيانات",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 66,
+    "TestId": 1,
+    "Code": "Q-MOT-066",
+    "Enonce": "ما هو المسار الآمن النموذجي (Trajectoire de sécurité) الذي يتبعه دركي الدراجات النارية عند ولوج منعرج يمين غير مكشوف؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "المسار الآمن يعتمد على: التموضع بجانب محور الطريق (الخارج) لزيادة مدى الرؤية، وتوجيه النظرة لأبعد نقطة، ثم الالتفاف نحو الداخل فقط بعد انكشاف نهاية المنعرج.",
+    "Competences": [
+      "تقنيات القيادة المتقدمة للدراجات",
+      "تأمين مسار المنعرجات"
+    ],
+    "CompetencesAssociees": [
+      "تقنيات القيادة المتقدمة للدراجات",
+      "تأمين مسار المنعرجات"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-GEH"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 6601,
+        "QuestionId": 66,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "الالتصاق التام بالحافة اليمنى الترابية قبل بداية المنعرج مع إغماض العينين",
+        "EnonceOption": "الالتصاق التام بالحافة اليمنى الترابية قبل بداية المنعرج مع إغماض العينين",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6602,
+        "QuestionId": 66,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "البقاء يسار مسلك السير لتوسيع زاوية الرؤية، مع توجيه النظر للمخرج والاقتراب من الداخل بعد انكشاف الرؤية",
+        "EnonceOption": "البقاء يسار مسلك السير لتوسيع زاوية الرؤية، مع توجيه النظر للمخرج والاقتراب من الداخل بعد انكشاف الرؤية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 6603,
+        "QuestionId": 66,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "السير في المسلك المعاكس المعاكس تماماً بسرعة مضاعفة",
+        "EnonceOption": "السير في المسلك المعاكس المعاكس تماماً بسرعة مضاعفة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6604,
+        "QuestionId": 66,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الفرملة القصوى بالفرامل الخلفية وحدها مع قفل المقود",
+        "EnonceOption": "الفرملة القصوى بالفرامل الخلفية وحدها مع قفل المقود",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 67,
+    "TestId": 1,
+    "Code": "Q-MOT-067",
+    "Enonce": "لماذا تعد الدقائق العشرين الأولى من هطول الأمطار بعد فترة جفاف طويلة الفترة الأكثر خطورة لانزلاق المركبات والدراجات النارية على الطرق؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "اختلاط قطرات المطر الأولى بالغبار وبقايا الزيوت والمطاط المتراكمة على الإسفلت يشكل طبقة لزجة جداً تشبه الصابون تقلل معامل الاحتكاك إلى أدنى مستوياته قبل أن يغسلها المطر الغزير.",
+    "Competences": [
+      "فيزياء الالتصاق والالتحام الطرقي",
+      "تقدير مخاطر الطقس الزلق"
+    ],
+    "CompetencesAssociees": [
+      "فيزياء الالتصاق والالتحام الطرقي",
+      "تقدير مخاطر الطقس الزلق"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 6701,
+        "QuestionId": 67,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "لأن محركات الدراجات تفقد 90% من قوتها الميكانيكية بمجرد ملامسة الماء",
+        "EnonceOption": "لأن محركات الدراجات تفقد 90% من قوتها الميكانيكية بمجرد ملامسة الماء",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6702,
+        "QuestionId": 67,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "لاختلاط الماء بزيوت وغبار الطريق مشكلاً طبقة لزجة خطيرة جداً قبل غسلها بالماء الغزير",
+        "EnonceOption": "لاختلاط الماء بزيوت وغبار الطريق مشكلاً طبقة لزجة خطيرة جداً قبل غسلها بالماء الغزير",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 6703,
+        "QuestionId": 67,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "لأن إشارات المرور الضوئية تتوقف آلياً عند هطول أي قطرة مطر",
+        "EnonceOption": "لأن إشارات المرور الضوئية تتوقف آلياً عند هطول أي قطرة مطر",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6704,
+        "QuestionId": 67,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "لأن خوذة السائق تصبح ثقيلة جداً وتمنعه من رفع رأسه",
+        "EnonceOption": "لأن خوذة السائق تصبح ثقيلة جداً وتمنعه من رفع رأسه",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 68,
+    "TestId": 1,
+    "Code": "Q-MOT-068",
+    "Enonce": "إذا كانت سيارة تسير بسرعة 90 كم/س على طريق جاف، فما هي المسافة التقريبية التي تقطعها خلال زمن رد الفعل البشري الطبيعي (المقدر بثانية واحدة) قبل أن يبدأ السائق بالضغط الفعلي على الفرامل؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "القاعدة التقريبية لحساب المسافة المقطوعة في الثانية: رقم العشرات مضروباً في 3 (9 × 3 = 27 متراً)، أو حسابياً (90,000 متر ÷ 3600 ثانية = 25 متراً في الثانية).",
+    "Competences": [
+      "الحساب الحركي للسلامة الطرقية",
+      "تقدير مسافة رد الفعل والتوقف"
+    ],
+    "CompetencesAssociees": [
+      "الحساب الحركي للسلامة الطرقية",
+      "تقدير مسافة رد الفعل والتوقف"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PJ",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 6801,
+        "QuestionId": 68,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "حوالي 5 أمتار فقط",
+        "EnonceOption": "حوالي 5 أمتار فقط",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6802,
+        "QuestionId": 68,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "حوالي 25 إلى 27 متراً",
+        "EnonceOption": "حوالي 25 إلى 27 متراً",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 6803,
+        "QuestionId": 68,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "أكثر من 150 متراً",
+        "EnonceOption": "أكثر من 150 متراً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6804,
+        "QuestionId": 68,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "السيارة تتوقف فوراً في نفس النقطة دون قطع أي متر",
+        "EnonceOption": "السيارة تتوقف فوراً في نفس النقطة دون قطع أي متر",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 69,
+    "TestId": 1,
+    "Code": "Q-MOT-069",
+    "Enonce": "في تشكيلات سير الدوريات ومواكب الدراجات النارية للدرك الملكي، ما هو التشكيل المعتمد لضمان السلامة ومسافة المناورة الكافية على الطرق المفتوحة؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "التشكيل المتعرج / التناوبي (Formation en quinconce) يمنح كل دراج رؤية أمامية واضحة ومسافة توقف مستقلة وكافية للمناورة في حال الفرملة المفاجئة دون الاصطدام بزميله.",
+    "Competences": [
+      "تشكيلات القيادة التكتيكية بالمواكب",
+      "قواعد سير الدراجات في مجموعات"
+    ],
+    "CompetencesAssociees": [
+      "تشكيلات القيادة التكتيكية بالمواكب",
+      "قواعد سير الدراجات في مجموعات"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 2.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-GEH"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 6901,
+        "QuestionId": 69,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "السير في خط مستقيم متلاصق بعجلة تلامس العجلة الأخرى تماماً",
+        "EnonceOption": "السير في خط مستقيم متلاصق بعجلة تلامس العجلة الأخرى تماماً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6902,
+        "QuestionId": 69,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "التشكيل المتعرج التناوبي (Quinconce) لتأمين مسافة أمان ورؤية كافية لكل دراج",
+        "EnonceOption": "التشكيل المتعرج التناوبي (Quinconce) لتأمين مسافة أمان ورؤية كافية لكل دراج",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 6903,
+        "QuestionId": 69,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "السير العرضي جنباً إلى جنب لاحتلال كامل عرض الطريق ومنع أي سيارة من المرور",
+        "EnonceOption": "السير العرضي جنباً إلى جنب لاحتلال كامل عرض الطريق ومنع أي سيارة من المرور",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 6904,
+        "QuestionId": 69,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إطفاء جميع الأضواء والسير دون ترتيب مسبق",
+        "EnonceOption": "إطفاء جميع الأضواء والسير دون ترتيب مسبق",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 70,
+    "TestId": 1,
+    "Code": "Q-MOT-070",
+    "Enonce": "عند اقتراب سيارة إسعاف تشغل المنبهات الصوتية والأضواء الدوارة الزرقاء من ملتقى طرق ذي أسبقية لليمين، ما هو الواجب القانوني والعملياتي على باقي مستعملي الطريق؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "مركبات التدخل المستعجل التي تستعمل أجهزتها التحذيرية الخاصة تتمتع بالأولوية المطلقة؛ ويجب على جميع السائقين تخفيض السرعة وإفساح المسار فوراً والتوقف إذا لزم.",
+    "Competences": [
+      "قوانين السير والمركبات ذات الأولوية",
+      "السلامة الطرقية وتسهيل مهام الإنقاذ"
+    ],
+    "CompetencesAssociees": [
+      "قوانين السير والمركبات ذات الأولوية",
+      "السلامة الطرقية وتسهيل مهام الإنقاذ"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 7001,
+        "QuestionId": 70,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "التسابق معها للوصول إلى الملتقى أولاً",
+        "EnonceOption": "التسابق معها للوصول إلى الملتقى أولاً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7002,
+        "QuestionId": 70,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تخفيف السرعة وإفساح المسلك فوراً والتوقف عند الاقتضاء لتسهيل مرورها الآمن",
+        "EnonceOption": "تخفيف السرعة وإفساح المسلك فوراً والتوقف عند الاقتضاء لتسهيل مرورها الآمن",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 7003,
+        "QuestionId": 70,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "استخدام المنبه الصوتي للتشويش على صفارات الإنذار",
+        "EnonceOption": "استخدام المنبه الصوتي للتشويش على صفارات الإنذار",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7004,
+        "QuestionId": 70,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "تجاهلها تماماً والتمسك بأسبقية اليمين العادية",
+        "EnonceOption": "تجاهلها تماماً والتمسك بأسبقية اليمين العادية",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 71,
+    "TestId": 1,
+    "Code": "Q-MOT-071",
+    "Enonce": "ما هو العنصر الإجباري في معدات الحماية الفردية لدراج الدرك الملكي الذي يوفر الحماية القصوى لعظام الجمجمة والفك السفلي أثناء السقوط المباشر؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الخوذة كاملة التغطية (Casque intégral) أو القابلة للتعديل والمقفلة والمطابقة للمواصفات توفر حماية حيوية شاملة لمنطقة الرأس وعظام الوجه والفك، بخلاف الخوذات المفتوحة.",
+    "Competences": [
+      "معدات الحماية الفردية وتأمين الدراج",
+      "السلامة المهنية"
+    ],
+    "CompetencesAssociees": [
+      "معدات الحماية الفردية وتأمين الدراج",
+      "السلامة المهنية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-GEH"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 7101,
+        "QuestionId": 71,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "القبعة العسكرية القماشية الخفيفة",
+        "EnonceOption": "القبعة العسكرية القماشية الخفيفة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7102,
+        "QuestionId": 71,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الخوذة الواقية المدمجة (Casque intégral) المعتمدة وذات الحماية الفكية الكاملة",
+        "EnonceOption": "الخوذة الواقية المدمجة (Casque intégral) المعتمدة وذات الحماية الفكية الكاملة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 7103,
+        "QuestionId": 71,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "نظارات شمسية عادية دون أي خوذة",
+        "EnonceOption": "نظارات شمسية عادية دون أي خوذة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7104,
+        "QuestionId": 71,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "وشاح صوفي يلف حول الرقبة",
+        "EnonceOption": "وشاح صوفي يلف حول الرقبة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 72,
+    "TestId": 1,
+    "Code": "Q-MOT-072",
+    "Enonce": "تفاجأ دراج دركي بوجود عائق طرقي صلب (إطار شاحنة منسلخ) على مساره ولا مجال لتفاديه يمنة أو يسرة. ما هي التقنية الصحيحة لعبور العائق بأمان وتفادي الانقلاب؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "إبطاء السرعة في خط مستقيم قبل العائق، ثم تحرير الفرامل تماماً، وإبقاء المقود عمودياً ومستقيماً، والوقوف الخفيف على مساند الأرجل لامتصاص الصدمة وتخفيف الحمل على المقود.",
+    "Competences": [
+      "تقنيات المناورة واجتياز العوائق الخطرة",
+      "التحكم الديناميكي بالدراجة"
+    ],
+    "CompetencesAssociees": [
+      "تقنيات المناورة واجتياز العوائق الخطرة",
+      "التحكم الديناميكي بالدراجة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 7201,
+        "QuestionId": 72,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "الضغط الأقصى على الفرامل الأمامية في لحظة ملامسة العائق تماماً",
+        "EnonceOption": "الضغط الأقصى على الفرامل الأمامية في لحظة ملامسة العائق تماماً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7202,
+        "QuestionId": 72,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الفرملة المسبقة باستقامة، ثم تحرير الفرامل، وإبقاء المقود مستقيماً مع الوقوف الخفيف على مساند الأقدام",
+        "EnonceOption": "الفرملة المسبقة باستقامة، ثم تحرير الفرامل، وإبقاء المقود مستقيماً مع الوقوف الخفيف على مساند الأقدام",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 7203,
+        "QuestionId": 72,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إمالة الدراجة على جانبها والانزلاق عمداً تحت العائق",
+        "EnonceOption": "إمالة الدراجة على جانبها والانزلاق عمداً تحت العائق",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7204,
+        "QuestionId": 72,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "القفز من فوق الدراجة وتركها تصطدم بمفردها",
+        "EnonceOption": "القفز من فوق الدراجة وتركها تصطدم بمفردها",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 73,
+    "TestId": 1,
+    "Code": "Q-MOT-073",
+    "Enonce": "خلال مراقبة حمولة شاحنات الوزن الثقيل، ما هو المؤشر القانوني والميداني الذي يثبت وجود مخالفة الحمولة الزائدة (Surcharge) الخطيرة على البنية الطرقية وسلامة الفرملة؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "تجاوز الوزن الإجمالي المأذون به محملة (PTAC / MMA) المسجل في شهادة التسجيل ولوحة الصانع، ويتم تأكيده قانونياً عبر قياس الوزن في محطة وزن معتمدة (Pont-bascule).",
+    "Competences": [
+      "مراقبة النقل الطرقي والوزن الثقيل",
+      "التطبيق الصارم لمدونة السير"
+    ],
+    "CompetencesAssociees": [
+      "مراقبة النقل الطرقي والوزن الثقيل",
+      "التطبيق الصارم لمدونة السير"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 7301,
+        "QuestionId": 73,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "طول قامة سائق الشاحنة مقارنة بالمقصورة",
+        "EnonceOption": "طول قامة سائق الشاحنة مقارنة بالمقصورة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7302,
+        "QuestionId": 73,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تجاوز الوزن الإجمالي المأذون به مع الحمولة (PTAC) الموثق عبر قياس الميزان الجسري المعتمد",
+        "EnonceOption": "تجاوز الوزن الإجمالي المأذون به مع الحمولة (PTAC) الموثق عبر قياس الميزان الجسري المعتمد",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 7303,
+        "QuestionId": 73,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "لون غطاء الحمولة المشمع",
+        "EnonceOption": "لون غطاء الحمولة المشمع",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7304,
+        "QuestionId": 73,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "عدد الملصقات الإعلانية الموجودة على هيكل الشاحنة",
+        "EnonceOption": "عدد الملصقات الإعلانية الموجودة على هيكل الشاحنة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 74,
+    "TestId": 1,
+    "Code": "Q-MOT-074",
+    "Enonce": "عند قيادة الدراجة النارية على قنطرة معلقة أو ممر مكشوف تضربه رياح جانبية عاتية، ما السلوك التكتيكي الصائب لمواجهة تمايل الدراجة المفاجئ؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "تخفيض السرعة، وضغط الركبتين بإحكام على خزان الوقود، وإرخاء الذراعين قليلاً لتفادي نقل تذبذب الجذع للمقود، والميلان الطفيف باتجاه هبوب الريح لتحقيق التوازن.",
+    "Competences": [
+      "السيطرة على توازن الدراجة في الرياح المعاكسة",
+      "القيادة في الظروف الجوية القاسية"
+    ],
+    "CompetencesAssociees": [
+      "السيطرة على توازن الدراجة في الرياح المعاكسة",
+      "القيادة في الظروف الجوية القاسية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-GEH"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 7401,
+        "QuestionId": 74,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "زيادة السرعة إلى 180 كم/س للتغلب على الرياح بالقوة الحركية",
+        "EnonceOption": "زيادة السرعة إلى 180 كم/س للتغلب على الرياح بالقوة الحركية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7402,
+        "QuestionId": 74,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تخفيف السرعة، ضم الركبتين للخزان، وتعديل الميلان باتجاه هبوب الريح مع إرخاء الشد على المقود",
+        "EnonceOption": "تخفيف السرعة، ضم الركبتين للخزان، وتعديل الميلان باتجاه هبوب الريح مع إرخاء الشد على المقود",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 7403,
+        "QuestionId": 74,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "فتح المظلة اليدوية أثناء القيادة لصد الرياح الجانبية",
+        "EnonceOption": "فتح المظلة اليدوية أثناء القيادة لصد الرياح الجانبية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7404,
+        "QuestionId": 74,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "رفع كلتا اليدين عن المقود والاعتماد على التوازن الطبيعي",
+        "EnonceOption": "رفع كلتا اليدين عن المقود والاعتماد على التوازن الطبيعي",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 75,
+    "TestId": 1,
+    "Code": "Q-MOT-075",
+    "Enonce": "ما هو الفرق القانوني والإجرائي بين جهاز فحص الكحول بالنفس الأولي (Éthylotest) وجهاز قياس نسبة الكحول في الهواء الزفيري (Éthylomètre)؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "جهاز الإيثيلوتيست هو وسيلة كشف وفرز نوعي سريع (إيجابي/سلبي)، بينما الإيثيلومتر جهاز معايرة قانوني معتمد يقيس التركيز الدقيق بالكيلوغرام/لتر وله حجية قضائية قاطعة بالمحضر.",
+    "Competences": [
+      "المساطر القانونية لقياس الكحول والمخدرات",
+      "الضبط القضائي لمخالفات السير"
+    ],
+    "CompetencesAssociees": [
+      "المساطر القانونية لقياس الكحول والمخدرات",
+      "الضبط القضائي لمخالفات السير"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PJ",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 7501,
+        "QuestionId": 75,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "لا يوجد أي فرق وكلاهما مجرد ألعاب إلكترونية توعوية",
+        "EnonceOption": "لا يوجد أي فرق وكلاهما مجرد ألعاب إلكترونية توعوية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7502,
+        "QuestionId": 75,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الإيثيلوتيست للكشف التوجيهي السريع، بينما الإيثيلومتر جهاز معايرة رسمي معتمد يحدد النسبة القانونية بدقة للإثبات القضائي",
+        "EnonceOption": "الإيثيلوتيست للكشف التوجيهي السريع، بينما الإيثيلومتر جهاز معايرة رسمي معتمد يحدد النسبة القانونية بدقة للإثبات القضائي",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 7503,
+        "QuestionId": 75,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الإيثيلومتر يستخدم فقط للسيارات العسكرية والإيثيلوتيست للمدنية",
+        "EnonceOption": "الإيثيلومتر يستخدم فقط للسيارات العسكرية والإيثيلوتيست للمدنية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7504,
+        "QuestionId": 75,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "كلاهما يتطلب سحب عينة من دم السائق في قارورة بلاستيكية بالميدان",
+        "EnonceOption": "كلاهما يتطلب سحب عينة من دم السائق في قارورة بلاستيكية بالميدان",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 76,
+    "TestId": 1,
+    "Code": "Q-MOT-076",
+    "Enonce": "أثناء السير السريع بالدراجة، حدث تذبذب واهتزاز عنيف في المقود والعجلة الأمامية (Guidonnage / Wobble). ما التصرف الميكانيكي السليم الذي يمنع السقوط الحتمي؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الخطأ القاتل هو الكبح العنيف بالفرامل الأمامية؛ التصرف الصحيح هو تقليل الضغط على المقود برفق، وإغلاق الوقود تدريجياً، وترك فيزياء الدراجة تستعيد توازنها الذاتي.",
+    "Competences": [
+      "التعامل مع حالات الطوارئ الديناميكية للدراجة",
+      "الإنقاذ من حوادث فقد السيطرة"
+    ],
+    "CompetencesAssociees": [
+      "التعامل مع حالات الطوارئ الديناميكية للدراجة",
+      "الإنقاذ من حوادث فقد السيطرة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-GEH"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 7601,
+        "QuestionId": 76,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "الضغط بأقصى قوة وفجأة على مقبض الفرامل الأمامية لمحاولة قفل العجلة",
+        "EnonceOption": "الضغط بأقصى قوة وفجأة على مقبض الفرامل الأمامية لمحاولة قفل العجلة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7602,
+        "QuestionId": 76,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "عدم مقاومة المقود بتصلب عضلي، وتخفيف السرعة تدريجياً بالسماح للدراجة باستعادة توازنها التلقائي",
+        "EnonceOption": "عدم مقاومة المقود بتصلب عضلي، وتخفيف السرعة تدريجياً بالسماح للدراجة باستعادة توازنها التلقائي",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 7603,
+        "QuestionId": 76,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "النزول فوراً من الدراجة وهي تسير بسرعة 120 كم/س",
+        "EnonceOption": "النزول فوراً من الدراجة وهي تسير بسرعة 120 كم/س",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7604,
+        "QuestionId": 76,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "تدوير المقود بالكامل إلى أقصى اليمين فجأة",
+        "EnonceOption": "تدوير المقود بالكامل إلى أقصى اليمين فجأة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 77,
+    "TestId": 1,
+    "Code": "Q-MOT-077",
+    "Enonce": "عند وقوع حادث سير داخل منعرج خطير يحجب الرؤية، على أي مسافة يجب وضع مثلث العطب وأقماع التشوير التحذيرية قبل مدخل المنعرج؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "يجب وضع التشوير قبل المنعرج بمسافة لا تقل عن 100 إلى 150 متراً في الطرق المفتوحة لتمكين السائقين القادمين من الفرملة الآمنة قبل ولوج المنعرج ورؤية الحادث.",
+    "Competences": [
+      "التشوير والإنذار الطرقي الاستباقي",
+      "حماية مستعملي الطريق ومسرح الحادث"
+    ],
+    "CompetencesAssociees": [
+      "التشوير والإنذار الطرقي الاستباقي",
+      "حماية مستعملي الطريق ومسرح الحادث"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 7701,
+        "QuestionId": 77,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "مباشرة ملاصقاً للسيارة المصدومة داخل المنعرج",
+        "EnonceOption": "مباشرة ملاصقاً للسيارة المصدومة داخل المنعرج",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7702,
+        "QuestionId": 77,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "قبل بداية المنعرج بمسافة كافية (100 إلى 150 متراً) لإنذار المركبات القادمة قبل انحجاب الرؤية",
+        "EnonceOption": "قبل بداية المنعرج بمسافة كافية (100 إلى 150 متراً) لإنذار المركبات القادمة قبل انحجاب الرؤية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 7703,
+        "QuestionId": 77,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "خلف الحادث بـ 200 متر في الاتجاه المعاكس الذي لا يمر منه أحد",
+        "EnonceOption": "خلف الحادث بـ 200 متر في الاتجاه المعاكس الذي لا يمر منه أحد",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7704,
+        "QuestionId": 77,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إخفاء المثلث داخل صندوق الأمتعة تفادياً لسرقته",
+        "EnonceOption": "إخفاء المثلث داخل صندوق الأمتعة تفادياً لسرقته",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 78,
+    "TestId": 1,
+    "Code": "Q-MOT-078",
+    "Enonce": "في مهام مرافقة وحماية الشخصيات الهامة (VIP) بواسطة فرقة دراجي الدرك الملكي، ما هي المهمة الميدانية الحيوية للدراج \"الفاتح\" (Ouvreur / Éclaireur)؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الدراج الفاتح يتقدم الموكب بمسافة استطلاعية لتطهير المسار، وقطع وتأمين ملتقيات الطرق الحساسة، والتأكد من خلو المسار من أي عوائق قبل وصول سيارة الشخصية المحمية.",
+    "Competences": [
+      "بروتوكول وتكتيك المواكب الرسمية",
+      "تأمين مسارات السير السريعة"
+    ],
+    "CompetencesAssociees": [
+      "بروتوكول وتكتيك المواكب الرسمية",
+      "تأمين مسارات السير السريعة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 3
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-GEH"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 7801,
+        "QuestionId": 78,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "التقاط الصور التذكارية للموكب من الأمام",
+        "EnonceOption": "التقاط الصور التذكارية للموكب من الأمام",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7802,
+        "QuestionId": 78,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "استطلاع المسار المتقدم، إغلاق وتأمين التقاطعات الحيوية، وضمان تدفق سير الموكب دون توقف",
+        "EnonceOption": "استطلاع المسار المتقدم، إغلاق وتأمين التقاطعات الحيوية، وضمان تدفق سير الموكب دون توقف",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 7803,
+        "QuestionId": 78,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "حمل حقائب الأمتعة الخاصة بالضيوف وتوزيع المشروبات",
+        "EnonceOption": "حمل حقائب الأمتعة الخاصة بالضيوف وتوزيع المشروبات",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7804,
+        "QuestionId": 78,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "مراقبة سرعة الموكب من الخلف وتسجيل مخالفات لسيارات الحراسة",
+        "EnonceOption": "مراقبة سرعة الموكب من الخلف وتسجيل مخالفات لسيارات الحراسة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 79,
+    "TestId": 1,
+    "Code": "Q-MOT-079",
+    "Enonce": "ما هو الخطر الميكانيكي والفيزيائي المباشر الناتج عن السير بإطارات دراجة نارية منخفضة الضغط بشدة (Sous-gonflage) في يوم حار على الطريق السيار؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "نقص ضغط الإطار يسبب تشوهاً مستمراً لهيكله وارتفاعاً مفرطاً في درجة حرارته الداخلية نتيجة الاحتكاك الشديد، مما يؤدي إلى انفصال طبقات المطاط وانفجار الإطار فجأة.",
+    "Competences": [
+      "الصيانة الوقائية لمركبات الدوريات",
+      "معايير السلامة الميكانيكية"
+    ],
+    "CompetencesAssociees": [
+      "الصيانة الوقائية لمركبات الدوريات",
+      "معايير السلامة الميكانيكية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-GEH"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 7901,
+        "QuestionId": 79,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تحسن سرعة الدراجة لتصل إلى سرعة الطائرات النفاثة",
+        "EnonceOption": "تحسن سرعة الدراجة لتصل إلى سرعة الطائرات النفاثة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7902,
+        "QuestionId": 79,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "ارتفاع شديد في حرارة الإطار وتهتك أنسجته الداخلية مما يعرضه للانفجار الفجائي القاتل",
+        "EnonceOption": "ارتفاع شديد في حرارة الإطار وتهتك أنسجته الداخلية مما يعرضه للانفجار الفجائي القاتل",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 7903,
+        "QuestionId": 79,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "انخفاض استهلاك الوقود إلى الصفر المطلق",
+        "EnonceOption": "انخفاض استهلاك الوقود إلى الصفر المطلق",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 7904,
+        "QuestionId": 79,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "تغير لون الهيكل الخارجي للدراجة إلى الأبيض",
+        "EnonceOption": "تغير لون الهيكل الخارجي للدراجة إلى الأبيض",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 80,
+    "TestId": 1,
+    "Code": "Q-MOT-080",
+    "Enonce": "أثناء مرافقة شاحنة ضخمة أو حافلة، أين تقع \"الزاوية الميتة\" (Angle mort) الأخطر التي يختفي فيها دراج الدرك تماماً عن رؤية سائق الشاحنة في مراياه العاكسة؟",
+    "ContexteSituationnel": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineId": 5,
+    "DomaineCode": "ROUTE_MOTO",
+    "DomaineNom": "السلامة الطرقية وقيادة الدراجات",
+    "DomaineIntitule": "السلامة الطرقية وقيادة الدراجات",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "المنطقة المحاذية للجانب الأيمن الخلفي للرأس الجرار مباشرة وأسفل زجاج الأبواب الجانبية هي أوسع زاوية ميتة؛ القاعدة الذهبية: \"إذا لم تكن قادراً على رؤية وجه السائق في مرآته، فهو حتماً لا يراك\".",
+    "Competences": [
+      "إدراك الزوايا الميتة للمركبات الثقيلة",
+      "التمركز التكتيكي الآمن للدراج"
+    ],
+    "CompetencesAssociees": [
+      "إدراك الزوايا الميتة للمركبات الثقيلة",
+      "التمركز التكتيكي الآمن للدراج"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-MOTARD",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 8001,
+        "QuestionId": 80,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "على بعد 100 متر أمام الشاحنة في خط مستقيم ومكشوف",
+        "EnonceOption": "على بعد 100 متر أمام الشاحنة في خط مستقيم ومكشوف",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8002,
+        "QuestionId": 80,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "بمحاذاة الجانب الأيمن والأمام والخلف المباشر للمركبة حيث تعجز المرايا عن كشف الدراج",
+        "EnonceOption": "بمحاذاة الجانب الأيمن والأمام والخلف المباشر للمركبة حيث تعجز المرايا عن كشف الدراج",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 8003,
+        "QuestionId": 80,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "فوق سقف مقصورة الشاحنة مباشرة",
+        "EnonceOption": "فوق سقف مقصورة الشاحنة مباشرة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8004,
+        "QuestionId": 80,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الزوايا الميتة غير موجودة إطلاقاً في الشاحنات الحديثة",
+        "EnonceOption": "الزوايا الميتة غير موجودة إطلاقاً في الشاحنات الحديثة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 81,
+    "TestId": 1,
+    "Code": "Q-ENQ-081",
+    "Enonce": "عند الوصول إلى مسرح جريمة قتل غامضة في شقة سكنية، ما هو الالتزام القانوني والمهني الأول لضابط الشرطة القضائية قبل الشروع في أي بحث؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "تجميد وحماية مسرح الجريمة (Gel des lieux) بضرب شريط أمني عازل ومنع دخول أي شخص غير مختص لتفادي تلويث أو إتلاف الآثار المادية والبيولوجية قبل وصول الشرطة العلمية والتقنية.",
+    "Competences": [
+      "تجميد وحماية مسرح الجريمة",
+      "الحفاظ على الآثار والأدلة المادية"
+    ],
+    "CompetencesAssociees": [
+      "تجميد وحماية مسرح الجريمة",
+      "الحفاظ على الآثار والأدلة المادية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 8101,
+        "QuestionId": 81,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تنظيف الأرضية فوراً بالماء ومواد التطهير لراحة المحققين",
+        "EnonceOption": "تنظيف الأرضية فوراً بالماء ومواد التطهير لراحة المحققين",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8102,
+        "QuestionId": 81,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تجميد مسرح الجريمة ومنع الولوج إليه ووضع طوق أمني لحماية الأدلة الجنائية من التلوث",
+        "EnonceOption": "تجميد مسرح الجريمة ومنع الولوج إليه ووضع طوق أمني لحماية الأدلة الجنائية من التلوث",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 8103,
+        "QuestionId": 81,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "فتح النوافذ وجمع الجيران والأقارب داخل الغرفة لتبادل الآراء",
+        "EnonceOption": "فتح النوافذ وجمع الجيران والأقارب داخل الغرفة لتبادل الآراء",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8104,
+        "QuestionId": 81,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "نقل الجثة إلى سيارة الدورية دون إشعار النيابة العامة أو الطبيب الشرعي",
+        "EnonceOption": "نقل الجثة إلى سيارة الدورية دون إشعار النيابة العامة أو الطبيب الشرعي",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 82,
+    "TestId": 1,
+    "Code": "Q-ENQ-082",
+    "Enonce": "وفقاً لقانون المسطرة الجنائية، ما هو الإجراء الإلزامي الذي يجب على ضابط الشرطة القضائية القيام به فور وضع شخص تحت تدبير الحراسة النظرية؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "إشعار الشخص بدواعي توقيفه وحقوقه القانونية (التزام الصمت، الاتصال بأحد أقربائه، الاستعانة بمحامٍ، والحق في الفحص الطبي) وتدوين ذلك في سجل رسمي ومحضر قانوني.",
+    "Competences": [
+      "ضمانات الحراسة النظرية وحقوق الإنسان",
+      "المسطرة الجنائية والشرعية الإجرائية"
+    ],
+    "CompetencesAssociees": [
+      "ضمانات الحراسة النظرية وحقوق الإنسان",
+      "المسطرة الجنائية والشرعية الإجرائية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 8201,
+        "QuestionId": 82,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "إجباره على التوقيع على محاضر بيضاء دون قراءتها",
+        "EnonceOption": "إجباره على التوقيع على محاضر بيضاء دون قراءتها",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8202,
+        "QuestionId": 82,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "إشعاره بحقوقه القانونية (دواعي التوقيف، الاتصال بالعائلة، طلب محامٍ وفحص طبي) وتدوينها بالسجل",
+        "EnonceOption": "إشعاره بحقوقه القانونية (دواعي التوقيف، الاتصال بالعائلة، طلب محامٍ وفحص طبي) وتدوينها بالسجل",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 8203,
+        "QuestionId": 82,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "مصادرة ملابسه وحرمانه من شرب الماء طوال مدة الحراسة",
+        "EnonceOption": "مصادرة ملابسه وحرمانه من شرب الماء طوال مدة الحراسة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8204,
+        "QuestionId": 82,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إطلاق سراحه سراً إذا كان ينتمي لنفس المنطقة الجغرافية",
+        "EnonceOption": "إطلاق سراحه سراً إذا كان ينتمي لنفس المنطقة الجغرافية",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 83,
+    "TestId": 1,
+    "Code": "Q-ENQ-083",
+    "Enonce": "عند رفع البصمات الإصبعية الكامنة (Empreintes latentes) من على سطح زجاجي ناعم بمسرح الجريمة، ما هي المادة والتقنية التقليدية الفعالة المعتمدة من طرف تقنيي الشرطة العلمية؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "استخدام المساحيق المغناطيسية أو الكربونية المتخصصة عبر فرشاة ريش ناعمة جداً لإظهار الإفرازات الدهنية العرقية المتروكة على الزجاج دون تشويه خطوط الحلمات الجلدية.",
+    "Competences": [
+      "الشرطة التقنية والعلمية",
+      "إظهار ورفع البصمات الجنائية"
+    ],
+    "CompetencesAssociees": [
+      "الشرطة التقنية والعلمية",
+      "إظهار ورفع البصمات الجنائية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 8301,
+        "QuestionId": 83,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "فرك الزجاج بقطعة قماش خشنة مبللة بالماء والصابون",
+        "EnonceOption": "فرك الزجاج بقطعة قماش خشنة مبللة بالماء والصابون",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8302,
+        "QuestionId": 83,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تطبيق المسحوق المغناطيسي أو الكربوني المتخصص بفرشاة رقيقة لكشف الخطوط الحليمية بدقة",
+        "EnonceOption": "تطبيق المسحوق المغناطيسي أو الكربوني المتخصص بفرشاة رقيقة لكشف الخطوط الحليمية بدقة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 8303,
+        "QuestionId": 83,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "تسخين الزجاج بالنار المباشرة حتى يتصدع",
+        "EnonceOption": "تسخين الزجاج بالنار المباشرة حتى يتصدع",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8304,
+        "QuestionId": 83,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "رش الزجاج بطلاء أسود زيتي سميك لإخفاء الآثار",
+        "EnonceOption": "رش الزجاج بطلاء أسود زيتي سميك لإخفاء الآثار",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 84,
+    "TestId": 1,
+    "Code": "Q-ENQ-084",
+    "Enonce": "ما هي الأوقات القانونية العامة التي يُسمح فيها لضابط الشرطة القضائية بدخول المنازل لتفتيشها في الأحوال العادية وفق قانون المسطرة الجنائية؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "القاعدة العامة تصون حرمة المنازل: لا يمكن البدء في تفتيش المنازل أو معاينتها قبل الساعة السادسة صباحاً (06:00) ولا بعد التاسعة ليلاً (21:00)، إلا باستثناءات قانونية محددة حصراً.",
+    "Competences": [
+      "حرمة المسكن والإجراءات التفتيشية",
+      "المسطرة الجنائية"
+    ],
+    "CompetencesAssociees": [
+      "حرمة المسكن والإجراءات التفتيشية",
+      "المسطرة الجنائية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 8401,
+        "QuestionId": 84,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "بين الساعة 02:00 ليلاً و 05:00 فجراً حصراً",
+        "EnonceOption": "بين الساعة 02:00 ليلاً و 05:00 فجراً حصراً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8402,
+        "QuestionId": 84,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "بين الساعة السادسة صباحاً (06:00) والتاسعة ليلاً (21:00)",
+        "EnonceOption": "بين الساعة السادسة صباحاً (06:00) والتاسعة ليلاً (21:00)",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 8403,
+        "QuestionId": 84,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "في أي وقت يختاره الضابط دون قيد زمني طوال 24 ساعة",
+        "EnonceOption": "في أي وقت يختاره الضابط دون قيد زمني طوال 24 ساعة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8404,
+        "QuestionId": 84,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "يوم الأحد فقط بين الظهر والعصر",
+        "EnonceOption": "يوم الأحد فقط بين الظهر والعصر",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 85,
+    "TestId": 1,
+    "Code": "Q-ENQ-085",
+    "Enonce": "لماذا تعد \"سلسلة الحراسة والحفظ\" (Chaîne de traçabilité des scellés) بالغة الحساسية والأهمية في القضايا الجنائية الكبرى؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "سلسلة الحفظ توثق هوية كل شخص استلم أو فحص الحرز وتوقيت ذلك لمنع أي شبهة استبدال أو تلاعب أو تلوث، مما يحمي الحجية القانونية للدليل أمام هيئة المحكمة.",
+    "Competences": [
+      "إدارة وتحريز الأدلة الجنائية",
+      "حماية الحجية القانونية للمحجوزات"
+    ],
+    "CompetencesAssociees": [
+      "إدارة وتحريز الأدلة الجنائية",
+      "حماية الحجية القانونية للمحجوزات"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 8501,
+        "QuestionId": 85,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "لزيادة وزن الحرز والحصول على مكافأة مالية",
+        "EnonceOption": "لزيادة وزن الحرز والحصول على مكافأة مالية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8502,
+        "QuestionId": 85,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "لضمان عدم التلاعب بالدليل أو تلويثه وإثبات مشروعيته وسلامته القانونية أمام القضاء",
+        "EnonceOption": "لضمان عدم التلاعب بالدليل أو تلويثه وإثبات مشروعيته وسلامته القانونية أمام القضاء",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 8503,
+        "QuestionId": 85,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "للسماح للجمهور بالتقاط صور مع الأحراز في المعارض",
+        "EnonceOption": "للسماح للجمهور بالتقاط صور مع الأحراز في المعارض",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8504,
+        "QuestionId": 85,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "لبيع الأحراز في المزاد العلني قبل صدور الحكم",
+        "EnonceOption": "لبيع الأحراز في المزاد العلني قبل صدور الحكم",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 86,
+    "TestId": 1,
+    "Code": "Q-ENQ-086",
+    "Enonce": "في تقنيات الاستنطاق الحديثة (مثل نموذج PEACE)، ما هي المرحلة الأساسية التي يجب أن يبدأ بها المحقق قبل توجيه أي أسئلة تفصيلية للمشتبه به؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "إتاحة الفرصة للمستمع إليه لتقديم روايته الحرة والمسترسلة للأحداث (Récit libre) دون مقاطعة لتدوين تفاصيلها، ثم الانتقال لمرحلة فحص التناقضات بالأسئلة الدقيقة.",
+    "Competences": [
+      "تقنيات الاستماع والاستجواب الجنائي",
+      "التحليل الاستقصائي"
+    ],
+    "CompetencesAssociees": [
+      "تقنيات الاستماع والاستجواب الجنائي",
+      "التحليل الاستقصائي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 1.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 8601,
+        "QuestionId": 86,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "الصراخ وتهديد المشتبه به بالعقوبات الشديدة لجعله ينهار فوراً",
+        "EnonceOption": "الصراخ وتهديد المشتبه به بالعقوبات الشديدة لجعله ينهار فوراً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8602,
+        "QuestionId": 86,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "إتاحة الفرصة للمشتبه به لتقديم سرده الحر والتلقائي للأحداث قبل الانتقال للأسئلة الموجهة",
+        "EnonceOption": "إتاحة الفرصة للمشتبه به لتقديم سرده الحر والتلقائي للأحداث قبل الانتقال للأسئلة الموجهة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 8603,
+        "QuestionId": 86,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "تلقينه الإجابات التي يرغب المحقق في كتابتها بالمحضر",
+        "EnonceOption": "تلقينه الإجابات التي يرغب المحقق في كتابتها بالمحضر",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8604,
+        "QuestionId": 86,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "جعله يقسم على الولاء قبل بدء الجلسة",
+        "EnonceOption": "جعله يقسم على الولاء قبل بدء الجلسة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 87,
+    "TestId": 1,
+    "Code": "Q-ENQ-087",
+    "Enonce": "عثر المحقق على بقعة دم رطبة على ملابس ضحية في جريمة اعتداء. كيف يتم أخذ هذه العينة البيولوجية وحفظها بشكل صحيح لتفادي تعفن الحمض النووي (ADN)؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "رفع العينة بمسحة معقمة وتركها تجف في درجة حرارة الغرفة بعيداً عن الرطوبة والشمس المباشرة، وتوضيبها في مظروف ورقي نافذ للهواء (وليس كيس بلاستيكي خانق يسبب تعفن العينة).",
+    "Competences": [
+      "البيولوجيا الجنائية ورفع عينات ADN",
+      "الشرطة العلمية"
+    ],
+    "CompetencesAssociees": [
+      "البيولوجيا الجنائية ورفع عينات ADN",
+      "الشرطة العلمية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 8701,
+        "QuestionId": 87,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "وضع العينة وهي مبللة داخل كيس بلاستيكي محكم الإغلاق وتركها في الشمس الحارة",
+        "EnonceOption": "وضع العينة وهي مبللة داخل كيس بلاستيكي محكم الإغلاق وتركها في الشمس الحارة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8702,
+        "QuestionId": 87,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "أخذ العينة بمسحة معقمة، تجفيفها في الهواء الطلق، وتعبئتها في كيس ورقي جاف وبارد",
+        "EnonceOption": "أخذ العينة بمسحة معقمة، تجفيفها في الهواء الطلق، وتعبئتها في كيس ورقي جاف وبارد",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 8703,
+        "QuestionId": 87,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "غسل بقعة الدم بمحلول الكلور (ماء جافيل) لتطهيرها قبل التحليل",
+        "EnonceOption": "غسل بقعة الدم بمحلول الكلور (ماء جافيل) لتطهيرها قبل التحليل",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8704,
+        "QuestionId": 87,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "تجميد الملابس في الثلج المباشر مع اللحوم المجمدة",
+        "EnonceOption": "تجميد الملابس في الثلج المباشر مع اللحوم المجمدة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 88,
+    "TestId": 1,
+    "Code": "Q-ENQ-088",
+    "Enonce": "أي من العناصر التالية يعد شكلياً وجوهرياً لصحة محضر الاستماع المنجز من طرف ضابط الشرطة القضائية تحت طائلة البطلان؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "المحضر يجب أن يتضمن هوية الضابط وصفته، تاريخ وساعة الإجراء، تلاوة الأقوال على المصرح، وتوقيع المصرح أو الإشارة إلى امتناعه أو عجزه عن التوقيع.",
+    "Competences": [
+      "صياغة المحاضر الجنائية",
+      "الشكليات القانونية الإلزامية"
+    ],
+    "CompetencesAssociees": [
+      "صياغة المحاضر الجنائية",
+      "الشكليات القانونية الإلزامية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 8801,
+        "QuestionId": 88,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "أن يكون المحضر مكتوباً بحبر أحمر حصراً ومزيناً بالرسومات",
+        "EnonceOption": "أن يكون المحضر مكتوباً بحبر أحمر حصراً ومزيناً بالرسومات",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8802,
+        "QuestionId": 88,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "ذكر صفة وهوية المحرر، التواريخ والساعات، قراءة الأقوال وتوقيع أو بصمة المصرح والضابط",
+        "EnonceOption": "ذكر صفة وهوية المحرر، التواريخ والساعات، قراءة الأقوال وتوقيع أو بصمة المصرح والضابط",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 8803,
+        "QuestionId": 88,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إرفاق شهادة ميلاد جد الضابط مع كل محضر استماع",
+        "EnonceOption": "إرفاق شهادة ميلاد جد الضابط مع كل محضر استماع",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8804,
+        "QuestionId": 88,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "أن تتم طباعة المحضر في مطبعة عمومية خارج المركز",
+        "EnonceOption": "أن تتم طباعة المحضر في مطبعة عمومية خارج المركز",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 89,
+    "TestId": 1,
+    "Code": "Q-ENQ-089",
+    "Enonce": "أي من الحالات التالية يعتبر حالة \"تلبس بالجناية أو الجنحة\" (Flagrant délit) تخول لضابط الشرطة القضائية صلاحيات استثنائية فورية؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "حالات التلبس قانوناً: إذا كانت الجريمة ترتكب عيناً أو ارتكبت حديثاً، أو إذا توبع الفاعل بصياح الجمهور إثر ارتكابها، أو إذا وجد بعد وقوعها بوقت قريب حاملاً أسلحة أو أشياء تثبت تورطه.",
+    "Competences": [
+      "أحكام التلبس بالجريمة",
+      "المسطرة الجنائية وسلطات OPJ"
+    ],
+    "CompetencesAssociees": [
+      "أحكام التلبس بالجريمة",
+      "المسطرة الجنائية وسلطات OPJ"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 8901,
+        "QuestionId": 89,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "شكوى شفوية غامضة عن واقعة غير محددة حدثت قبل ثلاث سنوات",
+        "EnonceOption": "شكوى شفوية غامضة عن واقعة غير محددة حدثت قبل ثلاث سنوات",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8902,
+        "QuestionId": 89,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "ضبط الفاعل في وقت ارتكاب الفعل الجرمي عيناً أو تتبعه بصياح وصخب الجمهور إثر ارتكابها",
+        "EnonceOption": "ضبط الفاعل في وقت ارتكاب الفعل الجرمي عيناً أو تتبعه بصياح وصخب الجمهور إثر ارتكابها",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 8903,
+        "QuestionId": 89,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "شخص يبدو عليه التعب أثناء تجوله في حديقة عامة",
+        "EnonceOption": "شخص يبدو عليه التعب أثناء تجوله في حديقة عامة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 8904,
+        "QuestionId": 89,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "سماع إشاعة غير مؤكدة على تطبيق واتساب",
+        "EnonceOption": "سماع إشاعة غير مؤكدة على تطبيق واتساب",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 90,
+    "TestId": 1,
+    "Code": "Q-ENQ-090",
+    "Enonce": "عند تنظيم طابور عرض للتشخيص وتعرف الشهود على المشتبه به (Tapissage / Parade d'identification)، ما الشرط الأساسي لنزاهة العملية وعدم بطلانها؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "وضع المشتبه به مع أشخاص آخرين (أشباه) يتقاربون معه في الملامح، والسن، والطول، والملابس، ودون تقديم أي إيحاء أو إشارة توجيهية للشاهد أثناء المعاينة.",
+    "Competences": [
+      "إجراءات تشخيص المشتبه بهم",
+      "نزاهة التحقيق وتفادي التوجيه الإيحائي"
+    ],
+    "CompetencesAssociees": [
+      "إجراءات تشخيص المشتبه بهم",
+      "نزاهة التحقيق وتفادي التوجيه الإيحائي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 9001,
+        "QuestionId": 90,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "وضع المشتبه به بمفرده مقيداً بالسلاسل والإشارة إليه بالقول \"هذا هو المجرم بالتأكيد\"",
+        "EnonceOption": "وضع المشتبه به بمفرده مقيداً بالسلاسل والإشارة إليه بالقول \"هذا هو المجرم بالتأكيد\"",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9002,
+        "QuestionId": 90,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "عرض المشتبه به وسط مجموعة من الأشخاص المماثلين له في السن والهيئة والبنية دون أي توجيه إيحائي",
+        "EnonceOption": "عرض المشتبه به وسط مجموعة من الأشخاص المماثلين له في السن والهيئة والبنية دون أي توجيه إيحائي",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 9003,
+        "QuestionId": 90,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "عرض صورة المشتبه به في التلفاز قبل بدء جلسة التعرف بساعة",
+        "EnonceOption": "عرض صورة المشتبه به في التلفاز قبل بدء جلسة التعرف بساعة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9004,
+        "QuestionId": 90,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "جعل الشاهد مغمض العينين تماماً أثناء العرض",
+        "EnonceOption": "جعل الشاهد مغمض العينين تماماً أثناء العرض",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 91,
+    "TestId": 1,
+    "Code": "Q-ENQ-091",
+    "Enonce": "عند ضبط هاتف ذكي بحوزة مشتبه به رئيسي أثناء مداهمة أمنية، ما الإجراء الفني الفوري لحماية البيانات الرقمية من المسح عن بُعد (Effacement à distance)؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "عزل الهاتف فوراً عن أي شبكة اتصال بتفعيل \"نمط الطيران\" أو وضعه داخل غلاف عازل للإشارات الكهرومغناطيسية (Cage de Faraday) لمنع إرسال أمر مسح للذاكرة عبر الإنترنت.",
+    "Competences": [
+      "المحافظة على الأدلة الرقمية",
+      "التحقيق في الجريمة السيبرانية"
+    ],
+    "CompetencesAssociees": [
+      "المحافظة على الأدلة الرقمية",
+      "التحقيق في الجريمة السيبرانية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 2.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-INFO"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 9101,
+        "QuestionId": 91,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "توصيل الهاتف بشبكة الواي فاي العامة للمركز والبدء في تنزيل ألعاب",
+        "EnonceOption": "توصيل الهاتف بشبكة الواي فاي العامة للمركز والبدء في تنزيل ألعاب",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9102,
+        "QuestionId": 91,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "عزل الهاتف فوراً عن الشبكات (وضع الطيران أو كيس فاراداي العازل للموجات)",
+        "EnonceOption": "عزل الهاتف فوراً عن الشبكات (وضع الطيران أو كيس فاراداي العازل للموجات)",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 9103,
+        "QuestionId": 91,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إدخال رمز سري خاطئ 20 مرة متتالية لقفل الجهاز",
+        "EnonceOption": "إدخال رمز سري خاطئ 20 مرة متتالية لقفل الجهاز",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9104,
+        "QuestionId": 91,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "رمي الهاتف في إناء ماء بارد لحمايته من الحرارة",
+        "EnonceOption": "رمي الهاتف في إناء ماء بارد لحمايته من الحرارة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 92,
+    "TestId": 1,
+    "Code": "Q-ENQ-092",
+    "Enonce": "عند الاستماع إلى طفل قاصر ضحية اعتداء جسدي عنيف، ما هي الشروط المسطرية والنفسية الواجب توفيرها لحماية مصلحة الطفل الفضلى؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الاستماع بحضور الولي الشرعي أو المساعد الاجتماعي، في قاعة ملائمة ومريحة نفسياً، وبأسلوب مبسط يتناسب مع سن الطفل وإدراكه ودون تكرار الأسئلة المسببة للصدمة.",
+    "Competences": [
+      "قضاء الأحداث وحماية الطفولة",
+      "الاستماع الجنائي للفئات الحساسة"
+    ],
+    "CompetencesAssociees": [
+      "قضاء الأحداث وحماية الطفولة",
+      "الاستماع الجنائي للفئات الحساسة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 9201,
+        "QuestionId": 92,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "استجواب الطفل في زنزانة الحراسة النظرية وهو مكبل اليدين",
+        "EnonceOption": "استجواب الطفل في زنزانة الحراسة النظرية وهو مكبل اليدين",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9202,
+        "QuestionId": 92,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الاستماع إليه في فضاء ملائم ومحفز نفسياً بحضور وليه الشرعي أو مساعد اجتماعي مع مراعاة سنه",
+        "EnonceOption": "الاستماع إليه في فضاء ملائم ومحفز نفسياً بحضور وليه الشرعي أو مساعد اجتماعي مع مراعاة سنه",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 9203,
+        "QuestionId": 92,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "نشر صورة الطفل في وسائل الإعلام لدعوة الجيران لحضور الجلسة",
+        "EnonceOption": "نشر صورة الطفل في وسائل الإعلام لدعوة الجيران لحضور الجلسة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9204,
+        "QuestionId": 92,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الضغط على الطفل للاعتراف بأنه هو المعتدي على نفسه",
+        "EnonceOption": "الضغط على الطفل للاعتراف بأنه هو المعتدي على نفسه",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 93,
+    "TestId": 1,
+    "Code": "Q-ENQ-093",
+    "Enonce": "في عمليات الترصد والمراقبة البصرية (Filature) لشبكة تهريب دولية، ما هي التقنية الأساسية لتفادي \"حرق\" عناصر المراقبة وكشف أمرهم من طرف المشبوهين؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "اعتماد المراقبة التناوبية متعددة المركبات (Filature en relais)؛ حيث تتغير السيارات والأفراد المتابعون باستمرار وبفواصل مكانية لتفادي إثارة أي شك لدى الهدف.",
+    "Competences": [
+      "تقنيات المراقبة والترصد السري",
+      "التحريات الميدانية المعقدة"
+    ],
+    "CompetencesAssociees": [
+      "تقنيات المراقبة والترصد السري",
+      "التحريات الميدانية المعقدة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-GSI",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 9301,
+        "QuestionId": 93,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تشغيل صفارات الإنذار وملاحقة الهدف من مسافة متر واحد فقط طوال الوقت",
+        "EnonceOption": "تشغيل صفارات الإنذار وملاحقة الهدف من مسافة متر واحد فقط طوال الوقت",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9302,
+        "QuestionId": 93,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "اعتماد المراقبة التناوبية المتبادلة بعدة سيارات غير مموهة وتغيير نقاط التتبع باستمرار وبمرونة",
+        "EnonceOption": "اعتماد المراقبة التناوبية المتبادلة بعدة سيارات غير مموهة وتغيير نقاط التتبع باستمرار وبمرونة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 9303,
+        "QuestionId": 93,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الاتصال بالمشتبه به هاتفياً لإخباره بأنه تحت المراقبة",
+        "EnonceOption": "الاتصال بالمشتبه به هاتفياً لإخباره بأنه تحت المراقبة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9304,
+        "QuestionId": 93,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "استخدام سيارة واحدة بلون أحمر فاقع لا تتغير طوال 6 أشهر",
+        "EnonceOption": "استخدام سيارة واحدة بلون أحمر فاقع لا تتغير طوال 6 أشهر",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 94,
+    "TestId": 1,
+    "Code": "Q-ENQ-094",
+    "Enonce": "ما هو السند القانوني الذي يُمكن ضابط الشرطة القضائية من مطالبة شركات الاتصالات بتحديد المواقع الجغرافية وسجلات مكالمات مشتبه به هارب؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "توجيه تسخير قضائي رسمي (Réquisition judiciaire) بناءً على تعليمات النيابة العامة المختصة أو أمر قضائي صادر عن قاضي التحقيق وفق المقتضيات القانونية الصريحة.",
+    "Competences": [
+      "المسائل القانونية في التعقب الإلكتروني",
+      "السخرة القضائية والأذونات"
+    ],
+    "CompetencesAssociees": [
+      "المسائل القانونية في التعقب الإلكتروني",
+      "السخرة القضائية والأذونات"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ",
+      "SPEC-INFO"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 9401,
+        "QuestionId": 94,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "مكالمة هاتفية ودية غير موثقة مع موظف الاستقبال بشركة الاتصالات",
+        "EnonceOption": "مكالمة هاتفية ودية غير موثقة مع موظف الاستقبال بشركة الاتصالات",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9402,
+        "QuestionId": 94,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تسخير قضائي كتابي رسمي صادر وفق القانون وبإشراف مباشر من النيابة العامة المختصة",
+        "EnonceOption": "تسخير قضائي كتابي رسمي صادر وفق القانون وبإشراف مباشر من النيابة العامة المختصة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 9403,
+        "QuestionId": 94,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "قرصنة خوادم الشركة بواسطة برامج تجسس مجهولة المصدر",
+        "EnonceOption": "قرصنة خوادم الشركة بواسطة برامج تجسس مجهولة المصدر",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9404,
+        "QuestionId": 94,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "شراء سجلات المكالمات من السوق السوداء",
+        "EnonceOption": "شراء سجلات المكالمات من السوق السوداء",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 95,
+    "TestId": 1,
+    "Code": "Q-ENQ-095",
+    "Enonce": "في مختبر البالستيك القضائي، كيف يتم إثبات أن رصاصة قاتلة معينة أُطلقت بالذات من مسدس مشتبه به محجوز وليس من أي سلاح آخر مماثل؟",
+    "ContexteSituationnel": "الشرطة القضائية والتحري",
+    "DomaineId": 6,
+    "DomaineCode": "PJ_ENQUETE",
+    "DomaineNom": "الشرطة القضائية والتحري",
+    "DomaineIntitule": "الشرطة القضائية والتحري",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "إجراء رمية اختبارية في حوض مائي بالمختبر، ثم مقارنة الخدوش والحلزونات الميكروسكوبية الدقيقة (Stries balistiques) الفريدة لسبطانة السلاح تحت المجهر المقارن.",
+    "Competences": [
+      "البالستيك المقارن والأسلحة النارية",
+      "الخبرة الجنائية المخبرية"
+    ],
+    "CompetencesAssociees": [
+      "البالستيك المقارن والأسلحة النارية",
+      "الخبرة الجنائية المخبرية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 9501,
+        "QuestionId": 95,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "مقارنة لون غلاف الرصاصة الخارجي بالعين المجردة فقط",
+        "EnonceOption": "مقارنة لون غلاف الرصاصة الخارجي بالعين المجردة فقط",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9502,
+        "QuestionId": 95,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "فحص التطابق الميكروسكوبي للخدوش والآثار الميكانيكية الفريدة لسبطانة السلاح بواسطة المجهر المقارن",
+        "EnonceOption": "فحص التطابق الميكروسكوبي للخدوش والآثار الميكانيكية الفريدة لسبطانة السلاح بواسطة المجهر المقارن",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 9503,
+        "QuestionId": 95,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "استنشاق رائحة البارود في فوهة المسدس بعد أسبوعين من الحادث",
+        "EnonceOption": "استنشاق رائحة البارود في فوهة المسدس بعد أسبوعين من الحادث",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9504,
+        "QuestionId": 95,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "وزن المسدس بميزان المطبخ المنزلي",
+        "EnonceOption": "وزن المسدس بميزان المطبخ المنزلي",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 96,
+    "TestId": 1,
+    "Code": "Q-NUM-096",
+    "Enonce": "تلقى دركي بريداً إلكترونياً يبدو في ظاهره صادراً عن مديرية الاتصالات يطلب: \"تحديث عاجل لكلمة مرور الحساب العملياتي عبر الرابط المرفق خلال ساعتين لتفادي الحظر\". ما هو التوصيف السيبراني لهذه الهجمة وما هو السلوك الحذر الواجب؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "هذه محاولة تصيد احتيالي (Phishing) لسرقة بيانات الاعتماد؛ يجب عدم الضغط على أي رابط، والإبلاغ الفوري لمسؤول أمن نظم المعلومات (RSSI) بالوحدة.",
+    "Competences": [
+      "الأمن السيبراني والوعي بالتهديدات",
+      "كشف التصيد الاحتيالي Phishing"
+    ],
+    "CompetencesAssociees": [
+      "الأمن السيبراني والوعي بالتهديدات",
+      "كشف التصيد الاحتيالي Phishing"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-SEC-ADMIN",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 9601,
+        "QuestionId": 96,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "إدخال كلمة المرور القديمة والجديدة فوراً لتفادي غضب المديرية",
+        "EnonceOption": "إدخال كلمة المرور القديمة والجديدة فوراً لتفادي غضب المديرية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9602,
+        "QuestionId": 96,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "هجمة تصيد احتيالي (Phishing)؛ يجب الامتناع عن النقر وإبلاغ خلية أمن الأنظمة فوراً",
+        "EnonceOption": "هجمة تصيد احتيالي (Phishing)؛ يجب الامتناع عن النقر وإبلاغ خلية أمن الأنظمة فوراً",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 9603,
+        "QuestionId": 96,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إعادة إرسال البريد لجميع الأصدقاء والزملاء لتنبيههم برابط التحديث",
+        "EnonceOption": "إعادة إرسال البريد لجميع الأصدقاء والزملاء لتنبيههم برابط التحديث",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9604,
+        "QuestionId": 96,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الرد على البريد بكلمة سر تجريبية لاختبار نيتهم",
+        "EnonceOption": "الرد على البريد بكلمة سر تجريبية لاختبار نيتهم",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 97,
+    "TestId": 1,
+    "Code": "Q-NUM-097",
+    "Enonce": "أي من كلمات المرور التالية يمثل أعلى مستوى من القوة والمقاومة لهجمات التخمين الشامل (Brute-force) وفق معايير الأمان الرقمي الحديثة؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "كلمة المرور القوية تتكون من 12 رمزاً على الأقل تجمع بين حروف كبيرة وصغيرة وأرقام ورموز خاصة عشوائية دون تشكيل كلمات قاموسية معروفة.",
+    "Competences": [
+      "إدارة وحماية كلمات المرور",
+      "الأمان السيبراني الأساسي"
+    ],
+    "CompetencesAssociees": [
+      "إدارة وحماية كلمات المرور",
+      "الأمان السيبراني الأساسي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 9701,
+        "QuestionId": 97,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "12345678",
+        "EnonceOption": "12345678",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9702,
+        "QuestionId": 97,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "Gendarme2024",
+        "EnonceOption": "Gendarme2024",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9703,
+        "QuestionId": 97,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "T9$mK#8vL!q2@Z",
+        "EnonceOption": "T9$mK#8vL!q2@Z",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 9704,
+        "QuestionId": 97,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "password1234",
+        "EnonceOption": "password1234",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 98,
+    "TestId": 1,
+    "Code": "Q-NUM-098",
+    "Enonce": "ما هو الدور الأمني الرئيسي لجدار الحماية (Firewall / Pare-feu) في الشبكة المعلوماتية لمقر قيادة الدرك الملكي؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "يقوم جدار الحماية بمراقبة وتصفية حركة البيانات الصادرة والواردة وفق قواعد أمنية صارمة، وحظر الاتصالات غير المصرح بها ومنع التسلل الخارجي إلى الخوادم الداخلية.",
+    "Competences": [
+      "هندسة وأمن الشبكات",
+      "حماية الخوادم والاتصالات"
+    ],
+    "CompetencesAssociees": [
+      "هندسة وأمن الشبكات",
+      "حماية الخوادم والاتصالات"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 9801,
+        "QuestionId": 98,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تبريد الغرفة المركزية بحفظ درجات الحرارة منخفضة",
+        "EnonceOption": "تبريد الغرفة المركزية بحفظ درجات الحرارة منخفضة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9802,
+        "QuestionId": 98,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "مراقبة وتصفية حزم البيانات المتبادلة وحظر المنافذ والاتصالات غير المصرح بها",
+        "EnonceOption": "مراقبة وتصفية حزم البيانات المتبادلة وحظر المنافذ والاتصالات غير المصرح بها",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 9803,
+        "QuestionId": 98,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "طباعة التقارير الإدارية تلقائياً كل مساء",
+        "EnonceOption": "طباعة التقارير الإدارية تلقائياً كل مساء",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9804,
+        "QuestionId": 98,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "تسريع سرعة الرياح داخل صندوق الحاسوب",
+        "EnonceOption": "تسريع سرعة الرياح داخل صندوق الحاسوب",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 99,
+    "TestId": 1,
+    "Code": "Q-NUM-099",
+    "Enonce": "في خطط الحفاظ على البيانات الإدارية والقضائية من التلف أو الكوارث، ماذا تنص القاعدة الذهبية للنسخ الاحتياطي المعروفة بـ (قاعدة 3-2-1)؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الاحتفاظ بـ 3 نسخ من البيانات، على وسيطين (2) تخزين ماديين مختلفين (مثلاً: قرص صلب داخلي ووحدة تخزين سحابية/شريط)، ونسخة واحدة (1) على الأقل في موقع جغرافي خارجي مؤمن.",
+    "Competences": [
+      "تدبير النسخ الاحتياطي وحماية المعطيات",
+      "استمرارية العمليات الرقمية"
+    ],
+    "CompetencesAssociees": [
+      "تدبير النسخ الاحتياطي وحماية المعطيات",
+      "استمرارية العمليات الرقمية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 9901,
+        "QuestionId": 99,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "3 دقائق للطباعة، 2 صفحة لكل ورقة، 1 ملف لكل درج",
+        "EnonceOption": "3 دقائق للطباعة، 2 صفحة لكل ورقة، 1 ملف لكل درج",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9902,
+        "QuestionId": 99,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "3 نسخ من البيانات، على وسيطين مختلفين للتخزين، ونسخة واحدة على الأقل في موقع جغرافي خارجي بعيد",
+        "EnonceOption": "3 نسخ من البيانات، على وسيطين مختلفين للتخزين، ونسخة واحدة على الأقل في موقع جغرافي خارجي بعيد",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 9903,
+        "QuestionId": 99,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "حفظ الملف 3 مرات متتالية على نفس بطاقة الذاكرة الصغيرة",
+        "EnonceOption": "حفظ الملف 3 مرات متتالية على نفس بطاقة الذاكرة الصغيرة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 9904,
+        "QuestionId": 99,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "مسح البيانات كل 3 أيام ونسخها في اليوم الثاني وإتلافها في اليوم الأول",
+        "EnonceOption": "مسح البيانات كل 3 أيام ونسخها في اليوم الثاني وإتلافها في اليوم الأول",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 100,
+    "TestId": 1,
+    "Code": "Q-NUM-100",
+    "Enonce": "في تتبع مرتكبي جرائم النصب الإلكتروني عبر الإنترنت، ما هي المعلومة التقنية الأساسية المضمنة في سجلات الخادم (Server logs) التي تسمح بتحديد الخط الهاتفي أو الاشتراك المزود للخدمة؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "عنوان بروتوكول الإنترنت العام (Adresse IP publique) المقترن بالتاريخ والساعة بدقة بالغة (Timestamp) هو العنصر الفني الحاسم لتحديد هوية صاحب الاشتراك لدى مزود خدمة الإنترنت (FAI).",
+    "Competences": [
+      "التحقيق الجنائي السيبراني",
+      "تعقب بروتوكولات الإنترنت"
+    ],
+    "CompetencesAssociees": [
+      "التحقيق الجنائي السيبراني",
+      "تعقب بروتوكولات الإنترنت"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-INFO",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 10001,
+        "QuestionId": 100,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "لون شاشة الحاسوب التي استخدمها الجاني",
+        "EnonceOption": "لون شاشة الحاسوب التي استخدمها الجاني",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10002,
+        "QuestionId": 100,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "عنوان بروتوكول الإنترنت (Adresse IP) مع البصمة الزمنية الدقيقة (Timestamp)",
+        "EnonceOption": "عنوان بروتوكول الإنترنت (Adresse IP) مع البصمة الزمنية الدقيقة (Timestamp)",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 10003,
+        "QuestionId": 100,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "طراز الطابعة المتصلة بمكتب الجاني",
+        "EnonceOption": "طراز الطابعة المتصلة بمكتب الجاني",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10004,
+        "QuestionId": 100,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "عدد الأزرار الموجودة في لوحة مفاتيحه",
+        "EnonceOption": "عدد الأزرار الموجودة في لوحة مفاتيحه",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 101,
+    "TestId": 1,
+    "Code": "Q-NUM-101",
+    "Enonce": "ظهرت فجأة على شاشة حاسوب المركز رسالة تحذيرية حمراء تفيد بتشفير جميع الملفات مع طلب فدية بعملة البيتكوين (Ransomware / برمجية الفدية). ما هو رد الفعل التقني الفوري الإلزامي لإنقاذ باقي أجهزة الوحدة؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "فصل كابل الشبكة السلكي وإيقاف الواي فاي فوراً لعزل الجهاز المصاب ومنع انتقال البرمجية لباقي خوادم الوحدة، مع عدم إطفاء الجهاز لحفظ الأدلة في الذاكرة الحية (RAM) للمختصين.",
+    "Competences": [
+      "الاستجابة للحوادث السيبرانية الطارئة",
+      "احتواء انتشار البرمجيات الخبيثة"
+    ],
+    "CompetencesAssociees": [
+      "الاستجابة للحوادث السيبرانية الطارئة",
+      "احتواء انتشار البرمجيات الخبيثة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-SEC-ADMIN",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 10101,
+        "QuestionId": 101,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تحويل مبلغ الفدية فوراً من الميزانية الخاصة للمركز",
+        "EnonceOption": "تحويل مبلغ الفدية فوراً من الميزانية الخاصة للمركز",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10102,
+        "QuestionId": 101,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "فصل الحاسوب فوراً عن الشبكة المحلية والإنترنت دون إطفائه وإشعار خلية الأمن السيبراني فوراً",
+        "EnonceOption": "فصل الحاسوب فوراً عن الشبكة المحلية والإنترنت دون إطفائه وإشعار خلية الأمن السيبراني فوراً",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 10103,
+        "QuestionId": 101,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إعادة تشغيل الحاسوب 10 مرات متتالية",
+        "EnonceOption": "إعادة تشغيل الحاسوب 10 مرات متتالية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10104,
+        "QuestionId": 101,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "توصيل مفاتيح USB إضافية لحفظ الفيروس ونقله للأجهزة الأخرى",
+        "EnonceOption": "توصيل مفاتيح USB إضافية لحفظ الفيروس ونقله للأجهزة الأخرى",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 102,
+    "TestId": 1,
+    "Code": "Q-NUM-102",
+    "Enonce": "عند حجز صورة فوتوغرافية رقمية التقطها مشتبه به لموقع حساس، ما هي البيانات الوصفية المخفية (Métadonnées EXIF) التي يمكن لتقني المعلوميات استخراجها للمساعدة في التحقيق الجنائي؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "بيانات EXIF تسجل تلقائياً نوع الكاميرا، والتاريخ والوقت بالثواني، وإحداثيات الموقع الجغرافي الدقيقة (GPS) التي التُقطت فيها الصورة ما لم يتم حجبها.",
+    "Competences": [
+      "التحليل الجنائي للوسائط الرقمية",
+      "استخراج بيانات EXIF الجغرافية"
+    ],
+    "CompetencesAssociees": [
+      "التحليل الجنائي للوسائط الرقمية",
+      "استخراج بيانات EXIF الجغرافية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 10201,
+        "QuestionId": 102,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "نوايا المشتبه به ومستقبله المهني",
+        "EnonceOption": "نوايا المشتبه به ومستقبله المهني",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10202,
+        "QuestionId": 102,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الإحداثيات الجغرافية (GPS)، تاريخ وساعة الالتقاط، وطراز الهاتف أو الكاميرا بدقة",
+        "EnonceOption": "الإحداثيات الجغرافية (GPS)، تاريخ وساعة الالتقاط، وطراز الهاتف أو الكاميرا بدقة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 10203,
+        "QuestionId": 102,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "تسجيل صوتي للأحاديث التي دارت أثناء التقاط الصورة قبل 5 سنوات",
+        "EnonceOption": "تسجيل صوتي للأحاديث التي دارت أثناء التقاط الصورة قبل 5 سنوات",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10204,
+        "QuestionId": 102,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الاسم الكامل لوالدة صانع الهاتف",
+        "EnonceOption": "الاسم الكامل لوالدة صانع الهاتف",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 103,
+    "TestId": 1,
+    "Code": "Q-NUM-103",
+    "Enonce": "في تقنيات التشفير غير المتماثل (Chiffrement asymétrique) المستخدمة في تأمين المراسلات العسكرية والمفاتيح العامة (PKI)، ما هو المبدأ الأساسي الذي يحقق سرية الرسالة؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "تُشفر الرسالة بالمفتاح العام (Clé publique) للمستلم الذي يعرفه الجميع، ولا يمكن فك تشفيرها وقراءتها إلا بواسطة المفتاح الخاص (Clé privée) الوحيد السري المحفوظ لدى المستلم.",
+    "Competences": [
+      "علم التعمية والتشفير",
+      "أمن الاتصالات الحساسة"
+    ],
+    "CompetencesAssociees": [
+      "علم التعمية والتشفير",
+      "أمن الاتصالات الحساسة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 10301,
+        "QuestionId": 103,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "استخدام كلمة سر موحدة وسهلة يعرفها جميع الجنود",
+        "EnonceOption": "استخدام كلمة سر موحدة وسهلة يعرفها جميع الجنود",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10302,
+        "QuestionId": 103,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "التشفير بواسطة المفتاح العام للطرف الآخر، وفك التشفير حصرياً بواسطة مفتاحه الخاص السري",
+        "EnonceOption": "التشفير بواسطة المفتاح العام للطرف الآخر، وفك التشفير حصرياً بواسطة مفتاحه الخاص السري",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 10303,
+        "QuestionId": 103,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "كتابة الرسالة بلغة أجنبية دون استخدام أي حاسوب",
+        "EnonceOption": "كتابة الرسالة بلغة أجنبية دون استخدام أي حاسوب",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10304,
+        "QuestionId": 103,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إرسال الرسالة عبر البريد العادي في مظروف شفاف",
+        "EnonceOption": "إرسال الرسالة عبر البريد العادي في مظروف شفاف",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 104,
+    "TestId": 1,
+    "Code": "Q-NUM-104",
+    "Enonce": "عثر دركي على مفتاح تخزين (USB Flash Drive) جديد ومغلف ملقى على رصيف مرآب السيارات العسكري للوحدة. ما هو التصرف الأمني الصارم وفق بروتوكولات الدفاع السيبراني؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "حظر توصيله بأي حاسوب مهني قطعياً؛ قد يحتوي على برمجية خبيثة هجومية (مثل BadUSB)؛ يجب تسليمه لخلية المعلوميات لفحصه داخل بيئة معزولة تماماً (Sandbox).",
+    "Competences": [
+      "مكافحة هجمات الهندسة الاجتماعية المادية",
+      "حماية الحواسب العسكرية"
+    ],
+    "CompetencesAssociees": [
+      "مكافحة هجمات الهندسة الاجتماعية المادية",
+      "حماية الحواسب العسكرية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-SEC-ADMIN",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 10401,
+        "QuestionId": 104,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "توصيله بحاسوب مكتب القيادة الرئيسي لمعرفة ما إذا كان يحتوي على أفلام وثائقية",
+        "EnonceOption": "توصيله بحاسوب مكتب القيادة الرئيسي لمعرفة ما إذا كان يحتوي على أفلام وثائقية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10402,
+        "QuestionId": 104,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الامتناع التام عن توصيله بأي جهاز، وتسليمه لمكتب أمن النظم لفحصه في بيئة معزولة ومحمية",
+        "EnonceOption": "الامتناع التام عن توصيله بأي جهاز، وتسليمه لمكتب أمن النظم لفحصه في بيئة معزولة ومحمية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 10403,
+        "QuestionId": 104,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "أخذه للمنزل وإعطائه للأطفال للعب به",
+        "EnonceOption": "أخذه للمنزل وإعطائه للأطفال للعب به",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10404,
+        "QuestionId": 104,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "توصيله بحاسوب المحاسبة والمالية فوراً لتهيئته (Format)",
+        "EnonceOption": "توصيله بحاسوب المحاسبة والمالية فوراً لتهيئته (Format)",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 105,
+    "TestId": 1,
+    "Code": "Q-NUM-105",
+    "Enonce": "في قاعدة بيانات السجلات القضائية، ما هي وظيفة استعلام لغة SQL التالي: SELECT * FROM VehiculesRecherches WHERE Matricule = '12345-A-1'; ؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "يقوم الاستعلام بالبحث واسترجاع جميع بيانات وحقول المركبة المبحوث عنها التي تطابق صفيحة ترقيمها بالتحديد القيمة '12345-A-1'.",
+    "Competences": [
+      "قواعد البيانات والاستعلام الرقمي",
+      "التنقيب في السجلات الإلكترونية"
+    ],
+    "CompetencesAssociees": [
+      "قواعد البيانات والاستعلام الرقمي",
+      "التنقيب في السجلات الإلكترونية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 10501,
+        "QuestionId": 105,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "مسح وحذف سجل المركبة نهائياً من قاعدة البيانات",
+        "EnonceOption": "مسح وحذف سجل المركبة نهائياً من قاعدة البيانات",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10502,
+        "QuestionId": 105,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "استعراض واستخراج كافة معلومات المركبة المبحوث عنها الحاملة لرقم الترقيم المحدد",
+        "EnonceOption": "استعراض واستخراج كافة معلومات المركبة المبحوث عنها الحاملة لرقم الترقيم المحدد",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 10503,
+        "QuestionId": 105,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "تغيير لوحة ترقيم جميع سيارات الدرك إلى هذا الرقم",
+        "EnonceOption": "تغيير لوحة ترقيم جميع سيارات الدرك إلى هذا الرقم",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10504,
+        "QuestionId": 105,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إيقاف تشغيل الخادم المركزي لمدة ساعة",
+        "EnonceOption": "إيقاف تشغيل الخادم المركزي لمدة ساعة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 106,
+    "TestId": 1,
+    "Code": "Q-NUM-106",
+    "Enonce": "كيف تعمل شبكة التخفي والتشفير المعروفة بـ (Tor / The Onion Router) التي تستغلها عصابات الجريمة المنظمة على الويب المظلم (Darknet)؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "تمرير حركة البيانات عبر طبقات متعددة من العقد العشوائية المشفرة المتتالية (عقدة دخول، عقدة وسطى، وعقدة خروج) بحيث لا تعرف أي عقدة هوية المصدر والوجهة معاً.",
+    "Competences": [
+      "فهم الويب المظلم وتقنيات إخفاء الهوية",
+      "التحريات الرقمية المتقدمة"
+    ],
+    "CompetencesAssociees": [
+      "فهم الويب المظلم وتقنيات إخفاء الهوية",
+      "التحريات الرقمية المتقدمة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 10601,
+        "QuestionId": 106,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "إرسال الرسائل عبر موجات الراديو التماثلية القديمة فقط",
+        "EnonceOption": "إرسال الرسائل عبر موجات الراديو التماثلية القديمة فقط",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10602,
+        "QuestionId": 106,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "توجيه البيانات عبر عقد مشفرة متعددة ومتعاقبة كطبقات البصل لإخفاء عنوان IP الحقيقي للمستخدم",
+        "EnonceOption": "توجيه البيانات عبر عقد مشفرة متعددة ومتعاقبة كطبقات البصل لإخفاء عنوان IP الحقيقي للمستخدم",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 10603,
+        "QuestionId": 106,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إلغاء اتصال الإنترنت واستخدام الطاقة الشمسية للتواصل",
+        "EnonceOption": "إلغاء اتصال الإنترنت واستخدام الطاقة الشمسية للتواصل",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10604,
+        "QuestionId": 106,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "نشر جميع الملفات في صفحات مفتوحة على محرك بحث جوجل",
+        "EnonceOption": "نشر جميع الملفات في صفحات مفتوحة على محرك بحث جوجل",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 107,
+    "TestId": 1,
+    "Code": "Q-NUM-107",
+    "Enonce": "لماذا يُمنع منعاً باتاً اعتماد بروتوكول التشفير القديم (WEP) في تأمين شبكات الواي فاي (Wi-Fi) التابعة للثكنات والوحدات العسكرية؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "بروتوكول WEP يعاني من ثغرات هيكلية قاتلة في خوارزمية التشفير تجعل مفتاح المرور قابلاً للاختراق والكسر التام خلال دقائق معدودة باستخدام أدوات مفتوحة المصدر.",
+    "Competences": [
+      "أمن الشبكات اللاسلكية",
+      "معايير التشفير والبروتوكولات"
+    ],
+    "CompetencesAssociees": [
+      "أمن الشبكات اللاسلكية",
+      "معايير التشفير والبروتوكولات"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 10701,
+        "QuestionId": 107,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "لأنه يستهلك كميات خيالية من الوقود",
+        "EnonceOption": "لأنه يستهلك كميات خيالية من الوقود",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10702,
+        "QuestionId": 107,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "لضعفه الأمني الحاد وسهولة اختراقه وكسر مفاتيحه خلال دقائق بواسطة برامج تحليل الحزم",
+        "EnonceOption": "لضعفه الأمني الحاد وسهولة اختراقه وكسر مفاتيحه خلال دقائق بواسطة برامج تحليل الحزم",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 10703,
+        "QuestionId": 107,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "لأنه لا يعمل إلا في فصل الشتاء فقط",
+        "EnonceOption": "لأنه لا يعمل إلا في فصل الشتاء فقط",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10704,
+        "QuestionId": 107,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "لأنه مخصص فقط للهواتف المنزلية السلكية القديمة",
+        "EnonceOption": "لأنه مخصص فقط للهواتف المنزلية السلكية القديمة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 108,
+    "TestId": 1,
+    "Code": "Q-NUM-108",
+    "Enonce": "ما هو الخطر السيبراني المعروف بـ (انتحال الهوية الرقمية / Spoofing) في الاتصالات الهاتفية والرسائل؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "تزوير البيانات التعريفية للاتصال لإظهار رقم هاتف المتصل أو عنوان بريده على شاشة الضحية كرقم جهة رسمية أو موثوقة لخداعه وسرقة أسراره أو توجيه أوامر زائفة.",
+    "Competences": [
+      "كشف انتحال الشخصية الرقمية",
+      "التحقيق في الجرائم الإلكترونية"
+    ],
+    "CompetencesAssociees": [
+      "كشف انتحال الشخصية الرقمية",
+      "التحقيق في الجرائم الإلكترونية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-PJ",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 10801,
+        "QuestionId": 108,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "انفجار بطارية الهاتف أثناء الرنين",
+        "EnonceOption": "انفجار بطارية الهاتف أثناء الرنين",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10802,
+        "QuestionId": 108,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تزييف هوية المتصل أو عنوان البريد ليظهر كجهة أمنية أو رسمية لكسب ثقة الضحية وخداعه",
+        "EnonceOption": "تزييف هوية المتصل أو عنوان البريد ليظهر كجهة أمنية أو رسمية لكسب ثقة الضحية وخداعه",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 10803,
+        "QuestionId": 108,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "تسجيل المكالمة بصوت جهوري مضخم",
+        "EnonceOption": "تسجيل المكالمة بصوت جهوري مضخم",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10804,
+        "QuestionId": 108,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "حرق شريحة الهاتف SIM Card بسبب تكرار المكالمات",
+        "EnonceOption": "حرق شريحة الهاتف SIM Card بسبب تكرار المكالمات",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 109,
+    "TestId": 1,
+    "Code": "Q-NUM-109",
+    "Enonce": "أثناء تحريز قرص صلب يحتوي على وثائق هامة في قضية تجسس، لماذا يقوم المحقق الجنائي بحساب قيمة \"دالة البصمة الرقمية\" (Hash SHA-256) للملفات فور ضبطها؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "دالة البصمة الرياضية تنتج قيمة نصية وحيدة وفريدة؛ أي تغيير ولو في بت (Bit) واحد في الملف مستقبلاً سيغير قيمة الـ Hash، مما يقدم دليلاً رياضياً قاطعاً على سلامة الدليل وعدم تحريفه.",
+    "Competences": [
+      "الأدلة الجنائية الرقمية",
+      "إثبات سلامة وعدم تحريف الأدلة الحوسبية"
+    ],
+    "CompetencesAssociees": [
+      "الأدلة الجنائية الرقمية",
+      "إثبات سلامة وعدم تحريف الأدلة الحوسبية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-PJ",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 10901,
+        "QuestionId": 109,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "لمسح الفيروسات وإصلاح القطاعات التالفة في القرص الصلب",
+        "EnonceOption": "لمسح الفيروسات وإصلاح القطاعات التالفة في القرص الصلب",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10902,
+        "QuestionId": 109,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "لإثبات السلامة الرياضية المطلقة للملفات والتأكيد أمام القضاء بعدم تعرضها لأي تعديل بعد ضبطها",
+        "EnonceOption": "لإثبات السلامة الرياضية المطلقة للملفات والتأكيد أمام القضاء بعدم تعرضها لأي تعديل بعد ضبطها",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 10903,
+        "QuestionId": 109,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "لتقليل حجم الملفات بنسبة 99% لتوفير مساحة التخزين",
+        "EnonceOption": "لتقليل حجم الملفات بنسبة 99% لتوفير مساحة التخزين",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 10904,
+        "QuestionId": 109,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "لتحويل الوثائق إلى نصوص باللغة اليابانية القديمة",
+        "EnonceOption": "لتحويل الوثائق إلى نصوص باللغة اليابانية القديمة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 110,
+    "TestId": 1,
+    "Code": "Q-NUM-110",
+    "Enonce": "ماذا يقتضي \"مبدأ الامتياز الأدنى\" (Principe du moindre privilège) في إدارة الصلاحيات للمستخدمين داخل المنظومات المعلوماتية للدرك الملكي؟",
+    "ContexteSituationnel": "المعلوماتية والمهارات الرقمية",
+    "DomaineId": 7,
+    "DomaineCode": "INFORMATIQUE",
+    "DomaineNom": "المعلوماتية والمهارات الرقمية",
+    "DomaineIntitule": "المعلوماتية والمهارات الرقمية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "منح كل مستخدم فقط الحد الأدنى من الصلاحيات والوصول إلى الملفات والوظائف الضرورية بدقة لأداء مهامه الوظيفية المباشرة، وحجب أي وصول إضافي لتقليص مساحة المخاطر.",
+    "Competences": [
+      "سياسات التحكم بالوصول والحوكمة الرقمية",
+      "الأمن السيبراني المؤسساتي"
+    ],
+    "CompetencesAssociees": [
+      "سياسات التحكم بالوصول والحوكمة الرقمية",
+      "الأمن السيبراني المؤسساتي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INFO",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 11001,
+        "QuestionId": 110,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "منح جميع الموظفين حسابات مدير النظام (Administrator) بصلاحيات مطلقة للتسهيل عليهم",
+        "EnonceOption": "منح جميع الموظفين حسابات مدير النظام (Administrator) بصلاحيات مطلقة للتسهيل عليهم",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11002,
+        "QuestionId": 110,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "منح المستخدم فقط الصلاحيات المحدودة والضرورية للغاية لإنجاز وظيفته دون أي زيادة تفادياً للمخاطر",
+        "EnonceOption": "منح المستخدم فقط الصلاحيات المحدودة والضرورية للغاية لإنجاز وظيفته دون أي زيادة تفادياً للمخاطر",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 11003,
+        "QuestionId": 110,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "منع جميع الموظفين من استخدام الكهرباء في المكاتب",
+        "EnonceOption": "منع جميع الموظفين من استخدام الكهرباء في المكاتب",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11004,
+        "QuestionId": 110,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إلغاء كلمات المرور واستخدام الدخول التلقائي بدون قيود",
+        "EnonceOption": "إلغاء كلمات المرور واستخدام الدخول التلقائي بدون قيود",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 111,
+    "TestId": 1,
+    "Code": "Q-COM-111",
+    "Enonce": "عند تأطير حصة تدريبية ميدانية في الرماية أو التكتيك لفائدة تلاميذ الدرك الملكي، ما هي المنهجية البيداغوجية العسكرية الفعالة لترسيخ المهارة الحركية بأمان تام؟",
+    "ContexteSituationnel": "التواصل والتكوين",
+    "DomaineId": 8,
+    "DomaineCode": "COMMUNICATION",
+    "DomaineNom": "التواصل والتكوين",
+    "DomaineIntitule": "التواصل والتكوين",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "المنهجية النموذجية تعتمد التسلسل: الشرح النظري المبسط، يليه العرض البيداغوجي النموذجي من المؤطر (Démonstration)، ثم التطبيق والمحاكاة الفردية من المتدربين مع التصحيح الفوري للأخطاء.",
+    "Competences": [
+      "البيداغوجيا العسكرية والتعليم الفعال",
+      "نقل المهارات والتأطير الميداني"
+    ],
+    "CompetencesAssociees": [
+      "البيداغوجيا العسكرية والتعليم الفعال",
+      "نقل المهارات والتأطير الميداني"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 11101,
+        "QuestionId": 111,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "إعطاء الأسلحة للتلاميذ فوراً دون أي شرح مسبق ليتعلموا من أخطائهم بمفردهم",
+        "EnonceOption": "إعطاء الأسلحة للتلاميذ فوراً دون أي شرح مسبق ليتعلموا من أخطائهم بمفردهم",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11102,
+        "QuestionId": 111,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "التسلسل: الشرح المنهجي، البيان العملي النموذجي، التطبيق الخاضع للمراقبة والتصحيح الفردي المستمر",
+        "EnonceOption": "التسلسل: الشرح المنهجي، البيان العملي النموذجي، التطبيق الخاضع للمراقبة والتصحيح الفردي المستمر",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 11103,
+        "QuestionId": 111,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الصراخ المتواصل والعقاب البدني العشوائي قبل بدء أي تمرين",
+        "EnonceOption": "الصراخ المتواصل والعقاب البدني العشوائي قبل بدء أي تمرين",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11104,
+        "QuestionId": 111,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "قراءة كتاب التدريب بالكامل بصوت منخفض في قاعة مظلمة دون أي تمرين عملي",
+        "EnonceOption": "قراءة كتاب التدريب بالكامل بصوت منخفض في قاعة مظلمة دون أي تمرين عملي",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 112,
+    "TestId": 1,
+    "Code": "Q-COM-112",
+    "Enonce": "أثناء حادث بارز ومثير للرأي العام، حاول صحفيون استجواب دركي بالشارع حول تفاصيل التحقيق وهوية الضحايا. ما هو السلوك الإعلامي والقانوني السليم؟",
+    "ContexteSituationnel": "التواصل والتكوين",
+    "DomaineId": 8,
+    "DomaineCode": "COMMUNICATION",
+    "DomaineNom": "التواصل والتكوين",
+    "DomaineIntitule": "التواصل والتكوين",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "احترام السر المهني وسرية البحث القضائي؛ التزام التحفظ والامتناع عن الإدلاء بأي تصريحات غير مرخصة وتوجيه وسائل الإعلام بلباقة إلى الناطق الرسمي المعتمد أو بلاغات النيابة العامة.",
+    "Competences": [
+      "التواصل في الأزمات وحماية سرية التحقيق",
+      "التقيد بالضوابط الإعلامية المؤسساتية"
+    ],
+    "CompetencesAssociees": [
+      "التواصل في الأزمات وحماية سرية التحقيق",
+      "التقيد بالضوابط الإعلامية المؤسساتية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 11201,
+        "QuestionId": 112,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تقديم كل أسرار التحقيق وأسماء المشتبه بهم للصحفيين مقابل نشر صورته بالصحف",
+        "EnonceOption": "تقديم كل أسرار التحقيق وأسماء المشتبه بهم للصحفيين مقابل نشر صورته بالصحف",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11202,
+        "QuestionId": 112,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الالتزام التام بواجب التحفظ والسر المهني، وتوجيه الصحفيين بلباقة للجهات الإعلامية الرسمية المخولة",
+        "EnonceOption": "الالتزام التام بواجب التحفظ والسر المهني، وتوجيه الصحفيين بلباقة للجهات الإعلامية الرسمية المخولة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 11203,
+        "QuestionId": 112,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الاعتداء الجسدي على الصحفيين وتحطيم كاميراتهم في الشارع العام",
+        "EnonceOption": "الاعتداء الجسدي على الصحفيين وتحطيم كاميراتهم في الشارع العام",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11204,
+        "QuestionId": 112,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "تأليف قصة خيالية طريفة وروايتها للصحفيين لإضحاكهم",
+        "EnonceOption": "تأليف قصة خيالية طريفة وروايتها للصحفيين لإضحاكهم",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 113,
+    "TestId": 1,
+    "Code": "Q-COM-113",
+    "Enonce": "تقدم مواطن في حالة صدمة وحزن شديد إلى مكتب الاستقبال بمركز الدرك للإبلاغ عن تعرضه لاعتداء واحتجاز. ما هي المهارة التواصلية الأولى الواجب إظهارها من عنصر الاستقبال؟",
+    "ContexteSituationnel": "التواصل والتكوين",
+    "DomaineId": 8,
+    "DomaineCode": "COMMUNICATION",
+    "DomaineNom": "التواصل والتكوين",
+    "DomaineIntitule": "التواصل والتكوين",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "إظهار الإنصات الإيجابي (Écoute active)، وتهدئة روع الضحية، وتوفير بيئة آمنة وكريمة، والتعامل باحترام وتعاطف إنساني مسؤول قبل الشروع في الإجراءات الإدارية والقضائية.",
+    "Competences": [
+      "الاستماع الفعال واستقبال المرتفقين والضحايا",
+      "الذكاء العاطفي والتواصل المهني"
+    ],
+    "CompetencesAssociees": [
+      "الاستماع الفعال واستقبال المرتفقين والضحايا",
+      "الذكاء العاطفي والتواصل المهني"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INSTRUCTEUR",
+      "SPEC-SEC-ADMIN",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 11301,
+        "QuestionId": 113,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "السخرية منه وتوبيخه على ضعفه وخروجه ليلاً",
+        "EnonceOption": "السخرية منه وتوبيخه على ضعفه وخروجه ليلاً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11302,
+        "QuestionId": 113,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "حسن الاستقبال، والإنصات الفعال بتقدير وتفهم، وطمأنته وتوفير فضاء لائق لتلقي شكايته بجدية",
+        "EnonceOption": "حسن الاستقبال، والإنصات الفعال بتقدير وتفهم، وطمأنته وتوفير فضاء لائق لتلقي شكايته بجدية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 11303,
+        "QuestionId": 113,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "تركه ينتظر في الرواق لساعات طويلة والتفرغ للعب على الهاتف",
+        "EnonceOption": "تركه ينتظر في الرواق لساعات طويلة والتفرغ للعب على الهاتف",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11304,
+        "QuestionId": 113,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "مطالبته بالعودة في الأسبوع القادم لأن المركز مغلق للراحة",
+        "EnonceOption": "مطالبته بالعودة في الأسبوع القادم لأن المركز مغلق للراحة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 114,
+    "TestId": 1,
+    "Code": "Q-COM-114",
+    "Enonce": "في نقل وتوجيه الأوامر التكتيكية قبل انطلاق مهمة أمنية، ما هو الهيكل المعياري المعمول به لضمان شمولية ووضوح أمر العمليات (نموذج SMEAC)؟",
+    "ContexteSituationnel": "التواصل والتكوين",
+    "DomaineId": 8,
+    "DomaineCode": "COMMUNICATION",
+    "DomaineNom": "التواصل والتكوين",
+    "DomaineIntitule": "التواصل والتكوين",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "نموذج SMEAC القيادي: الموقف العام (Situation)، المهمة المحددة (Mission)، خطة التنفيذ (Exécution)، الدعم اللوجستي والإداري (Administration)، والقيادة والمواصلات (Commandement).",
+    "Competences": [
+      "صياغة وتمرير الأوامر العسكرية",
+      "الوضوح الإجرائي والتنسيق التكتيكي"
+    ],
+    "CompetencesAssociees": [
+      "صياغة وتمرير الأوامر العسكرية",
+      "الوضوح الإجرائي والتنسيق التكتيكي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PSIG",
+      "SPEC-GEH"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 11401,
+        "QuestionId": 114,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "قول جملة واحدة فقط: \"انطلقوا وافعلوا ما يبدو لكم مناسباً\"",
+        "EnonceOption": "قول جملة واحدة فقط: \"انطلقوا وافعلوا ما يبدو لكم مناسباً\"",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11402,
+        "QuestionId": 114,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الموقف والبيئة (S)، المهمة (M)، التنفيذ والمراحل (E)، الإسناد اللوجستي (A)، والقيادة والاتصالات (C)",
+        "EnonceOption": "الموقف والبيئة (S)، المهمة (M)، التنفيذ والمراحل (E)، الإسناد اللوجستي (A)، والقيادة والاتصالات (C)",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 11403,
+        "QuestionId": 114,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "كتابة قصيدة شعرية حماسية دون أي تفاصيل جغرافية أو أمنية",
+        "EnonceOption": "كتابة قصيدة شعرية حماسية دون أي تفاصيل جغرافية أو أمنية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11404,
+        "QuestionId": 114,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الانتظار حتى انتهاء العملية ثم إخبار العناصر بما كان يجب عليهم فعله",
+        "EnonceOption": "الانتظار حتى انتهاء العملية ثم إخبار العناصر بما كان يجب عليهم فعله",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 115,
+    "TestId": 1,
+    "Code": "Q-COM-115",
+    "Enonce": "ما هو الهدف الجوهري من جلسة \"استخلاص الدروس والتقييم اللاحق\" (Retour d'expérience - RETEX) المنظمة مباشرة بعد انتهاء عملية أمنية معقدة؟",
+    "ContexteSituationnel": "التواصل والتكوين",
+    "DomaineId": 8,
+    "DomaineCode": "COMMUNICATION",
+    "DomaineNom": "التواصل والتكوين",
+    "DomaineIntitule": "التواصل والتكوين",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "تحليل مجريات التدخل بموضوعية، وتشخيص نقاط القوة لترسيخها، وتحديد النقائص لتفادي تكرارها وتطوير المهارات التكتيكية للفريق، وليس البحث عن كبش فداء أو التوبيخ الشخصي.",
+    "Competences": [
+      "ثقافة التعلم المؤسساتي والتقييم البناء",
+      "التطوير المستمر للكفاءات"
+    ],
+    "CompetencesAssociees": [
+      "ثقافة التعلم المؤسساتي والتقييم البناء",
+      "التطوير المستمر للكفاءات"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PSIG",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 11501,
+        "QuestionId": 115,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "توبيخ وإهانة العناصر الأقل خبرة أمام زملائهم لكسر معنوياتهم",
+        "EnonceOption": "توبيخ وإهانة العناصر الأقل خبرة أمام زملائهم لكسر معنوياتهم",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11502,
+        "QuestionId": 115,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "التحليل الموضوعي للإيجابيات والنواقص العملياتية بهدف تحسين الأداء الجماعي وتحديث بروتوكولات التدخل المستقبلي",
+        "EnonceOption": "التحليل الموضوعي للإيجابيات والنواقص العملياتية بهدف تحسين الأداء الجماعي وتحديث بروتوكولات التدخل المستقبلي",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 11503,
+        "QuestionId": 115,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الاحتفال وتناول الحلويات وإخفاء جميع الأخطاء المرتكبة",
+        "EnonceOption": "الاحتفال وتناول الحلويات وإخفاء جميع الأخطاء المرتكبة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11504,
+        "QuestionId": 115,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إلغاء جميع التدريبات المستقبلية لأن العملية انتهت بسلام",
+        "EnonceOption": "إلغاء جميع التدريبات المستقبلية لأن العملية انتهت بسلام",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 116,
+    "TestId": 1,
+    "Code": "Q-COM-116",
+    "Enonce": "عايش دركي حدثاً صادماً ومؤلماً أثناء انتشال ضحايا حادث مأساوي، ولاحظ زملاؤه انطواءه التام وشروده المتواصل وتدهور نومه. ما هو أسلوب الدعم الإنساني والتواصلي الأنسب لمساعدته؟",
+    "ContexteSituationnel": "التواصل والتكوين",
+    "DomaineId": 8,
+    "DomaineCode": "COMMUNICATION",
+    "DomaineNom": "التواصل والتكوين",
+    "DomaineIntitule": "التواصل والتكوين",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "التضامن الرفاقي الإيجابي بالاستماع الأخوي دون لوم، وإشعار القيادة الطبية بلباقة لتمكينه من دعم نفسي متخصص لتجاوز متلازمة ما بعد الصدمة (PTSD).",
+    "Competences": [
+      "الدعم النفسي والمرافقة الميدانية",
+      "الذكاء العلائقي في البيئة العسكرية"
+    ],
+    "CompetencesAssociees": [
+      "الدعم النفسي والمرافقة الميدانية",
+      "الذكاء العلائقي في البيئة العسكرية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PSIG",
+      "SPEC-GEH"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 11601,
+        "QuestionId": 116,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "الاستهزاء به واتهامه بالجبن والضعف ودعوته لترك الخدمة العسكرية",
+        "EnonceOption": "الاستهزاء به واتهامه بالجبن والضعف ودعوته لترك الخدمة العسكرية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11602,
+        "QuestionId": 116,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "التواصل الداعم برفق، وكسر عزلته الأخوية، وتوجيهه بحكمة وسرية للاستفادة من المتابعة الطبية والنفسية المتخصصة",
+        "EnonceOption": "التواصل الداعم برفق، وكسر عزلته الأخوية، وتوجيهه بحكمة وسرية للاستفادة من المتابعة الطبية والنفسية المتخصصة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 11603,
+        "QuestionId": 116,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "تكليفه بأصعب المهام الليلية بمفرده لكي ينسى الصدمة بالقوة",
+        "EnonceOption": "تكليفه بأصعب المهام الليلية بمفرده لكي ينسى الصدمة بالقوة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11604,
+        "QuestionId": 116,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "تجاهله التام واعتباره شخصاً غير مرغوب فيه في المركز",
+        "EnonceOption": "تجاهله التام واعتباره شخصاً غير مرغوب فيه في المركز",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 117,
+    "TestId": 1,
+    "Code": "Q-COM-117",
+    "Enonce": "كُلّف دركي بإلقاء عرض تحسيسي حول السلامة الطرقية أمام تلاميذ ثانوية تأهيلية. ما هي القاعدة الأساسية لنجاح هذا التواصل التربوي والتوجيهي؟",
+    "ContexteSituationnel": "التواصل والتكوين",
+    "DomaineId": 8,
+    "DomaineCode": "COMMUNICATION",
+    "DomaineNom": "التواصل والتكوين",
+    "DomaineIntitule": "التواصل والتكوين",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "ملاءمة الخطاب للجمهور المستهدف (لغة بسيطة وتفاعلية)، واستخدام وسائط بصرية مشوقة، وفتح باب الحوار، والتركيز على الإقناع بدلاً من الترهيب الجاف.",
+    "Competences": [
+      "التواصل العمومي والتحسيس التربوي",
+      "الخطابة ومخاطبة الجمهور الناشئ"
+    ],
+    "CompetencesAssociees": [
+      "التواصل العمومي والتحسيس التربوي",
+      "الخطابة ومخاطبة الجمهور الناشئ"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INSTRUCTEUR",
+      "SPEC-MOTARD"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 11701,
+        "QuestionId": 117,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "قراءة نصوص قانونية معقدة باللغة اللاتينية القديمة طوال ساعتين دون توقف",
+        "EnonceOption": "قراءة نصوص قانونية معقدة باللغة اللاتينية القديمة طوال ساعتين دون توقف",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11702,
+        "QuestionId": 117,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تكييف أسلوب الخطاب مع الفئة العمرية بالاعتماد على التفاعل، والوسائط البصرية، والأمثلة الحية المقنعة",
+        "EnonceOption": "تكييف أسلوب الخطاب مع الفئة العمرية بالاعتماد على التفاعل، والوسائط البصرية، والأمثلة الحية المقنعة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 11703,
+        "QuestionId": 117,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "معاقبة التلاميذ بالوقوف ووجوههم للحائط إذا طرحوا أي سؤال",
+        "EnonceOption": "معاقبة التلاميذ بالوقوف ووجوههم للحائط إذا طرحوا أي سؤال",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11704,
+        "QuestionId": 117,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "توزيع كتيبات فارغة ومغادرة القاعة فوراً",
+        "EnonceOption": "توزيع كتيبات فارغة ومغادرة القاعة فوراً",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 118,
+    "TestId": 1,
+    "Code": "Q-COM-118",
+    "Enonce": "في تقنيات \"نزع فتيل التوتر اللفظي\" (Désescalade) مع مواطن غاضب يرفع صوته محتجاً، ما هي الخطوة التواصلية التي تساعد على امتصاص غضبه بفعالية؟",
+    "ContexteSituationnel": "التواصل والتكوين",
+    "DomaineId": 8,
+    "DomaineCode": "COMMUNICATION",
+    "DomaineNom": "التواصل والتكوين",
+    "DomaineIntitule": "التواصل والتكوين",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "إعادة صياغة شكواه بهدوء (Reformulation) للتأكيد على سماعه وفهم المشكلة (\"أنا أتفهم استياءك وسأشرح لك المسطرة القانونية\") مع خفض نبرة الصوت لفرض الهدوء المتبادل.",
+    "Competences": [
+      "إدارة الانفعالات والتهدئة التواصلية",
+      "التواصل المهني الراقي"
+    ],
+    "CompetencesAssociees": [
+      "إدارة الانفعالات والتهدئة التواصلية",
+      "التواصل المهني الراقي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PSIG",
+      "SPEC-MOTARD"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 11801,
+        "QuestionId": 118,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "الصراخ بصوت أعلى منه لإجباره على السكوت التام فوراً",
+        "EnonceOption": "الصراخ بصوت أعلى منه لإجباره على السكوت التام فوراً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11802,
+        "QuestionId": 118,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الاستماع دون مقاطعة، ثم إعادة صياغة انشغاله بهدوء ونبرة صوت رصينة ومحترمة لتثبيت الهدوء",
+        "EnonceOption": "الاستماع دون مقاطعة، ثم إعادة صياغة انشغاله بهدوء ونبرة صوت رصينة ومحترمة لتثبيت الهدوء",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 11803,
+        "QuestionId": 118,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إغلاق الباب في وجهه وإطفاء أضواء المكتب",
+        "EnonceOption": "إغلاق الباب في وجهه وإطفاء أضواء المكتب",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11804,
+        "QuestionId": 118,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الضحك والاستهزاء بحركاته أمام الزملاء",
+        "EnonceOption": "الضحك والاستهزاء بحركاته أمام الزملاء",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 119,
+    "TestId": 1,
+    "Code": "Q-COM-119",
+    "Enonce": "عند تقييم كفاءة تلميذ دركي في نهاية دورة تكوينية، ما الذي يضمن نزاهة ومصداقية التقييم البيداغوجي وفق معايير مدارس التكوين؟",
+    "ContexteSituationnel": "التواصل والتكوين",
+    "DomaineId": 8,
+    "DomaineCode": "COMMUNICATION",
+    "DomaineNom": "التواصل والتكوين",
+    "DomaineIntitule": "التواصل والتكوين",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الاعتماد على شبكة تقييم معيارية محددة المعايير (Grille critériée) قائمة على مؤشرات أداء قابلة للملاحظة والقياس العملي، وتجنب الانطباعات الذاتية أو العاطفية للمؤطر.",
+    "Competences": [
+      "التقييم البيداغوجي الموضوعي",
+      "معايير جودة التكوين العسكري"
+    ],
+    "CompetencesAssociees": [
+      "التقييم البيداغوجي الموضوعي",
+      "معايير جودة التكوين العسكري"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INSTRUCTEUR",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 11901,
+        "QuestionId": 119,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "منح النقط بناء على الإعجاب الشخصي أو القرابة العائلية فقط",
+        "EnonceOption": "منح النقط بناء على الإعجاب الشخصي أو القرابة العائلية فقط",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11902,
+        "QuestionId": 119,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الاستناد إلى شبكة معايير موضوعية واضحة ومحددة سلفاً تقيس الإنجاز العملي والسلوك المهني بدقة",
+        "EnonceOption": "الاستناد إلى شبكة معايير موضوعية واضحة ومحددة سلفاً تقيس الإنجاز العملي والسلوك المهني بدقة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 11903,
+        "QuestionId": 119,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إعطاء نقطة موحدة وثابتة لجميع التلاميذ دون النظر لأدائهم الفعلي",
+        "EnonceOption": "إعطاء نقطة موحدة وثابتة لجميع التلاميذ دون النظر لأدائهم الفعلي",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 11904,
+        "QuestionId": 119,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إجراء القرعة بالقطع النقدية لتحديد الناجحين والراسبين",
+        "EnonceOption": "إجراء القرعة بالقطع النقدية لتحديد الناجحين والراسبين",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 120,
+    "TestId": 1,
+    "Code": "Q-COM-120",
+    "Enonce": "عند رفع تقرير شفوي عملياتي فوري (Compte-rendu verbal) إلى القائد التسلسلي عقب تدخل طارئ، ما هي القاعدة التواصلية التي يجب احترامها لتفادي الغموض وهدر الوقت؟",
+    "ContexteSituationnel": "التواصل والتكوين",
+    "DomaineId": 8,
+    "DomaineCode": "COMMUNICATION",
+    "DomaineNom": "التواصل والتكوين",
+    "DomaineIntitule": "التواصل والتكوين",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "قاعدة الإيجاز والدقة والوضوح (قاعدة 3C: Clair, Concis, Précis) عبر الإجابة المباشرة: من، ماذا حدث، أين، متى، وما هي الإجراءات المتخذة والاحتياجات الحالية فوراً.",
+    "Competences": [
+      "الإيجاز والدقة في التبليغ العملياتي",
+      "التواصل الصاعد في السلسلة القيادية"
+    ],
+    "CompetencesAssociees": [
+      "الإيجاز والدقة في التبليغ العملياتي",
+      "التواصل الصاعد في السلسلة القيادية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PSIG",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 12001,
+        "QuestionId": 120,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "سرد تفاصيل غير مهمة عن نوع الطعام الذي تناوله العناصر قبل المهمة",
+        "EnonceOption": "سرد تفاصيل غير مهمة عن نوع الطعام الذي تناوله العناصر قبل المهمة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12002,
+        "QuestionId": 120,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الإيجاز والدقة والوضوح التام، بتقديم الوقائع الجوهرية، والنتائج، والتدابير المتخذة فوراً دون استطراد",
+        "EnonceOption": "الإيجاز والدقة والوضوح التام، بتقديم الوقائع الجوهرية، والنتائج، والتدابير المتخذة فوراً دون استطراد",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 12003,
+        "QuestionId": 120,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إخفاء وقوع أي مشاكل والكذب على القائد لإرضائه فقط",
+        "EnonceOption": "إخفاء وقوع أي مشاكل والكذب على القائد لإرضائه فقط",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12004,
+        "QuestionId": 120,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إرسال لغز شعري للقائد ليحاول تخمين ما جرى في الميدان",
+        "EnonceOption": "إرسال لغز شعري للقائد ليحاول تخمين ما جرى في الميدان",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 121,
+    "TestId": 1,
+    "Code": "Q-ADM-121",
+    "Enonce": "عند استقبال مراسلة رسمية سرية واردة من القيادة العليا في مكتب الضبط (Bureau d'ordre)، ما هو الإجراء الإداري والتنظيمي الأول الواجب تسجيله فوراً؟",
+    "ContexteSituationnel": "الإدارة والسكرتارية",
+    "DomaineId": 9,
+    "DomaineCode": "SECRETARIAT",
+    "DomaineNom": "الإدارة والسكرتارية",
+    "DomaineIntitule": "الإدارة والسكرتارية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "تسجيل المراسلة فوراً بسجل البريد الوارد (Registre d'arrivée) برقم تسلسلي، وتاريخ وساعة الاستلام، وتحديد المصدر والموضوع، وعرضها فوراً على القائد المباشر دون تأخير.",
+    "Competences": [
+      "تدبير مكتب الضبط والمراسلات الإدارية",
+      "التوثيق وحفظ السرية"
+    ],
+    "CompetencesAssociees": [
+      "تدبير مكتب الضبط والمراسلات الإدارية",
+      "التوثيق وحفظ السرية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-SEC-ADMIN",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 12101,
+        "QuestionId": 121,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "فتح المراسلة وعرضها على جميع الزوار في قاعة الانتظار لأخذ آرائهم",
+        "EnonceOption": "فتح المراسلة وعرضها على جميع الزوار في قاعة الانتظار لأخذ آرائهم",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12102,
+        "QuestionId": 121,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تسجيلها فوراً في سجل البريد الوارد برقم ترتيبي وتاريخ وساعة الاستلام وتقديمها فوراً للقائد",
+        "EnonceOption": "تسجيلها فوراً في سجل البريد الوارد برقم ترتيبي وتاريخ وساعة الاستلام وتقديمها فوراً للقائد",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 12103,
+        "QuestionId": 121,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إخفاء الرسالة داخل درج المكتب ونسيانها لعدة أشهر",
+        "EnonceOption": "إخفاء الرسالة داخل درج المكتب ونسيانها لعدة أشهر",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12104,
+        "QuestionId": 121,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "تمزيق المظروف والتخلص من الوثيقة لتفادي كثرة الأوراق",
+        "EnonceOption": "تمزيق المظروف والتخلص من الوثيقة لتفادي كثرة الأوراق",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 122,
+    "TestId": 1,
+    "Code": "Q-ADM-122",
+    "Enonce": "في تدبير أرشيف الوحدة العسكرية، ما هي القاعدة التنظيمية المعتمدة لترتيب وحفظ الملفات الإدارية والقضائية المنتهية لضمان استرجاعها السريع عند الطلب؟",
+    "ContexteSituationnel": "الإدارة والسكرتارية",
+    "DomaineId": 9,
+    "DomaineCode": "SECRETARIAT",
+    "DomaineNom": "الإدارة والسكرتارية",
+    "DomaineIntitule": "الإدارة والسكرتارية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "التصنيف المنهجي المعياري وفق خطة حفظ معتمدة (ترتيب زمني موضوعاتي مع رمز تعريفي وفهرس رقمي موحد) داخل علب أرشيف مؤمنة ضد الرطوبة والحريق والعبث.",
+    "Competences": [
+      "الأرشفة والتصنيف الإداري المحكم",
+      "التنظيم الوثائقي"
+    ],
+    "CompetencesAssociees": [
+      "الأرشفة والتصنيف الإداري المحكم",
+      "التنظيم الوثائقي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-INFO",
+        "specialite": "الإعلاميات",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-SEC-ADMIN",
+      "SPEC-INFO",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 12201,
+        "QuestionId": 122,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تكديس جميع الملفات عشوائياً في ركن مظلم على أرضية المرآب",
+        "EnonceOption": "تكديس جميع الملفات عشوائياً في ركن مظلم على أرضية المرآب",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12202,
+        "QuestionId": 122,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "التصنيف المعياري المنهجي حسب السنوات والموضوعات مع الفهرسة والترميز الموحد في فضاء حفظ مخصص وآمن",
+        "EnonceOption": "التصنيف المعياري المنهجي حسب السنوات والموضوعات مع الفهرسة والترميز الموحد في فضاء حفظ مخصص وآمن",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 12203,
+        "QuestionId": 122,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "حرق الملفات القديمة أسبوعياً لتوفير المساحة في الغرفة",
+        "EnonceOption": "حرق الملفات القديمة أسبوعياً لتوفير المساحة في الغرفة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12204,
+        "QuestionId": 122,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "خلط ملفات الموظفين مع سجلات الصيانة وفواتير الوقود في مجلد واحد",
+        "EnonceOption": "خلط ملفات الموظفين مع سجلات الصيانة وفواتير الوقود في مجلد واحد",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 123,
+    "TestId": 1,
+    "Code": "Q-ADM-123",
+    "Enonce": "ما هي الخاصية التعبيرية والأسلوبية المميزة للتحرير الإداري العسكري في صياغة \"المذكرة المصلحية\" (Note de service) أو \"تقرير الإحالة\"؟",
+    "ContexteSituationnel": "الإدارة والسكرتارية",
+    "DomaineId": 9,
+    "DomaineCode": "SECRETARIAT",
+    "DomaineNom": "الإدارة والسكرتارية",
+    "DomaineIntitule": "الإدارة والسكرتارية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الأسلوب الإداري العسكري يتميز بالتجرد والموضوعية، والوضوح، والإيجاز، واحترام السلم الإداري، واستخدام الصيغ الرسمية المحددة بدقة دون مشاعر أو مبالغات إنشائية.",
+    "Competences": [
+      "التحرير الإداري العسكري",
+      "الدقة والأسلوب الرسمي الرصين"
+    ],
+    "CompetencesAssociees": [
+      "التحرير الإداري العسكري",
+      "الدقة والأسلوب الرسمي الرصين"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-SEC-ADMIN",
+      "SPEC-PJ",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 12301,
+        "QuestionId": 123,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "استخدام أسلوب رومانسي وشعري مليء بالاستعارات والمحسنات البديعية",
+        "EnonceOption": "استخدام أسلوب رومانسي وشعري مليء بالاستعارات والمحسنات البديعية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12302,
+        "QuestionId": 123,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الموضوعية التامة، والدقة والوضوح والإيجاز، واحترام التراتبية الإدارية والصيغ الرسمية المعتمدة",
+        "EnonceOption": "الموضوعية التامة، والدقة والوضوح والإيجاز، واحترام التراتبية الإدارية والصيغ الرسمية المعتمدة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 12303,
+        "QuestionId": 123,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "استعمال لغة عامية دارجة مليئة بالاختصارات المبهمة وغير المفهومة",
+        "EnonceOption": "استعمال لغة عامية دارجة مليئة بالاختصارات المبهمة وغير المفهومة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12304,
+        "QuestionId": 123,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "كتابة الوثيقة في شكل رسوم كاريكاتورية ساخرة",
+        "EnonceOption": "كتابة الوثيقة في شكل رسوم كاريكاتورية ساخرة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 124,
+    "TestId": 1,
+    "Code": "Q-ADM-124",
+    "Enonce": "عند إعداد جدول نوبات الحراسة والدوريات الشهرية (Tableau de service) للوحدة، ما هو المبدأ التسييري الأساسي الذي يضمن الجاهزية والعدالة؟",
+    "ContexteSituationnel": "الإدارة والسكرتارية",
+    "DomaineId": 9,
+    "DomaineCode": "SECRETARIAT",
+    "DomaineNom": "الإدارة والسكرتارية",
+    "DomaineIntitule": "الإدارة والسكرتارية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "ضمان التوازن بين متطلبات الجاهزية الأمنية الدائمة للوحدة واحترام فترات الراحة القانونية، مع التوزيع العادل للمهام بين كافة الأفراد وتجنب المحاباة أو الإرهاق المفرط.",
+    "Competences": [
+      "التخطيط الإداري وتدبير الموارد البشرية",
+      "تنظيم جداول الخدمة والجاهزية"
+    ],
+    "CompetencesAssociees": [
+      "التخطيط الإداري وتدبير الموارد البشرية",
+      "تنظيم جداول الخدمة والجاهزية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-SEC-ADMIN",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 12401,
+        "QuestionId": 124,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تكليف نفس الدركي بالحراسة طوال 30 يوماً دون أي راحة وإعفاء الباقين تماماً",
+        "EnonceOption": "تكليف نفس الدركي بالحراسة طوال 30 يوماً دون أي راحة وإعفاء الباقين تماماً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12402,
+        "QuestionId": 124,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الموازنة الدقيقة بين الجاهزية العملياتية المستمرة والراحة القانونية والتوزيع المنصف بين العناصر",
+        "EnonceOption": "الموازنة الدقيقة بين الجاهزية العملياتية المستمرة والراحة القانونية والتوزيع المنصف بين العناصر",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 12403,
+        "QuestionId": 124,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "إلغاء الحراسة الليلية بالكامل لتمكين الجميع من النوم في منازلهم",
+        "EnonceOption": "إلغاء الحراسة الليلية بالكامل لتمكين الجميع من النوم في منازلهم",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12404,
+        "QuestionId": 124,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "تحديد جدول الخدمة يومياً عبر مسابقة في الجري السريع صباحاً",
+        "EnonceOption": "تحديد جدول الخدمة يومياً عبر مسابقة في الجري السريع صباحاً",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 125,
+    "TestId": 1,
+    "Code": "Q-ADM-125",
+    "Enonce": "في تدبير ملفات المسار المهني والترقية والتنقيط السنوي للأفراد (Chancellerie et avancement)، ما هي المسؤولية الأخلاقية والإدارية الملقاة على عاتق كاتب السكرتارية؟",
+    "ContexteSituationnel": "الإدارة والسكرتارية",
+    "DomaineId": 9,
+    "DomaineCode": "SECRETARIAT",
+    "DomaineNom": "الإدارة والسكرتارية",
+    "DomaineIntitule": "الإدارة والسكرتارية",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الكتمان المطلق للسر المهني وحفظ سرية النقط والملاحظات التأديبية والترقيات، والدقة الصارمة في تدوين الأقدمية والأوسمة والشهادات دون أي تحريف أو إهمال.",
+    "Competences": [
+      "كتمان السر المهني للأفراد",
+      "الدقة والأمانة الإدارية"
+    ],
+    "CompetencesAssociees": [
+      "كتمان السر المهني للأفراد",
+      "الدقة والأمانة الإدارية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-SEC-ADMIN",
+      "SPEC-PJ",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 12501,
+        "QuestionId": 125,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "إفشاء نقط وملاحظات القادة للزملاء في المقهى لإثارة الجدل والتنافس غير الشريف",
+        "EnonceOption": "إفشاء نقط وملاحظات القادة للزملاء في المقهى لإثارة الجدل والتنافس غير الشريف",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12502,
+        "QuestionId": 125,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الالتزام الصارم بسرية البيانات الشخصية، والدقة المتناهية في مطابقة الأقدمية والاستحقاق بالسجلات الرسمية",
+        "EnonceOption": "الالتزام الصارم بسرية البيانات الشخصية، والدقة المتناهية في مطابقة الأقدمية والاستحقاق بالسجلات الرسمية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 12503,
+        "QuestionId": 125,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "تعديل نقط التقييم مقابل مبالغ مالية أو خدمات شخصية",
+        "EnonceOption": "تعديل نقط التقييم مقابل مبالغ مالية أو خدمات شخصية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12504,
+        "QuestionId": 125,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "تضييع ملفات الموظفين وإخبارهم بالبحث عنها بأنفسهم",
+        "EnonceOption": "تضييع ملفات الموظفين وإخبارهم بالبحث عنها بأنفسهم",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 126,
+    "TestId": 1,
+    "Code": "Q-DIS-126",
+    "Enonce": "تلقى دركي أمراً صريحاً من رئيسه المباشر بإخفاء سلاح ناري غير مرخص تم حجزه أثناء تفتيش وعدم تضمينه في المحضر الرسمي. ما هو الموقف القانوني والأخلاقي العسكري الإلزامي؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "DIFFICILE",
+    "DifficulteNiveau": 3,
+    "DifficulteLabel": "صعب",
+    "DifficulteArabe": "صعب",
+    "DifficulteCode": "DIFFICILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "تنص القوانين والأنظمة العسكرية على أن واجب الطاعة يسقط إذا كان الأمر الصادر غير مشروع بشكل صريح ويشكل جريمة قانونية خطيرة؛ يجب رفض التنفيذ وإشعار المستوى القيادي الأعلى فوراً.",
+    "Competences": [
+      "حدود الطاعة العسكرية والأمر غير المشروع",
+      "الاستقامة القانونية والنزاهة"
+    ],
+    "CompetencesAssociees": [
+      "حدود الطاعة العسكرية والأمر غير المشروع",
+      "الاستقامة القانونية والنزاهة"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PJ",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 12601,
+        "QuestionId": 126,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تنفيذ الأمر فوراً دون تردد لأن طاعة الرئيس مطلقة حتى لو خالفت القانون الجنائي",
+        "EnonceOption": "تنفيذ الأمر فوراً دون تردد لأن طاعة الرئيس مطلقة حتى لو خالفت القانون الجنائي",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12602,
+        "QuestionId": 126,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "رفض تنفيذ الأمر غير المشروع الصريح وإثبات المحجوز قانوناً وإبلاغ القيادة العليا بالواقعة",
+        "EnonceOption": "رفض تنفيذ الأمر غير المشروع الصريح وإثبات المحجوز قانوناً وإبلاغ القيادة العليا بالواقعة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 12603,
+        "QuestionId": 126,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "أخذ السلاح الناري وبيعه في السوق واقتسام المال مع الرئيس",
+        "EnonceOption": "أخذ السلاح الناري وبيعه في السوق واقتسام المال مع الرئيس",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12604,
+        "QuestionId": 126,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "إطلاق النار على السلاح الناري لإتلافه أمام الجميع",
+        "EnonceOption": "إطلاق النار على السلاح الناري لإتلافه أمام الجميع",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 127,
+    "TestId": 1,
+    "Code": "Q-DIS-127",
+    "Enonce": "ما الذي يمثله الارتداء السليم والمتكامل للبذلة العسكرية والشارات النظامية للدرك الملكي في الشارع العام؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الهندام العسكري المنضبط يجسد هيبة وسيادة الدولة، ويعزز الثقة والاحترام لدى المواطنين، ويعكس الصرامة والانضباط الذاتي الداخلي للمؤسسة العسكرية العريقة.",
+    "Competences": [
+      "الهندام العسكري والتمثيل المؤسساتي",
+      "الانضباط والوقار المهني"
+    ],
+    "CompetencesAssociees": [
+      "الهندام العسكري والتمثيل المؤسساتي",
+      "الانضباط والوقار المهني"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GEH",
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 12701,
+        "QuestionId": 127,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "مجرد لباس عادي يمكن تعديل ألوانه وارتداؤه مع أحذية رياضية متباينة",
+        "EnonceOption": "مجرد لباس عادي يمكن تعديل ألوانه وارتداؤه مع أحذية رياضية متباينة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12702,
+        "QuestionId": 127,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تجسيد لهيبة القانون وسيادة المؤسسة ويعكس الانضباط الصارم والاحترام الواجب للوظيفة العسكرية",
+        "EnonceOption": "تجسيد لهيبة القانون وسيادة المؤسسة ويعكس الانضباط الصارم والاحترام الواجب للوظيفة العسكرية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 12703,
+        "QuestionId": 127,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "وسيلة لتخويف الأطفال الصغار في الشوارع",
+        "EnonceOption": "وسيلة لتخويف الأطفال الصغار في الشوارع",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12704,
+        "QuestionId": 127,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "لباس صيفي يمكن تمزيق أكمامه في الأيام الحارة",
+        "EnonceOption": "لباس صيفي يمكن تمزيق أكمامه في الأيام الحارة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 128,
+    "TestId": 1,
+    "Code": "Q-DIS-128",
+    "Enonce": "قام دركي بنشر مقطع فيديو على منصة (تيك توك) يظهر فيه بالبذلة العسكرية الرسمية داخل مرآب الثكنة وهو يغني ويعلق بسخرية على بعض التوجيهات اليومية. ما التقييم التأديبي لهذا التصرف؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "مخالفة جسيمة وصريحة لواجب التحفظ والسر العسكري وقواعد استعمال وسائل التواصل الاجتماعي، تعرض صاحبها لعقوبات تأديبية صارمة للمساس بصورة وهيبة السلك.",
+    "Competences": [
+      "واجب التحفظ واستخدام شبكات التواصل الاجتماعي",
+      "الانضباط العسكري الرقمي"
+    ],
+    "CompetencesAssociees": [
+      "واجب التحفظ واستخدام شبكات التواصل الاجتماعي",
+      "الانضباط العسكري الرقمي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PJ",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 12801,
+        "QuestionId": 128,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تصرف عصري يستحق الإشادة والترقية الفورية لموهبته الفنية",
+        "EnonceOption": "تصرف عصري يستحق الإشادة والترقية الفورية لموهبته الفنية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12802,
+        "QuestionId": 128,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "خطأ مهني وتأديبي جسيم يخرق واجب التحفظ ويمس بهيبة المؤسسة العسكرية ويستوجب العقاب الرادع",
+        "EnonceOption": "خطأ مهني وتأديبي جسيم يخرق واجب التحفظ ويمس بهيبة المؤسسة العسكرية ويستوجب العقاب الرادع",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 12803,
+        "QuestionId": 128,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "عمل بطولي يُطلب من جميع العناصر تقليده يومياً",
+        "EnonceOption": "عمل بطولي يُطلب من جميع العناصر تقليده يومياً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12804,
+        "QuestionId": 128,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "مباح تماماً ما دام لم يذكر اسمه الشخصي في الفيديو",
+        "EnonceOption": "مباح تماماً ما دام لم يذكر اسمه الشخصي في الفيديو",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 129,
+    "TestId": 1,
+    "Code": "Q-DIS-129",
+    "Enonce": "أثناء فترة إجازته السنوية وارتدائه ملابس مدنية، شاهد دركي شخصاً يقود بتهور كاد يدهس مارة في حي سكني. ما هو الموقف المهني والأخلاقي السليم؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "صفة الدركي ورسالته في حماية المواطنين تلازمه دائماً؛ يتدخل بحكمة عبر إشعار مصالح الأمن أو الدرك المحلية فوراً برقم السيارة وأوصافها، والتدخل المباشر فقط في حدود الضرورة ودون تهور.",
+    "Competences": [
+      "استمرارية الواجب الأخلاقي والصفة الضبطية",
+      "حماية الأمن العام في كل الظروف"
+    ],
+    "CompetencesAssociees": [
+      "استمرارية الواجب الأخلاقي والصفة الضبطية",
+      "حماية الأمن العام في كل الظروف"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-PSIG",
+      "SPEC-MOTARD"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 12901,
+        "QuestionId": 129,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تجاهل الأمر تماماً لأن الإجازة تعني أن الشخص لم يعد ينتمي للدرك الملكي",
+        "EnonceOption": "تجاهل الأمر تماماً لأن الإجازة تعني أن الشخص لم يعد ينتمي للدرك الملكي",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12902,
+        "QuestionId": 129,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "التفاعل الإيجابي بتسجيل بيانات السيارة وإشعار الدورية المحلية فوراً والتدخل الآمن عند الضرورة لإنقاذ الأرواح",
+        "EnonceOption": "التفاعل الإيجابي بتسجيل بيانات السيارة وإشعار الدورية المحلية فوراً والتدخل الآمن عند الضرورة لإنقاذ الأرواح",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 12903,
+        "QuestionId": 129,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "مطاردة السيارة بالدراجة الهوائية وتكسير زجاجها بالحجارة",
+        "EnonceOption": "مطاردة السيارة بالدراجة الهوائية وتكسير زجاجها بالحجارة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 12904,
+        "QuestionId": 129,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "التصفيق للسائق المتهور وتشجيعه على زيادة السرعة",
+        "EnonceOption": "التصفيق للسائق المتهور وتشجيعه على زيادة السرعة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 130,
+    "TestId": 1,
+    "Code": "Q-DIS-130",
+    "Enonce": "حُدد موعد تجمع وانطلاق دورية أمنية على الساعة 08:00 صباحاً. متى يجب على الدركي المنضبط الحضور الفعلي في مكان الاستعداد؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "القاعدة العسكرية الراسخة: \"الدقة في الموعد أدب الملوك والواجب العسكري الأول\"؛ الحضور قبل الموعد بـ 15 إلى 20 دقيقة لاستلام وفحص السلاح والمعدات وجاهزية المركبة قبل ساعة الانطلاق.",
+    "Competences": [
+      "الانضباط الزمني والدقة العسكرية",
+      "الاستعداد المسبق للمهام"
+    ],
+    "CompetencesAssociees": [
+      "الانضباط الزمني والدقة العسكرية",
+      "الاستعداد المسبق للمهام"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GEH",
+      "SPEC-PSIG",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 1301,
+        "QuestionId": 130,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "الوصول في الساعة 08:30 صباحاً مع تقديم اعتذار شفهي بسيط",
+        "EnonceOption": "الوصول في الساعة 08:30 صباحاً مع تقديم اعتذار شفهي بسيط",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1302,
+        "QuestionId": 130,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الحضور قبل الموعد بـ 15 إلى 20 دقيقة لفحص التجهيزات والسلاح والمركبة وضمان الانطلاق في الوقت المحدد تماماً",
+        "EnonceOption": "الحضور قبل الموعد بـ 15 إلى 20 دقيقة لفحص التجهيزات والسلاح والمركبة وضمان الانطلاق في الوقت المحدد تماماً",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 1303,
+        "QuestionId": 130,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الحضور في الساعة 12:00 زوالاً لتناول وجبة الغداء مع الفريق",
+        "EnonceOption": "الحضور في الساعة 12:00 زوالاً لتناول وجبة الغداء مع الفريق",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 1304,
+        "QuestionId": 130,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "عدم الحضور نهائياً وإغلاق الهاتف النقال طوال اليوم",
+        "EnonceOption": "عدم الحضور نهائياً وإغلاق الهاتف النقال طوال اليوم",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 131,
+    "TestId": 1,
+    "Code": "Q-DIS-131",
+    "Enonce": "ما هو المفهوم الحقيقي لـ \"روح الفريق والتضامن العسكري\" (Esprit de corps) بين عناصر الدرك الملكي؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "روح الفريق تعني التآزر والمساندة الميدانية المخلصة، والتضحية لإنجاح المهمة وحماية سلامة الزملاء، دون أن تتحول أبداً إلى تواطؤ سلبي للتستر على الجرائم أو الخيانات المهنية.",
+    "Competences": [
+      "روح الجماعة والتضامن الأخلاقي",
+      "التماسك والتعاون المهني النزيه"
+    ],
+    "CompetencesAssociees": [
+      "روح الجماعة والتضامن الأخلاقي",
+      "التماسك والتعاون المهني النزيه"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PSIG",
+      "SPEC-GSI",
+      "SPEC-INSTRUCTEUR"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 13101,
+        "QuestionId": 131,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "التستر الأعمى على الجرائم والسرقات التي يرتكبها الزميل داخل الوحدة",
+        "EnonceOption": "التستر الأعمى على الجرائم والسرقات التي يرتكبها الزميل داخل الوحدة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13102,
+        "QuestionId": 131,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "التآزر الصادق والدعم المتبادل والشجاعة المشتركة لإنجاز الواجب وحماية الزملاء في إطار الشرف والقانون",
+        "EnonceOption": "التآزر الصادق والدعم المتبادل والشجاعة المشتركة لإنجاز الواجب وحماية الزملاء في إطار الشرف والقانون",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 13103,
+        "QuestionId": 131,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "رفض التحدث مع أي زميل ينتمي لمدينة أخرى",
+        "EnonceOption": "رفض التحدث مع أي زميل ينتمي لمدينة أخرى",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13104,
+        "QuestionId": 131,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الهروب وترك الزميل محاصراً بمفرده في مواجهة الخطر",
+        "EnonceOption": "الهروب وترك الزميل محاصراً بمفرده في مواجهة الخطر",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 132,
+    "TestId": 1,
+    "Code": "Q-DIS-132",
+    "Enonce": "لماذا يفرض القانون والأنظمة العسكرية على رجل الدرك الملكي الحياد السياسي والنقابي التام والمطلق؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "لضمان خدمة الوطن والشعب بتجرد مطلق ومساواة بين جميع المواطنين، وحماية المؤسسة العسكرية والأمنية من الانقسامات الأيديولوجية والتجاذبات الحزبية.",
+    "Competences": [
+      "الحياد السياسي والمؤسساتي",
+      "أخلاقيات المرفق الأمني والعسكري"
+    ],
+    "CompetencesAssociees": [
+      "الحياد السياسي والمؤسساتي",
+      "أخلاقيات المرفق الأمني والعسكري"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-INSTRUCTEUR",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 13201,
+        "QuestionId": 132,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "لأن رجال الدرك ليس لديهم أي اهتمام بالشأن العام إطلاقاً",
+        "EnonceOption": "لأن رجال الدرك ليس لديهم أي اهتمام بالشأن العام إطلاقاً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13202,
+        "QuestionId": 132,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "لضمان التجرد والنزاهة والمساواة في تطبيق القانون على الجميع، وصون وحدة المؤسسة من الصراعات الحزبية",
+        "EnonceOption": "لضمان التجرد والنزاهة والمساواة في تطبيق القانون على الجميع، وصون وحدة المؤسسة من الصراعات الحزبية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 13203,
+        "QuestionId": 132,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "لأن الأحزاب السياسية تمنع الانتساب إليها لمن يرتدي الزي العسكري في المساء فقط",
+        "EnonceOption": "لأن الأحزاب السياسية تمنع الانتساب إليها لمن يرتدي الزي العسكري في المساء فقط",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13204,
+        "QuestionId": 132,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "لتشجيع الناس على عدم المشاركة في الانتخابات",
+        "EnonceOption": "لتشجيع الناس على عدم المشاركة في الانتخابات",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 133,
+    "TestId": 1,
+    "Code": "Q-DIS-133",
+    "Enonce": "في ميدان الرماية بالرصاص الحي (Stand de tir)، صاح المدرب فجأة وبصوت قوي: \"قف! أوقفوا النار!\". ما هو الإجراء الفوري الإلزامي لجميع الرماة؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "التوقف الفوري والتام عن الرماية، ورفع الإصبع خارج الزناد، وإبقاء فوهة السلاح في اتجاه الأهداف الآمنة، ووضع السلاح في وضع التأمين وانتظار التعليمات التالية.",
+    "Competences": [
+      "الانضباط التكتيكي الصارم في الرماية",
+      "السلامة الحيوية في ميدان النار"
+    ],
+    "CompetencesAssociees": [
+      "الانضباط التكتيكي الصارم في الرماية",
+      "السلامة الحيوية في ميدان النار"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GSI",
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 13301,
+        "QuestionId": 133,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "الاستمرار في إطلاق النار حتى نفاد آخر رصاصة في المخزن",
+        "EnonceOption": "الاستمرار في إطلاق النار حتى نفاد آخر رصاصة في المخزن",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13302,
+        "QuestionId": 133,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "التوقف الفوري عن الرمي، إبقاء الفوهة باتجاه الأهداف، وضع الإصبع خارج الزناد وتأمين السلاح",
+        "EnonceOption": "التوقف الفوري عن الرمي، إبقاء الفوهة باتجاه الأهداف، وضع الإصبع خارج الزناد وتأمين السلاح",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 13303,
+        "QuestionId": 133,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الالتفات بالسلاح الملقم نحو المدرب لسؤاله عن سبب الصياح",
+        "EnonceOption": "الالتفات بالسلاح الملقم نحو المدرب لسؤاله عن سبب الصياح",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13304,
+        "QuestionId": 133,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "رمي السلاح الملقم على الأرض والركض نحو الباب الخارجي",
+        "EnonceOption": "رمي السلاح الملقم على الأرض والركض نحو الباب الخارجي",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 134,
+    "TestId": 1,
+    "Code": "Q-DIS-134",
+    "Enonce": "أثناء مراقبة روتينية للسيارات، تبين أن السائق المخالف قريب شخصي للدركي، فطلب منه إعفاءه من تسجيل المخالفة قائلاً: \"أنا من العائلة وعليك حمايتي\". كيف يتصرف الدركي النزيه؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "سيادة القانون تعلو فوق كل الروابط العائلية؛ يجب تطبيق الإجراءات القانونية المحددة بعدل وهدوء ولباقة، أو التماس تسليم تدبير المخالفة للزميل المرافق درءاً لأي شبهة محاباة.",
+    "Competences": [
+      "مقاومة المحاباة والمحسوبية",
+      "سيادة القانون والتجرد الوظيفي"
+    ],
+    "CompetencesAssociees": [
+      "مقاومة المحاباة والمحسوبية",
+      "سيادة القانون والتجرد الوظيفي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-INSTRUCTEUR",
+      "SPEC-MOTARD"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 13401,
+        "QuestionId": 134,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تمزيق وثيقة المخالفة وتقديم اعتذار رسمي له والسماح له بالسياقة بسرعة مضاعفة",
+        "EnonceOption": "تمزيق وثيقة المخالفة وتقديم اعتذار رسمي له والسماح له بالسياقة بسرعة مضاعفة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13402,
+        "QuestionId": 134,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "تطبيق القانون بكل تجرد وصرامة مهنية محترمة، وتأكيد أن الواجب الوطني يعلو فوق القرابة العائلية",
+        "EnonceOption": "تطبيق القانون بكل تجرد وصرامة مهنية محترمة، وتأكيد أن الواجب الوطني يعلو فوق القرابة العائلية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 13403,
+        "QuestionId": 134,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "طلب مبلغ مالي مضاعف منه كعقاب عائلي خاص",
+        "EnonceOption": "طلب مبلغ مالي مضاعف منه كعقاب عائلي خاص",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13404,
+        "QuestionId": 134,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الهروب والاختباء وراء شجرة لتفادي التحدث معه",
+        "EnonceOption": "الهروب والاختباء وراء شجرة لتفادي التحدث معه",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 135,
+    "TestId": 1,
+    "Code": "Q-DIS-135",
+    "Enonce": "التقى دركي بالزي النظامي في ساحة الثكنة بضابط يرتدي زيه العسكري لكنه لا ينتمي لنفس وحدته ولا يعرفه شخصياً. ما هو الواجب الانضباطي العسكري المباشر؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "التحية العسكرية تؤدى للرتبة والرمزية العسكرية والوطنية للزي وليس للشخص بحد ذاته؛ يجب تأدية التحية العسكرية النظامية بصرامة واعتزاز فور الالتقاء بأي رئيس تسلسلي أعلى رتبة.",
+    "Competences": [
+      "التقاليد والتحية العسكرية",
+      "احترام الرتب والتراتبية الهرمية"
+    ],
+    "CompetencesAssociees": [
+      "التقاليد والتحية العسكرية",
+      "احترام الرتب والتراتبية الهرمية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GEH",
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 13501,
+        "QuestionId": 135,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تجاهله تماماً والمشي وكأنه غير موجود لأنه ليس رئيسه المباشر في المكتب",
+        "EnonceOption": "تجاهله تماماً والمشي وكأنه غير موجود لأنه ليس رئيسه المباشر في المكتب",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13502,
+        "QuestionId": 135,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "أداء التحية العسكرية النظامية الكاملة فوراً وبكل انضباط تقديراً للرتبة والتقاليد العسكرية العريقة",
+        "EnonceOption": "أداء التحية العسكرية النظامية الكاملة فوراً وبكل انضباط تقديراً للرتبة والتقاليد العسكرية العريقة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 13503,
+        "QuestionId": 135,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "الغمز له بالعين والتلويح بيده بالتحية المدنية الخفيفة",
+        "EnonceOption": "الغمز له بالعين والتلويح بيده بالتحية المدنية الخفيفة",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13504,
+        "QuestionId": 135,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "طلب بطاقة تعريفه وتفتيش جيوبه في وسط الساحة",
+        "EnonceOption": "طلب بطاقة تعريفه وتفتيش جيوبه في وسط الساحة",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 136,
+    "TestId": 1,
+    "Code": "Q-DIS-136",
+    "Enonce": "أثناء مناورة ركن سيارة المصلحة العسكرية، اصطدمت المركبة بخفة بعمود إنارة مما تسبب في خدش طفيف في الصباغة الخلفية دون وجود شهود. ما هو السلوك المهني النزيه الواجب اتخاذه؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الشجاعة الأدبية والنزاهة العسكرية تقتضي الإبلاغ الفوري للقائد التسلسلي وإنجاز تقرير عن الحادث العرضي لإصلاحه، وتجنب إخفاء العيوب أو تبرئة النفس بالباطل.",
+    "Competences": [
+      "الأمانة في صيانة ممتلكات الدولة",
+      "الشجاعة الأدبية والمسؤولية الذاتية"
+    ],
+    "CompetencesAssociees": [
+      "الأمانة في صيانة ممتلكات الدولة",
+      "الشجاعة الأدبية والمسؤولية الذاتية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-SEC-ADMIN",
+        "specialite": "الإدارة والسكرتارية",
+        "poids": 1.5
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INSTRUCTEUR",
+      "SPEC-MOTARD",
+      "SPEC-SEC-ADMIN"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 13601,
+        "QuestionId": 136,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "شراء طلاء وتغطية الخدش سراً وإنكار أي علم به لاحقاً",
+        "EnonceOption": "شراء طلاء وتغطية الخدش سراً وإنكار أي علم به لاحقاً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13602,
+        "QuestionId": 136,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الإبلاغ الفوري والصادق للرئيس التسلسلي بالواقعة وإنجاز تقرير تقني بالحادث العرضي بشفافية",
+        "EnonceOption": "الإبلاغ الفوري والصادق للرئيس التسلسلي بالواقعة وإنجاز تقرير تقني بالحادث العرضي بشفافية",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 13603,
+        "QuestionId": 136,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "اتهام الزميل الذي قاد السيارة في اليوم السابق بالتسبب في الحادث",
+        "EnonceOption": "اتهام الزميل الذي قاد السيارة في اليوم السابق بالتسبب في الحادث",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13604,
+        "QuestionId": 136,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "ترك السيارة في الخلاء والمطالبة بسيارة جديدة بدلاً منها",
+        "EnonceOption": "ترك السيارة في الخلاء والمطالبة بسيارة جديدة بدلاً منها",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 137,
+    "TestId": 1,
+    "Code": "Q-DIS-137",
+    "Enonce": "ما هي المبادئ الدستورية والأخلاقية الصارمة التي تحكم لجوء رجل الدرك لاستعمال \"القوة المشروعة\" (Force légitime) عند تنفيذ مهامه؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "استخدام القوة يجب أن يخضع دائماً لمبادئ: الشرعية القانونية (Légalité)، والضرورة القصوى (Nécessité)، والتناسب الدقيق مع حجم الخطر (Proportionnalité)، والتوقف الفوري بمجرد زوال التهديد.",
+    "Competences": [
+      "مشروعية وتناسب استخدام القوة",
+      "حقوق الإنسان وحماية الحريات"
+    ],
+    "CompetencesAssociees": [
+      "مشروعية وتناسب استخدام القوة",
+      "حقوق الإنسان وحماية الحريات"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-GSI",
+      "SPEC-PSIG"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 13701,
+        "QuestionId": 137,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "استخدام القوة المفرطة ضد أي شخص لا يبتسم لرجال الدورية",
+        "EnonceOption": "استخدام القوة المفرطة ضد أي شخص لا يبتسم لرجال الدورية",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13702,
+        "QuestionId": 137,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "مبادئ الشرعية، والضرورة الملحة، والتناسب الصارم مع حجم الخطر القائم، والتوقف فور زوال التهديد",
+        "EnonceOption": "مبادئ الشرعية، والضرورة الملحة، والتناسب الصارم مع حجم الخطر القائم، والتوقف فور زوال التهديد",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 13703,
+        "QuestionId": 137,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "استعمال السلاح الناري في جميع الحالات البسيطة لتوفير وقت التحقيق",
+        "EnonceOption": "استعمال السلاح الناري في جميع الحالات البسيطة لتوفير وقت التحقيق",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13704,
+        "QuestionId": 137,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "الامتناع المطلق عن لمس أي مجرم حتى لو كان يطلق النار على المواطنين",
+        "EnonceOption": "الامتناع المطلق عن لمس أي مجرم حتى لو كان يطلق النار على المواطنين",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 138,
+    "TestId": 1,
+    "Code": "Q-DIS-138",
+    "Enonce": "عاد دركي إلى منزله بعد المشاركة في عملية حساسة لتفكيك شبكة تهريب دولية لم يتم الإعلان عنها بعد. سألته زوجته وأقاربه بفضول عن سبب تأخره وماهية العملية. كيف يتعامل مع هذا الموقف؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الحفاظ الصارم على كتمان السر المهني العسكري حتى داخل الدائرة الأسرية؛ التوضيح بلباقة ومودة أن طبيعة المهام تحظر الخوض في التفاصيل العملياتية حماية لأمن الوطن وسلامة الأسرة ذاتها.",
+    "Competences": [
+      "كتمان أسرار الدفاع والأمن",
+      "الفصل الحازم بين العمل والحياة الأسرية"
+    ],
+    "CompetencesAssociees": [
+      "كتمان أسرار الدفاع والأمن",
+      "الفصل الحازم بين العمل والحياة الأسرية"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-PJ",
+        "specialite": "الشرطة القضائية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PJ",
+      "SPEC-PJ"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 13801,
+        "QuestionId": 138,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "سرد كافة التفاصيل وأسماء المتورطين وخطة الهجوم كاملة أثناء تناول العشاء",
+        "EnonceOption": "سرد كافة التفاصيل وأسماء المتورطين وخطة الهجوم كاملة أثناء تناول العشاء",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13802,
+        "QuestionId": 138,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الالتزام التام بالسر المهني، والامتناع بحكمة ومودة عن سرد أي معطيات عملياتية تمس سرية المهمة وأمنها",
+        "EnonceOption": "الالتزام التام بالسر المهني، والامتناع بحكمة ومودة عن سرد أي معطيات عملياتية تمس سرية المهمة وأمنها",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 13803,
+        "QuestionId": 138,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "نشر صور المحجوزات في مجموعة الدردشة العائلية على الواتساب",
+        "EnonceOption": "نشر صور المحجوزات في مجموعة الدردشة العائلية على الواتساب",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13804,
+        "QuestionId": 138,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "دعوة أفراد العائلة للحضور في الغد لمشاهدة التحقيق مع المشتبه بهم",
+        "EnonceOption": "دعوة أفراد العائلة للحضور في الغد لمشاهدة التحقيق مع المشتبه بهم",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 139,
+    "TestId": 1,
+    "Code": "Q-DIS-139",
+    "Enonce": "أثناء ضبط حركة المرور، قام سائق غاضب بتوجيه شتائم نابية ومستفزة للدركي أمام الملأ. ما هو التصرف الاحترافي والمنضبط لمواجهة هذا الموقف؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "MOYEN",
+    "DifficulteNiveau": 2,
+    "DifficulteLabel": "متوسط",
+    "DifficulteArabe": "متوسط",
+    "DifficulteCode": "MOYEN",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "التحلي بأعلى درجات ضبط النفس وعدم النزول لمستوى الشتم أو العنف البدني، وتثبيت واقعة \"إهانة موظف عمومي أثناء قيامه بمهامه\" قانونياً عبر الشهود والمحضر وإحالة المعتدي للعدالة.",
+    "Competences": [
+      "ضبط النفس والتحكم في الغضب",
+      "الردع القانوني لجريمة إهانة موظف عمومي"
+    ],
+    "CompetencesAssociees": [
+      "ضبط النفس والتحكم في الغضب",
+      "الردع القانوني لجريمة إهانة موظف عمومي"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-PJ",
+        "specialite": "المجال القانوني",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 2.5
+      },
+      {
+        "code": "SPEC-MOTARD",
+        "specialite": "الدراجات النارية / السلامة الطرقية",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-PJ",
+      "SPEC-INSTRUCTEUR",
+      "SPEC-MOTARD"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 13901,
+        "QuestionId": 139,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "تبادل السباب والشتائم والاشتباك معه بالأيدي أمام الجمهور",
+        "EnonceOption": "تبادل السباب والشتائم والاشتباك معه بالأيدي أمام الجمهور",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13902,
+        "QuestionId": 139,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "الحفاظ على الهدوء والوقار التام، وتثبيت جنحة إهانة موظف عمومي في محضر رسمي وتحريك المسطرة القضائية بصرامة",
+        "EnonceOption": "الحفاظ على الهدوء والوقار التام، وتثبيت جنحة إهانة موظف عمومي في محضر رسمي وتحريك المسطرة القضائية بصرامة",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 13903,
+        "QuestionId": 139,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "البكاء وترك مكان الخدمة والذهاب للمنزل فوراً",
+        "EnonceOption": "البكاء وترك مكان الخدمة والذهاب للمنزل فوراً",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 13904,
+        "QuestionId": 139,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "تحطيم سيارة السائق بواسطة السلاح الوظيفي في الشارع العام",
+        "EnonceOption": "تحطيم سيارة السائق بواسطة السلاح الوظيفي في الشارع العام",
+        "EstCorrecte": false
+      }
+    ]
+  },
+  {
+    "QuestionId": 140,
+    "TestId": 1,
+    "Code": "Q-DIS-140",
+    "Enonce": "ما هو المعنى السامي لشعار الدرك الملكي الخالد \"الله - الوطن - الملك\" في وجدان وسلوك كل تلميذ ودركي في كل الميادين؟",
+    "ContexteSituationnel": "المواقف المهنية والانضباط",
+    "DomaineId": 10,
+    "DomaineCode": "DISCIPLINE",
+    "DomaineNom": "المواقف المهنية والانضباط",
+    "DomaineIntitule": "المواقف المهنية والانضباط",
+    "TypeQuestion": "QCM_UNIQUE",
+    "Difficulte": "FACILE",
+    "DifficulteNiveau": 1,
+    "DifficulteLabel": "سهل",
+    "DifficulteArabe": "سهل",
+    "DifficulteCode": "FACILE",
+    "Points": 1,
+    "Coefficient": 1,
+    "TempsLimiteSecondes": 90,
+    "Explication": "الشعار يجسد العقيدة الوطنية الراسخة: الإخلاص لله في أداء الأمانة، والتضحية والذود عن حوزة الوطن وسلامة أراضيه، والوفاء الدائم والولاء المطلق للقائد الأعلى ورئيس أركان الحرب العامة للقوات المسلحة الملكية.",
+    "Competences": [
+      "العقيدة العسكرية والروح الوطنية",
+      "الالتزام التام بثوابت الأمة والواجب المقدس"
+    ],
+    "CompetencesAssociees": [
+      "العقيدة العسكرية والروح الوطنية",
+      "الالتزام التام بثوابت الأمة والواجب المقدس"
+    ],
+    "SpecialitesPonderation": [
+      {
+        "code": "SPEC-GEH",
+        "specialite": "GEH",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-INSTRUCTEUR",
+        "specialite": "التكوين والتعليم",
+        "poids": 3
+      },
+      {
+        "code": "SPEC-PSIG",
+        "specialite": "العمليات الميدانية",
+        "poids": 2
+      },
+      {
+        "code": "SPEC-GSI",
+        "specialite": "GSI",
+        "poids": 2
+      }
+    ],
+    "SpecialitesAssociees": [
+      "SPEC-GEH",
+      "SPEC-INSTRUCTEUR",
+      "SPEC-PSIG",
+      "SPEC-GSI"
+    ],
+    "EstActive": true,
+    "EstArchivee": false,
+    "Options": [
+      {
+        "OptionId": 14001,
+        "QuestionId": 140,
+        "Lettre": "A",
+        "LettreOption": "A",
+        "LettreArabe": "أ",
+        "LettreOptionArabe": "أ",
+        "Libelle": "مجرد عبارة شكلية تُكتب على الأوراق الرسمية دون أي التزام روحي أو وطني",
+        "EnonceOption": "مجرد عبارة شكلية تُكتب على الأوراق الرسمية دون أي التزام روحي أو وطني",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 14002,
+        "QuestionId": 140,
+        "Lettre": "B",
+        "LettreOption": "B",
+        "LettreArabe": "ب",
+        "LettreOptionArabe": "ب",
+        "Libelle": "العقيدة الوطنية الراسخة للإخلاص، والتفاني في خدمة المواطنين، والذود عن حوزة الوطن، والولاء التام للملك",
+        "EnonceOption": "العقيدة الوطنية الراسخة للإخلاص، والتفاني في خدمة المواطنين، والذود عن حوزة الوطن، والولاء التام للملك",
+        "EstCorrecte": true
+      },
+      {
+        "OptionId": 14003,
+        "QuestionId": 140,
+        "Lettre": "C",
+        "LettreOption": "C",
+        "LettreArabe": "ج",
+        "LettreOptionArabe": "ج",
+        "Libelle": "شعار يتم تذكره في أوقات العطلات الرسمية فقط",
+        "EnonceOption": "شعار يتم تذكره في أوقات العطلات الرسمية فقط",
+        "EstCorrecte": false
+      },
+      {
+        "OptionId": 14004,
+        "QuestionId": 140,
+        "Lettre": "D",
+        "LettreOption": "D",
+        "LettreArabe": "د",
+        "LettreOptionArabe": "د",
+        "Libelle": "عبارة خاصة بكتب التاريخ المدرسي القديم",
+        "EnonceOption": "عبارة خاصة بكتب التاريخ المدرسي القديم",
+        "EstCorrecte": false
+      }
+    ]
+  }
+];
