@@ -211,14 +211,14 @@ export default function StudentGuidePage() {
       {/* ========================================================================= */}
       {/* 1. EN-TÊTE OFFICIEL : GUIDE                                              */}
       {/* ========================================================================= */}
-      <div className="bg-white rounded-2xl border border-slateSubtle-200 p-5 sm:p-6 shadow-xs flex flex-col lg:flex-row lg:items-center justify-between gap-5">
-        <div className="space-y-1.5 max-w-3xl">
+      <div className="bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-7 shadow-xs flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        <div className="space-y-2 max-w-3xl">
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse" />
-            <span className="text-[11px] uppercase tracking-wider font-bold text-gendarmerie font-mono">
+            <span className="text-xs uppercase tracking-wider font-bold text-gendarmerie font-mono">
               Gendarmerie Royale • ORIENT-GR
             </span>
-            <span className="px-2 py-0.5 rounded-full bg-gold/15 text-gold-dark text-[10px] font-mono font-bold border border-gold/30">
+            <span className="px-2.5 py-0.5 rounded-full bg-gold/15 text-gold-dark text-xs font-mono font-bold border border-gold/30">
               GUIDE OFFICIEL
             </span>
           </div>
@@ -227,14 +227,14 @@ export default function StudentGuidePage() {
             GUIDE
           </h1>
 
-          <p className="text-sm font-semibold text-gold-dark italic">
+          <p className="text-base font-semibold text-gold-dark italic">
             « Découvrez les spécialités et les domaines professionnels de la Gendarmerie Royale. »
           </p>
 
-          <p className="text-xs text-slateSubtle-600 leading-relaxed pt-0.5">
+          <p className="text-sm text-slate-600 leading-relaxed pt-0.5">
             Espace central de découverte, d'information et d'orientation de l'élève. Explorez les{' '}
-            <strong>7 spécialités opérationnelles</strong> de la Gendarmerie Royale et les{' '}
-            <strong>10 domaines techniques et professionnels</strong> pour bâtir votre projet de carrière.
+            <strong className="text-slate-800">7 spécialités opérationnelles</strong> de la Gendarmerie Royale et les{' '}
+            <strong className="text-slate-800">10 domaines techniques et professionnels</strong> pour bâtir votre projet de carrière.
           </p>
         </div>
 
@@ -243,7 +243,7 @@ export default function StudentGuidePage() {
           <button
             type="button"
             onClick={() => navigate('/eleve/parcours-intelligent')}
-            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#153B2B] hover:bg-[#1C4E39] text-white font-bold text-xs shadow-xs transition-all cursor-pointer border border-gold/30"
+            className="inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl bg-[#153B2B] hover:bg-[#1C4E39] text-white font-bold text-sm shadow-xs transition-all cursor-pointer border border-gold/40"
           >
             <Sparkles className="w-4 h-4 text-gold" />
             <span>Mon Parcours IA (Entretien)</span>
@@ -255,57 +255,57 @@ export default function StudentGuidePage() {
       {/* ========================================================================= */}
       {/* 2. STATISTIQUES & CHIFFRES CLÉS DU CATALOGUE                             */}
       {/* ========================================================================= */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-        <div className="bg-white rounded-2xl border border-slateSubtle-200 p-4 shadow-2xs">
-          <div className="flex items-center gap-2 text-slateSubtle-500 mb-1">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-2xs">
+          <div className="flex items-center gap-2 text-slate-600 mb-1.5">
             <Layers className="w-4 h-4 text-gendarmerie" />
-            <span className="text-[10px] uppercase font-bold tracking-wider">Catalogue Global</span>
+            <span className="text-xs uppercase font-bold tracking-wider">Catalogue Global</span>
           </div>
-          <p className="text-xl sm:text-2xl font-bold font-mono text-gendarmerie">
+          <p className="text-2xl sm:text-3xl font-bold font-mono text-gendarmerie">
             {catalogueData?.statistiques?.totalEntrees || 17}
           </p>
-          <span className="text-[10px] text-slateSubtle-500">Filières & domaines répertoriés</span>
+          <span className="text-xs text-slate-500 mt-0.5 block">Filières & domaines répertoriés</span>
         </div>
 
-        <div className="bg-white rounded-2xl border border-slateSubtle-200 p-4 shadow-2xs">
-          <div className="flex items-center gap-2 text-emerald-700 mb-1">
+        <div className="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-2xs">
+          <div className="flex items-center gap-2 text-emerald-800 mb-1.5">
             <Shield className="w-4 h-4 text-emerald-600" />
-            <span className="text-[10px] uppercase font-bold tracking-wider">Spécialités</span>
+            <span className="text-xs uppercase font-bold tracking-wider">Spécialités</span>
           </div>
-          <p className="text-xl sm:text-2xl font-bold font-mono text-emerald-800">
+          <p className="text-2xl sm:text-3xl font-bold font-mono text-emerald-800">
             {catalogueData?.statistiques?.specialitesOperationnellesCount || 7}
           </p>
-          <span className="text-[10px] text-slateSubtle-500">Filières opérationnelles officielles</span>
+          <span className="text-xs text-slate-500 mt-0.5 block">Filières opérationnelles officielles</span>
         </div>
 
-        <div className="bg-white rounded-2xl border border-slateSubtle-200 p-4 shadow-2xs">
-          <div className="flex items-center gap-2 text-indigo-700 mb-1">
+        <div className="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-2xs">
+          <div className="flex items-center gap-2 text-indigo-800 mb-1.5">
             <Cpu className="w-4 h-4 text-indigo-600" />
-            <span className="text-[10px] uppercase font-bold tracking-wider">Technologie</span>
+            <span className="text-xs uppercase font-bold tracking-wider">Technologie</span>
           </div>
-          <p className="text-xl sm:text-2xl font-bold font-mono text-indigo-800">
+          <p className="text-2xl sm:text-3xl font-bold font-mono text-indigo-800">
             {catalogueData?.statistiques?.domainesTechnologiquesCount || 6}
           </p>
-          <span className="text-[10px] text-slateSubtle-500">Domaines technologiques de pointe</span>
+          <span className="text-xs text-slate-500 mt-0.5 block">Domaines technologiques de pointe</span>
         </div>
 
-        <div className="bg-white rounded-2xl border border-slateSubtle-200 p-4 shadow-2xs">
-          <div className="flex items-center gap-2 text-amber-700 mb-1">
+        <div className="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-2xs">
+          <div className="flex items-center gap-2 text-amber-800 mb-1.5">
             <Wrench className="w-4 h-4 text-amber-600" />
-            <span className="text-[10px] uppercase font-bold tracking-wider">Technique & Log.</span>
+            <span className="text-xs uppercase font-bold tracking-wider">Technique & Log.</span>
           </div>
-          <p className="text-xl sm:text-2xl font-bold font-mono text-amber-800">
+          <p className="text-2xl sm:text-3xl font-bold font-mono text-amber-800">
             {catalogueData?.statistiques?.domainesTechniquesLogistiquesCount || 4}
           </p>
-          <span className="text-[10px] text-slateSubtle-500">Domaines techniques et soutien</span>
+          <span className="text-xs text-slate-500 mt-0.5 block">Domaines techniques et soutien</span>
         </div>
       </div>
 
       {/* ========================================================================= */}
       {/* 3. BARRE DE FILTRES PAR CATÉGORIE & RECHERCHE                             */}
       {/* ========================================================================= */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 bg-white p-3.5 rounded-2xl border border-slateSubtle-200 shadow-2xs">
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0 scrollbar-none w-full md:w-auto">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-3.5 bg-white p-4 rounded-2xl border border-slate-200/90 shadow-2xs">
+        <div className="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0 no-scrollbar w-full md:w-auto">
           {[
             { id: 'ALL', label: 'Toutes les filières (17)', icon: Layers },
             { id: 'OPERATIONNEL', label: 'Spécialités opérationnelles (7)', icon: Shield },
@@ -321,13 +321,13 @@ export default function StudentGuidePage() {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveCategoryFilter(tab.id)}
-                className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap shrink-0 cursor-pointer ${
+                className={`inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition whitespace-nowrap shrink-0 cursor-pointer ${
                   isActive
                     ? 'bg-gendarmerie text-white shadow-xs'
-                    : 'text-slateSubtle-700 hover:bg-cream-100 hover:text-gendarmerie'
+                    : 'text-slate-700 hover:bg-cream-100 hover:text-gendarmerie'
                 }`}
               >
-                <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-gold' : 'text-slate-400'}`} />
+                <Icon className={`w-4 h-4 ${isActive ? 'text-gold' : 'text-slate-400'}`} />
                 <span>{tab.label}</span>
               </button>
             );
@@ -335,21 +335,21 @@ export default function StudentGuidePage() {
         </div>
 
         {/* Barre de recherche instantanée */}
-        <div className="relative min-w-[240px]">
-          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slateSubtle-400" />
+        <div className="relative min-w-[260px]">
+          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Rechercher une filière, mission, outil..."
-            className="w-full pl-9 pr-8 py-2 text-xs rounded-xl border border-slateSubtle-200 bg-white focus:outline-hidden focus:ring-1 focus:ring-gendarmerie"
+            className="w-full pl-10 pr-8 py-2.5 text-sm rounded-xl border border-slate-200 bg-white focus:outline-hidden focus:border-gendarmerie"
           />
           {searchQuery && (
             <button
               onClick={() => setSearchQuery('')}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slateSubtle-400 hover:text-slateSubtle-700 cursor-pointer"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 cursor-pointer"
             >
-              <X className="w-3.5 h-3.5" />
+              <X className="w-4 h-4" />
             </button>
           )}
         </div>
@@ -383,15 +383,15 @@ export default function StudentGuidePage() {
                     <Shield className="w-4 h-4 text-emerald-700" />
                   </div>
                   <div>
-                    <h2 className="text-lg font-bold font-serif text-gendarmerie">
+                    <h2 className="text-lg sm:text-xl font-bold font-serif text-gendarmerie">
                       Spécialités opérationnelles
                     </h2>
-                    <p className="text-xs text-slateSubtle-500">
+                    <p className="text-xs sm:text-sm text-slate-600">
                       Les 7 filières officielles de souveraineté, d'intervention et de sécurité publique de la Gendarmerie Royale.
                     </p>
                   </div>
                 </div>
-                <span className="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-mono font-bold border border-emerald-200">
+                <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-mono font-bold border border-emerald-200">
                   {filteredOperationnelles.length} spécialités
                 </span>
               </div>
@@ -421,7 +421,7 @@ export default function StudentGuidePage() {
 
                         {/* Badge de code officiel */}
                         <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10">
-                          <span className={`px-2.5 py-1 rounded-full text-[10px] font-extrabold border shadow-xs ${spec.badgeClass}`}>
+                          <span className={`px-2.5 py-1 rounded-full text-xs font-extrabold border shadow-xs ${spec.badgeClass}`}>
                             {spec.code}
                           </span>
                         </div>
@@ -429,8 +429,8 @@ export default function StudentGuidePage() {
                         {/* Badge de recommandation IA si présent */}
                         {spec.compatibilite >= 80 && (
                           <div className="absolute top-3 right-3 z-10">
-                            <span className="px-2 py-0.5 rounded-full bg-gold text-[#153B2B] text-[10px] font-bold shadow-xs flex items-center gap-1">
-                              <Sparkles className="w-3 h-3 text-[#153B2B]" />
+                            <span className="px-2.5 py-0.5 rounded-full bg-gold text-[#153B2B] text-xs font-bold shadow-xs flex items-center gap-1">
+                              <Sparkles className="w-3.5 h-3.5 text-[#153B2B]" />
                               <span>{spec.compatibilite}% Compatibilité</span>
                             </span>
                           </div>
@@ -438,7 +438,7 @@ export default function StudentGuidePage() {
 
                         {/* Titre incrusté en bas */}
                         <div className="absolute bottom-3 inset-x-3 text-white space-y-0.5 z-10 pointer-events-none">
-                          <h3 className="text-sm sm:text-base font-bold font-serif leading-tight">
+                          <h3 className="text-base font-bold font-serif leading-tight">
                             {spec.titre || spec.nomFr}
                           </h3>
                           <p className="text-xs text-gold-light font-arabic" dir="rtl">
@@ -450,18 +450,18 @@ export default function StudentGuidePage() {
                       {/* Corps de la carte */}
                       <div className="p-4 space-y-3 flex-1 flex flex-col justify-between">
                         <div className="space-y-2">
-                          <p className="text-xs text-slateSubtle-600 line-clamp-2 leading-relaxed">
+                          <p className="text-xs sm:text-sm text-slate-600 line-clamp-2 leading-relaxed">
                             {spec.descriptionCourte || spec.presentation}
                           </p>
                         </div>
 
                         {/* Métadonnées & cursus */}
-                        <div className="pt-2 border-t border-slateSubtle-100 flex items-center justify-between text-[11px] text-slateSubtle-600">
-                          <div className="flex items-center gap-1">
+                        <div className="pt-2 border-t border-slateSubtle-100 flex items-center justify-between text-xs text-slate-600">
+                          <div className="flex items-center gap-1.5 font-medium">
                             <BookOpen className="w-3.5 h-3.5 text-gold-dark" />
                             <span>Cursus 6 étapes</span>
                           </div>
-                          <div className="flex items-center gap-1">
+                          <div className="flex items-center gap-1.5 font-semibold text-emerald-800">
                             <Award className="w-3.5 h-3.5 text-emerald-700" />
                             <span>Filière officielle</span>
                           </div>
@@ -476,7 +476,7 @@ export default function StudentGuidePage() {
                             setSelectedSpecialtyId(spec.id || spec.code);
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                           }}
-                          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gendarmerie hover:bg-gendarmerie-light text-white font-bold text-xs shadow-xs transition group-hover:bg-[#1A4533] cursor-pointer"
+                          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gendarmerie hover:bg-[#1A4533] text-white font-bold text-xs sm:text-sm shadow-xs transition group-hover:bg-[#1A4533] cursor-pointer"
                         >
                           <span>Entrer dans l'Académie</span>
                           <ChevronRight className="w-4 h-4 text-gold-light group-hover:translate-x-0.5 transition-transform" />
@@ -500,15 +500,15 @@ export default function StudentGuidePage() {
                     <Cpu className="w-4 h-4 text-indigo-700" />
                   </div>
                   <div>
-                    <h2 className="text-lg font-bold font-serif text-gendarmerie">
+                    <h2 className="text-lg sm:text-xl font-bold font-serif text-gendarmerie">
                       Domaines technologiques
                     </h2>
-                    <p className="text-xs text-slateSubtle-500">
+                    <p className="text-xs sm:text-sm text-slate-600">
                       Systèmes d'information, cyberdéfense, data intelligence, robotique et télécommunications tactiques.
                     </p>
                   </div>
                 </div>
-                <span className="px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-800 text-xs font-mono font-bold border border-indigo-200">
+                <span className="px-3 py-1 rounded-full bg-indigo-50 text-indigo-800 text-xs font-mono font-bold border border-indigo-200">
                   {filteredTechnologiques.length} domaines
                 </span>
               </div>
@@ -539,7 +539,7 @@ export default function StudentGuidePage() {
 
                         {/* Badge de code */}
                         <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10">
-                          <span className={`px-2.5 py-1 rounded-full text-[10px] font-extrabold border shadow-xs ${dom.BadgeClass || dom.badgeClass}`}>
+                          <span className={`px-2.5 py-1 rounded-full text-xs font-extrabold border shadow-xs ${dom.BadgeClass || dom.badgeClass}`}>
                             {dom.Code || dom.code}
                           </span>
                         </div>
@@ -547,8 +547,8 @@ export default function StudentGuidePage() {
                         {/* Badge IA */}
                         {dom.compatibilite && (
                           <div className="absolute top-3 right-3 z-10">
-                            <span className="px-2 py-0.5 rounded-full bg-gold text-[#153B2B] text-[10px] font-bold shadow-xs flex items-center gap-1">
-                              <Sparkles className="w-3 h-3 text-[#153B2B]" />
+                            <span className="px-2.5 py-0.5 rounded-full bg-gold text-[#153B2B] text-xs font-bold shadow-xs flex items-center gap-1">
+                              <Sparkles className="w-3.5 h-3.5 text-[#153B2B]" />
                               <span>{dom.compatibilite}% Match IA</span>
                             </span>
                           </div>
@@ -556,7 +556,7 @@ export default function StudentGuidePage() {
 
                         {/* Titre incrusté en bas */}
                         <div className="absolute bottom-3 inset-x-3 text-white space-y-0.5 z-10 pointer-events-none">
-                          <h3 className="text-sm sm:text-base font-bold font-serif leading-tight">
+                          <h3 className="text-base font-bold font-serif leading-tight">
                             {dom.Titre || dom.titre}
                           </h3>
                           <p className="text-xs text-gold-light font-arabic" dir="rtl">
@@ -567,20 +567,20 @@ export default function StudentGuidePage() {
 
                       {/* Contenu textuel */}
                       <div className="p-4 space-y-3 flex-1 flex flex-col justify-between">
-                        <p className="text-xs text-slateSubtle-600 line-clamp-3 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-slate-600 line-clamp-3 leading-relaxed">
                           {dom.DescriptionCourte || dom.descriptionCourte}
                         </p>
 
                         {/* Compétences clés aperçu */}
                         <div className="pt-2 border-t border-slateSubtle-100 space-y-1.5">
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-slateSubtle-500 block">
+                          <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block">
                             Compétences cibles :
                           </span>
-                          <div className="flex flex-wrap gap-1">
+                          <div className="flex flex-wrap gap-1.5">
                             {(dom.CompetencesTechniques || dom.competencesTechniques || []).slice(0, 2).map((comp, idx) => (
                               <span
                                 key={idx}
-                                className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-medium truncate max-w-full"
+                                className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium truncate max-w-full"
                               >
                                 {comp.split('(')[0]}
                               </span>
@@ -594,7 +594,7 @@ export default function StudentGuidePage() {
                         <button
                           type="button"
                           onClick={() => setActiveDomainDetail(dom)}
-                          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-900 hover:bg-indigo-800 text-white font-bold text-xs shadow-xs transition cursor-pointer"
+                          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-900 hover:bg-indigo-800 text-white font-bold text-xs sm:text-sm shadow-xs transition cursor-pointer"
                         >
                           <FileText className="w-4 h-4 text-gold" />
                           <span>Fiche détaillée du domaine</span>
@@ -619,15 +619,15 @@ export default function StudentGuidePage() {
                     <Wrench className="w-4 h-4 text-amber-700" />
                   </div>
                   <div>
-                    <h2 className="text-lg font-bold font-serif text-gendarmerie">
+                    <h2 className="text-lg sm:text-xl font-bold font-serif text-gendarmerie">
                       Domaines techniques et logistiques
                     </h2>
-                    <p className="text-xs text-slateSubtle-500">
+                    <p className="text-xs sm:text-sm text-slate-600">
                       Maintien en condition opérationnelle, électronique de bord, autonomie énergétique et logistique sensible.
                     </p>
                   </div>
                 </div>
-                <span className="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 text-xs font-mono font-bold border border-amber-200">
+                <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-mono font-bold border border-amber-200">
                   {filteredTechniquesLogistiques.length} domaines
                 </span>
               </div>
@@ -658,7 +658,7 @@ export default function StudentGuidePage() {
 
                         {/* Badge de code */}
                         <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10">
-                          <span className={`px-2.5 py-1 rounded-full text-[10px] font-extrabold border shadow-xs ${dom.BadgeClass || dom.badgeClass}`}>
+                          <span className={`px-2.5 py-1 rounded-full text-xs font-extrabold border shadow-xs ${dom.BadgeClass || dom.badgeClass}`}>
                             {dom.Code || dom.code}
                           </span>
                         </div>
@@ -666,8 +666,8 @@ export default function StudentGuidePage() {
                         {/* Badge IA */}
                         {dom.compatibilite && (
                           <div className="absolute top-3 right-3 z-10">
-                            <span className="px-2 py-0.5 rounded-full bg-gold text-[#153B2B] text-[10px] font-bold shadow-xs flex items-center gap-1">
-                              <Sparkles className="w-3 h-3 text-[#153B2B]" />
+                            <span className="px-2.5 py-0.5 rounded-full bg-gold text-[#153B2B] text-xs font-bold shadow-xs flex items-center gap-1">
+                              <Sparkles className="w-3.5 h-3.5 text-[#153B2B]" />
                               <span>{dom.compatibilite}% Match IA</span>
                             </span>
                           </div>
@@ -675,7 +675,7 @@ export default function StudentGuidePage() {
 
                         {/* Titre incrusté en bas */}
                         <div className="absolute bottom-3 inset-x-3 text-white space-y-0.5 z-10 pointer-events-none">
-                          <h3 className="text-sm sm:text-base font-bold font-serif leading-tight">
+                          <h3 className="text-base font-bold font-serif leading-tight">
                             {dom.Titre || dom.titre}
                           </h3>
                           <p className="text-xs text-gold-light font-arabic" dir="rtl">
@@ -686,20 +686,20 @@ export default function StudentGuidePage() {
 
                       {/* Contenu textuel */}
                       <div className="p-4 space-y-3 flex-1 flex flex-col justify-between">
-                        <p className="text-xs text-slateSubtle-600 line-clamp-3 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-slate-600 line-clamp-3 leading-relaxed">
                           {dom.DescriptionCourte || dom.descriptionCourte}
                         </p>
 
                         {/* Compétences clés aperçu */}
                         <div className="pt-2 border-t border-slateSubtle-100 space-y-1.5">
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-slateSubtle-500 block">
+                          <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block">
                             Compétences cibles :
                           </span>
-                          <div className="flex flex-wrap gap-1">
+                          <div className="flex flex-wrap gap-1.5">
                             {(dom.CompetencesTechniques || dom.competencesTechniques || []).slice(0, 2).map((comp, idx) => (
                               <span
                                 key={idx}
-                                className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-medium truncate max-w-full"
+                                className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium truncate max-w-full"
                               >
                                 {comp.split('(')[0]}
                               </span>
@@ -713,7 +713,7 @@ export default function StudentGuidePage() {
                         <button
                           type="button"
                           onClick={() => setActiveDomainDetail(dom)}
-                          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#78350F] hover:bg-[#632C0D] text-white font-bold text-xs shadow-xs transition cursor-pointer"
+                          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#78350F] hover:bg-[#632C0D] text-white font-bold text-xs sm:text-sm shadow-xs transition cursor-pointer"
                         >
                           <FileText className="w-4 h-4 text-gold" />
                           <span>Fiche détaillée du domaine</span>
@@ -741,17 +741,17 @@ export default function StudentGuidePage() {
             <div className="sticky top-0 bg-[#153B2B] text-white p-6 rounded-t-3xl border-b border-gold/30 z-20 flex items-start justify-between gap-4">
               <div className="space-y-1.5">
                 <div className="flex items-center gap-2">
-                  <span className="px-2.5 py-0.5 rounded-full bg-white/20 text-gold-light text-[10px] font-mono font-bold">
+                  <span className="px-2.5 py-0.5 rounded-full bg-white/20 text-gold-light text-xs font-mono font-bold">
                     {activeDomainDetail.Code || activeDomainDetail.code}
                   </span>
-                  <span className="px-2.5 py-0.5 rounded-full bg-gold/20 text-gold text-[10px] font-bold">
+                  <span className="px-2.5 py-0.5 rounded-full bg-gold/20 text-gold text-xs font-bold">
                     {activeDomainDetail.Categorie === 'TECHNOLOGIQUE' ? 'Domaine Technologique' : 'Domaine Technique & Logistique'}
                   </span>
                 </div>
                 <h2 className="text-xl sm:text-2xl font-bold font-serif text-white tracking-tight">
                   {activeDomainDetail.Titre || activeDomainDetail.titre}
                 </h2>
-                <p className="text-xs text-gold-light font-arabic" dir="rtl">
+                <p className="text-sm text-gold-light font-arabic" dir="rtl">
                   {activeDomainDetail.TitreAr || activeDomainDetail.titreAr}
                 </p>
               </div>
@@ -766,7 +766,7 @@ export default function StudentGuidePage() {
             </div>
 
             {/* Corps complet de la fiche */}
-            <div className="p-6 space-y-6 flex-1 text-slate-800">
+            <div className="p-6 space-y-6 flex-1 text-slate-800 text-sm leading-relaxed">
               
               {/* Badge IA et Explication personnalisée */}
               {activeDomainDetail.explicationIA && (
@@ -776,7 +776,7 @@ export default function StudentGuidePage() {
                     <span className="text-xs font-bold text-[#153B2B] uppercase tracking-wide">
                       Analyse de compatibilité avec votre profil IA ({activeDomainDetail.compatibilite || 80}%)
                     </span>
-                    <p className="text-xs text-slate-700 leading-relaxed">
+                    <p className="text-sm text-slate-700 leading-relaxed">
                       {activeDomainDetail.explicationIA}
                     </p>
                   </div>
@@ -789,7 +789,7 @@ export default function StudentGuidePage() {
                   <FileText className="w-4 h-4 text-gold" />
                   <span>1. Présentation du domaine</span>
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed bg-cream-50 p-4 rounded-2xl border border-slateSubtle-200">
+                <p className="text-sm text-slate-700 leading-relaxed bg-cream-50 p-4 rounded-2xl border border-slateSubtle-200">
                   {activeDomainDetail.Presentation || activeDomainDetail.presentation}
                 </p>
               </div>
@@ -800,7 +800,7 @@ export default function StudentGuidePage() {
                   <Target className="w-4 h-4 text-gold" />
                   <span>2. Missions et activités possibles</span>
                 </h3>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-slate-700">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-700">
                   {(activeDomainDetail.Missions || activeDomainDetail.missions || []).map((m, i) => (
                     <li key={i} className="flex items-start gap-2 bg-white p-3 rounded-xl border border-slateSubtle-200 shadow-2xs">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -819,7 +819,7 @@ export default function StudentGuidePage() {
                   </h3>
                   <div className="space-y-2">
                     {(activeDomainDetail.CompetencesTechniques || activeDomainDetail.competencesTechniques || []).map((c, i) => (
-                      <div key={i} className="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-800 font-medium">
+                      <div key={i} className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-800 font-medium">
                         • {c}
                       </div>
                     ))}
@@ -833,7 +833,7 @@ export default function StudentGuidePage() {
                   </h3>
                   <div className="space-y-2">
                     {(activeDomainDetail.QualitesPersonnelles || activeDomainDetail.qualitesPersonnelles || []).map((q, i) => (
-                      <div key={i} className="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-800 font-medium">
+                      <div key={i} className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-800 font-medium">
                         • {q}
                       </div>
                     ))}
@@ -848,9 +848,9 @@ export default function StudentGuidePage() {
                     <Laptop className="w-4 h-4 text-gold" />
                     <span>5. Technologies et équipements</span>
                   </h3>
-                  <ul className="space-y-1.5 text-xs text-slate-600 bg-white p-3.5 rounded-2xl border border-slateSubtle-200">
+                  <ul className="space-y-2 text-sm text-slate-700 bg-white p-4 rounded-2xl border border-slateSubtle-200">
                     {(activeDomainDetail.TechnologiesEquipements || activeDomainDetail.technologiesEquipements || []).map((t, i) => (
-                      <li key={i} className="flex items-start gap-1.5">
+                      <li key={i} className="flex items-start gap-2">
                         <span className="text-gold font-bold">›</span>
                         <span>{t}</span>
                       </li>
@@ -863,9 +863,9 @@ export default function StudentGuidePage() {
                     <Award className="w-4 h-4 text-gold" />
                     <span>6. Exemples de métiers et d'applications</span>
                   </h3>
-                  <ul className="space-y-1.5 text-xs text-slate-600 bg-white p-3.5 rounded-2xl border border-slateSubtle-200">
+                  <ul className="space-y-2 text-sm text-slate-700 bg-white p-4 rounded-2xl border border-slateSubtle-200">
                     {(activeDomainDetail.ExemplesApplications || activeDomainDetail.exemplesApplications || []).map((e, i) => (
-                      <li key={i} className="flex items-start gap-1.5">
+                      <li key={i} className="flex items-start gap-2">
                         <span className="text-emerald-600 font-bold">✓</span>
                         <span>{e}</span>
                       </li>
@@ -884,11 +884,11 @@ export default function StudentGuidePage() {
                   {(activeDomainDetail.ModulesPedagogiques || activeDomainDetail.modulesPedagogiques || []).map((mod, i) => (
                     <div key={i} className="p-3.5 rounded-xl bg-cream-50 border border-slateSubtle-200 flex flex-col justify-between space-y-2">
                       <div className="space-y-1">
-                        <span className="text-[10px] font-mono font-bold text-slate-400 block">{mod.id}</span>
-                        <h4 className="text-xs font-bold text-gendarmerie leading-snug">{mod.titre}</h4>
+                        <span className="text-xs font-mono font-bold text-slate-400 block">{mod.id}</span>
+                        <h4 className="text-sm font-bold text-gendarmerie leading-snug">{mod.titre}</h4>
                       </div>
-                      <div className="flex items-center justify-between text-[10px] text-slateSubtle-500 pt-2 border-t border-slateSubtle-200/60">
-                        <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {mod.duree}</span>
+                      <div className="flex items-center justify-between text-xs text-slateSubtle-600 pt-2 border-t border-slateSubtle-200/60">
+                        <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {mod.duree}</span>
                         <span className="font-semibold text-gendarmerie">{mod.difficulte}</span>
                       </div>
                     </div>
@@ -903,7 +903,7 @@ export default function StudentGuidePage() {
                   <span className="text-xs font-bold text-amber-800 uppercase tracking-wide">
                     Information Déontologique Officielle
                   </span>
-                  <p className="text-xs text-amber-900 leading-relaxed">
+                  <p className="text-sm text-amber-900 leading-relaxed">
                     Les 10 domaines techniques et professionnels présentés dans le GUIDE sont des catégories pédagogiques de découverte et d'évaluation des compétences. Ils ne constituent pas des affectations officielles autonomes de la Gendarmerie Royale. Les décisions finales d'affectation et de sélection relèvent exclusivement de l'ADMIN et des commissions officielles compétentes.
                   </p>
                 </div>
@@ -916,7 +916,7 @@ export default function StudentGuidePage() {
               <button
                 type="button"
                 onClick={() => setActiveDomainDetail(null)}
-                className="w-full sm:w-auto px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 text-xs font-semibold cursor-pointer"
+                className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 text-xs sm:text-sm font-semibold cursor-pointer"
               >
                 Fermer la fiche
               </button>
@@ -928,7 +928,7 @@ export default function StudentGuidePage() {
                   setActiveDomainDetail(null);
                   navigate(`/eleve/parcours-intelligent?sujet=${encodeURIComponent(domainName)}`);
                 }}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#153B2B] hover:bg-[#1C4E39] text-white font-bold text-xs shadow-xs cursor-pointer border border-gold/30"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#153B2B] hover:bg-[#1C4E39] text-white font-bold text-xs sm:text-sm shadow-xs cursor-pointer border border-gold/30"
               >
                 <Sparkles className="w-4 h-4 text-gold" />
                 <span>Approfondir ce domaine dans mon entretien IA</span>

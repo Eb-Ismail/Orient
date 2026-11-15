@@ -50,9 +50,9 @@ export default function ProgressBar({
                 key={idx}
                 type="button"
                 onClick={() => onSelectQuestion(idx)}
-                className={`w-7 h-7 text-xs font-medium rounded-lg transition-all duration-150 flex items-center justify-center ${
+                className={`w-8 h-8 text-xs font-bold rounded-xl transition-all duration-150 flex items-center justify-center cursor-pointer ${
                   isCurrent
-                    ? 'bg-gendarmerie text-white ring-2 ring-gold/80 shadow-xs font-bold scale-105'
+                    ? 'bg-gendarmerie text-white ring-2 ring-gold/80 shadow-xs scale-105'
                     : 'bg-cream-100 text-slateSubtle-700 border border-slateSubtle-200 hover:bg-cream-200 hover:border-gold/50'
                 }`}
                 title={`Aller à la question ${idx + 1}`}

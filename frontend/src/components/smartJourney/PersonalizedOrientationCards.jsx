@@ -70,7 +70,7 @@ export default function PersonalizedOrientationCards({
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#153B2B] text-gold border border-gold/30 flex items-center gap-1.5">
+              <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#153B2B] text-gold border border-gold/30 flex items-center gap-1.5">
                 <Compass className="w-3.5 h-3.5 text-gold" />
                 Orientation Personnalisée
               </span>
@@ -78,17 +78,17 @@ export default function PersonalizedOrientationCards({
                 7 Spécialités de la Gendarmerie Royale analysées
               </span>
             </div>
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
+            <h2 className="text-xl sm:text-2xl font-bold font-serif text-slate-900 tracking-tight">
               Adéquation & Préconisations de Filières
             </h2>
-            <p className="text-xs text-slate-600 max-w-2xl leading-relaxed">
+            <p className="text-sm text-slate-600 max-w-2xl leading-relaxed">
               Classement prédictif basé sur la convergence entre vos diplômes, votre vécu personnel, vos compétences déclarées et vos résultats d'ateliers certifiés.
             </p>
           </div>
 
           <div className="text-right shrink-0">
             <span className="text-xs font-semibold text-slate-500 block">Orientation #1</span>
-            <span className="text-sm font-extrabold text-[#153B2B]">{topMatch?.nomFr}</span>
+            <span className="text-base font-extrabold text-[#153B2B]">{topMatch?.nomFr}</span>
           </div>
         </div>
       </div>
@@ -123,10 +123,10 @@ export default function PersonalizedOrientationCards({
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3 text-white">
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-gold-light">
+                  <span className="text-xs font-mono uppercase tracking-wider text-gold-light">
                     {topMatch.code}
                   </span>
-                  <p className="text-sm font-bold truncate">{topMatch.nomFr}</p>
+                  <p className="text-base font-bold truncate">{topMatch.nomFr}</p>
                 </div>
               </div>
 
@@ -146,7 +146,7 @@ export default function PersonalizedOrientationCards({
                     <span className="text-2xl sm:text-3xl font-black text-gold">
                       {topMatch.scoreCompatibilite}%
                     </span>
-                    <span className="text-[10px] uppercase tracking-wider block text-slate-300">
+                    <span className="text-xs uppercase tracking-wider block text-slate-300">
                       Compatibilité
                     </span>
                   </div>
@@ -178,14 +178,14 @@ export default function PersonalizedOrientationCards({
 
                 {/* Justification par les expériences personnelles */}
                 {topMatch.experiencesPersonnelles && topMatch.experiencesPersonnelles.length > 0 && (
-                  <div className="p-3 rounded-xl bg-black/25 border border-white/10 space-y-1 text-xs">
-                    <span className="text-[11px] font-bold text-gold-light uppercase tracking-wider flex items-center gap-1.5">
-                      <FileText className="w-3 h-3 text-gold" />
+                  <div className="p-3.5 rounded-xl bg-black/25 border border-white/10 space-y-1.5 text-xs sm:text-sm">
+                    <span className="text-xs font-bold text-gold-light uppercase tracking-wider flex items-center gap-1.5">
+                      <FileText className="w-3.5 h-3.5 text-gold" />
                       Expériences personnelles & cursus justifiant ce choix :
                     </span>
                     <ul className="space-y-1 text-slate-200">
                       {topMatch.experiencesPersonnelles.map((exp, ei) => (
-                        <li key={ei} className="flex items-start gap-1.5">
+                        <li key={ei} className="flex items-start gap-2">
                           <span className="text-gold font-bold">•</span>
                           <span>{exp}</span>
                         </li>
@@ -196,13 +196,13 @@ export default function PersonalizedOrientationCards({
 
                 {/* Compétences concordantes & Résultats pratiques */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                  <div className="space-y-1">
+                  <div className="space-y-1.5">
                     <span className="text-xs text-slate-300 font-semibold block">Compétences détectées :</span>
-                    <div className="flex flex-wrap gap-1">
+                    <div className="flex flex-wrap gap-1.5">
                       {(topMatch.competencesDetectees || topMatch.competencesCorrespondantes || []).map((c, i) => (
                         <span
                           key={i}
-                          className="px-2 py-0.5 text-xs rounded-md bg-white/10 text-white border border-white/20"
+                          className="px-2.5 py-1 text-xs rounded-md bg-white/10 text-white border border-white/20 font-medium"
                         >
                           {c}
                         </span>
@@ -210,9 +210,9 @@ export default function PersonalizedOrientationCards({
                     </div>
                   </div>
 
-                  <div className="space-y-1">
+                  <div className="space-y-1.5">
                     <span className="text-xs text-slate-300 font-semibold block">Résultats des exercices pratiques :</span>
-                    <div className="text-xs text-gold-light bg-black/20 p-2 rounded-lg border border-white/10">
+                    <div className="text-xs sm:text-sm text-gold-light bg-black/20 p-2.5 rounded-lg border border-white/10">
                       {topMatch.resultatsExercicesPratiques || "Ateliers en cours de réalisation"}
                     </div>
                   </div>
@@ -221,22 +221,22 @@ export default function PersonalizedOrientationCards({
                 {/* Points forts et axes d'amélioration */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs pt-1">
                   {topMatch.pointsForts && (
-                    <div className="p-2.5 rounded-lg bg-emerald-950/40 border border-emerald-500/30">
+                    <div className="p-3 rounded-lg bg-emerald-950/40 border border-emerald-500/30">
                       <span className="font-bold text-emerald-300 block mb-1">Points forts :</span>
-                      <p className="text-slate-200">{Array.isArray(topMatch.pointsForts) ? topMatch.pointsForts.join(', ') : topMatch.pointsForts}</p>
+                      <p className="text-slate-200 leading-relaxed">{Array.isArray(topMatch.pointsForts) ? topMatch.pointsForts.join(', ') : topMatch.pointsForts}</p>
                     </div>
                   )}
                   {topMatch.axesAmelioration && (
-                    <div className="p-2.5 rounded-lg bg-amber-950/40 border border-amber-500/30">
+                    <div className="p-3 rounded-lg bg-amber-950/40 border border-amber-500/30">
                       <span className="font-bold text-amber-300 block mb-1">Axes de perfectionnement :</span>
-                      <p className="text-slate-200">{Array.isArray(topMatch.axesAmelioration) ? topMatch.axesAmelioration.join(', ') : topMatch.axesAmelioration}</p>
+                      <p className="text-slate-200 leading-relaxed">{Array.isArray(topMatch.axesAmelioration) ? topMatch.axesAmelioration.join(', ') : topMatch.axesAmelioration}</p>
                     </div>
                   )}
                 </div>
 
                 {/* Mention légale de validation humaine */}
-                <div className="p-2.5 rounded-lg bg-black/35 border border-gold/30 text-[11px] text-slate-300 flex items-start gap-2">
-                  <Shield className="w-3.5 h-3.5 text-gold shrink-0 mt-0.5" />
+                <div className="p-3 rounded-lg bg-black/35 border border-gold/30 text-xs text-slate-300 flex items-start gap-2 leading-relaxed">
+                  <Shield className="w-4 h-4 text-gold shrink-0 mt-0.5" />
                   <span>
                     <strong>Cadre décisionnel : </strong>
                     {topMatch.mentionValidationHumaine || "Hypothèse consultative générée par l'IA. La validation définitive relève exclusivement de la décision souveraine du Commandement de la Gendarmerie Royale."}

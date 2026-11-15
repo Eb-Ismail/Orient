@@ -410,125 +410,125 @@ export default function CommissionDashboardPage() {
       )}
 
       {/* 2. EN-TÊTE OFFICIEL DE LA COMMISSION */}
-      <div className="bg-gradient-to-r from-[#153B2B] via-[#1A4533] to-[#0E291E] text-white p-6 rounded-2xl shadow-md border border-gold/30 flex flex-col md:flex-row md:items-center justify-between gap-6">
-        <div className="space-y-1.5 flex-1 min-w-0">
+      <div className="bg-gradient-to-r from-[#153B2B] via-[#1A4533] to-[#0E291E] text-white p-6 sm:p-7 rounded-2xl shadow-card border border-gold/40 flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="space-y-2 flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
             <span className="w-2.5 h-2.5 rounded-full bg-gold animate-pulse" />
-            <span className="text-[11px] uppercase tracking-wider font-bold text-gold-light font-mono">
+            <span className="text-xs uppercase tracking-wider font-bold text-gold-light font-mono">
               Commission de Sélection & Recrutement • {selectedComm?.Code}
             </span>
-            <span className="px-2.5 py-0.5 rounded-full bg-white/10 text-white text-[10px] font-mono border border-white/15">
+            <span className="px-3 py-1 rounded-full bg-white/10 text-white text-xs font-mono font-medium border border-white/15">
               Évaluateur : {user?.prenom} {user?.nom} ({user?.matricule})
             </span>
           </div>
-          <h1 className="text-xl sm:text-2xl font-bold font-serif text-white tracking-tight flex items-center gap-3">
-            <CommIcon className="w-7 h-7 text-gold shrink-0" />
+          <h1 className="text-2xl sm:text-3xl font-bold font-serif text-white tracking-tight flex items-center gap-3">
+            <CommIcon className="w-8 h-8 text-gold shrink-0" />
             <span>{selectedComm?.Nom}</span>
           </h1>
-          <p className="text-xs text-slate-200 max-w-2xl leading-relaxed">
+          <p className="text-sm text-slate-200 max-w-3xl leading-relaxed">
             {selectedComm?.Description || "Évaluation présentielle des tests pratiques et entretiens de sélection pour l'affectation des élèves gendarmes."}
           </p>
         </div>
 
-        {/* Moyenne Générale */}
-        <div className="bg-white/10 border border-white/15 rounded-xl p-3.5 text-center shrink-0 min-w-[130px]">
-          <span className="text-[10px] uppercase font-bold text-gold-light block">Moyenne Promotion</span>
-          <span className="text-2xl font-bold font-mono text-gold mt-0.5 block">
+        {/* Moyenne Promotion */}
+        <div className="bg-white/10 border border-white/20 rounded-2xl p-4 sm:p-5 text-center shrink-0 min-w-[150px]">
+          <span className="text-xs uppercase font-bold tracking-wider text-gold-light block">Moyenne Promotion</span>
+          <span className="text-3xl font-bold font-mono text-gold mt-1 block">
             {stats.moyenne !== null ? `${stats.moyenne}/20` : '—'}
           </span>
         </div>
       </div>
 
       {/* 3. TABLEAU DE BORD COMMISSION : LES 7 MÉTRIQUES OFFICIELLES */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
-        <div className="bg-white rounded-xl border border-slateSubtle-200 p-3.5 shadow-2xs text-center">
-          <span className="text-[10px] uppercase font-bold text-slate-500 block">Total Affectés</span>
-          <span className="text-xl font-bold font-mono text-slate-900 mt-1 block">{stats.total}</span>
+      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3.5">
+        <div className="bg-white rounded-2xl border border-slate-200/90 p-4 shadow-2xs text-center">
+          <span className="text-xs uppercase font-bold tracking-wider text-slate-600 block">Total Affectés</span>
+          <span className="text-2xl font-bold font-mono text-slate-900 mt-1.5 block">{stats.total}</span>
         </div>
-        <div className="bg-white rounded-xl border border-amber-200 p-3.5 shadow-2xs text-center">
-          <span className="text-[10px] uppercase font-bold text-amber-700 block">En Attente</span>
-          <span className="text-xl font-bold font-mono text-amber-600 mt-1 block">{stats.enAttente}</span>
+        <div className="bg-white rounded-2xl border border-amber-300 p-4 shadow-2xs text-center">
+          <span className="text-xs uppercase font-bold tracking-wider text-amber-700 block">En Attente</span>
+          <span className="text-2xl font-bold font-mono text-amber-600 mt-1.5 block">{stats.enAttente}</span>
         </div>
-        <div className="bg-white rounded-xl border border-blue-200 p-3.5 shadow-2xs text-center">
-          <span className="text-[10px] uppercase font-bold text-blue-700 block">Convoqués</span>
-          <span className="text-xl font-bold font-mono text-blue-600 mt-1 block">{stats.convoques}</span>
+        <div className="bg-white rounded-2xl border border-blue-300 p-4 shadow-2xs text-center">
+          <span className="text-xs uppercase font-bold tracking-wider text-blue-700 block">Convoqués</span>
+          <span className="text-2xl font-bold font-mono text-blue-600 mt-1.5 block">{stats.convoques}</span>
         </div>
-        <div className="bg-white rounded-xl border border-indigo-200 p-3.5 shadow-2xs text-center">
-          <span className="text-[10px] uppercase font-bold text-indigo-700 block">En Cours</span>
-          <span className="text-xl font-bold font-mono text-indigo-600 mt-1 block">{stats.enCours}</span>
+        <div className="bg-white rounded-2xl border border-indigo-300 p-4 shadow-2xs text-center">
+          <span className="text-xs uppercase font-bold tracking-wider text-indigo-700 block">En Cours</span>
+          <span className="text-2xl font-bold font-mono text-indigo-600 mt-1.5 block">{stats.enCours}</span>
         </div>
-        <div className="bg-white rounded-xl border border-slate-300 p-3.5 shadow-2xs text-center">
-          <span className="text-[10px] uppercase font-bold text-slate-700 block">Terminées</span>
-          <span className="text-xl font-bold font-mono text-slate-800 mt-1 block">{stats.termines}</span>
+        <div className="bg-white rounded-2xl border border-slate-300 p-4 shadow-2xs text-center">
+          <span className="text-xs uppercase font-bold tracking-wider text-slate-700 block">Terminées</span>
+          <span className="text-2xl font-bold font-mono text-slate-800 mt-1.5 block">{stats.termines}</span>
         </div>
-        <div className="bg-emerald-50/80 rounded-xl border border-emerald-300 p-3.5 shadow-2xs text-center">
-          <span className="text-[10px] uppercase font-bold text-emerald-800 block">POSITIFS (Admin)</span>
-          <span className="text-xl font-bold font-mono text-emerald-700 mt-1 block">{stats.positifs}</span>
+        <div className="bg-emerald-50/90 rounded-2xl border border-emerald-300 p-4 shadow-2xs text-center">
+          <span className="text-xs uppercase font-bold tracking-wider text-emerald-800 block">POSITIFS (Admin)</span>
+          <span className="text-2xl font-bold font-mono text-emerald-700 mt-1.5 block">{stats.positifs}</span>
         </div>
-        <div className="bg-rose-50/80 rounded-xl border border-rose-300 p-3.5 shadow-2xs text-center">
-          <span className="text-[10px] uppercase font-bold text-rose-800 block">NÉGATIFS (Local)</span>
-          <span className="text-xl font-bold font-mono text-rose-700 mt-1 block">{stats.negatifs}</span>
+        <div className="bg-rose-50/90 rounded-2xl border border-rose-300 p-4 shadow-2xs text-center">
+          <span className="text-xs uppercase font-bold tracking-wider text-rose-800 block">NÉGATIFS (Local)</span>
+          <span className="text-2xl font-bold font-mono text-rose-700 mt-1.5 block">{stats.negatifs}</span>
         </div>
       </div>
 
       {/* 4. BARRE DE RECHERCHE ET FILTRES RAPIDES */}
-      <div className="bg-white rounded-2xl border border-slateSubtle-200 p-4 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div className="bg-white rounded-2xl border border-slate-200/90 p-4 sm:p-5 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-3.5">
         <div className="relative flex-1 max-w-md">
-          <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+          <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Rechercher un candidat par nom, matricule ou diplôme..."
-            className="w-full pl-9 pr-4 py-2 rounded-xl text-xs bg-slate-50 border border-slateSubtle-200 focus:bg-white focus:border-gold outline-hidden transition"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl text-sm bg-slate-50 border border-slate-200 focus:bg-white focus:border-gold outline-hidden transition"
           />
         </div>
 
-        <div className="flex items-center gap-1.5 overflow-x-auto">
+        <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
           <button
             onClick={() => setStatusFilter('ALL')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition ${
-              statusFilter === 'ALL' ? 'bg-[#153B2B] text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            className={`px-3.5 py-2 rounded-xl text-xs font-bold cursor-pointer transition whitespace-nowrap shrink-0 ${
+              statusFilter === 'ALL' ? 'bg-[#153B2B] text-white shadow-xs' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
             }`}
           >
             Tous ({stats.total})
           </button>
           <button
             onClick={() => setStatusFilter('EN_ATTENTE')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition ${
-              statusFilter === 'EN_ATTENTE' ? 'bg-amber-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            className={`px-3.5 py-2 rounded-xl text-xs font-bold cursor-pointer transition whitespace-nowrap shrink-0 ${
+              statusFilter === 'EN_ATTENTE' ? 'bg-amber-600 text-white shadow-xs' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
             }`}
           >
             En Attente ({stats.enAttente})
           </button>
           <button
             onClick={() => setStatusFilter('CONVOQUE')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition ${
-              statusFilter === 'CONVOQUE' ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            className={`px-3.5 py-2 rounded-xl text-xs font-bold cursor-pointer transition whitespace-nowrap shrink-0 ${
+              statusFilter === 'CONVOQUE' ? 'bg-blue-600 text-white shadow-xs' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
             }`}
           >
             Convoqués ({stats.convoques})
           </button>
           <button
             onClick={() => setStatusFilter('EN_COURS')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition ${
-              statusFilter === 'EN_COURS' ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            className={`px-3.5 py-2 rounded-xl text-xs font-bold cursor-pointer transition whitespace-nowrap shrink-0 ${
+              statusFilter === 'EN_COURS' ? 'bg-indigo-600 text-white shadow-xs' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
             }`}
           >
             En cours ({stats.enCours})
           </button>
           <button
             onClick={() => setStatusFilter('POSITIF')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition ${
-              statusFilter === 'POSITIF' ? 'bg-emerald-700 text-white' : 'bg-emerald-50 text-emerald-800 hover:bg-emerald-100'
+            className={`px-3.5 py-2 rounded-xl text-xs font-bold cursor-pointer transition whitespace-nowrap shrink-0 ${
+              statusFilter === 'POSITIF' ? 'bg-emerald-700 text-white shadow-xs' : 'bg-emerald-50 text-emerald-800 hover:bg-emerald-100'
             }`}
           >
             POSITIFS ({stats.positifs})
           </button>
           <button
             onClick={() => setStatusFilter('NEGATIF')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition ${
-              statusFilter === 'NEGATIF' ? 'bg-rose-700 text-white' : 'bg-rose-50 text-rose-800 hover:bg-rose-100'
+            className={`px-3.5 py-2 rounded-xl text-xs font-bold cursor-pointer transition whitespace-nowrap shrink-0 ${
+              statusFilter === 'NEGATIF' ? 'bg-rose-700 text-white shadow-xs' : 'bg-rose-50 text-rose-800 hover:bg-rose-100'
             }`}
           >
             NÉGATIFS ({stats.negatifs})
@@ -537,33 +537,33 @@ export default function CommissionDashboardPage() {
       </div>
 
       {/* 5. TABLEAU DES CANDIDATS DE LA COMMISSION */}
-      <div className="bg-white rounded-2xl border border-slateSubtle-200 shadow-xs overflow-hidden">
+      <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden">
         {candidatesLoading ? (
-          <div className="py-12 flex justify-center">
+          <div className="py-16 flex justify-center">
             <LoadingSpinner text="Chargement des candidats..." />
           </div>
         ) : filteredCandidates.length === 0 ? (
-          <div className="py-12 text-center space-y-2">
-            <Users className="w-8 h-8 text-slate-300 mx-auto" />
-            <p className="text-xs text-slate-500 font-semibold">Aucun candidat ne correspond à vos filtres.</p>
+          <div className="py-16 text-center space-y-2.5">
+            <Users className="w-10 h-10 text-slate-300 mx-auto" />
+            <p className="text-sm text-slate-600 font-semibold">Aucun candidat ne correspond à vos filtres.</p>
           </div>
         ) : (
           <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse text-xs">
+            <table className="w-full text-left border-collapse text-sm">
               <thead>
-                <tr className="bg-slate-50/80 border-b border-slateSubtle-200 text-slateSubtle-600 font-bold uppercase tracking-wider text-[10px]">
-                  <th className="py-3 px-4">Candidat</th>
-                  <th className="py-3 px-4">Diplôme & Filière</th>
-                  <th className="py-3 px-4 text-center">Score IA</th>
-                  <th className="py-3 px-4 text-center">Pratique /20</th>
-                  <th className="py-3 px-4 text-center">Entretien /20</th>
-                  <th className="py-3 px-4 text-center">Note Globale</th>
-                  <th className="py-3 px-4 text-center">Avis & Statut</th>
-                  <th className="py-3 px-4 text-center">Recommandation IA</th>
-                  <th className="py-3 px-4 text-right">Action</th>
+                <tr className="bg-slate-50 border-b border-slate-200 text-slate-700 font-bold uppercase tracking-wider text-xs">
+                  <th className="py-3.5 px-4 sm:px-5">Candidat</th>
+                  <th className="py-3.5 px-4 sm:px-5">Diplôme & Filière</th>
+                  <th className="py-3.5 px-4 text-center">Score IA</th>
+                  <th className="py-3.5 px-4 text-center">Pratique /20</th>
+                  <th className="py-3.5 px-4 text-center">Entretien /20</th>
+                  <th className="py-3.5 px-4 text-center">Note Globale</th>
+                  <th className="py-3.5 px-4 text-center">Avis & Statut</th>
+                  <th className="py-3.5 px-4 text-center">Recommandation IA</th>
+                  <th className="py-3.5 px-4 text-right">Action</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slateSubtle-100">
+              <tbody className="divide-y divide-slate-100">
                 {filteredCandidates.map((cand) => {
                   const sv = cand.StatutVentilation;
                   const se = cand.StatutEvaluation;
@@ -572,87 +572,87 @@ export default function CommissionDashboardPage() {
                   const isNegatif = recom === 'NEGATIF' || sv === 'NEGATIF' || sv === 'REFUSE';
 
                   return (
-                    <tr key={cand.AssignmentId} className="hover:bg-cream-50/50 transition-colors">
+                    <tr key={cand.AssignmentId} className="hover:bg-cream-50/70 transition-colors">
                       {/* Identité */}
-                      <td className="py-3.5 px-4">
-                        <div className="font-bold text-[#153B2B] flex items-center gap-1.5">
-                          <span>{cand.Nom} {cand.Prenom}</span>
+                      <td className="py-4 px-4 sm:px-5">
+                        <div className="font-bold text-[#153B2B] text-sm">
+                          {cand.Nom} {cand.Prenom}
                         </div>
-                        <div className="text-[11px] text-slate-500 font-mono">
+                        <div className="text-xs text-slate-600 font-mono mt-0.5">
                           Matricule : {cand.Matricule}
                         </div>
                       </td>
 
                       {/* Diplôme */}
-                      <td className="py-3.5 px-4">
-                        <div className="font-medium text-slate-800">{cand.DiplomeOrigine || 'Baccalauréat'}</div>
-                        <div className="text-[11px] text-slate-500">{cand.FiliereEntree || 'Tronc Commun'}</div>
+                      <td className="py-4 px-4 sm:px-5">
+                        <div className="font-semibold text-slate-800 text-sm">{cand.DiplomeOrigine || 'Baccalauréat'}</div>
+                        <div className="text-xs text-slate-500 mt-0.5">{cand.FiliereEntree || 'Tronc Commun'}</div>
                       </td>
 
                       {/* Score IA */}
-                      <td className="py-3.5 px-4 text-center">
-                        <span className="font-mono font-bold text-slate-800">
+                      <td className="py-4 px-4 text-center">
+                        <span className="font-mono font-bold text-sm text-slate-800">
                           {cand.ScoreCorrespondanceIA ? `${cand.ScoreCorrespondanceIA}%` : '—'}
                         </span>
                       </td>
 
                       {/* Note Pratique */}
-                      <td className="py-3.5 px-4 text-center">
+                      <td className="py-4 px-4 text-center">
                         {cand.NotePratiqueSur20 !== null && cand.NotePratiqueSur20 !== undefined ? (
-                          <span className={`font-mono font-bold ${cand.NotePratiqueSur20 >= 12 ? 'text-emerald-700' : 'text-rose-600'}`}>
+                          <span className={`font-mono font-bold text-sm ${cand.NotePratiqueSur20 >= 12 ? 'text-emerald-800' : 'text-rose-700'}`}>
                             {cand.NotePratiqueSur20}/20
                           </span>
                         ) : (
-                          <span className="text-slate-400 font-mono">—</span>
+                          <span className="text-slate-400 font-mono text-sm">—</span>
                         )}
                       </td>
 
                       {/* Note Entretien */}
-                      <td className="py-3.5 px-4 text-center">
+                      <td className="py-4 px-4 text-center">
                         {cand.NoteEntretienSur20 !== null && cand.NoteEntretienSur20 !== undefined ? (
-                          <span className={`font-mono font-bold ${cand.NoteEntretienSur20 >= 12 ? 'text-emerald-700' : 'text-rose-600'}`}>
+                          <span className={`font-mono font-bold text-sm ${cand.NoteEntretienSur20 >= 12 ? 'text-emerald-800' : 'text-rose-700'}`}>
                             {cand.NoteEntretienSur20}/20
                           </span>
                         ) : (
-                          <span className="text-slate-400 font-mono">—</span>
+                          <span className="text-slate-400 font-mono text-sm">—</span>
                         )}
                       </td>
 
                       {/* Note Globale */}
-                      <td className="py-3.5 px-4 text-center">
+                      <td className="py-4 px-4 text-center">
                         {cand.NoteGlobaleSur20 !== null && cand.NoteGlobaleSur20 !== undefined ? (
-                          <span className={`px-2 py-0.5 rounded-md font-mono font-bold text-xs ${
-                            cand.NoteGlobaleSur20 >= 14 ? 'bg-emerald-100 text-emerald-800' :
-                            cand.NoteGlobaleSur20 >= 12 ? 'bg-blue-100 text-blue-800' :
-                            'bg-rose-100 text-rose-800'
+                          <span className={`px-2.5 py-1 rounded-lg font-mono font-bold text-sm ${
+                            cand.NoteGlobaleSur20 >= 14 ? 'bg-emerald-100 text-emerald-900 border border-emerald-200' :
+                            cand.NoteGlobaleSur20 >= 12 ? 'bg-blue-100 text-blue-900 border border-blue-200' :
+                            'bg-rose-100 text-rose-900 border border-rose-200'
                           }`}>
                             {cand.NoteGlobaleSur20}/20
                           </span>
                         ) : (
-                          <span className="text-slate-400 font-mono">—</span>
+                          <span className="text-slate-400 font-mono text-sm">—</span>
                         )}
                       </td>
 
                       {/* Avis & Statut */}
-                      <td className="py-3.5 px-4 text-center">
+                      <td className="py-4 px-4 text-center">
                         <div className="flex flex-col items-center gap-1">
                           {sv === 'CONVOQUE' && (
-                            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 text-blue-800">
+                            <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-900 border border-blue-200">
                               Convoqué
                             </span>
                           )}
                           {sv === 'EN_COURS' && (
-                            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800">
+                            <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-200">
                               En cours
                             </span>
                           )}
                           {sv === 'EN_ATTENTE' && (
-                            <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-slate-100 text-slate-600">
+                            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200">
                               En attente
                             </span>
                           )}
                           {cand.AvisCommission && (
-                            <span className="text-[10px] font-mono text-slate-600">
+                            <span className="text-xs font-mono text-slate-600 font-medium">
                               {cand.AvisCommission}
                             </span>
                           )}
@@ -660,31 +660,31 @@ export default function CommissionDashboardPage() {
                       </td>
 
                       {/* Recommandation IA */}
-                      <td className="py-3.5 px-4 text-center">
+                      <td className="py-4 px-4 text-center">
                         {isPositif ? (
-                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
-                            <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-900 border border-emerald-300">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
                             POSITIF • Transmis
                           </span>
                         ) : isNegatif ? (
-                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold bg-rose-100 text-rose-800 border border-rose-300">
-                            <X className="w-3 h-3 text-rose-600" />
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-900 border border-rose-300">
+                            <X className="w-3.5 h-3.5 text-rose-700" />
                             NÉGATIF • Local
                           </span>
                         ) : (
-                          <span className="text-[11px] text-slate-400 font-mono italic">
+                          <span className="text-xs text-slate-400 font-mono italic">
                             Non délibéré
                           </span>
                         )}
                       </td>
 
                       {/* Action */}
-                      <td className="py-3.5 px-4 text-right">
-                        <div className="flex items-center justify-end gap-1.5">
+                      <td className="py-4 px-4 text-right">
+                        <div className="flex items-center justify-end gap-2">
                           {sv === 'EN_ATTENTE' && (
                             <button
                               onClick={(e) => handleConvoquerCandidate(cand, e)}
-                              className="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 cursor-pointer transition"
+                              className="px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-50 text-blue-800 hover:bg-blue-100 border border-blue-200 cursor-pointer transition"
                             >
                               Convoquer
                             </button>
@@ -693,15 +693,15 @@ export default function CommissionDashboardPage() {
                             variant="secondary"
                             size="sm"
                             onClick={() => handleOpenEvaluationModal(cand)}
-                            className="text-xs"
+                            className="text-xs font-bold px-3 py-1.5"
                           >
                             {cand.EstVerrouillee ? (
-                              <span className="flex items-center gap-1">
+                              <span className="flex items-center gap-1.5">
                                 <FileText className="w-3.5 h-3.5" />
                                 Consulter
                               </span>
                             ) : (
-                              <span className="flex items-center gap-1">
+                              <span className="flex items-center gap-1.5">
                                 <Edit3 className="w-3.5 h-3.5" />
                                 Évaluer
                               </span>
@@ -720,41 +720,41 @@ export default function CommissionDashboardPage() {
 
       {/* 6. MODALE DÉTAILLÉE : FICHE CANDIDAT & ÉVALUATION PRÉSENTIELLE */}
       {activeCandidate && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
-          <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92vh] flex flex-col overflow-hidden border border-slateSubtle-200 animate-in fade-in zoom-in duration-150">
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92vh] flex flex-col overflow-hidden border border-slate-200 animate-in fade-in zoom-in duration-150">
             {/* En-tête Modale */}
-            <div className="bg-gradient-to-r from-[#153B2B] to-[#1F533E] text-white p-5 flex items-center justify-between shrink-0">
-              <div className="space-y-0.5">
-                <div className="flex items-center gap-2">
-                  <span className="text-[10px] uppercase font-bold text-gold font-mono tracking-wider">
+            <div className="bg-gradient-to-r from-[#153B2B] to-[#1F533E] text-white p-5 sm:p-6 flex items-center justify-between shrink-0">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-xs uppercase font-bold text-gold font-mono tracking-wider">
                     Dossier Candidat Commission • {selectedComm?.Nom}
                   </span>
                   {candidateDetails?.evaluation?.EstVerrouillee && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-bold bg-amber-500/20 text-gold-light border border-gold/30">
-                      <Lock className="w-2.5 h-2.5" />
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-500/20 text-gold-light border border-gold/40">
+                      <Lock className="w-3 h-3" />
                       Évaluation Verrouillée
                     </span>
                   )}
                 </div>
-                <h3 className="text-lg font-bold font-serif text-white flex items-center gap-2">
+                <h3 className="text-xl font-bold font-serif text-white flex items-center gap-2.5 flex-wrap">
                   <span>{activeCandidate.Nom} {activeCandidate.Prenom}</span>
-                  <span className="text-xs font-mono font-normal text-slate-200">
+                  <span className="text-sm font-mono font-normal text-slate-200">
                     ({activeCandidate.Matricule})
                   </span>
                 </h3>
               </div>
               <button
                 onClick={() => setActiveCandidate(null)}
-                className="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition cursor-pointer"
+                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition cursor-pointer shrink-0"
               >
-                <X className="w-4 h-4" />
+                <X className="w-5 h-5" />
               </button>
             </div>
 
             {/* Corps Défilable */}
-            <div className="p-6 overflow-y-auto space-y-6 flex-1 text-xs">
+            <div className="p-6 sm:p-7 overflow-y-auto space-y-6 flex-1 text-sm leading-relaxed">
               {detailsLoading ? (
-                <div className="py-12 flex justify-center">
+                <div className="py-16 flex justify-center">
                   <LoadingSpinner text="Chargement du dossier complet..." />
                 </div>
               ) : (
@@ -763,36 +763,36 @@ export default function CommissionDashboardPage() {
                   {candidateDetails?.evaluation?.RecommandationIA && (
                     <div>
                       {candidateDetails.evaluation.RecommandationIA === 'POSITIF' ? (
-                        <div className="bg-emerald-50 border border-emerald-300 rounded-xl p-4 text-emerald-950 space-y-2">
-                          <div className="flex items-center justify-between">
+                        <div className="bg-emerald-50 border-2 border-emerald-300 rounded-2xl p-5 text-emerald-950 space-y-2.5">
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                             <div className="flex items-center gap-2">
                               <CheckCircle2 className="w-5 h-5 text-emerald-700 shrink-0" />
-                              <span className="font-bold text-sm text-emerald-900 font-serif">
+                              <span className="font-bold text-base text-emerald-900 font-serif">
                                 Recommandation IA : POSITIF • Dossier Transmis à l'Administration
                               </span>
                             </div>
-                            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-200 text-emerald-900 font-mono">
+                            <span className="px-3 py-1 rounded-full text-xs font-bold bg-emerald-200 text-emerald-900 font-mono">
                               Transmis le {candidateDetails.evaluation.DateTransmissionAdmin ? new Date(candidateDetails.evaluation.DateTransmissionAdmin).toLocaleDateString('fr-FR') : 'Récemment'}
                             </span>
                           </div>
-                          <p className="text-xs leading-relaxed text-emerald-900">
+                          <p className="text-sm leading-relaxed text-emerald-900">
                             {candidateDetails.evaluation.JustificationPostEvalIA || candidateDetails.evaluation.ResumeAnalyseIA}
                           </p>
                         </div>
                       ) : (
-                        <div className="bg-rose-50 border border-rose-300 rounded-xl p-4 text-rose-950 space-y-2">
-                          <div className="flex items-center justify-between">
+                        <div className="bg-rose-50 border-2 border-rose-300 rounded-2xl p-5 text-rose-950 space-y-2.5">
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                             <div className="flex items-center gap-2">
                               <AlertCircle className="w-5 h-5 text-rose-700 shrink-0" />
-                              <span className="font-bold text-sm text-rose-900 font-serif">
+                              <span className="font-bold text-base text-rose-900 font-serif">
                                 Recommandation IA : NÉGATIF • Dossier Conservé en Commission
                               </span>
                             </div>
-                            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-200 text-rose-900 font-mono">
+                            <span className="px-3 py-1 rounded-full text-xs font-bold bg-rose-200 text-rose-900 font-mono">
                               Non transmis à l'ADMIN
                             </span>
                           </div>
-                          <p className="text-xs leading-relaxed text-rose-900">
+                          <p className="text-sm leading-relaxed text-rose-900">
                             {candidateDetails.evaluation.JustificationPostEvalIA || candidateDetails.evaluation.ResumeAnalyseIA}
                           </p>
                         </div>
@@ -801,28 +801,28 @@ export default function CommissionDashboardPage() {
                   )}
 
                   {/* A. SYNTHÈSE DU PROFIL & DE L'ENTRETIEN IA INITIAL */}
-                  <div className="bg-slate-50 rounded-xl border border-slateSubtle-200 p-4 space-y-3">
-                    <div className="flex items-center justify-between border-b border-slateSubtle-200 pb-2">
-                      <span className="font-bold text-slate-800 flex items-center gap-1.5">
-                        <Sparkles className="w-4 h-4 text-gold" />
+                  <div className="bg-slate-50 rounded-2xl border border-slate-200 p-5 space-y-3.5">
+                    <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+                      <span className="font-bold text-slate-800 text-base flex items-center gap-2">
+                        <Sparkles className="w-5 h-5 text-gold shrink-0" />
                         Rapport de l'Entretien IA Initial & Compétences Détectées
                       </span>
-                      <span className="font-mono text-slate-500 text-[11px]">
+                      <span className="font-mono text-slate-600 text-xs font-bold">
                         Affinité calculée : {activeCandidate.ScoreCorrespondanceIA}%
                       </span>
                     </div>
 
-                    <p className="text-slate-700 italic leading-relaxed">
+                    <p className="text-slate-800 italic leading-relaxed text-sm bg-white p-4 rounded-xl border border-slate-200">
                       "{candidateDetails?.assignment?.JustificationIA || "Profil correspondant aux critères opérationnels de cette commission."}"
                     </p>
 
                     {/* Compétences clés */}
                     {candidateDetails?.assignment?.CompetencesCles?.length > 0 && (
-                      <div className="space-y-1">
-                        <span className="text-[10px] uppercase font-bold text-slate-500 block">Compétences Déclarées & Validées :</span>
-                        <div className="flex flex-wrap gap-1.5">
+                      <div className="space-y-1.5 pt-1">
+                        <span className="text-xs uppercase font-bold tracking-wider text-slate-700 block">Compétences Déclarées & Validées :</span>
+                        <div className="flex flex-wrap gap-2">
                           {candidateDetails.assignment.CompetencesCles.map((comp, idx) => (
-                            <span key={idx} className="px-2 py-0.5 rounded-md bg-white border border-slateSubtle-200 text-slate-700 font-medium text-[11px]">
+                            <span key={idx} className="px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-800 font-medium text-xs">
                               {comp}
                             </span>
                           ))}
@@ -832,9 +832,9 @@ export default function CommissionDashboardPage() {
 
                     {/* Points à vérifier par la commission */}
                     {candidateDetails?.assignment?.PointsAVerifier?.length > 0 && (
-                      <div className="space-y-1 pt-1">
-                        <span className="text-[10px] uppercase font-bold text-amber-800 block">Points d'Attention pour les Épreuves Présentielles :</span>
-                        <ul className="list-disc pl-4 space-y-0.5 text-slate-600 text-[11px]">
+                      <div className="space-y-1.5 pt-2">
+                        <span className="text-xs uppercase font-bold tracking-wider text-amber-800 block">Points d'Attention pour les Épreuves Présentielles :</span>
+                        <ul className="list-disc pl-5 space-y-1 text-slate-700 text-xs">
                           {candidateDetails.assignment.PointsAVerifier.map((pt, idx) => (
                             <li key={idx}>{pt}</li>
                           ))}
@@ -844,19 +844,19 @@ export default function CommissionDashboardPage() {
                   </div>
 
                   {/* B. FORMULAIRE D'ÉVALUATION PRÉSENTIELLE MANUELLE */}
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between border-b border-slateSubtle-200 pb-2">
-                      <span className="font-bold text-slate-900 text-sm flex items-center gap-1.5">
-                        <Award className="w-4 h-4 text-[#153B2B]" />
+                  <div className="space-y-5 bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-xs">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 pb-3 gap-2">
+                      <span className="font-bold text-slate-900 text-base flex items-center gap-2">
+                        <Award className="w-5 h-5 text-[#153B2B]" />
                         Saisie des Épreuves Présentielles & Entretien Physique
                       </span>
                       {dynamicNoteGlobale !== null && (
                         <div className="flex items-center gap-2">
-                          <span className="text-slate-500 text-[11px]">Note Globale Calculée :</span>
-                          <span className={`px-2.5 py-0.5 rounded-md font-mono font-bold text-xs ${
-                            dynamicNoteGlobale >= 14 ? 'bg-emerald-100 text-emerald-800' :
-                            dynamicNoteGlobale >= 12 ? 'bg-blue-100 text-blue-800' :
-                            'bg-rose-100 text-rose-800'
+                          <span className="text-slate-600 text-xs font-semibold">Note Globale Calculée :</span>
+                          <span className={`px-3 py-1 rounded-lg font-mono font-bold text-sm ${
+                            dynamicNoteGlobale >= 14 ? 'bg-emerald-100 text-emerald-900 border border-emerald-300' :
+                            dynamicNoteGlobale >= 12 ? 'bg-blue-100 text-blue-900 border border-blue-300' :
+                            'bg-rose-100 text-rose-900 border border-rose-300'
                           }`}>
                             {dynamicNoteGlobale}/20
                           </span>
@@ -867,8 +867,8 @@ export default function CommissionDashboardPage() {
                     {/* Grille de Notes */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                       {/* Note Test Pratique */}
-                      <div className="bg-white p-3.5 rounded-xl border border-slateSubtle-200 space-y-1.5">
-                        <label className="text-[11px] font-bold text-slate-700 block">
+                      <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+                        <label className="text-xs font-bold text-slate-800 block">
                           1. Note Test Pratique (/20) <span className="text-rose-600">*</span>
                         </label>
                         <input
@@ -880,14 +880,14 @@ export default function CommissionDashboardPage() {
                           value={evalForm.notePratiqueSur20}
                           onChange={(e) => setEvalForm({ ...evalForm, notePratiqueSur20: e.target.value })}
                           placeholder="Ex: 14.5"
-                          className="w-full px-3 py-2 rounded-lg text-sm font-mono font-bold border border-slateSubtle-300 focus:border-gold outline-hidden disabled:bg-slate-100"
+                          className="w-full px-3.5 py-2.5 rounded-xl text-base font-mono font-bold border border-slate-300 bg-white focus:border-gold outline-hidden disabled:bg-slate-100 shadow-2xs"
                         />
-                        <span className="text-[10px] text-slate-500 block">Seuil d'admissibilité : 12/20</span>
+                        <span className="text-xs text-slate-500 block">Seuil d'admissibilité : 12/20</span>
                       </div>
 
                       {/* Note Entretien Présentiel */}
-                      <div className="bg-white p-3.5 rounded-xl border border-slateSubtle-200 space-y-1.5">
-                        <label className="text-[11px] font-bold text-slate-700 block">
+                      <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+                        <label className="text-xs font-bold text-slate-800 block">
                           2. Note Entretien Présentiel (/20) <span className="text-rose-600">*</span>
                         </label>
                         <input
@@ -899,14 +899,14 @@ export default function CommissionDashboardPage() {
                           value={evalForm.noteEntretienSur20}
                           onChange={(e) => setEvalForm({ ...evalForm, noteEntretienSur20: e.target.value })}
                           placeholder="Ex: 15.0"
-                          className="w-full px-3 py-2 rounded-lg text-sm font-mono font-bold border border-slateSubtle-300 focus:border-gold outline-hidden disabled:bg-slate-100"
+                          className="w-full px-3.5 py-2.5 rounded-xl text-base font-mono font-bold border border-slate-300 bg-white focus:border-gold outline-hidden disabled:bg-slate-100 shadow-2xs"
                         />
-                        <span className="text-[10px] text-slate-500 block">Motivation & posture militaire</span>
+                        <span className="text-xs text-slate-500 block">Motivation & posture militaire</span>
                       </div>
 
                       {/* Note Complémentaire Optionnelle */}
-                      <div className="bg-white p-3.5 rounded-xl border border-slateSubtle-200 space-y-1.5">
-                        <label className="text-[11px] font-bold text-slate-700 block">
+                      <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+                        <label className="text-xs font-bold text-slate-800 block">
                           3. Note Complémentaire (/20)
                         </label>
                         <input
@@ -918,30 +918,30 @@ export default function CommissionDashboardPage() {
                           value={evalForm.noteComplementaireSur20}
                           onChange={(e) => setEvalForm({ ...evalForm, noteComplementaireSur20: e.target.value })}
                           placeholder="Optionnelle"
-                          className="w-full px-3 py-2 rounded-lg text-sm font-mono font-bold border border-slateSubtle-300 focus:border-gold outline-hidden disabled:bg-slate-100"
+                          className="w-full px-3.5 py-2.5 rounded-xl text-base font-mono font-bold border border-slate-300 bg-white focus:border-gold outline-hidden disabled:bg-slate-100 shadow-2xs"
                         />
-                        <span className="text-[10px] text-slate-500 block">Aptitudes spécialisées d'atelier</span>
+                        <span className="text-xs text-slate-500 block">Aptitudes spécialisées d'atelier</span>
                       </div>
                     </div>
 
                     {/* Observations du Jury */}
-                    <div className="space-y-1.5">
-                      <label className="text-[11px] font-bold text-slate-700 block">
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-slate-800 block">
                         Observations circonstanciées du Jury <span className="text-rose-600">*</span>
                       </label>
                       <textarea
-                        rows={3}
+                        rows={4}
                         disabled={isLocked}
                         value={evalForm.observations}
                         onChange={(e) => setEvalForm({ ...evalForm, observations: e.target.value })}
                         placeholder="Détaillez le comportement pratique, la rigueur technique et les réponses apportées lors de l'entretien..."
-                        className="w-full p-3 rounded-xl border border-slateSubtle-300 focus:border-gold outline-hidden text-xs leading-relaxed disabled:bg-slate-100"
+                        className="w-full p-4 rounded-xl border border-slate-300 focus:border-gold outline-hidden text-sm leading-relaxed disabled:bg-slate-100 shadow-2xs"
                       />
                     </div>
 
                     {/* Commentaires complémentaires */}
-                    <div className="space-y-1.5">
-                      <label className="text-[11px] font-bold text-slate-700 block">
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-slate-800 block">
                         Commentaires complémentaires & perspectives
                       </label>
                       <input
@@ -950,19 +950,19 @@ export default function CommissionDashboardPage() {
                         value={evalForm.commentairesComplementaires}
                         onChange={(e) => setEvalForm({ ...evalForm, commentairesComplementaires: e.target.value })}
                         placeholder="Remarques additionnelles sur le potentiel d'évolution..."
-                        className="w-full px-3 py-2 rounded-xl border border-slateSubtle-300 focus:border-gold outline-hidden text-xs disabled:bg-slate-100"
+                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-gold outline-hidden text-sm disabled:bg-slate-100 shadow-2xs"
                       />
                     </div>
 
                     {/* Avis de la Commission & Métadonnées d'évaluation */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
                       <div>
-                        <label className="text-[11px] font-bold text-slate-700 block mb-1">Avis du Jury</label>
+                        <label className="text-xs font-bold text-slate-800 block mb-1.5">Avis du Jury</label>
                         <select
                           disabled={isLocked}
                           value={evalForm.avisCommission}
                           onChange={(e) => setEvalForm({ ...evalForm, avisCommission: e.target.value })}
-                          className="w-full px-3 py-2 rounded-xl border border-slateSubtle-300 font-semibold text-xs outline-hidden disabled:bg-slate-100"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 font-semibold text-sm outline-hidden disabled:bg-slate-100 cursor-pointer shadow-2xs"
                         >
                           <option value="FAVORABLE_FORT">Favorable Fort (Prioritaire)</option>
                           <option value="FAVORABLE">Favorable</option>
@@ -972,24 +972,24 @@ export default function CommissionDashboardPage() {
                       </div>
 
                       <div>
-                        <label className="text-[11px] font-bold text-slate-700 block mb-1">Date d'évaluation</label>
+                        <label className="text-xs font-bold text-slate-800 block mb-1.5">Date d'évaluation</label>
                         <input
                           type="date"
                           disabled={isLocked}
                           value={evalForm.dateEvaluation}
                           onChange={(e) => setEvalForm({ ...evalForm, dateEvaluation: e.target.value })}
-                          className="w-full px-3 py-2 rounded-xl border border-slateSubtle-300 font-mono text-xs outline-hidden disabled:bg-slate-100"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 font-mono text-sm outline-hidden disabled:bg-slate-100 shadow-2xs"
                         />
                       </div>
 
                       <div>
-                        <label className="text-[11px] font-bold text-slate-700 block mb-1">Identité Évaluateur</label>
+                        <label className="text-xs font-bold text-slate-800 block mb-1.5">Identité Évaluateur</label>
                         <input
                           type="text"
                           disabled={isLocked}
                           value={evalForm.nomEvaluateur}
                           onChange={(e) => setEvalForm({ ...evalForm, nomEvaluateur: e.target.value })}
-                          className="w-full px-3 py-2 rounded-xl border border-slateSubtle-300 text-xs outline-hidden disabled:bg-slate-100"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm outline-hidden disabled:bg-slate-100 shadow-2xs"
                         />
                       </div>
                     </div>
@@ -999,25 +999,25 @@ export default function CommissionDashboardPage() {
             </div>
 
             {/* Pied de Modale & Actions */}
-            <div className="p-4 bg-slate-50 border-t border-slateSubtle-200 flex flex-wrap items-center justify-between gap-3 shrink-0">
+            <div className="p-4 sm:p-5 bg-slate-50 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3 shrink-0">
               <div className="flex items-center gap-2">
                 {isLocked ? (
                   <button
                     onClick={() => setShowCorrectionModal(true)}
-                    className="px-3 py-1.5 rounded-lg border border-amber-300 bg-amber-50 text-amber-800 font-semibold text-xs hover:bg-amber-100 flex items-center gap-1.5 cursor-pointer"
+                    className="px-3.5 py-2 rounded-xl border border-amber-300 bg-amber-50 text-amber-900 font-bold text-xs sm:text-sm hover:bg-amber-100 flex items-center gap-2 cursor-pointer transition shadow-2xs"
                   >
-                    <Edit3 className="w-3.5 h-3.5" />
+                    <Edit3 className="w-4 h-4 text-amber-700" />
                     Demander une Correction Officielle
                   </button>
                 ) : (
-                  <span className="text-[11px] text-slate-500 italic">
+                  <span className="text-xs text-slate-600 italic">
                     Toutes les modifications sont enregistrées dans SQL Server.
                   </span>
                 )}
               </div>
 
-              <div className="flex items-center gap-2">
-                <Button variant="secondary" size="sm" onClick={() => setActiveCandidate(null)}>
+              <div className="flex items-center gap-2.5">
+                <Button variant="secondary" size="md" onClick={() => setActiveCandidate(null)} className="text-sm font-semibold">
                   Fermer
                 </Button>
 
@@ -1025,18 +1025,19 @@ export default function CommissionDashboardPage() {
                   <>
                     <Button
                       variant="secondary"
-                      size="sm"
+                      size="md"
                       disabled={savingEval}
                       onClick={() => handleSubmitEvaluation('BROUILLON')}
+                      className="text-sm font-semibold"
                     >
                       Sauvegarder Brouillon
                     </Button>
                     <Button
                       variant="primary"
-                      size="sm"
+                      size="md"
                       disabled={savingEval}
                       onClick={() => handleSubmitEvaluation('SOUMISE')}
-                      className="bg-[#153B2B] hover:bg-[#1A4533] text-white font-bold"
+                      className="bg-[#153B2B] hover:bg-[#1A4533] text-white text-sm font-bold shadow-xs cursor-pointer"
                     >
                       {savingEval ? 'Analyse IA & Transmission...' : 'Valider & Soumettre Définitivement'}
                     </Button>
@@ -1051,43 +1052,43 @@ export default function CommissionDashboardPage() {
       {/* 7. MODALE DE DEMANDE DE CORRECTION OFFICIELLE (AUDIT TRAIL) */}
       {showCorrectionModal && (
         <div className="fixed inset-0 z-60 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl shadow-xl max-w-lg w-full p-6 space-y-4 border border-slateSubtle-200 animate-in fade-in zoom-in duration-150">
-            <div className="flex items-center justify-between border-b border-slateSubtle-200 pb-3">
-              <h4 className="font-bold text-sm text-[#153B2B] flex items-center gap-2">
-                <Shield className="w-4 h-4 text-gold" />
+          <div className="bg-white rounded-2xl shadow-xl max-w-lg w-full p-6 sm:p-7 space-y-4 border border-slate-200 animate-in fade-in zoom-in duration-150">
+            <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+              <h4 className="font-bold text-base text-[#153B2B] flex items-center gap-2">
+                <Shield className="w-5 h-5 text-gold" />
                 Procédure de Correction Officielle d'Évaluation
               </h4>
-              <button onClick={() => setShowCorrectionModal(false)} className="text-slate-400 hover:text-slate-600">
-                <X className="w-4 h-4" />
+              <button onClick={() => setShowCorrectionModal(false)} className="text-slate-400 hover:text-slate-700 cursor-pointer">
+                <X className="w-5 h-5" />
               </button>
             </div>
 
-            <div className="space-y-2 text-xs text-slate-600">
+            <div className="space-y-2.5 text-sm text-slate-700 leading-relaxed">
               <p>
                 Cette évaluation a déjà été soumise et verrouillée. Conformément à la réglementation militaire, toute modification ultérieure doit être formellement justifiée et fera l'objet d'un audit immuable.
               </p>
-              <label className="font-bold text-slate-700 block pt-1">
+              <label className="font-bold text-slate-900 block pt-1 text-sm">
                 Motif réglementaire de la demande de révision <span className="text-rose-600">*</span>
               </label>
               <textarea
-                rows={3}
+                rows={4}
                 value={correctionMotif}
                 onChange={(e) => setCorrectionMotif(e.target.value)}
                 placeholder="Précisez la raison administrative ou technique justifiant la réévaluation..."
-                className="w-full p-3 rounded-xl border border-slateSubtle-300 focus:border-gold outline-hidden text-xs leading-relaxed"
+                className="w-full p-3.5 rounded-xl border border-slate-300 focus:border-gold outline-hidden text-sm leading-relaxed"
               />
             </div>
 
-            <div className="flex items-center justify-end gap-2 pt-2 border-t border-slateSubtle-200">
-              <Button variant="secondary" size="sm" onClick={() => setShowCorrectionModal(false)}>
+            <div className="flex items-center justify-end gap-2.5 pt-3 border-t border-slate-200">
+              <Button variant="secondary" size="md" onClick={() => setShowCorrectionModal(false)} className="text-sm font-semibold">
                 Annuler
               </Button>
               <Button
                 variant="primary"
-                size="sm"
+                size="md"
                 disabled={submittingCorrection || !correctionMotif.trim()}
                 onClick={handleRequestCorrection}
-                className="bg-amber-600 hover:bg-amber-700 text-white font-bold"
+                className="bg-amber-600 hover:bg-amber-700 text-white font-bold text-sm shadow-xs cursor-pointer"
               >
                 {submittingCorrection ? 'Enregistrement audit...' : 'Autoriser et Déverrouiller'}
               </Button>

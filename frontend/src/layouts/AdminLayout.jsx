@@ -129,10 +129,10 @@ export default function AdminLayout() {
         </div>
 
         {/* Navigation links groupés */}
-        <div className="flex-1 overflow-y-auto px-3 py-3 space-y-4">
+        <div className="flex-1 overflow-y-auto px-3.5 py-4 space-y-5">
           {navSections.map((section, idx) => (
-            <div key={idx} className="space-y-1">
-              <div className="px-3 text-[10px] uppercase font-bold tracking-wider text-gold/75">
+            <div key={idx} className="space-y-1.5">
+              <div className="px-3 text-xs uppercase font-bold tracking-wider text-gold/85">
                 {section.title}
               </div>
               {section.items.map((item) => {
@@ -143,16 +143,16 @@ export default function AdminLayout() {
                     to={item.to}
                     onClick={() => setSidebarOpen(false)}
                     className={({ isActive }) =>
-                      `flex items-center gap-2.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                      `flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all ${
                         isActive
-                          ? 'bg-[#153B2B] text-white font-semibold border-l-3 border-gold shadow-xs'
-                          : 'text-slate-300 hover:bg-white/5 hover:text-white'
+                          ? 'bg-[#153B2B] text-white font-semibold border-l-4 border-gold shadow-xs'
+                          : 'text-slate-200 hover:bg-white/10 hover:text-white'
                       }`
                     }
                   >
                     {({ isActive }) => (
                       <>
-                        <Icon className={`w-3.5 h-3.5 flex-shrink-0 ${isActive ? 'text-gold' : 'text-slate-400'}`} />
+                        <Icon className={`w-4 h-4 flex-shrink-0 ${isActive ? 'text-gold' : 'text-slate-400'}`} />
                         <span className="truncate">{item.label}</span>
                       </>
                     )}
@@ -164,28 +164,28 @@ export default function AdminLayout() {
         </div>
 
         {/* Profil & Actions rapides */}
-        <div className="p-3 border-t border-white/10 bg-black/25">
-          <div className="flex items-center gap-2 px-1 mb-2">
-            <div className="w-7 h-7 rounded-full bg-gold/20 border border-gold/40 flex items-center justify-center text-xs font-bold text-gold">
-              {user?.nom?.charAt(0) || (isInstructor ? 'I' : 'A')}
+        <div className="p-3.5 border-t border-white/10 bg-black/25">
+          <div className="flex items-center gap-2.5 px-1 mb-2.5">
+            <div className="w-8 h-8 rounded-full bg-gold/20 border border-gold/40 flex items-center justify-center text-xs font-bold text-gold">
+              {user?.nom?.charAt(0) || (isCommission ? 'C' : 'A')}
             </div>
             <div className="min-w-0 flex-1">
-              <p className="text-xs font-semibold text-white truncate">
+              <p className="text-sm font-semibold text-white truncate">
                 {user?.prenom} {user?.nom}
               </p>
-              <p className="text-[10px] text-gold-light/80 truncate">
+              <p className="text-xs text-gold-light/90 truncate">
                 {isCommission ? 'Membre Commission' : 'État-Major'}
               </p>
             </div>
           </div>
 
-          <div className="flex gap-1.5 pt-1">
+          <div className="flex gap-2 pt-1">
             <button
               onClick={() => {
                 quickLogin('ELEVE');
                 navigate('/eleve/dashboard');
               }}
-              className="flex-1 text-[10px] py-1 px-2 rounded bg-white/10 hover:bg-white/20 text-slate-200 text-center transition font-medium border border-white/10"
+              className="flex-1 text-xs py-1.5 px-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-slate-200 text-center transition font-semibold border border-white/10 cursor-pointer"
               title="Basculer en vue Élève"
             >
               Élève
@@ -200,17 +200,17 @@ export default function AdminLayout() {
                   navigate('/commission/dashboard');
                 }
               }}
-              className="flex-1 text-[10px] py-1 px-2 rounded bg-gold/20 hover:bg-gold/30 text-gold-light text-center transition font-medium border border-gold/30"
+              className="flex-1 text-xs py-1.5 px-2.5 rounded-lg bg-gold/20 hover:bg-gold/30 text-gold-light text-center transition font-semibold border border-gold/30 cursor-pointer"
               title="Basculer de rôle (ADMIN / COMMISSION)"
             >
               {isCommission ? 'Admin' : 'Commission'}
             </button>
             <button
               onClick={logout}
-              className="py-1 px-2 rounded bg-rose-950/40 text-rose-300 hover:bg-rose-900/60 transition flex items-center justify-center border border-rose-800/30"
+              className="py-1.5 px-2.5 rounded-lg bg-rose-950/40 text-rose-300 hover:bg-rose-900/60 transition flex items-center justify-center border border-rose-800/30 cursor-pointer"
               title="Se déconnecter"
             >
-              <LogOut className="w-3.5 h-3.5" />
+              <LogOut className="w-4 h-4" />
             </button>
           </div>
         </div>
@@ -223,26 +223,26 @@ export default function AdminLayout() {
           <div className="flex items-center gap-2 sm:gap-3">
             <button
               onClick={() => setSidebarOpen(true)}
-              className="md:hidden p-2 rounded-lg text-slateSubtle-700 hover:bg-cream-200 min-h-[44px] min-w-[44px] flex items-center justify-center"
+              className="md:hidden p-2 rounded-xl text-slateSubtle-700 hover:bg-cream-200 min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer"
               aria-label="Ouvrir le menu de navigation administration"
             >
               <Menu className="w-5 h-5" />
             </button>
             <div className="hidden sm:block">
-              <span className="text-xs font-medium text-slateSubtle-700">
+              <span className="text-sm font-semibold text-slateSubtle-800">
                 Portail Officiel • {isCommission ? 'Commission Spécialisée • Évaluations & Recrutement' : 'Commandement & Recrutement Centralisé'}
               </span>
             </div>
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-3">
             <Badge
               type={isCommission ? "WARNING" : "ADMIN"}
               label={isCommission ? "Membre Commission" : "Habilitation Officier (Admin)"}
-              size="xs"
+              size="sm"
             />
             <div className="h-4 w-px bg-slateSubtle-300 hidden sm:block" />
-            <span className="text-xs text-slateSubtle-700 hidden sm:inline">
+            <span className="text-xs font-medium text-slateSubtle-600 hidden sm:inline">
               École Royale de Gendarmerie
             </span>
           </div>

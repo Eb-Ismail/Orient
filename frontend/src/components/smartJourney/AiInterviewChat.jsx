@@ -910,36 +910,36 @@ export default function AiInterviewChat({
           {/* Badges de Statut des Modèles (Ollama & Moulsot) */}
           <div className="flex items-center gap-2 flex-wrap">
             {/* Modèle Texte */}
-            <div className={`px-2.5 py-1 rounded-lg border text-[11px] font-mono flex items-center gap-1.5 ${
+            <div className={`px-3 py-1 rounded-lg border text-xs font-mono flex items-center gap-1.5 ${
               aiHealth.textAi?.online
                 ? 'bg-emerald-950/60 border-emerald-500/50 text-emerald-300'
                 : 'bg-black/30 border-white/10 text-slate-300'
             }`}>
-              <FileText className="w-3 h-3 text-gold" />
+              <FileText className="w-3.5 h-3.5 text-gold" />
               <span>Gemma 4:12B</span>
-              <span className={`w-1.5 h-1.5 rounded-full ${aiHealth.textAi?.online ? 'bg-emerald-400' : 'bg-slate-400'}`} />
+              <span className={`w-2 h-2 rounded-full ${aiHealth.textAi?.online ? 'bg-emerald-400' : 'bg-slate-400'}`} />
             </div>
 
             {/* Modèle Vocal */}
-            <div className={`px-2.5 py-1 rounded-lg border text-[11px] font-mono flex items-center gap-1.5 ${
+            <div className={`px-3 py-1 rounded-lg border text-xs font-mono flex items-center gap-1.5 ${
               aiHealth.voiceAi?.online
                 ? 'bg-emerald-950/60 border-emerald-500/50 text-emerald-300'
                 : 'bg-black/30 border-white/10 text-slate-300'
             }`}>
-              <Radio className="w-3 h-3 text-gold" />
+              <Radio className="w-3.5 h-3.5 text-gold" />
               <span>Voxtral / Moulsot STT</span>
-              <span className={`w-1.5 h-1.5 rounded-full ${aiHealth.voiceAi?.online ? 'bg-emerald-400' : 'bg-slate-400'}`} />
+              <span className={`w-2 h-2 rounded-full ${aiHealth.voiceAi?.online ? 'bg-emerald-400' : 'bg-slate-400'}`} />
             </div>
 
             {onGoToAnalysis && (
               <button
                 type="button"
                 onClick={onGoToAnalysis}
-                className="hidden md:inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-gold/20 hover:bg-gold/30 text-gold-light border border-gold/40 text-[11px] font-semibold transition-colors cursor-pointer"
+                className="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-gold/20 hover:bg-gold/30 text-gold-light border border-gold/40 text-xs font-bold transition-colors cursor-pointer"
               >
-                <Sparkles className="w-3 h-3 text-gold" />
+                <Sparkles className="w-3.5 h-3.5 text-gold" />
                 <span>Analyse</span>
-                <ArrowRight className="w-2.5 h-2.5" />
+                <ArrowRight className="w-3 h-3" />
               </button>
             )}
 
@@ -950,7 +950,7 @@ export default function AiInterviewChat({
                 title="Réinitialiser l'entretien"
                 className="p-1.5 rounded-lg bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition-colors cursor-pointer"
               >
-                <RefreshCw className="w-3.5 h-3.5" />
+                <RefreshCw className="w-4 h-4" />
               </button>
             )}
           </div>
@@ -1072,12 +1072,12 @@ export default function AiInterviewChat({
               <div className="flex flex-col space-y-1">
                 {/* Badge d'attribution de modèle / mode */}
                 <div
-                  className={`flex items-center gap-1.5 text-[10px] px-1 ${
+                  className={`flex items-center gap-1.5 text-xs px-1 ${
                     isAi ? 'justify-start text-slate-500' : 'justify-end text-slate-500'
                   }`}
                 >
                   {isAi ? (
-                    <span className="font-semibold text-[#153B2B] flex items-center gap-1">
+                    <span className="font-bold text-[#153B2B] flex items-center gap-1.5">
                       {(() => {
                         const isVoxtral = (msg.model && msg.model.toLowerCase().includes('voxtral')) || 
                                           msg.language === 'darija' || 
@@ -1086,7 +1086,7 @@ export default function AiInterviewChat({
                         if (isVoxtral) {
                           return (
                             <>
-                              <Radio className="w-2.5 h-2.5 text-[#C9A052]" />
+                              <Radio className="w-3 h-3 text-[#C9A052]" />
                               <span>Voxtral Mini 4B (Darija{isVoice ? ' • Vocal' : ''})</span>
                             </>
                           );
@@ -1094,7 +1094,7 @@ export default function AiInterviewChat({
                         const isEnglish = msg.language === 'en' || (msg.model && msg.model.toLowerCase().includes('en'));
                         return (
                           <>
-                            {isVoice ? <Radio className="w-2.5 h-2.5 text-[#C9A052]" /> : <FileText className="w-2.5 h-2.5 text-[#153B2B]" />}
+                            {isVoice ? <Radio className="w-3 h-3 text-[#C9A052]" /> : <FileText className="w-3 h-3 text-[#153B2B]" />}
                             <span>Gemma 4:12B ({isEnglish ? 'English' : 'Français'}{isVoice ? ' • Vocal' : ''})</span>
                           </>
                         );
@@ -1102,9 +1102,9 @@ export default function AiInterviewChat({
                     </span>
                   ) : (
                     <span className="font-semibold text-slate-600 flex items-center gap-1">
-                      {isVoice ? <Mic className="w-2.5 h-2.5 text-[#C9A052]" /> : null}
+                      {isVoice ? <Mic className="w-3 h-3 text-[#C9A052]" /> : null}
                       <span>Élève Gendarme</span>
-                      {isVoice && <span className="text-[9px] bg-[#C9A052]/20 px-1 rounded text-[#8F6B20]">Vocal</span>}
+                      {isVoice && <span className="text-xs bg-[#C9A052]/20 px-1.5 py-0.5 rounded text-[#8F6B20] font-bold">Vocal</span>}
                     </span>
                   )}
                   <span>•</span>
@@ -1114,7 +1114,7 @@ export default function AiInterviewChat({
                 {/* Bulle de Contenu */}
                 <div
                   dir={isAr ? 'rtl' : 'ltr'}
-                  className={`p-3.5 sm:p-4 rounded-2xl text-xs sm:text-sm leading-relaxed shadow-xs ${
+                  className={`p-4 sm:p-5 rounded-2xl text-sm leading-relaxed shadow-xs ${
                     isAi
                       ? 'bg-white border border-slate-200 text-slate-800 rounded-tl-xs'
                       : 'bg-[#153B2B] text-white rounded-tr-xs'
@@ -1124,7 +1124,7 @@ export default function AiInterviewChat({
 
                   {/* Bouton d'écoute / réécoute pour les réponses de l'IA */}
                   {isAi && (
-                    <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-col gap-2">
+                    <div className="mt-3 pt-2.5 border-t border-slate-100 flex flex-col gap-2">
                       <div className="flex items-center justify-between gap-2">
                         <button
                           type="button"
@@ -1135,7 +1135,7 @@ export default function AiInterviewChat({
                               replayVoiceMessage(msg, index);
                             }
                           }}
-                          className={`inline-flex items-center gap-1.5 text-[11px] font-bold px-2 py-0.5 rounded-lg border transition-all cursor-pointer ${
+                          className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-lg border transition-all cursor-pointer ${
                             isCurrentlySpeaking
                               ? 'bg-rose-50 border-rose-300 text-rose-700 animate-pulse'
                               : 'bg-slate-50 border-slate-200 hover:bg-slate-100 text-slate-700'
@@ -1143,12 +1143,12 @@ export default function AiInterviewChat({
                         >
                           {isCurrentlySpeaking ? (
                             <>
-                              <VolumeX className="w-3 h-3 text-rose-600" />
+                              <VolumeX className="w-3.5 h-3.5 text-rose-600" />
                               <span>Arrêter la voix</span>
                             </>
                           ) : (
                             <>
-                              <Volume2 className="w-3 h-3 text-[#153B2B]" />
+                              <Volume2 className="w-3.5 h-3.5 text-[#153B2B]" />
                               <span>{isVoice ? 'Réécouter la voix' : 'Écouter'}</span>
                             </>
                           )}
@@ -1156,7 +1156,7 @@ export default function AiInterviewChat({
 
                         {/* Badge affiché STRICTEMENT si un fichier audio réel est disponible */}
                         {isVoice && (msg.audioUrl || audioMapRef.current[msg.id || index] || msg.audioBase64 || msg.hasAudio) && (
-                          <span className="text-[10px] text-[#8F6B20] font-bold">
+                          <span className="text-xs text-[#8F6B20] font-bold">
                             Réponse vocale optimisée
                           </span>
                         )}
@@ -1351,7 +1351,7 @@ export default function AiInterviewChat({
           </div>
         ) : (
           /* INTERFACE TEXTE ACTIVE (GEMMA 4:12B) */
-          <form onSubmit={handleSubmitText} className="flex items-end gap-2">
+          <form onSubmit={handleSubmitText} className="flex items-end gap-2.5">
             <div className="relative flex-1">
               <textarea
                 ref={inputRef}
@@ -1362,7 +1362,7 @@ export default function AiInterviewChat({
                 disabled={loading}
                 rows={2}
                 placeholder="Rédigez votre réponse ici pour Gemma 4:12B... (Entrée pour envoyer, Maj+Entrée pour nouvelle ligne)"
-                className="w-full resize-none px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-[#153B2B] focus:ring-2 focus:ring-[#153B2B]/10 outline-none text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 bg-slate-50/30"
+                className="w-full resize-none px-4 py-3 rounded-xl border border-slate-300 focus:border-[#153B2B] focus:ring-2 focus:ring-[#153B2B]/10 outline-none text-sm text-slate-800 placeholder:text-slate-400 bg-slate-50/40 leading-relaxed"
               />
             </div>
 

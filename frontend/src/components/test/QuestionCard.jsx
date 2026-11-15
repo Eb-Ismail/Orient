@@ -29,20 +29,20 @@ export default function QuestionCard({
       {/* En-tête de la question : Catégorie & Difficulté */}
       <div className="flex flex-wrap items-center justify-between gap-2.5 pb-4 mb-6 border-b border-slateSubtle-200">
         <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-cream-100 text-gendarmerie border border-gendarmerie/20 shadow-2xs">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-cream-100 text-gendarmerie border border-gendarmerie/20 shadow-2xs">
             <span className="w-1.5 h-1.5 rounded-full bg-gold" />
             {question.DomaineIntitule || question.DomaineCode}
           </span>
-          <span className="text-xs font-medium text-slateSubtle-600 hidden sm:inline font-mono">
+          <span className="text-xs font-semibold text-slateSubtle-600 hidden sm:inline font-mono">
             Réf: {question.Code}
           </span>
           {isArabic && (
-            <span className="text-[10px] font-bold bg-emerald-50 text-emerald-800 px-2.5 py-0.5 rounded-full border border-emerald-200">
+            <span className="text-xs font-bold bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full border border-emerald-200">
               بنك الأسئلة باللغة العربية
             </span>
           )}
           {isSubjective && (
-            <span className="text-[10px] font-bold bg-amber-50 text-amber-900 px-2 py-0.5 rounded-full border border-amber-200">
+            <span className="text-xs font-bold bg-amber-50 text-amber-900 px-3 py-1 rounded-full border border-amber-200">
               Rédaction Opérationnelle
             </span>
           )}
@@ -50,11 +50,11 @@ export default function QuestionCard({
 
         <div className="flex items-center gap-2">
           {question.Difficulte && (
-            <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${difficultyColors[question.Difficulte] || 'bg-cream-100 text-slateSubtle-700'}`}>
+            <span className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border ${difficultyColors[question.Difficulte] || 'bg-cream-100 text-slateSubtle-700'}`}>
               {question.Difficulte}
             </span>
           )}
-          <span className="text-xs font-semibold text-slateSubtle-700 bg-cream-100 px-2.5 py-0.5 rounded-full border border-slateSubtle-200">
+          <span className="text-xs font-bold text-slateSubtle-700 bg-cream-100 px-3 py-1 rounded-full border border-slateSubtle-200">
             {question.Points || 1} pt{(question.Points || 1) > 1 ? 's' : ''}
           </span>
         </div>

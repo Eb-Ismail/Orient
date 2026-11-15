@@ -166,14 +166,14 @@ export default function TestsManagementPage() {
       {/* En-tête */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slateSubtle-200">
         <div>
-          <div className="flex items-center gap-2 text-xs font-semibold text-gendarmerie uppercase tracking-wider mb-1">
+          <div className="flex items-center gap-2 text-xs font-bold text-gendarmerie uppercase tracking-wider mb-1">
             <FileCheck2 className="w-4 h-4 text-gold" />
             Paramétrage des Campagnes & Protocoles
           </div>
-          <h1 className="text-2xl font-extrabold text-gendarmerie font-serif">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gendarmerie font-serif">
             Gestion des Tests d'Orientation
           </h1>
-          <p className="text-xs text-slateSubtle-700">
+          <p className="text-sm text-slate-600 mt-1">
             Configuration des durées de passage, règles de révision, tirages reproductibles et notation des questions subjectives.
           </p>
         </div>
@@ -190,13 +190,13 @@ export default function TestsManagementPage() {
       </div>
 
       {/* Onglets de navigation */}
-      <div className="flex items-center gap-2 border-b border-slateSubtle-200 text-xs font-semibold">
+      <div className="flex items-center gap-2 border-b border-slateSubtle-200 text-xs sm:text-sm font-bold">
         <button
           onClick={() => setActiveTab('tests')}
-          className={`pb-2.5 px-4 flex items-center gap-2 border-b-2 transition-colors ${
+          className={`pb-3 px-4 flex items-center gap-2 border-b-2 transition-colors cursor-pointer ${
             activeTab === 'tests'
               ? 'border-gendarmerie text-gendarmerie font-bold'
-              : 'border-transparent text-slateSubtle-600 hover:text-slateSubtle-900'
+              : 'border-transparent text-slate-500 hover:text-slate-800'
           }`}
         >
           <Sliders className="w-4 h-4 text-gold" />
@@ -205,10 +205,10 @@ export default function TestsManagementPage() {
 
         <button
           onClick={() => setActiveTab('evaluations')}
-          className={`pb-2.5 px-4 flex items-center gap-2 border-b-2 transition-colors ${
+          className={`pb-3 px-4 flex items-center gap-2 border-b-2 transition-colors cursor-pointer ${
             activeTab === 'evaluations'
               ? 'border-gendarmerie text-gendarmerie font-bold'
-              : 'border-transparent text-slateSubtle-600 hover:text-slateSubtle-900'
+              : 'border-transparent text-slate-500 hover:text-slate-800'
           }`}
         >
           <UserCheck className="w-4 h-4 text-gold" />
@@ -223,22 +223,22 @@ export default function TestsManagementPage() {
             <Card key={test.TestId} className="p-6 space-y-4 hover:border-gold/60 transition-colors">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div className="flex items-center flex-wrap gap-2">
-                  <span className="text-xs font-mono font-bold bg-cream-100 text-gendarmerie px-2.5 py-1 rounded border border-slateSubtle-200">
+                  <span className="text-xs font-mono font-bold bg-cream-100 text-gendarmerie px-3 py-1 rounded-full border border-slateSubtle-200">
                     {test.Code}
                   </span>
-                  <span className="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                  <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
                     Actif • Version {test.Version || 1}
                   </span>
-                  <span className="text-[10px] font-bold text-gendarmerie bg-cream-100 px-2.5 py-0.5 rounded-full border border-gendarmerie/20">
+                  <span className="text-xs font-bold text-gendarmerie bg-cream-100 px-3 py-1 rounded-full border border-gendarmerie/20">
                     بنك 140 سؤالاً بالعربية
                   </span>
                   {test.SelectionAleatoire && (
-                    <span className="text-[10px] font-bold text-amber-900 bg-amber-50 px-2 py-0.5 rounded border border-gold/40">
+                    <span className="text-xs font-bold text-amber-900 bg-amber-50 px-2.5 py-1 rounded-full border border-gold/40">
                       Tirage aléatoire équilibré
                     </span>
                   )}
                   {test.DifficulteCible && (
-                    <span className="text-[10px] font-semibold text-slateSubtle-700 bg-slateSubtle-100 px-2 py-0.5 rounded border border-slateSubtle-200">
+                    <span className="text-xs font-semibold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200">
                       Niveau: {test.DifficulteCible}
                     </span>
                   )}

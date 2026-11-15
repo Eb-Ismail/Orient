@@ -41,14 +41,14 @@ export default function OfficialTestsPanel() {
     <div className="space-y-6">
       <div className="bg-white rounded-2xl border border-slate-200/80 p-5 sm:p-6 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
-          <div className="flex items-center gap-2 text-xs font-semibold text-gendarmerie uppercase tracking-wider mb-1">
+          <div className="flex items-center gap-2 text-xs font-bold text-gendarmerie uppercase tracking-wider mb-1">
             <ShieldCheck className="w-4 h-4 text-gold" />
-            منظومة التوجيه المهني الرسمي • ORIENT-G
+            منظومة التوجيه المهني الرسمي • ORIENT-GR
           </div>
-          <h2 className="text-lg sm:text-xl font-bold text-gendarmerie font-serif">
+          <h2 className="text-xl sm:text-2xl font-bold text-gendarmerie font-serif">
             Tests QCM Officiels (الاختبارات المهنية الثلاثة)
           </h2>
-          <p className="text-xs text-slateSubtle-600 mt-0.5">
+          <p className="text-sm text-slate-600 mt-1 leading-relaxed">
             Trois épreuves QCM officielles (10 questions par test) évaluant l'analyse professionnelle, le terrain et l'organisation.
           </p>
         </div>
@@ -75,24 +75,24 @@ export default function OfficialTestsPanel() {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div className="space-y-3 flex-1 text-right" dir="rtl">
                   <div className="flex items-center justify-between flex-row-reverse">
-                    <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-cream-200 text-gendarmerie border border-slateSubtle-200">
+                    <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-cream-200 text-gendarmerie border border-slateSubtle-200">
                       {test.Code || `TEST-0${index + 1}`}
                     </span>
                     <Badge type={test.sessionStatus || 'NON_COMMENCE'} />
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-bold text-gendarmerie font-serif">{test.Titre}</h3>
+                    <h3 className="text-xl font-bold text-gendarmerie font-serif">{test.Titre}</h3>
                     {test.TitreFr && (
-                      <p className="text-xs text-slateSubtle-500 font-sans mt-0.5" dir="ltr">
+                      <p className="text-sm text-slate-500 font-sans mt-0.5" dir="ltr">
                         {test.TitreFr}
                       </p>
                     )}
                   </div>
 
-                  <p className="text-xs text-slateSubtle-700 leading-relaxed max-w-2xl">{test.Description}</p>
+                  <p className="text-sm text-slate-700 leading-relaxed max-w-2xl">{test.Description}</p>
 
-                  <div className="flex flex-wrap items-center gap-4 text-xs text-slateSubtle-600 pt-2 border-t border-slateSubtle-100 flex-row-reverse">
+                  <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-slate-600 pt-3 border-t border-slateSubtle-100 flex-row-reverse">
                     <span className="inline-flex items-center gap-1.5 font-medium">
                       <Clock className="w-4 h-4 text-gold" />
                       المدة المحددة : <strong>{test.DureeMinutes || 15} دقيقة</strong>
@@ -106,7 +106,7 @@ export default function OfficialTestsPanel() {
                       عتبة الاستحقاق : <strong>{test.SeuilReussite || 60}%</strong>
                     </span>
                     {test.scorePourcentage !== null && (
-                      <span className="inline-flex items-center gap-1.5 font-bold text-gendarmerie bg-emerald-50 text-emerald-800 px-3 py-0.5 rounded-full border border-emerald-200 font-mono">
+                      <span className="inline-flex items-center gap-1.5 font-bold text-gendarmerie bg-emerald-50 text-emerald-800 px-3 py-1 rounded-full border border-emerald-200 font-mono text-xs sm:text-sm">
                         النتيجة المحصلة : {test.scorePourcentage}%
                       </span>
                     )}

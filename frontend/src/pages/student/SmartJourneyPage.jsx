@@ -261,7 +261,7 @@ export default function SmartJourneyPage() {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap cursor-pointer shrink-0 ${
+                className={`flex items-center gap-2 px-4 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer shrink-0 ${
                   isActive
                     ? 'bg-[#153B2B] text-white shadow-xs'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
@@ -271,7 +271,7 @@ export default function SmartJourneyPage() {
                 <span>{tab.label}</span>
                 {tab.badge && (
                   <span
-                    className={`ml-1 px-2 py-0.5 text-[10px] rounded-full font-bold ${
+                    className={`ml-1 px-2.5 py-0.5 text-xs rounded-full font-mono font-bold ${
                       isActive
                         ? 'bg-gold text-[#153B2B]'
                         : 'bg-slate-100 text-slate-600 border border-slate-200'
@@ -321,18 +321,18 @@ export default function SmartJourneyPage() {
                 <div className="w-14 h-14 rounded-full bg-amber-50 text-amber-800 flex items-center justify-center mx-auto border border-amber-200">
                   <Shield className="w-7 h-7 text-[#153B2B]" />
                 </div>
-                <div className="space-y-1.5">
-                  <h3 className="text-lg font-bold text-slate-800">
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold font-serif text-[#153B2B]">
                     Résultats d'Orientation Réservés à l'Administration
                   </h3>
-                  <p className="text-xs text-slate-600 max-w-lg mx-auto leading-relaxed">
+                  <p className="text-sm text-slate-700 max-w-lg mx-auto leading-relaxed">
                     La consultation des résultats d'orientation est actuellement restreinte aux administrateurs de la commission (Mode <strong>admin_only</strong>). Vos déclarations et échanges avec l'IA ont bien été enregistrés dans votre dossier.
                   </p>
                 </div>
                 <button
                   type="button"
                   onClick={() => setActiveTab('interview')}
-                  className="px-4 py-2 rounded-xl bg-[#153B2B] text-white text-xs font-semibold cursor-pointer"
+                  className="px-5 py-2.5 rounded-xl bg-[#153B2B] hover:bg-[#1A4533] text-white text-xs sm:text-sm font-bold cursor-pointer transition shadow-xs"
                 >
                   Poursuivre mon entretien avec l'IA
                 </button>
