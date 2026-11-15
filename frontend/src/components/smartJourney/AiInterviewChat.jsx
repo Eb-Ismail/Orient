@@ -725,7 +725,7 @@ export default function AiInterviewChat({
 
       if (res && res.success === false) {
         setVoiceState('error');
-        setServerErrorBanner(res.error || "Le modèle vocal Moulsot v0.3 n'a pas pu traiter la demande.");
+        setServerErrorBanner(res.error || "Le conseiller vocal n'a pas pu traiter la demande pour le moment.");
         return;
       }
 
@@ -886,7 +886,7 @@ export default function AiInterviewChat({
       <div className="bg-[#153B2B] text-white px-4 sm:px-6 py-3.5 border-b border-[#1C4E39] shrink-0">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           
-          {/* Identité Conseiller IA */}
+          {/* Identité Conseiller */}
           <div className="flex items-center gap-3">
             <div className="relative">
               <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center border border-gold/40 shadow-xs">
@@ -896,39 +896,22 @@ export default function AiInterviewChat({
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="font-bold text-sm sm:text-base text-white">Conseiller d'Orientation IA</h3>
+                <h3 className="font-bold text-sm sm:text-base text-white">Conseiller d'Orientation</h3>
                 <span className="px-2 py-0.5 text-[10px] font-semibold bg-gold/20 text-gold-light border border-gold/30 rounded-full">
-                  Architecture 2 Modèles
+                  Accompagnement Officiel
                 </span>
               </div>
               <p className="text-xs text-slate-300">
-                Gendarmerie Royale • Traitement bimodal Texte & Voix synchronisé
+                Gendarmerie Royale • Échanges personnalisés par écrit ou par voix
               </p>
             </div>
           </div>
 
-          {/* Badges de Statut des Modèles (Ollama & Moulsot) */}
+          {/* Statut du Conseiller */}
           <div className="flex items-center gap-2 flex-wrap">
-            {/* Modèle Texte */}
-            <div className={`px-3 py-1 rounded-lg border text-xs font-mono flex items-center gap-1.5 ${
-              aiHealth.textAi?.online
-                ? 'bg-emerald-950/60 border-emerald-500/50 text-emerald-300'
-                : 'bg-black/30 border-white/10 text-slate-300'
-            }`}>
-              <FileText className="w-3.5 h-3.5 text-gold" />
-              <span>Gemma 4:12B</span>
-              <span className={`w-2 h-2 rounded-full ${aiHealth.textAi?.online ? 'bg-emerald-400' : 'bg-slate-400'}`} />
-            </div>
-
-            {/* Modèle Vocal */}
-            <div className={`px-3 py-1 rounded-lg border text-xs font-mono flex items-center gap-1.5 ${
-              aiHealth.voiceAi?.online
-                ? 'bg-emerald-950/60 border-emerald-500/50 text-emerald-300'
-                : 'bg-black/30 border-white/10 text-slate-300'
-            }`}>
-              <Radio className="w-3.5 h-3.5 text-gold" />
-              <span>Voxtral / Moulsot STT</span>
-              <span className={`w-2 h-2 rounded-full ${aiHealth.voiceAi?.online ? 'bg-emerald-400' : 'bg-slate-400'}`} />
+            <div className="px-3 py-1 rounded-lg bg-emerald-950/60 border border-emerald-500/50 text-emerald-300 text-xs font-semibold flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Conseiller disponible</span>
             </div>
 
             {onGoToAnalysis && (
@@ -938,7 +921,7 @@ export default function AiInterviewChat({
                 className="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-gold/20 hover:bg-gold/30 text-gold-light border border-gold/40 text-xs font-bold transition-colors cursor-pointer"
               >
                 <Sparkles className="w-3.5 h-3.5 text-gold" />
-                <span>Analyse</span>
+                <span>Mon Profil</span>
                 <ArrowRight className="w-3 h-3" />
               </button>
             )}
@@ -976,7 +959,7 @@ export default function AiInterviewChat({
             }`}
           >
             <FileText className="w-3.5 h-3.5" />
-            <span>Mode Écrit (Gemma 4:12B)</span>
+            <span>Mode Écrit</span>
           </button>
 
           <button
@@ -989,7 +972,7 @@ export default function AiInterviewChat({
             }`}
           >
             <Radio className="w-3.5 h-3.5" />
-            <span>Mode Vocal (Voice-to-Voice)</span>
+            <span>Mode Vocal</span>
           </button>
         </div>
 
@@ -1078,27 +1061,8 @@ export default function AiInterviewChat({
                 >
                   {isAi ? (
                     <span className="font-bold text-[#153B2B] flex items-center gap-1.5">
-                      {(() => {
-                        const isVoxtral = (msg.model && msg.model.toLowerCase().includes('voxtral')) || 
-                                          msg.language === 'darija' || 
-                                          msg.language === 'ar' || 
-                                          /[\u0600-\u06FF]/.test(msg.text || '');
-                        if (isVoxtral) {
-                          return (
-                            <>
-                              <Radio className="w-3 h-3 text-[#C9A052]" />
-                              <span>Voxtral Mini 4B (Darija{isVoice ? ' • Vocal' : ''})</span>
-                            </>
-                          );
-                        }
-                        const isEnglish = msg.language === 'en' || (msg.model && msg.model.toLowerCase().includes('en'));
-                        return (
-                          <>
-                            {isVoice ? <Radio className="w-3 h-3 text-[#C9A052]" /> : <FileText className="w-3 h-3 text-[#153B2B]" />}
-                            <span>Gemma 4:12B ({isEnglish ? 'English' : 'Français'}{isVoice ? ' • Vocal' : ''})</span>
-                          </>
-                        );
-                      })()}
+                      <Bot className="w-3.5 h-3.5 text-[#C9A052]" />
+                      <span>Conseiller d'Orientation{isVoice ? ' • Vocal' : ''}</span>
                     </span>
                   ) : (
                     <span className="font-semibold text-slate-600 flex items-center gap-1">
@@ -1220,12 +1184,12 @@ export default function AiInterviewChat({
           </div>
         )}
 
-        {/* INDICATEUR D'ÉTAT : TRANSCRIPTION WHISPER / PROCESSING */}
+        {/* INDICATEUR D'ÉTAT : PROCESSING */}
         {voiceState === 'processing' && (
           <div className="p-3.5 bg-white border border-slate-200 rounded-2xl shadow-xs max-w-[80%] mr-auto flex items-center gap-3">
             <Radio className="w-5 h-5 text-[#C9A052] animate-spin" />
             <span className="text-xs text-slate-700 font-medium">
-              Transcription STT Moulsot & analyse IA en cours...
+              Traitement de votre message en cours...
             </span>
           </div>
         )}
@@ -1240,7 +1204,7 @@ export default function AiInterviewChat({
           </div>
         )}
 
-        {/* INDICATEUR D'ÉTAT : IA EN COURS DE RÉFLEXION ÉCRITE */}
+        {/* INDICATEUR D'ÉTAT : IA EN COURS DE RÉFLEXION */}
         {(loading || voiceState === 'thinking') && voiceState !== 'processing' && voiceState !== 'generating_audio' && (
           <div className="flex gap-3 max-w-[80%] mr-auto items-start">
             <div className="w-8 h-8 rounded-lg bg-[#153B2B] text-gold border border-[#1C4E39] flex items-center justify-center shrink-0 shadow-2xs">
@@ -1249,8 +1213,8 @@ export default function AiInterviewChat({
             <div className="p-3.5 bg-white border border-slate-200 rounded-2xl rounded-tl-xs shadow-2xs flex items-center gap-2">
               <span className="text-xs text-slate-600 italic">
                 {activeMode === 'voice'
-                  ? "L'IA formule sa réponse vocale..."
-                  : 'Gemma 4:12B analyse votre écrit...'}
+                  ? "Votre conseiller formule sa réponse vocale..."
+                  : 'Votre conseiller analyse votre message...'}
               </span>
               <div className="flex gap-1 items-center">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#153B2B] animate-bounce" style={{ animationDelay: '0ms' }} />
@@ -1321,18 +1285,18 @@ export default function AiInterviewChat({
                     {voiceState === 'recording'
                       ? `Enregistrement en cours (${recordingSeconds >= 60 ? `${Math.floor(recordingSeconds / 60)}m ${String(recordingSeconds % 60).padStart(2, '0')}s` : `${recordingSeconds}s`})...`
                       : voiceState === 'processing'
-                      ? 'Transcription STT Moulsot & analyse...'
+                      ? 'Traitement de votre message...'
                       : voiceState === 'generating_audio'
-                      ? 'Génération audio en cours...'
+                      ? 'Génération de la réponse...'
                       : voiceState === 'speaking'
-                      ? 'L\'IA formule sa réponse vocale (Écoute active)'
+                      ? 'Votre conseiller vous répond (Écoute active)'
                       : 'Appuyez sur le micro ou Ctrl + Espace pour parler'}
                   </span>
                 </h4>
                 <p className="text-[11px] text-slate-600">
                   {voiceState === 'recording'
                     ? 'Parlez sans limite. Réappuyez sur Ctrl + Espace pour envoyer.'
-                    : 'Exprimez-vous en Darija marocaine, arabe ou français. Véritable échange Voice-to-Voice.'}
+                    : 'Exprimez-vous en Darija marocaine, arabe ou français. Échange vocal fluide.'}
                 </p>
               </div>
             </div>
@@ -1350,7 +1314,7 @@ export default function AiInterviewChat({
             </button>
           </div>
         ) : (
-          /* INTERFACE TEXTE ACTIVE (GEMMA 4:12B) */
+          /* INTERFACE TEXTE ACTIVE */
           <form onSubmit={handleSubmitText} className="flex items-end gap-2.5">
             <div className="relative flex-1">
               <textarea
@@ -1361,7 +1325,7 @@ export default function AiInterviewChat({
                 onKeyDown={handleKeyDown}
                 disabled={loading}
                 rows={2}
-                placeholder="Rédigez votre réponse ici pour Gemma 4:12B... (Entrée pour envoyer, Maj+Entrée pour nouvelle ligne)"
+                placeholder="Rédigez votre message ici... (Entrée pour envoyer, Maj+Entrée pour nouvelle ligne)"
                 className="w-full resize-none px-4 py-3 rounded-xl border border-slate-300 focus:border-[#153B2B] focus:ring-2 focus:ring-[#153B2B]/10 outline-none text-sm text-slate-800 placeholder:text-slate-400 bg-slate-50/40 leading-relaxed"
               />
             </div>

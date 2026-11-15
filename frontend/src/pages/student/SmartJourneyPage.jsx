@@ -7,7 +7,8 @@ import {
   History,
   Shield,
   Clock,
-  ArrowRight
+  ArrowRight,
+  MessageSquare
 } from 'lucide-react';
 import { smartJourneyService } from '../../services/smartJourneyService.js';
 import { useToast } from '../../context/ToastContext.jsx';
@@ -212,21 +213,18 @@ export default function SmartJourneyPage() {
   const tabs = [
     {
       id: 'interview',
-      label: '1. Entretien avec l\'IA',
-      icon: Bot,
-      badge: journey.conversation?.length > 1 ? `${journey.conversation.length} msgs` : 'Actif'
+      label: 'Mon Entretien',
+      icon: MessageSquare
     },
     {
       id: 'analysis',
-      label: '2. Analyse & Talent Radar',
-      icon: Sparkles,
-      badge: journey.orientationResultsLocked ? 'Réservé Admin' : (journey.analysis ? `${journey.analysis.indiceConfianceGlobal || 85}%` : null)
+      label: 'Mon Profil & Mes Compétences',
+      icon: Award
     },
     {
       id: 'history',
-      label: '3. Historique Évolutif',
-      icon: History,
-      badge: `v${historyData.currentVersion || journey.version || 1}`
+      label: 'Mon Parcours',
+      icon: History
     }
   ];
 
@@ -306,14 +304,14 @@ export default function SmartJourneyPage() {
                 onClick={() => setActiveTab('analysis')}
                 className="px-5 py-2.5 rounded-xl bg-[#153B2B] hover:bg-[#1C4E39] text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-all shadow-xs cursor-pointer"
               >
-                <span>Consulter l'Analyse des Compétences</span>
+                <span>Voir Mon Profil & Mes Compétences</span>
                 <ArrowRight className="w-4 h-4 text-gold" />
               </button>
             </div>
           </div>
         )}
 
-        {/* ONGLET 3 : ANALYSE DES COMPÉTENCES (DÉCLARÉ VS VÉRIFIÉ) */}
+        {/* ONGLET 2 : MON PROFIL & MES COMPÉTENCES */}
         {activeTab === 'analysis' && (
           <div className="space-y-4">
             {journey.orientationResultsLocked ? (
@@ -326,7 +324,7 @@ export default function SmartJourneyPage() {
                     Résultats d'Orientation Réservés à l'Administration
                   </h3>
                   <p className="text-sm text-slate-700 max-w-lg mx-auto leading-relaxed">
-                    La consultation des résultats d'orientation est actuellement restreinte aux administrateurs de la commission (Mode <strong>admin_only</strong>). Vos déclarations et échanges avec l'IA ont bien été enregistrés dans votre dossier.
+                    La consultation des résultats d'orientation est actuellement réservée aux administrateurs de la commission. Vos déclarations et échanges avec votre conseiller ont bien été enregistrés dans votre dossier.
                   </p>
                 </div>
                 <button
@@ -334,7 +332,7 @@ export default function SmartJourneyPage() {
                   onClick={() => setActiveTab('interview')}
                   className="px-5 py-2.5 rounded-xl bg-[#153B2B] hover:bg-[#1A4533] text-white text-xs sm:text-sm font-bold cursor-pointer transition shadow-xs"
                 >
-                  Poursuivre mon entretien avec l'IA
+                  Poursuivre mon entretien
                 </button>
               </div>
             ) : (
@@ -361,7 +359,7 @@ export default function SmartJourneyPage() {
                     onClick={() => setActiveTab('interview')}
                     className="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-2 transition-colors cursor-pointer"
                   >
-                    <span>Retour à l'Entretien IA</span>
+                    <span>Retour à Mon Entretien</span>
                   </button>
 
                   <button
@@ -369,7 +367,7 @@ export default function SmartJourneyPage() {
                     onClick={() => setActiveTab('history')}
                     className="px-5 py-2.5 rounded-xl bg-[#153B2B] hover:bg-[#1C4E39] text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-all shadow-xs cursor-pointer"
                   >
-                    <span>Consulter l'Historique Évolutif</span>
+                    <span>Consulter Mon Parcours</span>
                     <ArrowRight className="w-4 h-4 text-gold" />
                   </button>
                 </div>
@@ -378,7 +376,7 @@ export default function SmartJourneyPage() {
           </div>
         )}
 
-        {/* ONGLET 3 : HISTORIQUE ÉVOLUTIF DES VERSIONS */}
+        {/* ONGLET 3 : MON PARCOURS */}
         {activeTab === 'history' && (
           <div className="space-y-4">
             <JourneyHistoryTimeline
