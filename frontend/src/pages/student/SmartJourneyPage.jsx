@@ -247,7 +247,7 @@ export default function SmartJourneyPage() {
   return (
     <div className={`w-full mx-auto transition-all ${
       activeTab === 'interview'
-        ? 'h-[calc(100dvh-130px)] sm:h-[calc(100dvh-140px)] flex flex-col px-2 sm:px-4 py-2 space-y-2 sm:space-y-3'
+        ? 'w-full flex-1 flex flex-col min-h-0 px-2 sm:px-4 py-2 space-y-2 sm:space-y-3'
         : 'max-w-[1600px] px-4 sm:px-6 lg:px-8 py-6 space-y-6'
     }`}>
       
@@ -295,7 +295,7 @@ export default function SmartJourneyPage() {
         
         {/* ONGLET 1 : ENTRETIEN CONVERSATIONNEL AVEC L'IA */}
         {activeTab === 'interview' && (
-          <div className="w-full h-full flex-1 min-h-0 flex flex-col">
+          <div className="w-full flex-1 min-h-[580px] h-[calc(100vh-215px)] flex flex-col">
             <AiInterviewChat
               conversation={journey.conversation || []}
               onSendMessage={handleSendMessage}

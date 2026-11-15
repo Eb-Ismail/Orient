@@ -880,14 +880,9 @@ export default function AiInterviewChat({
   };
 
   return (
-    <div className="sinta-3d-wrapper w-full h-full flex-1 flex flex-col min-h-[580px] lg:min-h-[640px]">
-      {/* Halo de lueur 3D du ruban lumineux */}
-      <div className="sinta-3d-glow" />
-      {/* Ruban lumineux dynamique aux couleurs de l'application (Sinta kadoz 3D) */}
-      <div className="sinta-3d-beam" />
-      
+    <div className="chat-card-3d w-full h-full flex-1 flex flex-col min-h-[600px]">
       {/* Conteneur intérieur du Chat */}
-      <div className="sinta-3d-inner">
+      <div className="chat-card-3d-inner">
         {/* HEADER MILITAIRE PROFESSIONNEL & STATUT DU CONSEILLER */}
         <div className="bg-gradient-to-r from-[#102C20] via-[#153B2B] to-[#1C4E39] text-white px-4 sm:px-6 py-3.5 border-b border-[#1C4E39] shrink-0 shadow-xs">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -1320,20 +1315,21 @@ export default function AiInterviewChat({
             </button>
           </div>
         ) : (
-          /* INTERFACE TEXTE ACTIVE */
+          /* INTERFACE TEXTE ACTIVE AVEC BORDURE 3D DYNAMIQUE (CAPTURE UTILISATEUR) */
           <form onSubmit={handleSubmitText} className="flex items-end gap-2.5">
             <div className="relative flex-1">
-              <textarea
-                ref={inputRef}
-                dir="auto"
-                value={inputText}
-                onChange={(e) => setInputText(e.target.value)}
-                onKeyDown={handleKeyDown}
-                disabled={loading}
-                rows={2}
-                placeholder="Rédigez votre message ici... (Entrée pour envoyer, Maj+Entrée pour nouvelle ligne)"
-                className="w-full resize-none px-4 py-3 rounded-xl border border-slate-300 focus:border-[#153B2B] focus:ring-2 focus:ring-[#153B2B]/10 outline-none text-sm text-slate-800 placeholder:text-slate-400 bg-slate-50/40 leading-relaxed"
-              />
+              <div className="chat-3d-input-box">
+                <textarea
+                  ref={inputRef}
+                  dir="auto"
+                  value={inputText}
+                  onChange={(e) => setInputText(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  disabled={loading}
+                  rows={2}
+                  placeholder="Rédigez votre message ici... (Entrée pour envoyer, Maj+Entrée pour nouvelle ligne)"
+                />
+              </div>
             </div>
 
             {/* Bouton bascule rapide vers le micro */}
@@ -1344,7 +1340,7 @@ export default function AiInterviewChat({
                 startVoiceRecording();
               }}
               title="Passer en mode vocal (Ctrl + Espace)"
-              className="p-3 rounded-xl bg-slate-100 hover:bg-[#C9A052]/20 text-[#153B2B] hover:text-[#153B2B] border border-slate-200 transition-colors cursor-pointer shrink-0"
+              className="p-3.5 rounded-2xl bg-slate-100 hover:bg-[#C9A052]/20 text-[#153B2B] hover:text-[#153B2B] border border-slate-200 transition-all shadow-xs cursor-pointer shrink-0 active:scale-95"
             >
               <Mic className="w-5 h-5 text-[#153B2B]" />
             </button>
@@ -1353,7 +1349,7 @@ export default function AiInterviewChat({
             <button
               type="submit"
               disabled={loading || !inputText.trim()}
-              className="p-3 rounded-xl bg-[#153B2B] hover:bg-[#1C4E39] disabled:opacity-50 text-white transition-all shadow-xs cursor-pointer shrink-0"
+              className="p-3.5 rounded-2xl bg-gradient-to-br from-[#153B2B] to-[#1C4E39] hover:from-[#1C4E39] hover:to-[#25664A] disabled:opacity-40 text-gold border border-gold/40 transition-all shadow-md cursor-pointer shrink-0 active:scale-95"
             >
               <Send className="w-5 h-5 text-[#C9A052]" />
             </button>

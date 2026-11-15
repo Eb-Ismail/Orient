@@ -154,124 +154,102 @@
 }
 
 /* ========================================================================== */
-/* SINTA KADOZ 3D - BORDER BEAM DYNAMIQUE AUX COULEURS DE L'APPLICATION       */
+/* BORDURE 3D DU CHAT (SINTA KADOZ 3D AUX COULEURS DE L'APPLICATION)        */
 /* ========================================================================== */
 
-@keyframes sintaBeamRotate {
+@keyframes sintaBorderBeam {
   0% {
-    transform: rotate(0deg);
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    transform: rotate(360deg);
+    background-position: 0% 50%;
   }
 }
 
-.sinta-3d-wrapper {
+/* Bordure 3D dynamique pour la boîte de saisie du chat (Capture utilisateur) */
+.chat-3d-input-box {
+  position: relative;
+  border-radius: 1rem;
+  padding: 2.5px; /* Épaisseur du ruban 3D */
+  background: linear-gradient(
+    135deg,
+    #153B2B 0%,
+    #C9A052 25%,
+    #10B981 50%,
+    #DFC17E 75%,
+    #153B2B 100%
+  );
+  background-size: 300% 300%;
+  animation: sintaBorderBeam 5s ease infinite;
+  box-shadow: 
+    0 4px 14px -2px rgba(21, 59, 43, 0.25),
+    0 2px 6px rgba(201, 160, 82, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.chat-3d-input-box:focus-within {
+  box-shadow: 
+    0 6px 20px -2px rgba(21, 59, 43, 0.35),
+    0 0 15px rgba(201, 160, 82, 0.35),
+    inset 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.chat-3d-input-box textarea {
+  width: 100%;
+  background: #ffffff;
+  border-radius: calc(1rem - 2.5px);
+  border: none !important;
+  outline: none !important;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: #1e293b;
+  resize: none;
+  display: block;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Carte principale du Chat avec bordure 3D raffinée */
+.chat-card-3d {
   position: relative;
   border-radius: 1.5rem;
-  padding: 3.5px;
-  overflow: hidden;
-  background: #0E291E;
-  box-shadow: 
-    0 20px 45px -12px rgba(21, 59, 43, 0.4),
-    0 10px 25px -5px rgba(201, 160, 82, 0.25),
-    0 0 0 1px rgba(201, 160, 82, 0.25),
-    inset 0 1px 2px rgba(255, 255, 255, 0.4);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.sinta-3d-wrapper:hover {
-  box-shadow: 
-    0 25px 60px -10px rgba(21, 59, 43, 0.5),
-    0 15px 35px -5px rgba(201, 160, 82, 0.35),
-    0 0 25px rgba(201, 160, 82, 0.3),
-    0 0 0 1px rgba(201, 160, 82, 0.4),
-    inset 0 1px 2px rgba(255, 255, 255, 0.5);
-}
-
-/* Ruban lumineux net qui tourne continuellement (Sinta kadoz 3D) */
-.sinta-3d-beam {
-  position: absolute;
-  top: -200%;
-  left: -200%;
-  width: 500%;
-  height: 500%;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    transparent 65deg,
-    #C9A052 85deg,
-    #DFC17E 105deg,
-    #FFFFFF 115deg,
-    #10B981 125deg,
-    #153B2B 145deg,
-    transparent 170deg,
-    transparent 245deg,
-    #C9A052 265deg,
-    #DFC17E 285deg,
-    #FFFFFF 295deg,
-    #10B981 305deg,
-    #153B2B 325deg,
-    transparent 350deg
+  padding: 3px;
+  background: linear-gradient(
+    135deg,
+    #153B2B 0%,
+    #C9A052 30%,
+    #1C4E39 60%,
+    #DFC17E 85%,
+    #153B2B 100%
   );
-  animation: sintaBeamRotate 5.5s linear infinite;
-  pointer-events: none;
-  z-index: 1;
-  will-change: transform;
+  background-size: 300% 300%;
+  animation: sintaBorderBeam 7s ease infinite;
+  box-shadow: 
+    0 20px 45px -10px rgba(21, 59, 43, 0.3),
+    0 8px 20px -4px rgba(201, 160, 82, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
 }
 
-/* Lueur et halo d'ambiance 3D flouté autour du ruban */
-.sinta-3d-glow {
-  position: absolute;
-  top: -200%;
-  left: -200%;
-  width: 500%;
-  height: 500%;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    transparent 65deg,
-    rgba(201, 160, 82, 0.85) 85deg,
-    rgba(223, 193, 126, 0.95) 105deg,
-    rgba(255, 255, 255, 0.9) 115deg,
-    rgba(16, 185, 129, 0.85) 125deg,
-    rgba(21, 59, 43, 0.9) 145deg,
-    transparent 170deg,
-    transparent 245deg,
-    rgba(201, 160, 82, 0.85) 265deg,
-    rgba(223, 193, 126, 0.95) 285deg,
-    rgba(255, 255, 255, 0.9) 295deg,
-    rgba(16, 185, 129, 0.85) 305deg,
-    rgba(21, 59, 43, 0.9) 325deg,
-    transparent 350deg
-  );
-  filter: blur(12px);
-  animation: sintaBeamRotate 5.5s linear infinite;
-  pointer-events: none;
-  opacity: 0.85;
-  z-index: 2;
-  will-change: transform;
-}
-
-/* Conteneur intérieur du Chat avec relief 3D */
-.sinta-3d-inner {
-  position: relative;
-  z-index: 10;
+.chat-card-3d-inner {
   width: 100%;
   height: 100%;
-  border-radius: calc(1.5rem - 3.5px);
+  flex: 1;
+  min-height: 0;
   background: #ffffff;
+  border-radius: calc(1.5rem - 3px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 
-    inset 0 1.5px 2px rgba(255, 255, 255, 0.9),
-    inset 0 -1.5px 3px rgba(21, 59, 43, 0.08);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sinta-3d-beam,
-  .sinta-3d-glow {
+  .chat-3d-input-box,
+  .chat-card-3d {
     animation: none;
   }
 }
