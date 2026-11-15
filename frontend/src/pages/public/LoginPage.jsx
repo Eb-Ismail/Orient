@@ -164,7 +164,7 @@ export default function LoginPage() {
     <div className="min-h-screen w-full relative flex flex-col justify-center items-center py-6 sm:py-8 px-4 sm:px-6 overflow-x-hidden selection:bg-gold/30">
       {/* Image de fond originale sur toute la page avec position:fixed, inset:0, w-full, h-full, object-fit:cover, object-position:center, z-index:0 */}
       <img 
-        src="/images/login-bg.jpg" 
+        src="/images/login-bg.jpg?v=20261115_clean" 
         alt="Arrière-plan Gendarmerie Royale" 
         className="fixed inset-0 w-full h-full object-cover object-center pointer-events-none z-0"
         style={{
