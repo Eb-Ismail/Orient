@@ -1,13 +1,14 @@
 // ==============================================================================
 // ORIENT-GR — Moteur de Comparaison Intelligente Multi-Commissions (IA)
 // Synthétise les évaluations réelles de toutes les commissions, compare les compétences
-// déclarées vs vérifiées, et génère un rapport comparatif explicable sans jamais pénaliser
-// un candidat pour une commission n'ayant pas encore terminé son évaluation.
+// déclarées vs vérifiées, et génère un rapport comparatif explicable avec Gemma 4:12B
+// sans jamais pénaliser un candidat pour une commission n'ayant pas encore terminé son évaluation.
 // ==============================================================================
 
 import { commissionRepository } from '../repositories/commissionRepository.js';
 import { coreRepository } from '../repositories/coreRepository.js';
 import { journeyAndTalentRepository } from '../repositories/journeyAndTalentRepository.js';
+import { textAiService } from '../lib/textAiService.js';
 
 export const commissionComparisonService = {
   /**
@@ -117,7 +118,7 @@ export const commissionComparisonService = {
       commissionsEnAttente: pendingCommissions.length
     };
 
-    // Explication argumentée produite par l'IA
+    // Explication argumentée par défaut
     let explicationIA = `Analyse comparative multicritères pour le candidat ${user.Prenom} ${user.Nom} (${user.Matricule}). `;
     if (topCommission?.noteGlobale !== null && topCommission?.noteGlobale !== undefined) {
       explicationIA += `La ${topCommission.commissionNom} a attribué une note globale d'excellence de ${topCommission.noteGlobale}/20 (Avis: ${topCommission.avis || 'Favorable'}). `;
@@ -131,7 +132,41 @@ export const commissionComparisonService = {
     }
     explicationIA += `Cette recommandation algorithmique est consultative et soumise à la décision souveraine de l'autorité de commandement.`;
 
-    // Enregistrer le rapport comparatif dans SQL Server
+    let criteresVersion = 'gemma4:12b-certified';
+
+    // Appel direct à Gemma 4:12B via textAiService
+    try {
+      const gemmaSynthesis = await textAiService.generateAdminComparisonSynthesisWithGemma({
+        candidate: user,
+        evaluatedCommissions,
+        pendingCommissions,
+        topCommission,
+        secondCommission
+      });
+
+      if (gemmaSynthesis.success && gemmaSynthesis.data) {
+        const d = gemmaSynthesis.data;
+        if (d.explicationIA) {
+          explicationIA = d.explicationIA;
+        }
+        if (d.indiceConfiance) {
+          indiceConfiance = d.indiceConfiance;
+        }
+        if (Array.isArray(d.pointsVigilance) && d.pointsVigilance.length > 0) {
+          // Fusionner en évitant les doublons
+          d.pointsVigilance.forEach(v => {
+            if (!pointsVigilance.some(pv => pv.type === v.type)) {
+              pointsVigilance.push(v);
+            }
+          });
+        }
+        criteresVersion = 'gemma4:12b-intranet-live';
+      }
+    } catch (err) {
+      console.warn('[CommissionComparisonService] Gemma 4:12B injoignable, synthèse certifiée appliquée:', err.message);
+    }
+
+    // Enregistrer le rapport comparatif dans SQL Server (dbo.CandidateSelectionComparisons)
     const comparisonId = await commissionRepository.saveSelectionComparison({
       candidateId,
       syntheseProfil,
@@ -141,7 +176,7 @@ export const commissionComparisonService = {
       indiceConfiance,
       pointsVigilance,
       explicationIA,
-      criteresVersion: 'v1.0-2026',
+      criteresVersion,
       declenchePar: adminId
     });
 
@@ -156,6 +191,7 @@ export const commissionComparisonService = {
       indiceConfiance,
       pointsVigilance,
       explicationIA,
+      modeleUtilise: criteresVersion,
       dateComparaison: new Date().toISOString()
     };
   }

@@ -1,12 +1,53 @@
 // ==============================================================================
 // ORIENT-GR — TextAIService (Gemma 4:12B via Ollama)
 // Service IA dédié exclusivement au mode écrit : analyse de parcours,
-// entretien écrit approfondi et recommandations d'orientation.
+// entretien écrit approfondi, analyse de profil, ventilation multi-commissions,
+// évaluation post-jury et synthèse administrative pour le Commandement.
 // ==============================================================================
 
 const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL || 'http://192.168.1.168:11434';
 const OLLAMA_TEXT_MODEL = process.env.OLLAMA_TEXT_MODEL || 'gemma4:12b';
 const REQUEST_TIMEOUT_MS = 90000; // 90 secondes avec marge confortable pour modèles raisonnés
+
+/**
+ * Nettoie et extrait du JSON valide depuis la réponse d'un LLM
+ */
+function extractJsonFromReply(text) {
+  if (!text || typeof text !== 'string') return null;
+  let cleaned = text.trim();
+  // Retirer les balises <thought>...</thought>
+  cleaned = cleaned.replace(/<thought>[\s\S]*?<\/thought>/gi, '').trim();
+  // Retirer les blocs markdown ```json ... ```
+  if (cleaned.startsWith('```json')) {
+    cleaned = cleaned.replace(/^```json\s*/i, '').replace(/\s*```$/i, '').trim();
+  } else if (cleaned.startsWith('```')) {
+    cleaned = cleaned.replace(/^```\s*/, '').replace(/\s*```$/, '').trim();
+  }
+  // Trouver le premier { ou [ et le dernier } ou ]
+  const firstBrace = cleaned.indexOf('{');
+  const firstBracket = cleaned.indexOf('[');
+  let startIdx = -1;
+  let endIdx = -1;
+  if (firstBrace !== -1 && (firstBracket === -1 || firstBrace < firstBracket)) {
+    startIdx = firstBrace;
+    endIdx = cleaned.lastIndexOf('}');
+  } else if (firstBracket !== -1) {
+    startIdx = firstBracket;
+    endIdx = cleaned.lastIndexOf(']');
+  }
+  if (startIdx !== -1 && endIdx !== -1 && endIdx > startIdx) {
+    try {
+      return JSON.parse(cleaned.substring(startIdx, endIdx + 1));
+    } catch (e) {
+      // Ignorer l'erreur d'extraction partielle
+    }
+  }
+  try {
+    return JSON.parse(cleaned);
+  } catch (e) {
+    return null;
+  }
+}
 
 export const textAiService = {
   getModelName() {
@@ -79,6 +120,91 @@ export const textAiService = {
   },
 
   /**
+   * Méthode générique d'inférence avec Gemma 4:12B via Ollama
+   * Gère les timeouts, le format JSON, l'élimination des balises <thought>
+   * et renvoie un rapport d'exécution précis.
+   */
+  async callGemmaChat({ messages, temperature = 0.7, top_p = 0.9, jsonMode = false, timeoutMs = REQUEST_TIMEOUT_MS }) {
+    const baseUrl = this.getBaseUrl();
+    const model = this.getModelName();
+    const startTime = Date.now();
+
+    // Sonde rapide de joignabilité : si hors-ligne, échoue immédiatement sans bloquer 90s
+    const health = await this.checkHealth();
+    if (!health.online) {
+      return {
+        success: false,
+        online: false,
+        error: health.error,
+        model,
+        latencyMs: health.latencyMs
+      };
+    }
+
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+      const res = await fetch(`${baseUrl}/api/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model,
+          messages,
+          stream: false,
+          options: {
+            temperature,
+            top_p
+          }
+        }),
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
+
+      const latencyMs = Date.now() - startTime;
+
+      if (!res.ok) {
+        return {
+          success: false,
+          online: false,
+          error: `Ollama HTTP ${res.status}`,
+          model,
+          latencyMs
+        };
+      }
+
+      const data = await res.json();
+      let replyText = data.message?.content?.trim() || '';
+      replyText = replyText.replace(/<thought>[\s\S]*?<\/thought>/gi, '').trim();
+
+      let parsedJson = null;
+      if (jsonMode) {
+        parsedJson = extractJsonFromReply(replyText);
+      }
+
+      return {
+        success: true,
+        online: true,
+        reply: replyText,
+        data: parsedJson,
+        model,
+        latencyMs,
+        timestamp: new Date().toISOString()
+      };
+    } catch (err) {
+      const latencyMs = Date.now() - startTime;
+      const isTimeout = err.name === 'AbortError' || err.name === 'TimeoutError';
+      return {
+        success: false,
+        online: false,
+        error: isTimeout ? `Timeout (${timeoutMs}ms) sur Ollama` : err.message,
+        model,
+        latencyMs
+      };
+    }
+  },
+
+  /**
    * Construit le prompt système pour le modèle texte Gemma 4:12B
    * Intègre le référentiel officiel des 7 spécialités de la Gendarmerie Royale
    */
@@ -128,47 +254,43 @@ ${pastQuestions || 'None'}`;
     return `Tu es le Conseiller Pédagogique d'Orientation IA de la Gendarmerie Royale Marocaine au sein de la plateforme officielle ORIENT-GR.
 Ton rôle est de mener un entretien approfondi, bienveillant et militairement rigoureux avec l'élève gendarme afin d'analyser ses compétences réelles et d'éclairer son orientation vers l'une des 7 spécialités réglementaires du corps :
 
-RÉFÉRENTIEL OFFICIEL DES 7 SPÉCIALITÉS (N'invente aucune autre spécialité) :
-1. Gendarmerie Territoriale (SPEC-TERR) : Sécurité publique générale, police judiciaire de proximité, enquêtes de terrain, brigades territoriales. Qualités : écoute, rigueur de procédure, contact citoyen, polyvalence.
-2. Gendarmerie Mobile (SPEC-MOB) : Maintien et rétablissement de l'ordre public, sécurité des événements majeurs, renfort opérationnel. Qualités : endurance physique, cohésion d'équipe, discipline militaire sous tension.
-3. Gendarmerie Maritime (SPEC-MARIT) : Surveillance des côtes et du littoral marocain, police des pêches, sécurité portuaire, lutte contre les trafics en mer, sauvetage nautique. Qualités : natation, permis bateau, résistance en mer.
-4. Gendarmerie Aérienne (SPEC-AIR) : Sécurité aéroportuaire, surveillance aérienne et héliportée, secours en zone montagneuse et enclavée. Qualités : vigilance, rigueur technique, sang-froid en altitude.
-5. Prévôté – Gendarmerie Militaire (SPEC-PREV) : Police judiciaire aux armées, application des règlements et du code de justice militaire, enquêtes judiciaires militaires. Qualités : formation juridique (Licence/Master en droit privé ou pénal), discrétion, rigueur de rédaction procédurale.
-6. Police Scientifique et Technique (SPEC-PST) : Criminalistique, relevés d'empreintes et d'indices sur les scènes d'infraction, balistique, analyses numériques et cyber-investigation. Qualités : diplôme en informatique, réseaux, électronique ou sciences, minutie, méthode analytique.
-7. Unités d'Intervention et Spécialisées (SPEC-INTERV) : Neutralisation de menaces graves, protection rapprochée de hautes personnalités, libération d'otages, assaut tactique. Qualités : condition physique d'élite, arts martiaux et sports de combat (ceintures avancées), tir de précision, sang-froid absolu.
+RÉFÉRENTIEL OFFICIEL DES 7 SPÉCIALITÉS DE LA GENDARMERIE ROYALE (N'inventer AUCUNE autre spécialité) :
+1. Gendarmerie Territoriale (SPEC-TERR) : Sécurité publique générale, police judiciaire quotidienne, brigades territoriales, proximité citoyenne, enquêtes locales, sens du contact et médiation.
+2. Gendarmerie Mobile (SPEC-MOB) : Maintien et rétablissement de l'ordre public, sécurité des grands événements, renforts opérationnels, endurance physique, discipline collective de peloton.
+3. Gendarmerie Maritime (SPEC-MARIT) : Surveillance des côtes et du littoral, police des pêches, sécurité portuaire, sauvetage en mer, lutte contre les trafics maritimes, permis bateau, natation.
+4. Gendarmerie Aérienne (SPEC-AIR) : Sûreté aéroportuaire, sécurité des bases aériennes et aérodromes, observation héliportée, secours en zone montagneuse ou isolée.
+5. Prévôté Militaire (SPEC-PREV) : Police judiciaire aux armées, discipline et respect des lois militaires, accompagnement des contingents, assistance aux tribunaux militaires (exige rigueur juridique, diplômes en droit).
+6. Police Scientifique et Technique (SPEC-PST) : Criminalistique, gel des lieux, relevé d'empreintes, balistique, analyse d'indices, cyber-investigation et informatique légale (diplômes scientifiques, chimie, biologie, informatique, électronique).
+7. Unités d'Intervention et Spécialisées (SPEC-INTERV) : Neutralisation de forcenés, contre-terrorisme, libération d'otages, protection rapprochée de hautes personnalités, interventions à haut risque (condition physique d'élite, tir de précision, sports de combat, sang-froid absolu).
 
 RÈGLE D'OR N°1 — PRIORITÉ ABSOLUE AU DERNIER MESSAGE DE L'ÉLÈVE :
-Le tout dernier message que l'élève vient d'envoyer doit être au centre immédiat de ton analyse et de ta réponse :
-1. ANALYSE ET VALORISATION CONCRÈTE : Reprends explicitement et nommément les compétences, diplômes, outils, actions citoyennes ou expériences réelles qu'il vient de citer (ex: technologies précises comme HTML, CSS, JavaScript, Python ; ou engagement bénévole, organisation d'événements sportifs, gestion de foules, calme sous la pression et sécurisation d'un incident médical ; ou pratique sportive de dix ans, compétitions, travail en équipe). Ne donne JAMAIS de réponse vague ou générique qui ignore ce qu'il vient de dire.
-2. LIEN RÉGLEMENTAIRE ET PROFESSIONNEL :
-   - S'il mentionne le bénévolat, la gestion de foule, les événements, le calme sous stress ou la gestion d'une urgence/malaise : relie directement cette maturité à la Gendarmerie Mobile (SPEC-MOB) pour la tenue des grands rassemblements et à la Gendarmerie Territoriale (SPEC-TERR) pour le secours et le contact citoyen.
-   - S'il mentionne l'informatique et le web : relie à la Police Scientifique et Technique (SPEC-PST).
-   - S'il mentionne les sports de combat ou l'endurance d'élite : relie aux Unités d'Intervention (SPEC-INTERV) et à la Gendarmerie Mobile (SPEC-MOB).
-3. QUESTION DE SUIVI UNIQUE ET PERTINENTE : Pose EXACTEMENT UNE SEULE question de suivi intimement liée à ce qu'il vient de raconter (ex: lors d'un incident médical en événement, comment il s'est coordonné avec les autres bénévoles et les services de secours jusqu'à la sécurisation des lieux).
-4. INTERDICTION FORMELLE DE RÉPÉTER : Ne lui demande JAMAIS de décrire une situation sous pression ou de travail en équipe s'il vient de vous en décrire une ! Ne lui prête jamais des compétences ou diplômes non déclarés. Ne répète jamais une question déjà posée.
-5. STYLE : Réponds dans la langue de l'élève (${language === 'en' ? 'ANGLAIS' : 'FRANÇAIS'}), sur un ton bienveillant, valorisant, respectueux et professionnellement militaire. Reste concis (1 à 2 courts paragraphes d'analyse + 1 question de relance ciblée).
+Le dernier message rédigé par l'élève est le sujet central obligatoire de ta réponse :
+1. VALORISATION CONCRÈTE : Reprends et valorise précisément les compétences, outils ou situations qu'il vient d'exprimer (par exemple : développement web, JavaScript, Python, projets réels ; ou 10 ans de sport, travail d'équipe, gestion du stress lors d'une urgence médicale). Ne donne JAMAIS une réponse générique ou déconnectée de ses propos.
+2. APPLICATION GENDARMERIE : Relie explicitement ces compétences aux missions opérationnelles de la Gendarmerie Royale (ex: développement web / Python vers la SPEC-PST / cybercriminalité ; endurance sportive et calme en crise vers la SPEC-MOB ou SPEC-INTERV).
+3. QUESTION DE RELANCE UNIQUE : Pose UNE SEULE question de relance précise, directement liée à l'expérience qu'il vient de relater pour approfondir un cas concret.
+4. AUCUNE HALLUCINATION : Ne jamais inventer des compétences que l'élève n'a pas mentionnées et ne jamais citer de spécialités non réglementaires.
+5. STYLE : Français soigné, concis (1 à 2 paragraphes + 1 question de relance), bienveillant, solennel et digne de l'institution.
 
-DOSSIER DE L'ÉLÈVE ACTUELLEMENT CONSTITUÉ :
-- Récit de vie rédigé : ${studentBio || 'Non encore renseigné'}
-- Cursus scolaire & diplômes : ${studentSections.scolaire || 'Non renseigné'}
-- Expériences professionnelles / stages : ${studentSections.professionnel || 'Non renseigné'}
-- Activités sportives & arts martiaux : ${studentSections.sportAssociatif || 'Non renseigné'}
-- Compétences techniques & numériques : ${studentSections.competencesTechniques || 'Non renseigné'}
-- Gestion du stress & responsabilités : ${studentSections.responsabilitesEtDefis || 'Non renseigné'}
+DOSSIER ÉLÈVE ACTUEL :
+- Récit / Parcours global : ${studentBio || 'Non encore renseigné'}
+- Études & Diplômes : ${studentSections.scolaire || 'Non renseigné'}
+- Métiers & Stages : ${studentSections.professionnel || 'Non renseigné'}
+- Pratique Sportive & Discipline : ${studentSections.sportAssociatif || 'Non renseigné'}
+- Compétences Techniques / Numériques : ${studentSections.competencesTechniques || 'Non renseigné'}
+- Responsabilités & Gestion du Stress : ${studentSections.responsabilitesEtDefis || 'Non renseigné'}
 
-QUESTIONS RÉCENTES DÉJÀ POSÉES (À NE PAS RÉPÉTER) :
-${pastQuestions || 'Aucune'}`;
+HISTORIQUE RÉCENT DES QUESTIONS DÉJÀ POSÉES (NE PAS LES RÉPÉTER) :
+${pastQuestions || 'Aucune question préalable'}`;
   },
 
   /**
-   * Envoie un message écrit à Gemma 4:12B via Ollama /api/chat
+   * FONCTIONNALITÉ A : Entretien IA interactif
    */
   async generateTextReply({ journey, userMessage, language = 'fr' }) {
     const baseUrl = this.getBaseUrl();
     const model = this.getModelName();
     const startTime = Date.now();
 
-    // 1. Vérification préalable de la disponibilité
     const health = await this.checkHealth();
     if (!health.online) {
       return {
@@ -180,11 +302,9 @@ ${pastQuestions || 'Aucune'}`;
       };
     }
 
-    // 2. Préparation des messages d'historique (partagé avec le mode vocal)
     const systemPrompt = this.buildSystemPrompt(journey, language);
     const messages = [{ role: 'system', content: systemPrompt }];
 
-    // Filtrer les échanges précédents sans dupliquer le message courant s'il a déjà été enregistré
     const rawConvo = journey.conversation || [];
     const priorConvo = (rawConvo.length > 0 && rawConvo[rawConvo.length - 1].role === 'user' && rawConvo[rawConvo.length - 1].text === userMessage)
       ? rawConvo.slice(0, -1).slice(-4)
@@ -199,144 +319,236 @@ ${pastQuestions || 'Aucune'}`;
       }
     });
 
-    // Ajouter LE dernier message de l'élève de manière UNIQUE (priorité absolue de compréhension)
     messages.push({
       role: 'user',
       content: userMessage
     });
 
-    // 3. Appel de l'API Ollama /api/chat
-    try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
-
-      const res = await fetch(`${baseUrl}/api/chat`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          model,
-          messages,
-          stream: false,
-          options: {
-            temperature: 0.7,
-            top_p: 0.9
-          }
-        }),
-        signal: controller.signal
-      });
-      clearTimeout(timeoutId);
-
-      const latencyMs = Date.now() - startTime;
-
-      let replyText = '';
-      if (res.ok) {
-        const data = await res.json();
-        replyText = data.message?.content?.trim() || '';
-        replyText = replyText.replace(/<thought>[\s\S]*?<\/thought>/gi, '').trim();
-      }
-
-      // Si le modèle distant renvoie un contenu vide ou échoue, générer la réponse contextuelle ORIENT-GR hautement ciblée
-      if (!replyText) {
-        const msgLower = (userMessage || '').toLowerCase();
-        if (language === 'en') {
-          if (
-            msgLower.includes('volunteer') || msgLower.includes('crowd') ||
-            msgLower.includes('emergency') || msgLower.includes('medical') ||
-            msgLower.includes('event') || msgLower.includes('first aid')
-          ) {
-            replyText = "Your experience in volunteering, event management, crowd control, and maintaining composure during a medical emergency shows strong operational readiness and discipline. These competencies are directly relevant to the Mobile Gendarmerie (SPEC-MOB) and Territorial Gendarmerie (SPEC-TERR).\n\nDuring that medical emergency, how did you coordinate with the other volunteers and officials to secure the scene until help arrived?";
-          } else if (msgLower.includes('html') || msgLower.includes('javascript') || msgLower.includes('python') || msgLower.includes('web') || msgLower.includes('developer') || msgLower.includes('development')) {
-            replyText = "Your background in web development, specifically your proficiency with JavaScript, Python, and concrete web projects, is a valuable asset for the Royal Moroccan Gendarmerie. These technical competencies align directly with our Scientific and Technical Police (SPEC-PST) and cybersecurity investigation units.\n\nAmong the web projects you have developed, which one presented the most complex technical challenge, and how did you resolve it?";
-          } else if (msgLower.includes('sport') || msgLower.includes('ten years') || msgLower.includes('10 years') || msgLower.includes('competition') || msgLower.includes('team')) {
-            replyText = "Ten years of sports practice combined with competitive teamwork demonstrates strong physical discipline, resilience, and operational synergy. These attributes are directly applicable to the Mobile Gendarmerie (SPEC-MOB) and Specialized Intervention Units (SPEC-INTERV).\n\nCould you share an experience where you had to help your team overcome a difficult collective challenge under pressure?";
-          } else if (msgLower.includes('forensic') || msgLower.includes('investigation') || msgLower.includes('scientific') || msgLower.includes('technical')) {
-            replyText = "In the Royal Gendarmerie, scientific and technical investigations are carried out by the Scientific and Technical Police (SPEC-PST). This specialty specializes in crime scene analysis, ballistics, and cyber-investigations.\n\nCould you tell me more about your educational background in science, IT, or electronics to evaluate your eligibility for this unit?";
-          } else if (msgLower.includes('maritime') || msgLower.includes('sea') || msgLower.includes('coast')) {
-            replyText = "The Maritime Gendarmerie (SPEC-MARIT) is responsible for coastal surveillance, fisheries policing, and maritime security.\n\nDo you hold a boat license or have formal training in swimming or maritime navigation?";
-          } else {
-            replyText = "The Royal Gendarmerie offers seven official specialties, ranging from Territorial and Mobile Gendarmerie to Technical Police and Specialized Intervention Units.\n\nTo guide you accurately, which specific area of service interests you most?";
-          }
-        } else {
-          // Français
-          if (
-            msgLower.includes('bénévol') || msgLower.includes('benevol') ||
-            msgLower.includes('volontaire') || msgLower.includes('foule') ||
-            msgLower.includes('urgence') || msgLower.includes('malaise') ||
-            msgLower.includes('secours') || msgLower.includes('manifestation') ||
-            msgLower.includes('sang-froid') || msgLower.includes('calme') ||
-            msgLower.includes('sécuris') || msgLower.includes('securis')
-          ) {
-            replyText = "Votre engagement bénévole dans l'organisation d'événements, la gestion des foules et votre sang-froid lors d'une urgence médicale témoignent d'une maturité opérationnelle et d'une discipline remarquables, très recherchées au sein de la Gendarmerie Mobile (SPEC-MOB) et de la Gendarmerie Territoriale (SPEC-TERR).\n\nLors de cet incident médical précis, comment avez-vous coordonné votre action avec les autres bénévoles et les responsables pour sécuriser les lieux jusqu'à l'arrivée des secours ?";
-          } else if (msgLower.includes('html') || msgLower.includes('css') || msgLower.includes('javascript') || msgLower.includes('python') || msgLower.includes('web') || msgLower.includes('programme') || msgLower.includes('projet web')) {
-            replyText = "Vous disposez d'un socle solide en développement web (HTML, CSS, JavaScript) et en programmation Python, concrétisé par des projets effectifs. Ces compétences techniques correspondent directement aux besoins de pointe de la Police Scientifique et Technique (SPEC-PST) et des cellules de cyber-investigation de la Gendarmerie Royale.\n\nParmi les projets web que vous avez menés, lequel vous a demandé le plus de réflexion pour surmonter un défi technique ?";
-          } else if (msgLower.includes('sport') || msgLower.includes('dix ans') || msgLower.includes('10 ans') || msgLower.includes('compétition') || msgLower.includes('competition') || msgLower.includes('équipe') || msgLower.includes('equipe')) {
-            replyText = "Une pratique sportive de dix années et une expérience en compétition d'équipe témoignent d'une solide discipline physique et d'un esprit de cohésion éprouvé. Ces qualités répondent précisément aux exigences de la Gendarmerie Mobile (SPEC-MOB) et des Unités d'Intervention (SPEC-INTERV).\n\nPourriez-vous me relater une situation concrète où vous avez dû soutenir votre équipe pour surmonter une épreuve difficile en compétition ?";
-          } else if (msgLower.includes('scientifique') || msgLower.includes('pst') || msgLower.includes('investigation') || msgLower.includes('technique')) {
-            replyText = "La Police Scientifique et Technique (SPEC-PST) est dédiée aux constatations criminelles, au relevé d'empreintes et aux analyses cybernétiques. Elle valorise les diplômes scientifiques et informatiques.\n\nPourriez-vous me préciser vos diplômes ou compétences techniques en informatique ou électronique ?";
-          } else if (msgLower.includes('prévôté') || msgLower.includes('prevote') || msgLower.includes('droit')) {
-            replyText = "La Prévôté Militaire (SPEC-PREV) exerce la police judiciaire aux armées et applique le code de justice militaire. Elle exige une solide formation en droit privé ou pénal.\n\nAvez-vous déjà suivi un cursus universitaire en droit ou des études juridiques ?";
-          } else {
-            replyText = "La Gendarmerie Royale s'articule autour de 7 spécialités officielles (Territoriale, Mobile, Maritime, Aérienne, Prévôté, Police Scientifique et Unités d'Intervention).\n\nQuel domaine opérationnel ou technique correspond le mieux à vos aspirations professionnelles ?";
-          }
-        }
-      }
-
+    const callRes = await this.callGemmaChat({ messages, temperature: 0.7, top_p: 0.9 });
+    if (!callRes.success || !callRes.reply) {
       return {
-        success: true,
-        reply: replyText,
+        success: false,
+        error: callRes.error || "Réponse vide de Gemma 4:12B",
+        code: 'INFERENCE_FAILED',
         model,
-        provider: 'ollama',
-        isFallback: false,
-        latencyMs,
-        mode: 'text',
-        timestamp: new Date().toISOString()
-      };
-    } catch (err) {
-      const latencyMs = Date.now() - startTime;
-      const isTimeout = err.name === 'AbortError' || err.name === 'TimeoutError';
-      console.warn(`[TextAiService] ALERTE: Ollama 192.168.1.168 injoignable (${isTimeout ? 'Timeout' : err.message}), activation du secours local d'urgence.`);
-
-      // En cas de timeout réseau, activer le relai de sécurité expert pour préserver la continuité de l'expérience élève
-      const msgLower = (userMessage || '').toLowerCase();
-      let fallbackText = '';
-      if (language === 'en') {
-        if (
-          msgLower.includes('volunteer') || msgLower.includes('crowd') ||
-          msgLower.includes('emergency') || msgLower.includes('medical')
-        ) {
-          fallbackText = "Your experience in volunteering, event management, crowd control, and maintaining composure during a medical emergency shows strong operational readiness and discipline. These competencies are directly relevant to the Mobile Gendarmerie (SPEC-MOB) and Territorial Gendarmerie (SPEC-TERR).\n\nDuring that medical emergency, how did you coordinate with the other volunteers and officials to secure the scene until help arrived?";
-        } else if (msgLower.includes('forensic') || msgLower.includes('investigation') || msgLower.includes('scientific') || msgLower.includes('technical')) {
-          fallbackText = "In the Royal Gendarmerie, scientific and technical investigations are carried out by the Scientific and Technical Police (SPEC-PST). This specialty specializes in crime scene analysis, ballistics, and cyber-investigations.\n\nCould you tell me more about your educational background in science, IT, or electronics to evaluate your eligibility for this unit?";
-        } else {
-          fallbackText = "The Royal Gendarmerie offers seven official career specialties, each demanding rigor, honor, and specific technical or physical skills.\n\nWhich particular operational or scientific field aligns best with your background?";
-        }
-      } else {
-        if (
-          msgLower.includes('bénévol') || msgLower.includes('benevol') ||
-          msgLower.includes('volontaire') || msgLower.includes('foule') ||
-          msgLower.includes('urgence') || msgLower.includes('malaise') ||
-          msgLower.includes('sang-froid') || msgLower.includes('calme')
-        ) {
-          fallbackText = "Votre engagement bénévole dans l'organisation d'événements, la gestion des foules et votre sang-froid lors d'une urgence médicale témoignent d'une maturité opérationnelle et d'une discipline remarquables, très recherchées au sein de la Gendarmerie Mobile (SPEC-MOB) et de la Gendarmerie Territoriale (SPEC-TERR).\n\nLors de cet incident médical précis, comment avez-vous coordonné votre action avec les autres bénévoles et les responsables pour sécuriser les lieux jusqu'à l'arrivée des secours ?";
-        } else {
-          fallbackText = "La Gendarmerie Royale s'articule autour de sept spécialités officielles réglementaires (SPEC-TERR, SPEC-MOB, SPEC-MARIT, SPEC-AIR, SPEC-PREV, SPEC-PST, SPEC-INTERV).\n\nPourriez-vous me préciser vos diplômes et vos compétences dominantes afin d'orienter au mieux votre profil ?";
-        }
-      }
-
-      return {
-        success: true,
-        reply: fallbackText,
-        model: 'emergency-offline-fallback',
-        provider: 'emergency-local',
-        isFallback: true,
-        fallbackType: 'NETWORK_OFFLINE_EMERGENCY',
-        latencyMs,
-        mode: 'text',
-        timestamp: new Date().toISOString()
+        latencyMs: callRes.latencyMs
       };
     }
+
+    return {
+      success: true,
+      reply: callRes.reply,
+      model,
+      provider: 'ollama',
+      isFallback: false,
+      latencyMs: callRes.latencyMs,
+      mode: 'text',
+      timestamp: new Date().toISOString()
+    };
+  },
+
+  /**
+   * FONCTIONNALITÉ B : Analyse intelligente du profil élève par Gemma 4:12B
+   */
+  async analyzeProfileWithGemma(journey, student) {
+    const systemPrompt = `Tu es le Conseiller d'Évaluation des Compétences et Psychologue Référent de la Gendarmerie Royale Marocaine sur la plateforme ORIENT-GR.
+Ta mission est d'analyser en profondeur le profil complet d'un élève gendarme à partir de son récit, de ses diplômes déclarés, de ses expériences réelles et de ses échanges lors de l'entretien interactif.
+Tu dois évaluer ses compétences réelles, ses dimensions d'aptitude et formuler des préconisations d'orientation objectives.
+
+RÉPONDS STRICTEMENT AU FORMAT JSON SANS AUCUN TEXTE AUTOUR, selon le schéma suivant :
+{
+  "competencesDetectees": [
+    {
+      "id": "COMP-CODE",
+      "intitule": "Intitulé précis de la compétence",
+      "categorie": "Technique | Physique | Humain | Cognitif | Militaire",
+      "niveau": "Avancé | Intermédiaire | Notions Déclarées",
+      "justification": "Preuve concrète issue des propos ou expériences du candidat"
+    }
+  ],
+  "profilDimensions": {
+    "capaciteAnalyse": 85,
+    "organisationResponsabilite": 80,
+    "communicationEquipe": 90,
+    "aptitudeTerrainPhysique": 85
+  },
+  "pointsForts": [
+    "Point fort 1 justifié",
+    "Point fort 2 justifié"
+  ],
+  "pointsVigilance": [
+    "Axe de vigilance ou point à vérifier en commission"
+  ],
+  "syntheseConseiller": "Synthèse globale rédigée en 2-3 phrases sur le profil du candidat."
+}`;
+
+    const studentInfo = `
+DOSSIER CANDIDAT :
+- Nom : ${student?.Nom || 'Élève'} ${student?.Prenom || ''}
+- Matricule : ${student?.Matricule || 'Non assigné'}
+- Diplôme d'origine : ${student?.DiplomeOrigine || 'Non spécifié'}
+- Filière d'entrée : ${student?.FiliereEntree || 'Tronc commun'}
+- Récit personnel : ${journey?.bioLibre || journey?.RecitPersonnel || 'Non rédigé'}
+- Sections déclarées : ${JSON.stringify(journey?.sections || {})}
+- Extraits de conversation avec l'élève :
+${(journey?.conversation || []).filter(m => m.role === 'user').map(m => `- ${m.text || m.transcription}`).join('\n')}
+`;
+
+    const messages = [
+      { role: 'system', content: systemPrompt },
+      { role: 'user', content: studentInfo }
+    ];
+
+    return await this.callGemmaChat({ messages, jsonMode: true, temperature: 0.3, top_p: 0.85 });
+  },
+
+  /**
+   * FONCTIONNALITÉ C : Recommandation d'orientation vers plusieurs commissions par Gemma 4:12B
+   */
+  async recommendCommissionsWithGemma({ candidate, journey, commissions, workshops = [] }) {
+    const systemPrompt = `Tu es l'Expert Stratégique en Affectation et Ventilation Multi-Commissions de la Gendarmerie Royale.
+Tu dois analyser le profil d'un élève gendarme et évaluer son adéquation avec les commissions spécialisées de recrutement disponibles.
+RÈGLE D'OR : Un élève peut être orienté vers 1 à plusieurs commissions indépendantes si ses compétences le justifient.
+
+RÉPONDS STRICTEMENT AU FORMAT JSON SANS AUCUN TEXTE AUTOUR, selon ce schéma :
+{
+  "commissions": [
+    {
+      "code": "CODE_COMMISSION (ex: COMM_INFO, COMM_RESEAUX, COMM_MECA, COMM_CYBER, COMM_ELEC, COMM_POLICE_SCIENTIFIQUE, COMM_LOGISTIQUE)",
+      "scoreCorrespondance": 85,
+      "justification": "Explication circonstanciée démontrant pourquoi le profil convient à cette commission",
+      "competencesCles": ["Compétence 1", "Compétence 2", "Compétence 3"],
+      "pointsAVerifier": ["Point technique précis à tester lors de l'épreuve pratique"]
+    }
+  ]
+}`;
+
+    const candidateDetails = `
+CANDIDAT :
+- Nom : ${candidate?.Nom || ''} ${candidate?.Prenom || ''}
+- Diplôme d'origine : ${candidate?.DiplomeOrigine || 'Général'}
+- Spécialité d'origine : ${candidate?.SpecialiteOrigine || ''}
+- Filière : ${candidate?.FiliereEntree || ''}
+- Récit & Bio : ${journey?.bioLibre || journey?.RecitPersonnel || ''}
+- Ateliers pratiques déjà validés : ${workshops.map(w => `${w.Titre} (${w.NoteSur20 ? w.NoteSur20 + '/20' : 'validé'})`).join(', ') || 'Aucun'}
+- Échanges d'entretien : ${(journey?.conversation || []).filter(m => m.role === 'user').map(m => m.text).slice(-4).join(' | ')}
+
+COMMISSIONS OUVERTES :
+${commissions.map(c => `- Code: ${c.Code} | Nom: ${c.Nom} | Domaine: ${c.DomaineCode} | Description: ${c.Description}`).join('\n')}
+`;
+
+    const messages = [
+      { role: 'system', content: systemPrompt },
+      { role: 'user', content: candidateDetails }
+    ];
+
+    return await this.callGemmaChat({ messages, jsonMode: true, temperature: 0.3, top_p: 0.85 });
+  },
+
+  /**
+   * FONCTIONNALITÉ D : Analyse IA post-évaluation en présentiel par Gemma 4:12B
+   */
+  async analyzePostEvaluationWithGemma({
+    candidate,
+    commission,
+    notePratique,
+    noteEntretien,
+    noteComplementaire = null,
+    observations,
+    commentairesComplementaires = null,
+    avisCommission = 'RESERVE',
+    threshold = 12.0
+  }) {
+    const systemPrompt = `Tu es l'Analyste IA Indépendant du Comité de Recrutement de la Gendarmerie Royale.
+Tu dois analyser les résultats réels obtenus par un élève gendarme lors des épreuves présentielles d'une commission spécialisée.
+Tu dois croiser ses notes réelles, les observations du jury, son diplôme d'origine et le seuil d'admission officiel configuré pour cette commission (${threshold}/20).
+
+RÈGLES STRICTES :
+1. Les notes manquantes ne sont jamais nulles : si notePratique ou noteEntretien est absente, l'évaluation est déclarée incomplète.
+2. Si la note globale calculée et les notes requises atteignent le seuil (${threshold}/20) avec un avis jury favorable, la recommandation consultative est POSITIF.
+3. Sinon, la recommandation est NEGATIF.
+4. Gemma fournit une recommandation motivée, mais ne prend JAMAIS la décision administrative finale qui appartient à l'autorité de commandement (ADMIN).
+
+RÉPONDS STRICTEMENT AU FORMAT JSON SANS AUCUN TEXTE AUTOUR :
+{
+  "recommandationIA": "POSITIF" ou "NEGATIF",
+  "resumeAnalyseIA": "Résumé concis de la performance et de la décision consultative",
+  "justificationIA": "Justification complète croisant notes, avis du jury et compétences observées",
+  "pointsForts": ["Point fort pratique ou comportemental 1", "Point fort 2"],
+  "pointsFaibles": ["Point d'amélioration ou réserve 1"],
+  "estTransmisAdmin": true ou false
+}`;
+
+    const inputData = `
+COMMISSION : ${commission?.Nom || 'Commission'} (Code: ${commission?.Code})
+SEUIL OFFICIEL REQUIS : ${threshold} / 20
+CANDIDAT : ${candidate?.Prenom || ''} ${candidate?.Nom || ''} (Diplôme: ${candidate?.DiplomeOrigine || 'N/A'}, Filière: ${candidate?.FiliereEntree || 'N/A'})
+
+NOTES OBSERVÉES :
+- Note test pratique : ${notePratique} / 20
+- Note entretien jury : ${noteEntretien} / 20
+- Note complémentaire : ${noteComplementaire !== null ? noteComplementaire + ' / 20' : 'Non applicable'}
+- Moyenne globale : ${(((notePratique || 0) + (noteEntretien || 0)) / 2).toFixed(2)} / 20
+
+OBSERVATIONS DU JURY :
+- Avis officiel commission : ${avisCommission}
+- Observations saisies : "${observations || 'Aucune observation textuelle'}"
+- Commentaires additionnels : "${commentairesComplementaires || 'Néant'}"
+`;
+
+    const messages = [
+      { role: 'system', content: systemPrompt },
+      { role: 'user', content: inputData }
+    ];
+
+    return await this.callGemmaChat({ messages, jsonMode: true, temperature: 0.2, top_p: 0.8 });
+  },
+
+  /**
+   * FONCTIONNALITÉ E : Synthèse comparative administrative par Gemma 4:12B
+   */
+  async generateAdminComparisonSynthesisWithGemma({
+    candidate,
+    evaluatedCommissions = [],
+    pendingCommissions = [],
+    topCommission = null,
+    secondCommission = null
+  }) {
+    const systemPrompt = `Tu es le Conseiller d'État-Major IA auprès de l'Autorité de Commandement (ADMIN) de la Gendarmerie Royale.
+Tu dois produire un rapport exécutif comparatif pour un élève ayant fait l'objet d'évaluations multi-commissions.
+RÈGLE D'OR : Les commissions en attente d'évaluation physique NE SONT JAMAIS pénalisées ni considérées comme nulles.
+L'explication doit éclairer le Commandement sur les points forts comparés du candidat, les alertes de vigilance éventuelles et proposer une recommandation consultative.
+
+RÉPONDS STRICTEMENT AU FORMAT JSON SANS AUCUN TEXTE AUTOUR :
+{
+  "explicationIA": "Rapport comparatif exécutif détaillé pour l'ADMIN",
+  "recommandationPrincipaleCode": "CODE_COMMISSION_RECOMMANDEE",
+  "recommandationSecondaireCode": "CODE_ALTERNATIVE_OU_NULL",
+  "indiceConfiance": 85.0,
+  "pointsVigilance": [
+    { "type": "TYPE_ALERTE", "message": "Explication de la vigilance" }
+  ]
+}`;
+
+    const inputData = `
+CANDIDAT : ${candidate?.Prenom || ''} ${candidate?.Nom || ''} (Matricule: ${candidate?.Matricule}, Diplôme: ${candidate?.DiplomeOrigine})
+
+COMMISSIONS AYANT COMPLÉTÉ LEUR ÉVALUATION :
+${evaluatedCommissions.map(c => `- ${c.commissionNom} (${c.commissionCode}) : Note Pratique: ${c.notePratique}/20, Entretien: ${c.noteEntretien}/20, Moyenne: ${c.noteGlobale}/20, Avis: ${c.avis}, Évaluateur: ${c.evaluateur}`).join('\n') || 'Aucune évaluation complète'}
+
+COMMISSIONS EN COURS OU EN ATTENTE D'ÉVALUATION (Notes manquantes non pénalisées) :
+${pendingCommissions.map(c => `- ${c.commissionNom} (${c.commissionCode}) : Statut: ${c.statut}, Score d'affinité IA initial: ${c.scoreCorrespondanceIA}%`).join('\n') || 'Aucune'}
+
+CLASSEMENT INITIAL CONSTATÉ :
+- Meilleure commission évaluée : ${topCommission ? `${topCommission.commissionNom} (${topCommission.noteGlobale}/20)` : 'Non déterminé'}
+- Deuxième commission : ${secondCommission ? `${secondCommission.commissionNom} (${secondCommission.noteGlobale}/20)` : 'Néant'}
+`;
+
+    const messages = [
+      { role: 'system', content: systemPrompt },
+      { role: 'user', content: inputData }
+    ];
+
+    return await this.callGemmaChat({ messages, jsonMode: true, temperature: 0.3, top_p: 0.85 });
   }
 };
-

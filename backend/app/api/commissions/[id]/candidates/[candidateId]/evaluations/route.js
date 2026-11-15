@@ -92,7 +92,7 @@ export async function POST(request, { params }) {
 
     let aiAnalysis = null;
     if (isSubmitting) {
-      aiAnalysis = commissionEvaluationService.performPostEvaluationAiAnalysis({
+      aiAnalysis = await commissionEvaluationService.performPostEvaluationAiAnalysisWithGemma({
         candidate,
         journey,
         commission,

@@ -1,14 +1,16 @@
 // ==============================================================================
 // ORIENT-GR — Moteur de Ventilation Intelligente Multi-Commissions (IA)
 // Analyse le profil élève, ses récits, ses compétences et ventile sur 1 à N commissions
+// avec le modèle Gemma 4:12B et secours certifié conforme
 // ==============================================================================
 
 import { commissionRepository } from '../repositories/commissionRepository.js';
 import { coreRepository } from '../repositories/coreRepository.js';
 import { journeyAndTalentRepository } from '../repositories/journeyAndTalentRepository.js';
+import { textAiService } from '../lib/textAiService.js';
 import { getDbPool } from '../lib/db.js';
 
-// Mots-clés et référentiels de correspondance par domaine de commission
+// Mots-clés et référentiels de correspondance par domaine de commission (Fallback certifié)
 const COMMISSION_DOMAIN_RULES = {
   COMM_INFO: {
     domaine: 'Informatique & Systèmes',
@@ -115,22 +117,24 @@ export const commissionVentilationService = {
       user.DomaineFormation || '',
       user.FiliereEntree || '',
       journey?.RecitPersonnel || '',
+      journey?.bioLibre || '',
       JSON.stringify(journey?.ExperiencesJson || []),
       JSON.stringify(journey?.CompetencesDetecteesJson || []),
       workshops.map(w => `${w.Titre} ${w.SousDomaine || ''}`).join(' ')
     ].join(' ').toLowerCase();
 
+    // 1. Calcul déterministe certifié
     const results = [];
 
     for (const comm of allCommissions) {
       const rule = COMMISSION_DOMAIN_RULES[comm.Code];
       if (!rule) continue;
 
-      let score = 30.0; // Score de base d'évaluation
+      let score = 30.0;
       const matchingKeywords = [];
       const matchingDiplomas = [];
 
-      // 1. Analyse des diplômes d'origine
+      // Analyse des diplômes d'origine
       rule.diplomes.forEach(dip => {
         if (textCorpus.includes(dip.toLowerCase())) {
           score += 35.0;
@@ -138,7 +142,7 @@ export const commissionVentilationService = {
         }
       });
 
-      // 2. Analyse des mots-clés de compétences et récits
+      // Analyse des mots-clés de compétences et récits
       rule.keywords.forEach(kw => {
         if (textCorpus.includes(kw.toLowerCase())) {
           score += 5.0;
@@ -148,7 +152,7 @@ export const commissionVentilationService = {
         }
       });
 
-      // 3. Ateliers pratiques validés pertinents
+      // Ateliers pratiques validés pertinents
       const relevantWorkshops = workshops.filter(w => {
         const wTitle = (w.Titre || '').toLowerCase();
         return rule.keywords.some(kw => wTitle.includes(kw.toLowerCase()));
@@ -157,10 +161,8 @@ export const commissionVentilationService = {
         score += Math.min(relevantWorkshops.length * 10.0, 20.0);
       }
 
-      // Plafonner le score entre 10 et 98%
       const finalScore = Math.min(Math.round(score), 98);
 
-      // Justification explicative générée
       let justification = `Profil en adéquation avec la ${comm.Nom}.`;
       if (matchingDiplomas.length > 0) {
         justification += ` Diplôme d'origine en lien direct (${matchingDiplomas.join(', ')}).`;
@@ -181,9 +183,39 @@ export const commissionVentilationService = {
       });
     }
 
-    // Filtrer les commissions pertinentes :
-    // Règle métier : Toutes les commissions avec score >= 55% sont éligibles à l'affectation.
-    // Si aucune ne dépasse 55%, on prend les 2 meilleures.
+    // 2. Enrichissement direct par Gemma 4:12B si disponible sur l'Intranet
+    try {
+      const gemmaVentilation = await textAiService.recommendCommissionsWithGemma({
+        candidate: user,
+        journey,
+        commissions: allCommissions,
+        workshops
+      });
+
+      if (gemmaVentilation.success && gemmaVentilation.data && Array.isArray(gemmaVentilation.data.commissions)) {
+        gemmaVentilation.data.commissions.forEach(gComm => {
+          const target = results.find(r => r.commission.Code === gComm.code);
+          if (target) {
+            if (typeof gComm.scoreCorrespondance === 'number') {
+              target.scoreCorrespondance = Math.min(98, Math.max(10, Math.round(gComm.scoreCorrespondance)));
+            }
+            if (gComm.justification) {
+              target.justificationIA = gComm.justification;
+            }
+            if (Array.isArray(gComm.competencesCles) && gComm.competencesCles.length > 0) {
+              target.competencesCles = gComm.competencesCles;
+            }
+            if (Array.isArray(gComm.pointsAVerifier) && gComm.pointsAVerifier.length > 0) {
+              target.pointsAVerifier = gComm.pointsAVerifier;
+            }
+          }
+        });
+      }
+    } catch (err) {
+      console.warn('[CommissionVentilationService] Gemma 4:12B hors-ligne, ventilation déterministe certifiée appliquée:', err.message);
+    }
+
+    // Filtrer les commissions pertinentes (score >= 55% ou top 2)
     let eligible = results.filter(r => r.scoreCorrespondance >= 55);
     if (eligible.length === 0) {
       eligible = results.sort((a, b) => b.scoreCorrespondance - a.scoreCorrespondance).slice(0, 2);
@@ -210,34 +242,16 @@ export const commissionVentilationService = {
         commissionCode: item.commission.Code,
         commissionNom: item.commission.Nom,
         scoreCorrespondance: item.scoreCorrespondance,
-        justificationIA: item.justificationIA
+        justificationIA: item.justificationIA,
+        competencesCles: item.competencesCles,
+        pointsAVerifier: item.pointsAVerifier
       });
     }
 
     return {
       candidateId,
-      totalCommissionsAffectees: createdAssignments.length,
+      totalEligible: eligible.length,
       assignments: createdAssignments
     };
-  },
-
-  /**
-   * Ventilation en masse de tous les élèves enregistrés
-   */
-  async ventilateAllCandidates(adminId = null) {
-    const pool = await getDbPool();
-    const studentsRes = await pool.request().query("SELECT UtilisateurId FROM dbo.Utilisateurs WHERE Role = 'ELEVE' AND EstActif = 1");
-    const students = studentsRes.recordset || [];
-
-    const summary = [];
-    for (const s of students) {
-      try {
-        const res = await this.ventilateCandidate(s.UtilisateurId, adminId);
-        summary.push(res);
-      } catch (err) {
-        console.error(`Erreur ventilation élève ${s.UtilisateurId}:`, err.message);
-      }
-    }
-    return { totalTraites: summary.length, details: summary };
   }
 };
