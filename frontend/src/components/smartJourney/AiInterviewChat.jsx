@@ -880,65 +880,71 @@ export default function AiInterviewChat({
   };
 
   return (
-    <div className="flex flex-col h-[750px] max-h-[85dvh] bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden">
+    <div className="sinta-3d-wrapper w-full h-full flex-1 flex flex-col min-h-[580px] lg:min-h-[640px]">
+      {/* Halo de lueur 3D du ruban lumineux */}
+      <div className="sinta-3d-glow" />
+      {/* Ruban lumineux dynamique aux couleurs de l'application (Sinta kadoz 3D) */}
+      <div className="sinta-3d-beam" />
       
-      {/* HEADER MILITAIRE PROFESSIONNEL & STATUT DES 2 MODÈLES */}
-      <div className="bg-[#153B2B] text-white px-4 sm:px-6 py-3.5 border-b border-[#1C4E39] shrink-0">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          
-          {/* Identité Conseiller */}
-          <div className="flex items-center gap-3">
-            <div className="relative">
-              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center border border-gold/40 shadow-xs">
-                <Bot className="w-5 h-5 text-gold" />
+      {/* Conteneur intérieur du Chat */}
+      <div className="sinta-3d-inner">
+        {/* HEADER MILITAIRE PROFESSIONNEL & STATUT DU CONSEILLER */}
+        <div className="bg-gradient-to-r from-[#102C20] via-[#153B2B] to-[#1C4E39] text-white px-4 sm:px-6 py-3.5 border-b border-[#1C4E39] shrink-0 shadow-xs">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            
+            {/* Identité Conseiller */}
+            <div className="flex items-center gap-3">
+              <div className="relative">
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center border border-gold/40 shadow-xs">
+                  <Bot className="w-5 h-5 text-gold" />
+                </div>
+                <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-400 border-2 border-[#153B2B]" />
               </div>
-              <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-400 border-2 border-[#153B2B]" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <h3 className="font-bold text-sm sm:text-base text-white">Conseiller d'Orientation</h3>
-                <span className="px-2 py-0.5 text-[10px] font-semibold bg-gold/20 text-gold-light border border-gold/30 rounded-full">
-                  Accompagnement Officiel
-                </span>
+              <div>
+                <div className="flex items-center gap-2">
+                  <h3 className="font-bold text-sm sm:text-base text-white">Conseiller d'Orientation</h3>
+                  <span className="px-2 py-0.5 text-[10px] font-semibold bg-gold/20 text-gold-light border border-gold/30 rounded-full">
+                    Accompagnement Officiel
+                  </span>
+                </div>
+                <p className="text-xs text-slate-300">
+                  Gendarmerie Royale • Échanges personnalisés par écrit ou par voix
+                </p>
               </div>
-              <p className="text-xs text-slate-300">
-                Gendarmerie Royale • Échanges personnalisés par écrit ou par voix
-              </p>
-            </div>
-          </div>
-
-          {/* Statut du Conseiller */}
-          <div className="flex items-center gap-2 flex-wrap">
-            <div className="px-3 py-1 rounded-lg bg-emerald-950/60 border border-emerald-500/50 text-emerald-300 text-xs font-semibold flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Conseiller disponible</span>
             </div>
 
-            {onGoToAnalysis && (
-              <button
-                type="button"
-                onClick={onGoToAnalysis}
-                className="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-gold/20 hover:bg-gold/30 text-gold-light border border-gold/40 text-xs font-bold transition-colors cursor-pointer"
-              >
-                <Sparkles className="w-3.5 h-3.5 text-gold" />
-                <span>Mon Profil</span>
-                <ArrowRight className="w-3 h-3" />
-              </button>
-            )}
+            {/* Statut du Conseiller */}
+            <div className="flex items-center gap-2 flex-wrap">
+              <div className="px-3 py-1 rounded-lg bg-emerald-950/60 border border-emerald-500/50 text-emerald-300 text-xs font-semibold flex items-center gap-1.5 shadow-2xs">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Conseiller disponible</span>
+              </div>
 
-            {onResetConversation && (
-              <button
-                type="button"
-                onClick={onResetConversation}
-                title="Réinitialiser l'entretien"
-                className="p-1.5 rounded-lg bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition-colors cursor-pointer"
-              >
-                <RefreshCw className="w-4 h-4" />
-              </button>
-            )}
+              {onGoToAnalysis && (
+                <button
+                  type="button"
+                  onClick={onGoToAnalysis}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gold/20 hover:bg-gold/30 text-gold-light border border-gold/40 text-xs font-bold transition-all shadow-2xs hover:shadow-gold/20 cursor-pointer active:scale-95"
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-gold" />
+                  <span>Mon Profil & Compétences</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-gold" />
+                </button>
+              )}
+
+              {onResetConversation && (
+                <button
+                  type="button"
+                  onClick={onResetConversation}
+                  title="Réinitialiser l'entretien"
+                  className="p-1.5 rounded-lg bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition-colors cursor-pointer"
+                >
+                  <RefreshCw className="w-4 h-4" />
+                </button>
+              )}
+            </div>
           </div>
         </div>
-      </div>
 
       {/* BARRE DE SÉLECTION DU MODE & RACCOURCI CLAVIER */}
       <div className="bg-slate-50 border-b border-slate-200/80 px-4 py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-600 shrink-0">
@@ -1353,6 +1359,7 @@ export default function AiInterviewChat({
             </button>
           </form>
         )}
+      </div>
       </div>
     </div>
   );

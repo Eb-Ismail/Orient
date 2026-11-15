@@ -245,10 +245,14 @@ export default function SmartJourneyPage() {
   }
 
   return (
-    <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+    <div className={`w-full mx-auto transition-all ${
+      activeTab === 'interview'
+        ? 'h-[calc(100dvh-130px)] sm:h-[calc(100dvh-140px)] flex flex-col px-2 sm:px-4 py-2 space-y-2 sm:space-y-3'
+        : 'max-w-[1600px] px-4 sm:px-6 lg:px-8 py-6 space-y-6'
+    }`}>
       
       {/* BARRE D'ONGLETS / ÉTAPES DU PARCOURS */}
-      <div className="bg-white rounded-2xl border border-slate-200/90 p-2 shadow-xs">
+      <div className="bg-white rounded-2xl border border-slate-200/90 p-1.5 sm:p-2 shadow-xs shrink-0">
         <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
           {tabs.map((tab) => {
             const Icon = tab.icon;
@@ -259,7 +263,7 @@ export default function SmartJourneyPage() {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-4 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer shrink-0 ${
+                className={`flex items-center gap-2 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer shrink-0 ${
                   isActive
                     ? 'bg-[#153B2B] text-white shadow-xs'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
@@ -285,11 +289,13 @@ export default function SmartJourneyPage() {
       </div>
 
       {/* CONTENU ACTIF SELON L'ONGLET SÉLECTIONNÉ */}
-      <div className="transition-opacity duration-300">
+      <div className={`transition-opacity duration-300 ${
+        activeTab === 'interview' ? 'flex-1 min-h-0 flex flex-col w-full' : ''
+      }`}>
         
         {/* ONGLET 1 : ENTRETIEN CONVERSATIONNEL AVEC L'IA */}
         {activeTab === 'interview' && (
-          <div className="space-y-4">
+          <div className="w-full h-full flex-1 min-h-0 flex flex-col">
             <AiInterviewChat
               conversation={journey.conversation || []}
               onSendMessage={handleSendMessage}
@@ -297,17 +303,6 @@ export default function SmartJourneyPage() {
               onGoToAnalysis={() => setActiveTab('analysis')}
               onResetConversation={handleResetConversation}
             />
-
-            <div className="flex justify-end items-center pt-2">
-              <button
-                type="button"
-                onClick={() => setActiveTab('analysis')}
-                className="px-5 py-2.5 rounded-xl bg-[#153B2B] hover:bg-[#1C4E39] text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-all shadow-xs cursor-pointer"
-              >
-                <span>Voir Mon Profil & Mes Compétences</span>
-                <ArrowRight className="w-4 h-4 text-gold" />
-              </button>
-            </div>
           </div>
         )}
 
