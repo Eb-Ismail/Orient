@@ -162,21 +162,21 @@ export default function LoginPage() {
 
   return (
     <div 
-      className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center py-4 sm:py-6 px-4 sm:px-6 relative overflow-x-hidden selection:bg-gold/30"
+      className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center py-4 sm:py-6 px-4 sm:px-6 relative overflow-x-hidden selection:bg-gold/30 bg-transparent"
       style={{
-        backgroundImage: `url('/images/login-bg.webp?v=20261115_v3')`,
-        backgroundColor: '#F7F8F5'
+        backgroundImage: `url('/images/login-bg.webp?v=20261115_natural')`,
+        backgroundColor: 'transparent'
       }}
     >
       {/* En-tête officiel centré au-dessus de la carte */}
-      <div className="w-full max-w-md mx-auto text-center mb-2.5">
+      <div className="w-full max-w-md mx-auto text-center mb-2.5 bg-transparent">
         {/* Blason / Écusson Vert Gendarmerie avec bordure or */}
         <div className="mx-auto w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#153B2B] flex items-center justify-center border-2 border-gold/70 shadow-md mb-2">
           <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
         </div>
 
         {/* Badge Pilule institutionnel */}
-        <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/95 border border-slate-200/90 text-[10px] sm:text-[11px] font-bold tracking-widest text-slate-700 uppercase mb-1.5 shadow-2xs backdrop-blur-xs">
+        <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/95 border border-slate-200/90 text-[10px] sm:text-[11px] font-bold tracking-widest text-slate-700 uppercase mb-1.5 shadow-2xs">
           ROYAUME DU MAROC • GENDARMERIE ROYALE
         </div>
 
@@ -191,8 +191,8 @@ export default function LoginPage() {
         </p>
       </div>
 
-      {/* Carte centrale d'authentification */}
-      <div className="w-full max-w-[460px] md:max-w-[480px] mx-auto bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-slate-200/90 p-5 sm:p-6 backdrop-blur-xs">
+      {/* Unique carte centrale d'authentification */}
+      <div className="w-full max-w-[460px] md:max-w-[480px] mx-auto bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-slate-200/90 p-5 sm:p-6">
         
         {/* Sélecteur d'espace sous forme d'onglets (Espace Élève / Encadrement) */}
         <div className="bg-slate-100 p-1 rounded-xl flex items-center gap-1 mb-3.5">
